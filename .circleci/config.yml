@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: unit tests
+          command: docker run -w $PWD -v $PWD:$PWD --entrypoint sh sparkprime/jsonnet tests.sh
