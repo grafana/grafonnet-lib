@@ -1,6 +1,19 @@
 #!/bin/sh
 
 x=0
+
+for i in `find . -name '*.jsonnet' -or -name '*.libsonnet'`
+do
+    t="Formating $i..."
+    if jsonnet fmt --test -n 4 $i;
+    then
+        echo $t OK
+    else
+        echo $t NOK
+        x=1
+    fi
+done
+
 for i in tests/*/*.jsonnet
 do
     json=$(dirname $i)/$( basename $i .jsonnet ).json
