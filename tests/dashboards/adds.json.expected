@@ -9,7 +9,30 @@
    "id": null,
    "links": [ ],
    "refresh": "off",
-   "rows": [ ],
+   "rows": [
+      {
+         "collapse": false,
+         "height": "250px",
+         "panels": [ ],
+         "repeat": null,
+         "repeatIteration": null,
+         "repeatRowId": null,
+         "showTitle": false,
+         "title": "1",
+         "titleSize": "h6"
+      },
+      {
+         "collapse": false,
+         "height": "250px",
+         "panels": [ ],
+         "repeat": null,
+         "repeatIteration": null,
+         "repeatRowId": null,
+         "showTitle": false,
+         "title": "2",
+         "titleSize": "h6"
+      }
+   ],
    "schemaVersion": 14,
    "style": "dark",
    "tags": [ ],

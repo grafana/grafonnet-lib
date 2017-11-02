@@ -43,4 +43,7 @@ local timepickerlib = import "timepicker.libsonnet";
         templates+:: [template],
         templating: { list: t },
     },
+    addRow(row):: {
+        rows+: [row],
+    },
 }
