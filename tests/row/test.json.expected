@@ -1,0 +1,24 @@
+{
+   "advanced": {
+      "collapse": true,
+      "height": "125px",
+      "panels": [ ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": true,
+      "title": "Test Row",
+      "titleSize": "h1"
+   },
+   "basic": {
+      "collapse": false,
+      "height": "250px",
+      "panels": [ ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+   }
+}
