@@ -1,0 +1,44 @@
+{
+   "advanced": {
+      "allValue": "$ALL",
+      "current": {
+         "foo": "bar"
+      },
+      "datasource": "elastic",
+      "hide": 2,
+      "includeAll": true,
+      "label": "node",
+      "multi": true,
+      "name": "name",
+      "options": [ ],
+      "query": "TEST",
+      "refresh": 0,
+      "regex": "",
+      "sort": 0,
+      "tagValuesQuery": "tvquery",
+      "tags": [ ],
+      "tagsQuery": "",
+      "type": "query",
+      "useTags": false
+   },
+   "basic": {
+      "allValue": null,
+      "current": { },
+      "datasource": "elastic",
+      "hide": 0,
+      "includeAll": false,
+      "label": null,
+      "multi": false,
+      "name": "name",
+      "options": [ ],
+      "query": "TEST",
+      "refresh": 0,
+      "regex": "",
+      "sort": 0,
+      "tagValuesQuery": "",
+      "tags": [ ],
+      "tagsQuery": "",
+      "type": "query",
+      "useTags": false
+   }
+}
