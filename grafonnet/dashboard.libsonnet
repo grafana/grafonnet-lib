@@ -38,4 +38,9 @@ local timepickerlib = import "timepicker.libsonnet";
         title: title,
         version: 0,
     },
+    addTemplate(template):: {
+        local t = self.templates,
+        templates+:: [template],
+        templating: { list: t },
+    },
 }
