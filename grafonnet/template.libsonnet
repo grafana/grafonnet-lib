@@ -31,4 +31,28 @@
             type: "query",
             useTags: false,
         },
+    interval(
+        name,
+        query,
+        current,
+        hide="",
+        label=null,
+        auto_count=300,
+        auto_min="10s",
+    )::
+        {
+            current: {
+                text: current,
+                value: if current == "auto" then "$__auto_interval" else current,
+            },
+            hide: if hide == "" then 0 else if hide == "label" then 1 else 2,
+            label: label,
+            name: name,
+            query: query,
+            refresh: 2,
+            type: "interval",
+            auto: std.count(std.split(query, ","), "auto") > 0,
+            auto_count: auto_count,
+            auto_min: auto_min,
+        },
 }

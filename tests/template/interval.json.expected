@@ -1,0 +1,32 @@
+{
+   "auto": {
+      "auto": true,
+      "auto_count": 300,
+      "auto_min": "10s",
+      "current": {
+         "text": "auto",
+         "value": "$__auto_interval"
+      },
+      "hide": 0,
+      "label": null,
+      "name": "interval",
+      "query": "auto,5m,10m,20m",
+      "refresh": 2,
+      "type": "interval"
+   },
+   "basic": {
+      "auto": false,
+      "auto_count": 300,
+      "auto_min": "10s",
+      "current": {
+         "text": "5m",
+         "value": "5m"
+      },
+      "hide": 0,
+      "label": null,
+      "name": "interval",
+      "query": "5m,10m,20m",
+      "refresh": 2,
+      "type": "interval"
+   }
+}
