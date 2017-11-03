@@ -4,9 +4,9 @@ local template = grafana.template;
 {
     basic: template.new("host", "elastic", "test-query"),
     advanced: template.new(
-        "host",
-        "elastic",
-        "test-query",
+        "newhost",
+        "newelastic",
+        "newtest-query",
         label="node",
         allValues="$ALL",
         tagValuesQuery="tvquery",
