@@ -31,7 +31,7 @@ templates, rows, panels...) as well as a number of datasources and plugins.
 Grafonnet is developed withing the Grafana community. Therefore we are following
 the same [Code of Conduct as Grafana][coc].
 
-We use the same [license][lic] as [Grafana][lic2] (ASL 2.0).
+We use the same [license][lic1] as [Grafana][lic2] (ASL 2.0).
 
 [lic1]:https://github.com/grafana/grafonnet-lib/blob/master/LICENSE
 [lic2]:https://github.com/grafana/grafana/blob/master/LICENSE
