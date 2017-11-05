@@ -1,4 +1,4 @@
-# Grafonnet-lib, a Jsonnet library for generating Grafana dashboards
+# Grafonnet, a Jsonnet library for generating Grafana dashboards
 
 [![CircleCI](https://circleci.com/gh/grafana/grafonnet-lib.svg?style=svg)](https://circleci.com/gh/grafana/grafonnet-lib)
 

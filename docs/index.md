@@ -1,4 +1,4 @@
-# Grafonnet
+# <center>![Grafonnet logo](images/grafonnet.png)</center>
 
 Grafonnet provides an easy and maintainable way of writing
 [grafana](https://grafana.org) dashboards. Instead of generating JSON files and
