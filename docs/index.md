@@ -26,10 +26,13 @@ that would not be covered by Grafonnet already.
 Grafonnet aims at supporting any basic feature of dashboards (annotations,
 templates, rows, panels...) as well as a number of datasources and plugins.
 
-## Code of Conduct and License
+## Code of Conduct
 
 Grafonnet is developed withing the Grafana community. Therefore we are following
-the same [Code of Conduct as Grafana][coc].
+the same [Code of Conduct as Grafana][coc]. You need to agree and follow the
+code of conduct when you contribute to Grafonnet.
+
+## License
 
 We use the same [license][lic1] as [Grafana][lic2] (ASL 2.0).
 
