@@ -1,0 +1,14 @@
+{
+   "advanced": {
+      "expr": "apache_up",
+      "format": "time_series",
+      "intervalFactor": 1,
+      "legendFormat": "{{instance}}"
+   },
+   "basic": {
+      "expr": "up",
+      "format": "time_series",
+      "intervalFactor": 2,
+      "legendFormat": ""
+   }
+}

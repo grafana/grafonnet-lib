@@ -4,4 +4,5 @@
     timepicker:: import "timepicker.libsonnet",
     row:: import "row.libsonnet",
     graphPanel:: import "graph_panel.libsonnet",
+    prometheus:: import "prometheus.libsonnet",
 }
