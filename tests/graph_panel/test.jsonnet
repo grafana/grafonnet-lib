@@ -14,5 +14,6 @@ local graphPanel = grafana.graphPanel;
         bars=true,
         dashes=true,
         stack=true,
+        repeat="$device",
     ),
 }

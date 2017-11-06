@@ -10,6 +10,7 @@
         bars=false,
         dashes=false,
         stack=false,
+        repeat=null,
     ):: {
         id: null,
         title: title,
@@ -61,6 +62,7 @@
         timeFrom: null,
         timeShift: null,
         aliasColors: {},
+        repeat: repeat,
         seriesOverrides: [],
         thresholds: [],
     },
