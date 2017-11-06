@@ -16,4 +16,7 @@ local graphPanel = grafana.graphPanel;
         stack=true,
         repeat="$device",
     ),
+    targets: graphPanel.new("with targets")
+             + graphPanel.addTarget("foo")
+             + graphPanel.addTarget("foo"),
 }

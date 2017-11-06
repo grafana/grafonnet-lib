@@ -18,7 +18,6 @@
         type: "graph",
         datasource: null,
         targets: [
-            {},
         ],
         renderer: "flot",
         yaxes: [
@@ -80,5 +79,8 @@
         min: min,
         max: max,
         format: format,
+    },
+    addTarget(target):: {
+        targets+: [target],
     },
 }

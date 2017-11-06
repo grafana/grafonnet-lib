@@ -29,9 +29,7 @@
       "span": 8,
       "stack": true,
       "steppedLine": false,
-      "targets": [
-         { }
-      ],
+      "targets": [ ],
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
@@ -98,13 +96,81 @@
       "span": 12,
       "stack": false,
       "steppedLine": false,
-      "targets": [
-         { }
-      ],
+      "targets": [ ],
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
       "title": "test",
+      "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+         "buckets": null,
+         "mode": "time",
+         "name": null,
+         "show": true,
+         "values": [ ]
+      },
+      "yaxes": [
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         },
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         }
+      ]
+   },
+   "targets": {
+      "aliasColors": { },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "id": null,
+      "legend": {
+         "avg": false,
+         "current": false,
+         "max": false,
+         "min": false,
+         "show": true,
+         "total": false,
+         "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [ ],
+      "spaceLength": 10,
+      "span": 12,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+         "foo",
+         "foo"
+      ],
+      "thresholds": [ ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "with targets",
       "tooltip": {
          "shared": true,
          "sort": 0,
