@@ -11,4 +11,7 @@ local row = grafana.row;
         showTitle=true,
         titleSize="h1"
     ),
+    panels: row.new()
+            + row.addPanel("foo")
+            + row.addPanel("bar"),
 }
