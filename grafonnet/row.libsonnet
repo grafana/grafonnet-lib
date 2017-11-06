@@ -17,4 +17,7 @@
         title: title,
         titleSize: titleSize,
     },
+    addPanel(panel):: {
+        panels+: [panel],
+    },
 }
