@@ -5,7 +5,7 @@
       "dashLength": 10,
       "dashes": true,
       "datasource": null,
-      "fill": 1,
+      "fill": 2,
       "id": 2,
       "legend": {
          "avg": false,
@@ -17,7 +17,7 @@
          "values": false
       },
       "lines": false,
-      "linewidth": 1,
+      "linewidth": 2,
       "minSpan": 9,
       "nullPointMode": "null",
       "percentage": false,
