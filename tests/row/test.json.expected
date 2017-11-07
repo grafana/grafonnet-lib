@@ -4,7 +4,7 @@
       "height": "125px",
       "id": 1,
       "panels": [ ],
-      "repeat": null,
+      "repeat": "env",
       "repeatIteration": null,
       "repeatRowId": null,
       "showTitle": true,
