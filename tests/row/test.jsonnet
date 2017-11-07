@@ -5,6 +5,7 @@ local row = grafana.row;
     basic: row.new(),
     advanced: row.new(
         title="Test Row",
+        id=1,
         height="125px",
         collapse=true,
         repeat="env",

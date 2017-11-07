@@ -1,6 +1,7 @@
 {
     new(
         title="Dashboard Row",
+        id=null,
         height="250px",
         collapse=false,
         repeat=null,
@@ -9,6 +10,7 @@
     ):: {
         collapse: collapse,
         height: height,
+        [if id != null then "id"]: id,
         panels: [],
         repeat: null,
         repeatIteration: null,
