@@ -3,6 +3,7 @@ local row = grafana.row;
 
 {
     basic: row.new(),
+    showTite: row.new(title="foo"),
     advanced: row.new(
         title="Test Row",
         id=1,
