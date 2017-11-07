@@ -7,6 +7,7 @@ local graphPanel = grafana.graphPanel;
         "test",
         id=2,
         span=8,
+        min_span=9,
         format="ms",
         min=10,
         max=10,
