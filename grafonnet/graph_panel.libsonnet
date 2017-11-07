@@ -3,6 +3,7 @@
         title,
         span=12,
         id=null,
+        min_span=null,
         format="short",
         min=null,
         max=null,
@@ -16,6 +17,7 @@
         [if id != null then "id"]: id,
         title: title,
         span: span,
+        [if min_span != null then "minSpan"]: min_span,
         type: "graph",
         datasource: null,
         targets: [

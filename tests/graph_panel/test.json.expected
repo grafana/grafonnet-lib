@@ -18,6 +18,7 @@
       },
       "lines": false,
       "linewidth": 1,
+      "minSpan": 9,
       "nullPointMode": "null",
       "percentage": false,
       "pointradius": 5,
