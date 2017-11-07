@@ -2,8 +2,10 @@
     target(
         expr,
         intervalFactor=2,
-        legendFormat=""
+        legendFormat="",
+        datasource=null
     ):: {
+        [if datasource != null then "datasource"]: datasource,
         expr: expr,
         format: "time_series",
         intervalFactor: intervalFactor,

@@ -1,5 +1,6 @@
 {
    "advanced": {
+      "datasource": "prom1",
       "expr": "apache_up",
       "format": "time_series",
       "intervalFactor": 1,
