@@ -2,6 +2,7 @@
    "advanced": {
       "collapse": true,
       "height": "125px",
+      "id": 1,
       "panels": [ ],
       "repeat": null,
       "repeatIteration": null,

@@ -27,6 +27,8 @@ do
         continue
     fi
 
+    if [[ $1 == "update" ]]; then cp $json $json.expected; fi
+
     t="Checking $i..."
     if diff $json $json.expected
     then
