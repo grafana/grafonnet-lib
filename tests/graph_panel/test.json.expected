@@ -6,7 +6,7 @@
       "dashes": true,
       "datasource": null,
       "fill": 1,
-      "id": null,
+      "id": 2,
       "legend": {
          "avg": false,
          "current": false,
@@ -73,7 +73,6 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
-      "id": null,
       "legend": {
          "avg": false,
          "current": false,
@@ -140,7 +139,6 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
-      "id": null,
       "legend": {
          "avg": false,
          "current": false,

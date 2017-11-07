@@ -2,6 +2,7 @@
     new(
         title,
         span=12,
+        id=null,
         format="short",
         min=null,
         max=null,
@@ -12,7 +13,7 @@
         stack=false,
         repeat=null,
     ):: {
-        id: null,
+        [if id != null then "id"]: id,
         title: title,
         span: span,
         type: "graph",

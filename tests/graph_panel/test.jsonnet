@@ -5,6 +5,7 @@ local graphPanel = grafana.graphPanel;
     basic: graphPanel.new("test"),
     advanced: graphPanel.new(
         "test",
+        id=2,
         span=8,
         format="ms",
         min=10,
