@@ -6,7 +6,7 @@
         label=null,
         allValues=null,
         tagValuesQuery="",
-        current={},
+        current=null,
         hide="",
         refresh="never",
         includeAll=false,
@@ -14,7 +14,7 @@
     )::
         {
             allValue: allValues,
-            current: current,
+            current: $.current(current),
             datasource: datasource,
             hide: if hide == "" then 0 else if hide == "label" then 1 else 2,
             includeAll: includeAll,
@@ -53,10 +53,7 @@
         auto_min="10s",
     )::
         {
-            current: {
-                text: current,
-                value: if current == "auto" then "$__auto_interval" else current,
-            },
+            current: $.current(current),
             hide: if hide == "" then 0 else if hide == "label" then 1 else 2,
             label: label,
             name: name,
@@ -67,4 +64,13 @@
             auto_count: auto_count,
             auto_min: auto_min,
         },
+    current(current):: {
+        [if current != null then "text"]: current,
+        [if current != null then "value"]: if current == "auto" then
+            "$__auto_interval"
+        else if current == "all" then
+            "$__all"
+        else
+            current,
+    },
 }
