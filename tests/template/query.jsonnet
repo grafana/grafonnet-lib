@@ -15,4 +15,10 @@ local template = grafana.template;
         includeAll=true,
         multi=true,
     ),
+    refresh: [
+        template.new("host", "elastic", "test-never-0", refresh="never"),
+        template.new("host", "elastic", "test-load-1", refresh="load"),
+        template.new("host", "elastic", "test-time-2", refresh="time"),
+        template.new("host", "elastic", "test-5-5", refresh=5),
+    ],
 }
