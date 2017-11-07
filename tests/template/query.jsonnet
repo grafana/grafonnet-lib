@@ -10,7 +10,7 @@ local template = grafana.template;
         label="node",
         allValues="$ALL",
         tagValuesQuery="tvquery",
-        current={ foo: "bar" },
+        current="bar",
         hide="value",
         includeAll=true,
         multi=true,
@@ -21,4 +21,5 @@ local template = grafana.template;
         template.new("host", "elastic", "test-time-2", refresh="time"),
         template.new("host", "elastic", "test-5-5", refresh=5),
     ],
+    current: template.new("host", "elastic", "test-never-0", current="all"),
 }
