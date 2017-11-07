@@ -5,6 +5,7 @@
         id=null,
         fill=1,
         linewidth=1,
+        decimals=null,
         min_span=null,
         format="short",
         min=null,
@@ -20,6 +21,7 @@
         title: title,
         span: span,
         [if min_span != null then "minSpan"]: min_span,
+        [if decimals != null then "decimals"]: decimals,
         type: "graph",
         datasource: null,
         targets: [
