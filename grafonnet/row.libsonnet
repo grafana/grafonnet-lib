@@ -12,7 +12,7 @@
         height: height,
         [if id != null then "id"]: id,
         panels: [],
-        repeat: null,
+        repeat: repeat,
         repeatIteration: null,
         repeatRowId: null,
         showTitle: showTitle,
