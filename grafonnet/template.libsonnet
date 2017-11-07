@@ -8,6 +8,7 @@
         tagValuesQuery="",
         current={},
         hide="",
+        refresh="never",
         includeAll=false,
         multi=false,
     )::
@@ -22,7 +23,18 @@
             name: name,
             options: [],
             query: query,
-            refresh: 0,
+            refresh: if refresh == "never"
+            then
+                0
+            else if refresh == "load"
+            then
+                1
+            else if refresh == "time"
+            then
+                2
+            else
+                refresh
+            ,
             regex: "",
             sort: 0,
             tagValuesQuery: tagValuesQuery,
