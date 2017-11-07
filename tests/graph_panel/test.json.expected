@@ -9,13 +9,15 @@
       "fill": 2,
       "id": 2,
       "legend": {
-         "avg": false,
-         "current": false,
-         "max": false,
-         "min": false,
-         "show": true,
-         "total": false,
-         "values": false
+         "alignAsTable": true,
+         "avg": true,
+         "current": true,
+         "max": true,
+         "min": true,
+         "rightSide": true,
+         "show": false,
+         "total": true,
+         "values": true
       },
       "lines": false,
       "linewidth": 2,
@@ -76,10 +78,12 @@
       "datasource": null,
       "fill": 1,
       "legend": {
+         "alignAsTable": false,
          "avg": false,
          "current": false,
          "max": false,
          "min": false,
+         "rightSide": false,
          "show": true,
          "total": false,
          "values": false
@@ -142,10 +146,12 @@
       "datasource": null,
       "fill": 1,
       "legend": {
+         "alignAsTable": false,
          "avg": false,
          "current": false,
          "max": false,
          "min": false,
+         "rightSide": false,
          "show": true,
          "total": false,
          "values": false

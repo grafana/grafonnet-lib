@@ -20,6 +20,15 @@ local graphPanel = grafana.graphPanel;
         dashes=true,
         stack=true,
         repeat="$device",
+        legend_show=false,
+        legend_values=true,
+        legend_min=true,
+        legend_max=true,
+        legend_current=true,
+        legend_total=true,
+        legend_avg=true,
+        legend_alignAsTable=true,
+        legend_rightSide=true,
     ),
     targets: graphPanel.new("with targets")
              + graphPanel.addTarget("foo")
