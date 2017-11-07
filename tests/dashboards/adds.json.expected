@@ -17,7 +17,7 @@
          "repeat": null,
          "repeatIteration": null,
          "repeatRowId": null,
-         "showTitle": false,
+         "showTitle": true,
          "title": "1",
          "titleSize": "h6"
       },
@@ -28,7 +28,7 @@
          "repeat": null,
          "repeatIteration": null,
          "repeatRowId": null,
-         "showTitle": false,
+         "showTitle": true,
          "title": "2",
          "titleSize": "h6"
       }

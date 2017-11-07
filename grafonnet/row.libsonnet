@@ -5,7 +5,7 @@
         height="250px",
         collapse=false,
         repeat=null,
-        showTitle=false,
+        showTitle=null,
         titleSize="h6"
     ):: {
         collapse: collapse,
@@ -15,7 +15,11 @@
         repeat: repeat,
         repeatIteration: null,
         repeatRowId: null,
-        showTitle: showTitle,
+        showTitle:
+            if showTitle != null then
+                showTitle
+            else
+                title != "Dashboard Row",
         title: title,
         titleSize: titleSize,
     },

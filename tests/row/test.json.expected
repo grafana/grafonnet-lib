@@ -35,5 +35,16 @@
       "showTitle": false,
       "title": "Dashboard Row",
       "titleSize": "h6"
+   },
+   "showTite": {
+      "collapse": false,
+      "height": "250px",
+      "panels": [ ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": true,
+      "title": "foo",
+      "titleSize": "h6"
    }
 }

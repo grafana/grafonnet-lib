@@ -16,7 +16,8 @@ done
 
 for i in tests/*/*.jsonnet
 do
-    json=$(dirname $i)/$( basename $i .jsonnet ).json
+    json=$(dirname $i)/.$( basename $i .jsonnet ).json
+    json_e=$(dirname $i)/$( basename $i .jsonnet ).json.expected
     t="Compiling $i..."
     if jsonnet  -J . $i > $json
     then
@@ -27,10 +28,10 @@ do
         continue
     fi
 
-    if [[ $1 == "update" ]]; then cp $json $json.expected; fi
+    if [[ $1 == "update" ]]; then cp $json $json_e; fi
 
     t="Checking $i..."
-    if diff $json $json.expected
+    if diff $json $json_e
     then
         echo $t OK
     else
