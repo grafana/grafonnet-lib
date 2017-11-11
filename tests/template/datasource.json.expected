@@ -1,0 +1,30 @@
+{
+   "advanced": {
+      "current": {
+         "text": "newtest-query",
+         "value": "newtest-query"
+      },
+      "hide": 2,
+      "label": "foo",
+      "name": "newhost",
+      "options": [ ],
+      "query": "newelastic",
+      "refresh": 2,
+      "regex": "prom.*",
+      "type": "datasource"
+   },
+   "basic": {
+      "current": {
+         "text": "Prometheus 1",
+         "value": "Prometheus 1"
+      },
+      "hide": 0,
+      "label": null,
+      "name": "prom",
+      "options": [ ],
+      "query": "prometheus",
+      "refresh": 1,
+      "regex": "",
+      "type": "datasource"
+   }
+}
