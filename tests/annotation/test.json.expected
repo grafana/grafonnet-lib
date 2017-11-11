@@ -1,0 +1,35 @@
+{
+   "advanced": {
+      "datasource": "advDS",
+      "enable": false,
+      "expr": "advExpr",
+      "hide": true,
+      "iconColor": "rgba(25, 6, 6, 2)",
+      "name": "newAdv",
+      "showIn": 0,
+      "tags": [
+         "foo"
+      ],
+      "type": "rows"
+   },
+   "basic": {
+      "datasource": "prom",
+      "enable": true,
+      "expr": "up",
+      "hide": false,
+      "iconColor": "rgba(255, 96, 96, 1)",
+      "name": "basicname",
+      "showIn": 0,
+      "tags": [ ],
+      "type": "tags"
+   },
+   "def": {
+      "builtIn": 1,
+      "datasource": "-- Grafana --",
+      "enable": true,
+      "hide": true,
+      "iconColor": "rgba(0, 211, 255, 1)",
+      "name": "Annotations & Alerts",
+      "type": "dashboard"
+   }
+}
