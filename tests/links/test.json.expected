@@ -1,0 +1,25 @@
+{
+   "advance": {
+      "asDropdown": false,
+      "icon": "external link",
+      "includeVars": true,
+      "keepTime": true,
+      "tags": [
+         "advanced"
+      ],
+      "title": "adv",
+      "type": "dashboards"
+   },
+   "basic": {
+      "asDropdown": true,
+      "icon": "external link",
+      "includeVars": false,
+      "keepTime": false,
+      "tags": [
+         "nodes",
+         "system"
+      ],
+      "title": "node",
+      "type": "dashboards"
+   }
+}
