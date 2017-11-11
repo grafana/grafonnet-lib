@@ -1,9 +1,9 @@
 local grafana = import "grafonnet/grafana.libsonnet";
-local links = grafana.links;
+local link = grafana.link;
 
 {
-    basic: links.dashboards("node", ["nodes", "system"]),
-    advance: links.dashboards(
+    basic: link.dashboards("node", ["nodes", "system"]),
+    advance: link.dashboards(
         "adv",
         ["advanced"],
         asDropdown=false,
