@@ -1,4 +1,35 @@
 {
+    /**
+     * Returns a new graph panel that can be added in a row.
+     * It requires the graph panel plugin in grafana, which is built-in.
+     *
+     * @param title The title of the graph panel.
+     * @param span Width of the panel
+     * @param id ID of the panel. If null, not added to the json output.
+     * @param fill Fill, integer from 0 to 10
+     * @param linewidth Line Width, integer from 0 to 10
+     * @param decimals Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
+     * @param min_span Min span
+     * @param format Unit of the Y axes
+     * @param min Min of the Y axes
+     * @param max Max of the Y axes
+     * @param lines Display lines, boolean
+     * @param points Display points, boolean
+     * @param bars Display bars, boolean
+     * @param dashes Display line as dashes
+     * @param stack Stack values
+     * @param repeat Variable used to repeat the graph panel
+     * @param legend_show Show legend
+     * @param legend_values Show values in legend
+     * @param legend_min Show min in legend
+     * @param legend_max Show max in legend
+     * @param legend_current Show current in legend
+     * @param legend_total Show total in legend
+     * @param legend_avg Show average in legend
+     * @param legend_alignAsTable Show legend as table
+     * @param legend_rightSide Show legend to the right
+     * @return A json that represents a graph panel
+     */
     new(
         title,
         span=12,
