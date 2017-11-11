@@ -1,6 +1,9 @@
 {
    "annotations": {
-      "list": [ ]
+      "list": [
+         "foo",
+         "bar"
+      ]
    },
    "editable": false,
    "gnetId": null,
