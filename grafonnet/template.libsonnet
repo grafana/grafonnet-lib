@@ -16,25 +16,14 @@
             allValue: allValues,
             current: $.current(current),
             datasource: datasource,
-            hide: if hide == "" then 0 else if hide == "label" then 1 else 2,
             includeAll: includeAll,
+            hide: $.hide(hide),
             label: label,
             multi: multi,
             name: name,
             options: [],
             query: query,
-            refresh: if refresh == "never"
-            then
-                0
-            else if refresh == "load"
-            then
-                1
-            else if refresh == "time"
-            then
-                2
-            else
-                refresh
-            ,
+            refresh: $.refresh(refresh),
             regex: "",
             sort: 0,
             tagValuesQuery: tagValuesQuery,
@@ -64,6 +53,8 @@
             auto_count: auto_count,
             auto_min: auto_min,
         },
+    hide(hide)::
+        if hide == "" then 0 else if hide == "label" then 1 else 2,
     current(current):: {
         [if current != null then "text"]: current,
         [if current != null then "value"]: if current == "auto" then
@@ -73,4 +64,34 @@
         else
             current,
     },
+    datasource(
+        name,
+        query,
+        current,
+        hide="",
+        label=null,
+        regex="",
+        refresh="load",
+    ):: {
+        current: $.current(current),
+        hide: $.hide(hide),
+        label: label,
+        name: name,
+        options: [],
+        query: query,
+        refresh: $.refresh(refresh),
+        regex: regex,
+        type: "datasource",
+    },
+    refresh(refresh):: if refresh == "never"
+    then
+        0
+    else if refresh == "load"
+    then
+        1
+    else if refresh == "time"
+    then
+        2
+    else
+        refresh,
 }
