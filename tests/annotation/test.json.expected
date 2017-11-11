@@ -15,7 +15,6 @@
    "basic": {
       "datasource": "prom",
       "enable": true,
-      "expr": "up",
       "hide": false,
       "iconColor": "rgba(255, 96, 96, 1)",
       "name": "basicname",

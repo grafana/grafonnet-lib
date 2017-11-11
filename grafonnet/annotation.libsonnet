@@ -11,8 +11,8 @@
         },
     datasource(
         name,
-        expr,
         datasource,
+        expr=null,
         enable=true,
         hide=false,
         iconColor="rgba(255, 96, 96, 1)",
@@ -22,7 +22,7 @@
         {
             datasource: datasource,
             enable: enable,
-            expr: expr,
+            [if expr != null then "expr"]: expr,
             hide: hide,
             iconColor: iconColor,
             name: name,
