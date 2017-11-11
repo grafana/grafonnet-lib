@@ -3,11 +3,11 @@ local annotation = grafana.annotation;
 
 {
     def: annotation.default,
-    basic: annotation.datasource("basicname", "up", "prom"),
+    basic: annotation.datasource("basicname", "prom"),
     advanced: annotation.datasource(
         "newAdv",
-        "advExpr",
         "advDS",
+        expr="advExpr",
         enable=false,
         hide=true,
         iconColor="rgba(25, 6, 6, 2)",
