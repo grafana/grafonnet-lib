@@ -10,7 +10,10 @@
    "graphTooltip": 0,
    "hideControls": false,
    "id": null,
-   "links": [ ],
+   "links": [
+      "foolinks",
+      "barlinks"
+   ],
    "refresh": "off",
    "rows": [
       {
