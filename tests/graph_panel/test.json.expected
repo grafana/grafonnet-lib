@@ -4,7 +4,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": true,
-      "datasource": null,
+      "datasource": "$PROMETHEUS",
       "decimals": 2,
       "fill": 2,
       "id": 2,
