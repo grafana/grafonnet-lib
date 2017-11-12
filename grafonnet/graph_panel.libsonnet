@@ -5,6 +5,7 @@
      *
      * @param title The title of the graph panel.
      * @param span Width of the panel
+     * @param datasource Datasource
      * @param id ID of the panel. If null, not added to the json output.
      * @param fill Fill, integer from 0 to 10
      * @param linewidth Line Width, integer from 0 to 10
@@ -42,6 +43,7 @@
         min=null,
         max=null,
         lines=true,
+        datasource=null,
         points=false,
         bars=false,
         dashes=false,
@@ -63,7 +65,7 @@
         [if min_span != null then "minSpan"]: min_span,
         [if decimals != null then "decimals"]: decimals,
         type: "graph",
-        datasource: null,
+        datasource: datasource,
         targets: [
         ],
         renderer: "flot",
