@@ -57,7 +57,7 @@
       "thresholds": "",
       "title": "adv",
       "type": "singlestat",
-      "valueFontSize": "80%",
+      "valueFontSize": "50%",
       "valueMaps": [
          {
             "op": "=",
