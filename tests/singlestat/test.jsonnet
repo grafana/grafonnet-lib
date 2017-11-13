@@ -16,6 +16,7 @@ local singlestat = grafana.singlestat;
         interval="10s",
         datasource="prom1",
         span=1,
+        valueFontSize="50%",
         valueName="current",
     ),
 }

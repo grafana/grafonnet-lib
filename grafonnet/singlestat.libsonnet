@@ -7,6 +7,7 @@
         datasource=null,
         span=12,
         valueName="avg",
+        valueFontSize="80%",
     )::
         {
             [if id != null then "id"]: id,
@@ -52,7 +53,7 @@
             nullPointMode: "connected",
             valueName: valueName,
             prefixFontSize: "50%",
-            valueFontSize: "80%",
+            valueFontSize: valueFontSize,
             postfixFontSize: "50%",
             thresholds: "",
             colorBackground: false,
