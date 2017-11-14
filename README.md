@@ -55,15 +55,43 @@ As you build your own mixins/dashboards, you should add additional `-J` paths.
 
 ## Examples
 
-Empty dashboard:
+Simple dashboard:
 
 ```jsonnet
-local grafana = import "grafonnet/grafana.libsonnet";
+local grafana = import "lib/grafana.libsonnet";
+local dashboard = grafana.dashboard;
+local row = grafana.row;
+local singlestat = grafana.singlestat;
+local prometheus = grafana.prometheus;
 
-grafana.dashboard.new("test")
+dashboard.new(
+    "JVM",
+    tags=["java"],
+)
++ dashboard.addRow(
+    row.new(id=2)
+    + row.addPanel(
+        singlestat.new(
+            "uptime",
+            format="s",
+            datasource="Prometheus",
+            id=3,
+            span=2,
+            valueName="current",
+        )
+        + singlestat.addTarget(
+            prometheus.target(
+                "time()-process_start_time_seconds{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+            )
+        )
+    )
+)
 ```
+
+Find more examples in the [examples](examples/) directory.
 
 
 [brew]:https://brew.sh/
 [jsonnet]:http://jsonnet.org/
 [jsonnetgh]:https://github.com/google/jsonnet
+

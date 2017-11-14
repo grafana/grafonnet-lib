@@ -1,0 +1,1224 @@
+{
+   "annotations": {
+      "list": [
+         {
+            "datasource": "-- Grafana --",
+            "enable": false,
+            "hide": false,
+            "iconColor": "rgba(255, 96, 96, 1)",
+            "name": "Ansible",
+            "showIn": 0,
+            "tags": [
+               "ansible"
+            ],
+            "type": "tags"
+         },
+         {
+            "datasource": "-- Grafana --",
+            "enable": false,
+            "hide": false,
+            "iconColor": "rgba(255, 96, 96, 1)",
+            "name": "Support",
+            "showIn": 0,
+            "tags": [
+               "support"
+            ],
+            "type": "tags"
+         }
+      ]
+   },
+   "editable": false,
+   "gnetId": null,
+   "graphTooltip": 0,
+   "hideControls": false,
+   "id": null,
+   "links": [
+      {
+         "asDropdown": true,
+         "icon": "external link",
+         "includeVars": false,
+         "keepTime": false,
+         "tags": [
+            "node"
+         ],
+         "title": "System",
+         "type": "dashboards"
+      },
+      {
+         "asDropdown": true,
+         "icon": "external link",
+         "includeVars": false,
+         "keepTime": false,
+         "tags": [
+            "prometheus"
+         ],
+         "title": "Prometheus",
+         "type": "dashboards"
+      },
+      {
+         "asDropdown": true,
+         "icon": "external link",
+         "includeVars": false,
+         "keepTime": false,
+         "tags": [
+            "apache"
+         ],
+         "title": "Apache",
+         "type": "dashboards"
+      }
+   ],
+   "refresh": "1m",
+   "rows": [
+      {
+         "collapse": false,
+         "height": "125px",
+         "id": 8,
+         "panels": [
+            {
+               "cacheTimeout": null,
+               "colorBackground": false,
+               "colorValue": false,
+               "colors": [
+                  "#299c46",
+                  "rgba(237, 129, 40, 0.89)",
+                  "#d44a3a"
+               ],
+               "datasource": "-- Mixed --",
+               "format": "s",
+               "gauge": {
+                  "maxValue": 100,
+                  "minValue": 0,
+                  "show": false,
+                  "thresholdLabels": false,
+                  "thresholdMarkers": true
+               },
+               "id": 30,
+               "interval": null,
+               "links": [ ],
+               "mappingType": 1,
+               "mappingTypes": [
+                  {
+                     "name": "value to text",
+                     "value": 1
+                  },
+                  {
+                     "name": "range to text",
+                     "value": 2
+                  }
+               ],
+               "maxDataPoints": 100,
+               "nullPointMode": "connected",
+               "nullText": null,
+               "postfix": "",
+               "postfixFontSize": "50%",
+               "prefix": "",
+               "prefixFontSize": "50%",
+               "rangeMaps": [
+                  {
+                     "from": "null",
+                     "text": "N/A",
+                     "to": "null"
+                  }
+               ],
+               "span": 2,
+               "sparkline": {
+                  "fillColor": "rgba(31, 118, 189, 0.18)",
+                  "full": false,
+                  "lineColor": "rgb(31, 120, 193)",
+                  "show": false
+               },
+               "tableColumn": "",
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "time()-process_start_time_seconds{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": ""
+                  }
+               ],
+               "thresholds": "",
+               "title": "uptime",
+               "type": "singlestat",
+               "valueFontSize": "80%",
+               "valueMaps": [
+                  {
+                     "op": "=",
+                     "text": "N/A",
+                     "value": "null"
+                  }
+               ],
+               "valueName": "current"
+            },
+            {
+               "cacheTimeout": null,
+               "colorBackground": false,
+               "colorValue": false,
+               "colors": [
+                  "#299c46",
+                  "rgba(237, 129, 40, 0.89)",
+                  "#d44a3a"
+               ],
+               "datasource": "-- Mixed --",
+               "format": "s",
+               "gauge": {
+                  "maxValue": 100,
+                  "minValue": 0,
+                  "show": false,
+                  "thresholdLabels": false,
+                  "thresholdMarkers": true
+               },
+               "id": 31,
+               "interval": null,
+               "links": [ ],
+               "mappingType": 1,
+               "mappingTypes": [
+                  {
+                     "name": "value to text",
+                     "value": 1
+                  },
+                  {
+                     "name": "range to text",
+                     "value": 2
+                  }
+               ],
+               "maxDataPoints": 100,
+               "nullPointMode": "connected",
+               "nullText": null,
+               "postfix": "",
+               "postfixFontSize": "50%",
+               "prefix": "",
+               "prefixFontSize": "50%",
+               "rangeMaps": [
+                  {
+                     "from": "null",
+                     "text": "N/A",
+                     "to": "null"
+                  }
+               ],
+               "span": 2,
+               "sparkline": {
+                  "fillColor": "rgba(31, 118, 189, 0.18)",
+                  "full": false,
+                  "lineColor": "rgb(31, 120, 193)",
+                  "show": false
+               },
+               "tableColumn": "",
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_info{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "{{vendor}}"
+                  }
+               ],
+               "thresholds": "",
+               "title": "JVM vendor",
+               "type": "singlestat",
+               "valueFontSize": "50%",
+               "valueMaps": [
+                  {
+                     "op": "=",
+                     "text": "N/A",
+                     "value": "null"
+                  }
+               ],
+               "valueName": "name"
+            },
+            {
+               "cacheTimeout": null,
+               "colorBackground": false,
+               "colorValue": false,
+               "colors": [
+                  "#299c46",
+                  "rgba(237, 129, 40, 0.89)",
+                  "#d44a3a"
+               ],
+               "datasource": "-- Mixed --",
+               "format": "s",
+               "gauge": {
+                  "maxValue": 100,
+                  "minValue": 0,
+                  "show": false,
+                  "thresholdLabels": false,
+                  "thresholdMarkers": true
+               },
+               "id": 32,
+               "interval": null,
+               "links": [ ],
+               "mappingType": 1,
+               "mappingTypes": [
+                  {
+                     "name": "value to text",
+                     "value": 1
+                  },
+                  {
+                     "name": "range to text",
+                     "value": 2
+                  }
+               ],
+               "maxDataPoints": 100,
+               "nullPointMode": "connected",
+               "nullText": null,
+               "postfix": "",
+               "postfixFontSize": "50%",
+               "prefix": "",
+               "prefixFontSize": "50%",
+               "rangeMaps": [
+                  {
+                     "from": "null",
+                     "text": "N/A",
+                     "to": "null"
+                  }
+               ],
+               "span": 4,
+               "sparkline": {
+                  "fillColor": "rgba(31, 118, 189, 0.18)",
+                  "full": false,
+                  "lineColor": "rgb(31, 120, 193)",
+                  "show": false
+               },
+               "tableColumn": "",
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_info{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "{{version}}"
+                  }
+               ],
+               "thresholds": "",
+               "title": "JVM version",
+               "type": "singlestat",
+               "valueFontSize": "50%",
+               "valueMaps": [
+                  {
+                     "op": "=",
+                     "text": "N/A",
+                     "value": "null"
+                  }
+               ],
+               "valueName": "name"
+            },
+            {
+               "cacheTimeout": null,
+               "colorBackground": false,
+               "colorValue": false,
+               "colors": [
+                  "#299c46",
+                  "rgba(237, 129, 40, 0.89)",
+                  "#d44a3a"
+               ],
+               "datasource": "-- Mixed --",
+               "format": "short",
+               "gauge": {
+                  "maxValue": 100,
+                  "minValue": 0,
+                  "show": false,
+                  "thresholdLabels": false,
+                  "thresholdMarkers": true
+               },
+               "id": 34,
+               "interval": null,
+               "links": [ ],
+               "mappingType": 1,
+               "mappingTypes": [
+                  {
+                     "name": "value to text",
+                     "value": 1
+                  },
+                  {
+                     "name": "range to text",
+                     "value": 2
+                  }
+               ],
+               "maxDataPoints": 100,
+               "nullPointMode": "connected",
+               "nullText": null,
+               "postfix": "",
+               "postfixFontSize": "50%",
+               "prefix": "",
+               "prefixFontSize": "50%",
+               "rangeMaps": [
+                  {
+                     "from": "null",
+                     "text": "N/A",
+                     "to": "null"
+                  }
+               ],
+               "span": 2,
+               "sparkline": {
+                  "fillColor": "rgba(31, 118, 189, 0.18)",
+                  "full": false,
+                  "lineColor": "rgb(31, 120, 193)",
+                  "show": false
+               },
+               "tableColumn": "",
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_classes_loaded{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "{{version}}"
+                  }
+               ],
+               "thresholds": "",
+               "title": "Classes loaded",
+               "type": "singlestat",
+               "valueFontSize": "80%",
+               "valueMaps": [
+                  {
+                     "op": "=",
+                     "text": "N/A",
+                     "value": "null"
+                  }
+               ],
+               "valueName": "current"
+            }
+         ],
+         "repeat": null,
+         "repeatIteration": null,
+         "repeatRowId": null,
+         "showTitle": false,
+         "title": "Dashboard Row",
+         "titleSize": "h6"
+      },
+      {
+         "collapse": false,
+         "height": "250px",
+         "id": 1,
+         "panels": [
+            {
+               "aliasColors": { },
+               "bars": false,
+               "dashLength": 10,
+               "dashes": false,
+               "datasource": "-- Mixed --",
+               "decimals": 2,
+               "fill": 0,
+               "id": 2,
+               "legend": {
+                  "alignAsTable": true,
+                  "avg": true,
+                  "current": true,
+                  "max": true,
+                  "min": true,
+                  "rightSide": false,
+                  "show": true,
+                  "total": false,
+                  "values": true
+               },
+               "lines": true,
+               "linewidth": 1,
+               "nullPointMode": "null",
+               "percentage": false,
+               "pointradius": 5,
+               "points": false,
+               "renderer": "flot",
+               "repeat": null,
+               "seriesOverrides": [ ],
+               "spaceLength": 10,
+               "span": 6,
+               "stack": false,
+               "steppedLine": false,
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_memory_bytes_max{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"heap\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "max"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_memory_bytes_used{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"heap\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "used"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_memory_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"heap\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "committed"
+                  }
+               ],
+               "thresholds": [ ],
+               "timeFrom": null,
+               "timeShift": null,
+               "title": "JVM Memory Heap",
+               "tooltip": {
+                  "shared": true,
+                  "sort": 0,
+                  "value_type": "individual"
+               },
+               "type": "graph",
+               "xaxis": {
+                  "buckets": null,
+                  "mode": "time",
+                  "name": null,
+                  "show": true,
+                  "values": [ ]
+               },
+               "yaxes": [
+                  {
+                     "format": "bytes",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  },
+                  {
+                     "format": "bytes",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  }
+               ]
+            },
+            {
+               "aliasColors": { },
+               "bars": false,
+               "dashLength": 10,
+               "dashes": false,
+               "datasource": "-- Mixed --",
+               "decimals": 2,
+               "fill": 0,
+               "id": 3,
+               "legend": {
+                  "alignAsTable": true,
+                  "avg": true,
+                  "current": true,
+                  "max": true,
+                  "min": true,
+                  "rightSide": false,
+                  "show": true,
+                  "total": false,
+                  "values": true
+               },
+               "lines": true,
+               "linewidth": 1,
+               "nullPointMode": "null",
+               "percentage": false,
+               "pointradius": 5,
+               "points": false,
+               "renderer": "flot",
+               "repeat": null,
+               "seriesOverrides": [ ],
+               "spaceLength": 10,
+               "span": 6,
+               "stack": false,
+               "steppedLine": false,
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_memory_bytes_max{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"nonheap\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "max"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_memory_bytes_used{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"nonheap\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "used"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_memory_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"nonheap\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "committed"
+                  }
+               ],
+               "thresholds": [ ],
+               "timeFrom": null,
+               "timeShift": null,
+               "title": "JVM Memory Non-Heap",
+               "tooltip": {
+                  "shared": true,
+                  "sort": 0,
+                  "value_type": "individual"
+               },
+               "type": "graph",
+               "xaxis": {
+                  "buckets": null,
+                  "mode": "time",
+                  "name": null,
+                  "show": true,
+                  "values": [ ]
+               },
+               "yaxes": [
+                  {
+                     "format": "bytes",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  },
+                  {
+                     "format": "bytes",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  }
+               ]
+            }
+         ],
+         "repeat": null,
+         "repeatIteration": null,
+         "repeatRowId": null,
+         "showTitle": true,
+         "title": "Memory",
+         "titleSize": "h6"
+      },
+      {
+         "collapse": false,
+         "height": "250px",
+         "id": 2,
+         "panels": [
+            {
+               "aliasColors": { },
+               "bars": false,
+               "dashLength": 10,
+               "dashes": false,
+               "datasource": "-- Mixed --",
+               "decimals": 2,
+               "fill": 0,
+               "id": 25,
+               "legend": {
+                  "alignAsTable": true,
+                  "avg": true,
+                  "current": true,
+                  "max": true,
+                  "min": true,
+                  "rightSide": false,
+                  "show": true,
+                  "total": false,
+                  "values": true
+               },
+               "lines": true,
+               "linewidth": 1,
+               "minSpan": 6,
+               "nullPointMode": "null",
+               "percentage": false,
+               "pointradius": 5,
+               "points": false,
+               "renderer": "flot",
+               "repeat": "pool",
+               "seriesOverrides": [ ],
+               "spaceLength": 10,
+               "span": 6,
+               "stack": false,
+               "steppedLine": false,
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_memory_pool_bytes_max{env=\"$env\",job=\"$job\",instance=\"$instance\",pool=\"$pool\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "max"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_memory_pool_bytes_used{env=\"$env\",job=\"$job\",instance=\"$instance\",pool=\"$pool\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "used"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_memory_pool_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\",pool=\"$pool\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "committed"
+                  }
+               ],
+               "thresholds": [ ],
+               "timeFrom": null,
+               "timeShift": null,
+               "title": "Memory $pool",
+               "tooltip": {
+                  "shared": true,
+                  "sort": 0,
+                  "value_type": "individual"
+               },
+               "type": "graph",
+               "xaxis": {
+                  "buckets": null,
+                  "mode": "time",
+                  "name": null,
+                  "show": true,
+                  "values": [ ]
+               },
+               "yaxes": [
+                  {
+                     "format": "bytes",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  },
+                  {
+                     "format": "bytes",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  }
+               ]
+            }
+         ],
+         "repeat": null,
+         "repeatIteration": null,
+         "repeatRowId": null,
+         "showTitle": true,
+         "title": "Memory pools",
+         "titleSize": "h6"
+      },
+      {
+         "collapse": false,
+         "height": "250px",
+         "id": 2,
+         "panels": [
+            {
+               "aliasColors": { },
+               "bars": false,
+               "dashLength": 10,
+               "dashes": false,
+               "datasource": "-- Mixed --",
+               "decimals": 2,
+               "fill": 0,
+               "id": 15,
+               "legend": {
+                  "alignAsTable": true,
+                  "avg": true,
+                  "current": true,
+                  "max": true,
+                  "min": true,
+                  "rightSide": false,
+                  "show": true,
+                  "total": false,
+                  "values": true
+               },
+               "lines": true,
+               "linewidth": 1,
+               "minSpan": 6,
+               "nullPointMode": "null",
+               "percentage": false,
+               "pointradius": 5,
+               "points": false,
+               "renderer": "flot",
+               "repeat": null,
+               "seriesOverrides": [ ],
+               "spaceLength": 10,
+               "span": 6,
+               "stack": false,
+               "steppedLine": false,
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "increase(jvm_gc_collection_seconds_count{env=\"$env\",job=\"$job\",instance=\"$instance\",gc=\"$gc\"}[5m])",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "Garbage collections per 5m"
+                  }
+               ],
+               "thresholds": [ ],
+               "timeFrom": null,
+               "timeShift": null,
+               "title": "Number of garbage collection",
+               "tooltip": {
+                  "shared": true,
+                  "sort": 0,
+                  "value_type": "individual"
+               },
+               "type": "graph",
+               "xaxis": {
+                  "buckets": null,
+                  "mode": "time",
+                  "name": null,
+                  "show": true,
+                  "values": [ ]
+               },
+               "yaxes": [
+                  {
+                     "format": "short",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  },
+                  {
+                     "format": "short",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  }
+               ]
+            },
+            {
+               "aliasColors": { },
+               "bars": false,
+               "dashLength": 10,
+               "dashes": false,
+               "datasource": "-- Mixed --",
+               "decimals": 2,
+               "fill": 0,
+               "id": 16,
+               "legend": {
+                  "alignAsTable": true,
+                  "avg": true,
+                  "current": true,
+                  "max": true,
+                  "min": true,
+                  "rightSide": false,
+                  "show": true,
+                  "total": false,
+                  "values": true
+               },
+               "lines": true,
+               "linewidth": 1,
+               "minSpan": 6,
+               "nullPointMode": "null",
+               "percentage": false,
+               "pointradius": 5,
+               "points": false,
+               "renderer": "flot",
+               "repeat": null,
+               "seriesOverrides": [ ],
+               "spaceLength": 10,
+               "span": 6,
+               "stack": false,
+               "steppedLine": false,
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "rate(jvm_gc_collection_seconds_sum{env=\"$env\",job=\"$job\",instance=\"$instance\",gc=\"$gc\"}[5m])/rate(jvm_gc_collection_seconds_count{env=\"$env\",job=\"$job\",instance=\"$instance\",gc=\"$gc\"}[5m])",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "Avg of garbage Collection duration per 5m"
+                  }
+               ],
+               "thresholds": [ ],
+               "timeFrom": null,
+               "timeShift": null,
+               "title": "Duration of garbage collection",
+               "tooltip": {
+                  "shared": true,
+                  "sort": 0,
+                  "value_type": "individual"
+               },
+               "type": "graph",
+               "xaxis": {
+                  "buckets": null,
+                  "mode": "time",
+                  "name": null,
+                  "show": true,
+                  "values": [ ]
+               },
+               "yaxes": [
+                  {
+                     "format": "s",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  },
+                  {
+                     "format": "s",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  }
+               ]
+            }
+         ],
+         "repeat": "gc",
+         "repeatIteration": null,
+         "repeatRowId": null,
+         "showTitle": true,
+         "title": "Garbage Collection: $gc",
+         "titleSize": "h6"
+      },
+      {
+         "collapse": false,
+         "height": "250px",
+         "id": 5,
+         "panels": [
+            {
+               "aliasColors": { },
+               "bars": false,
+               "dashLength": 10,
+               "dashes": false,
+               "datasource": "-- Mixed --",
+               "decimals": 2,
+               "fill": 0,
+               "id": 5,
+               "legend": {
+                  "alignAsTable": true,
+                  "avg": true,
+                  "current": true,
+                  "max": true,
+                  "min": true,
+                  "rightSide": false,
+                  "show": true,
+                  "total": false,
+                  "values": true
+               },
+               "lines": true,
+               "linewidth": 1,
+               "minSpan": 6,
+               "nullPointMode": "null",
+               "percentage": false,
+               "pointradius": 5,
+               "points": false,
+               "renderer": "flot",
+               "repeat": null,
+               "seriesOverrides": [ ],
+               "spaceLength": 10,
+               "span": 6,
+               "stack": false,
+               "steppedLine": false,
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_threads_peak{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "Peak thread count"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_threads_current{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "Current thread count"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_threads_daemon{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "Daemon thread count"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_threads_deadlocked{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "Cycles of JVM-threads that are in deadlock waiting to acquire object monitors or ownable synchronizers"
+                  },
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "jvm_threads_deadlocked_monitor{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "Cycles of JVM-threads that are in deadlock waiting to acquire object monitors"
+                  }
+               ],
+               "thresholds": [ ],
+               "timeFrom": null,
+               "timeShift": null,
+               "title": "Thread count",
+               "tooltip": {
+                  "shared": true,
+                  "sort": 0,
+                  "value_type": "individual"
+               },
+               "type": "graph",
+               "xaxis": {
+                  "buckets": null,
+                  "mode": "time",
+                  "name": null,
+                  "show": true,
+                  "values": [ ]
+               },
+               "yaxes": [
+                  {
+                     "format": "short",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  },
+                  {
+                     "format": "short",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  }
+               ]
+            },
+            {
+               "aliasColors": { },
+               "bars": false,
+               "dashLength": 10,
+               "dashes": false,
+               "datasource": "-- Mixed --",
+               "decimals": 2,
+               "fill": 0,
+               "id": 6,
+               "legend": {
+                  "alignAsTable": true,
+                  "avg": true,
+                  "current": true,
+                  "max": true,
+                  "min": true,
+                  "rightSide": false,
+                  "show": true,
+                  "total": false,
+                  "values": true
+               },
+               "lines": true,
+               "linewidth": 1,
+               "minSpan": 6,
+               "nullPointMode": "null",
+               "percentage": false,
+               "pointradius": 5,
+               "points": false,
+               "renderer": "flot",
+               "repeat": null,
+               "seriesOverrides": [ ],
+               "spaceLength": 10,
+               "span": 6,
+               "stack": false,
+               "steppedLine": false,
+               "targets": [
+                  {
+                     "datasource": "$PROMETHEUS_DS",
+                     "expr": "rate(jvm_threads_started_total{env=\"$env\",job=\"$job\",instance=\"$instance\"}[5m])",
+                     "format": "time_series",
+                     "intervalFactor": 2,
+                     "legendFormat": "Started threads rate"
+                  }
+               ],
+               "thresholds": [ ],
+               "timeFrom": null,
+               "timeShift": null,
+               "title": "New threads",
+               "tooltip": {
+                  "shared": true,
+                  "sort": 0,
+                  "value_type": "individual"
+               },
+               "type": "graph",
+               "xaxis": {
+                  "buckets": null,
+                  "mode": "time",
+                  "name": null,
+                  "show": true,
+                  "values": [ ]
+               },
+               "yaxes": [
+                  {
+                     "format": "short",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  },
+                  {
+                     "format": "short",
+                     "label": null,
+                     "logBase": 1,
+                     "max": null,
+                     "min": 0,
+                     "show": true
+                  }
+               ]
+            }
+         ],
+         "repeat": null,
+         "repeatIteration": null,
+         "repeatRowId": null,
+         "showTitle": true,
+         "title": "Threads",
+         "titleSize": "h6"
+      }
+   ],
+   "schemaVersion": 14,
+   "style": "dark",
+   "tags": [
+      "java"
+   ],
+   "templating": {
+      "list": [
+         {
+            "current": {
+               "text": "Prometheus",
+               "value": "Prometheus"
+            },
+            "hide": 1,
+            "label": null,
+            "name": "PROMETHEUS_DS",
+            "options": [ ],
+            "query": "prometheus",
+            "refresh": 1,
+            "regex": "",
+            "type": "datasource"
+         },
+         {
+            "allValue": null,
+            "current": { },
+            "datasource": "$PROMETHEUS_DS",
+            "hide": 0,
+            "includeAll": false,
+            "label": "Environment",
+            "multi": false,
+            "name": "env",
+            "options": [ ],
+            "query": "label_values(jvm_threads_current, env)",
+            "refresh": 2,
+            "regex": "",
+            "sort": 0,
+            "tagValuesQuery": "",
+            "tags": [ ],
+            "tagsQuery": "",
+            "type": "query",
+            "useTags": false
+         },
+         {
+            "allValue": null,
+            "current": { },
+            "datasource": "$PROMETHEUS_DS",
+            "hide": 0,
+            "includeAll": false,
+            "label": "Job",
+            "multi": false,
+            "name": "job",
+            "options": [ ],
+            "query": "label_values(jvm_threads_current{env=\"$env\"}, job)",
+            "refresh": 2,
+            "regex": "",
+            "sort": 0,
+            "tagValuesQuery": "",
+            "tags": [ ],
+            "tagsQuery": "",
+            "type": "query",
+            "useTags": false
+         },
+         {
+            "allValue": null,
+            "current": { },
+            "datasource": "$PROMETHEUS_DS",
+            "hide": 0,
+            "includeAll": false,
+            "label": "Instance",
+            "multi": false,
+            "name": "instance",
+            "options": [ ],
+            "query": "label_values(jvm_threads_current{env=\"$env\",job=\"$job\"}, instance)",
+            "refresh": 2,
+            "regex": "",
+            "sort": 0,
+            "tagValuesQuery": "",
+            "tags": [ ],
+            "tagsQuery": "",
+            "type": "query",
+            "useTags": false
+         },
+         {
+            "allValue": null,
+            "current": {
+               "text": "all",
+               "value": "$__all"
+            },
+            "datasource": "$PROMETHEUS_DS",
+            "hide": 2,
+            "includeAll": true,
+            "label": "Instance",
+            "multi": true,
+            "name": "gc",
+            "options": [ ],
+            "query": "label_values(jvm_gc_collection_seconds_count{env=\"$env\",job=\"$job\",instance=\"$instance\"}, gc)",
+            "refresh": 2,
+            "regex": "",
+            "sort": 0,
+            "tagValuesQuery": "",
+            "tags": [ ],
+            "tagsQuery": "",
+            "type": "query",
+            "useTags": false
+         },
+         {
+            "allValue": null,
+            "current": {
+               "text": "all",
+               "value": "$__all"
+            },
+            "datasource": "$PROMETHEUS_DS",
+            "hide": 2,
+            "includeAll": true,
+            "label": "Instance",
+            "multi": true,
+            "name": "pool",
+            "options": [ ],
+            "query": "label_values(jvm_memory_pool_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\"}, pool)",
+            "refresh": 2,
+            "regex": "",
+            "sort": 0,
+            "tagValuesQuery": "",
+            "tags": [ ],
+            "tagsQuery": "",
+            "type": "query",
+            "useTags": false
+         }
+      ]
+   },
+   "time": {
+      "from": "now-1h",
+      "to": "now"
+   },
+   "timepicker": {
+      "refresh_intervals": [
+         "5s",
+         "10s",
+         "30s",
+         "1m",
+         "5m",
+         "15m",
+         "30m",
+         "1h",
+         "2h",
+         "1d"
+      ],
+      "time_options": [
+         "5m",
+         "15m",
+         "1h",
+         "6h",
+         "12h",
+         "24h",
+         "2d",
+         "7d",
+         "30d"
+      ]
+   },
+   "timezone": "browser",
+   "title": "JVM",
+   "version": 0
+}
