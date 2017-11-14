@@ -14,10 +14,10 @@ do
     fi
 done
 
-for i in tests/*/*.jsonnet
+for i in tests/*/*.jsonnet examples/*.jsonnet
 do
-    json=$(dirname $i)/.$( basename $i .jsonnet ).json
-    json_e=$(dirname $i)/$( basename $i .jsonnet ).json.expected
+    json=$(dirname $i)/$( basename $i .jsonnet )_test_output.json
+    json_e=$(dirname $i)/$( basename $i .jsonnet )_compiled.json
     t="Compiling $i..."
     if jsonnet  -J . $i > $json
     then
