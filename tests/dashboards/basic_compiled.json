@@ -6,7 +6,7 @@
       "editable": true,
       "gnetId": null,
       "graphTooltip": 0,
-      "hideControls": false,
+      "hideControls": true,
       "id": null,
       "links": [ ],
       "refresh": "1m",
