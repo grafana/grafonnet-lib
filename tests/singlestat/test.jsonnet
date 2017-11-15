@@ -16,6 +16,7 @@ local singlestat = grafana.singlestat;
         interval="10s",
         datasource="prom1",
         span=1,
+        transparent=true,
         valueFontSize="50%",
         valueName="current",
         mappingType="range",

@@ -52,6 +52,7 @@
       "targets": [ ],
       "thresholds": "",
       "title": "adv",
+      "transparent": true,
       "type": "singlestat",
       "valueFontSize": "50%",
       "valueMaps": [
