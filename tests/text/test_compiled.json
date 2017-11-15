@@ -1,0 +1,18 @@
+{
+   "advanced": {
+      "content": "coocoo",
+      "id": 1,
+      "mode": "html",
+      "span": 5,
+      "title": "foo",
+      "transparent": true,
+      "type": "text"
+   },
+   "basic": {
+      "content": "",
+      "mode": "markdown",
+      "span": 12,
+      "title": "",
+      "type": "text"
+   }
+}

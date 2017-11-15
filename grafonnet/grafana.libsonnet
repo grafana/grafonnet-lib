@@ -1,6 +1,7 @@
 {
     dashboard:: import "dashboard.libsonnet",
     template:: import "template.libsonnet",
+    text:: import "text.libsonnet",
     timepicker:: import "timepicker.libsonnet",
     row:: import "row.libsonnet",
     link:: import "link.libsonnet",
