@@ -11,6 +11,7 @@ local timepickerlib = import "timepicker.libsonnet";
         timezone="browser",
         refresh="off",
         timepicker=timepickerlib.new(),
+        hideControls=false,
     ):: {
         _annotations:: [],
         annotations: {
@@ -19,7 +20,7 @@ local timepickerlib = import "timepicker.libsonnet";
         editable: editable,
         gnetId: null,
         graphTooltip: 0,
-        hideControls: false,
+        hideControls: hideControls,
         id: null,
         links: [],
         refresh: refresh,

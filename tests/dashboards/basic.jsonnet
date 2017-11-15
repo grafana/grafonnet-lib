@@ -13,5 +13,6 @@ local dashboard = grafana.dashboard;
         timezone="cet",
         refresh="1m",
         timepicker="hi",
+        hideControls=true,
     ),
 }
