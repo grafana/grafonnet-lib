@@ -8,6 +8,21 @@
         span=12,
         valueName="avg",
         valueFontSize="80%",
+        mappingType=1,
+        valueMaps=[
+            {
+                value: "null",
+                op: "=",
+                text: "N/A",
+            },
+        ],
+        rangeMaps=[
+            {
+                from: "null",
+                to: "null",
+                text: "N/A",
+            },
+        ],
     )::
         {
             [if id != null then "id"]: id,
@@ -25,13 +40,7 @@
             prefix: "",
             postfix: "",
             nullText: null,
-            valueMaps: [
-                {
-                    value: "null",
-                    op: "=",
-                    text: "N/A",
-                },
-            ],
+            valueMaps: valueMaps,
             mappingTypes: [
                 {
                     name: "value to text",
@@ -42,14 +51,16 @@
                     value: 2,
                 },
             ],
-            rangeMaps: [
-                {
-                    from: "null",
-                    to: "null",
-                    text: "N/A",
-                },
-            ],
-            mappingType: 1,
+            rangeMaps: rangeMaps,
+            mappingType:
+                if mappingType == "value"
+                then
+                    1
+                else if mappingType == "range"
+                then
+                    2
+                else
+                    mappingType,
             nullPointMode: "connected",
             valueName: valueName,
             prefixFontSize: "50%",
