@@ -12,7 +12,7 @@
       "refresh": "1m",
       "rows": [ ],
       "schemaVersion": 14,
-      "style": "dark",
+      "style": "light",
       "tags": [
          "foo"
       ],

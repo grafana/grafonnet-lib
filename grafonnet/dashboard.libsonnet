@@ -25,7 +25,7 @@ local timepickerlib = import "timepicker.libsonnet";
         refresh: refresh,
         rows: [],
         schemaVersion: 14,
-        style: "dark",
+        style: style,
         tags: tags,
         templating: {
             list: [],
