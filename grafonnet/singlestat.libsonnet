@@ -23,9 +23,11 @@
                 text: "N/A",
             },
         ],
+        transparent=null,
     )::
         {
             [if id != null then "id"]: id,
+            [if transparent != null then "transparent"]: transparent,
             title: title,
             span: span,
             type: "singlestat",
