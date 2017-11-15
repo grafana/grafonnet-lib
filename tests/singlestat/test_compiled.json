@@ -20,7 +20,7 @@
       "id": 1,
       "interval": "10s",
       "links": [ ],
-      "mappingType": 1,
+      "mappingType": 2,
       "mappingTypes": [
          {
             "name": "value to text",
@@ -39,11 +39,7 @@
       "prefix": "",
       "prefixFontSize": "50%",
       "rangeMaps": [
-         {
-            "from": "null",
-            "text": "N/A",
-            "to": "null"
-         }
+         "bar"
       ],
       "span": 1,
       "sparkline": {
@@ -59,11 +55,7 @@
       "type": "singlestat",
       "valueFontSize": "50%",
       "valueMaps": [
-         {
-            "op": "=",
-            "text": "N/A",
-            "value": "null"
-         }
+         "foo"
       ],
       "valueName": "current"
    },
@@ -194,6 +186,73 @@
       ],
       "thresholds": "",
       "title": "targets",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+         {
+            "op": "=",
+            "text": "N/A",
+            "value": "null"
+         }
+      ],
+      "valueName": "avg"
+   },
+   "value": {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+         "#299c46",
+         "rgba(237, 129, 40, 0.89)",
+         "#d44a3a"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+         "maxValue": 100,
+         "minValue": 0,
+         "show": false,
+         "thresholdLabels": false,
+         "thresholdMarkers": true
+      },
+      "interval": null,
+      "links": [ ],
+      "mappingType": 1,
+      "mappingTypes": [
+         {
+            "name": "value to text",
+            "value": 1
+         },
+         {
+            "name": "range to text",
+            "value": 2
+         }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+         {
+            "from": "null",
+            "text": "N/A",
+            "to": "null"
+         }
+      ],
+      "span": 12,
+      "sparkline": {
+         "fillColor": "rgba(31, 118, 189, 0.18)",
+         "full": false,
+         "lineColor": "rgb(31, 120, 193)",
+         "show": false
+      },
+      "tableColumn": "",
+      "targets": [ ],
+      "thresholds": "",
+      "title": "vv",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [

@@ -18,5 +18,12 @@ local singlestat = grafana.singlestat;
         span=1,
         valueFontSize="50%",
         valueName="current",
+        mappingType="range",
+        valueMaps=["foo"],
+        rangeMaps=["bar"],
+    ),
+    value: singlestat.new(
+        "vv",
+        mappingType="value",
     ),
 }
