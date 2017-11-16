@@ -53,6 +53,9 @@ local timepickerlib = import "timepicker.libsonnet";
     addRow(row):: {
         rows+: [row],
     },
+    addRows(rows):: {
+        rows+: rows,
+    },
     addLink(link):: {
         links+: [link],
     },
