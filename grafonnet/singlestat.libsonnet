@@ -6,6 +6,7 @@
         interval=null,
         datasource=null,
         span=12,
+        decimals=null,
         valueName="avg",
         valueFontSize="80%",
         mappingType=1,
@@ -35,6 +36,7 @@
             targets: [
             ],
             links: [],
+            [if decimals != null then "decimals"]: decimals,
             maxDataPoints: 100,
             interval: interval,
             cacheTimeout: null,
