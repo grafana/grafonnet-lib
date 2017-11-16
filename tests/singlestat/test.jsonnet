@@ -14,6 +14,7 @@ local singlestat = grafana.singlestat;
         id=1,
         format="s",
         interval="10s",
+        decimals=2,
         datasource="prom1",
         span=1,
         transparent=true,

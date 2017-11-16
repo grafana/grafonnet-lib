@@ -9,6 +9,7 @@
          "#d44a3a"
       ],
       "datasource": "prom1",
+      "decimals": 2,
       "format": "s",
       "gauge": {
          "maxValue": 100,
