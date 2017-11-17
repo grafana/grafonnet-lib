@@ -1,12 +1,12 @@
 {
    "advanced": {
       "cacheTimeout": null,
-      "colorBackground": false,
-      "colorValue": false,
+      "colorBackground": true,
+      "colorValue": true,
       "colors": [
-         "#299c46",
          "rgba(237, 129, 40, 0.89)",
-         "#d44a3a"
+         "#d44a3a",
+         "#299c46"
       ],
       "datasource": "prom1",
       "decimals": 2,
@@ -51,7 +51,7 @@
       },
       "tableColumn": "",
       "targets": [ ],
-      "thresholds": "",
+      "thresholds": "1,2",
       "title": "adv",
       "transparent": true,
       "type": "singlestat",

@@ -10,6 +10,14 @@
         valueName="avg",
         valueFontSize="80%",
         mappingType=1,
+        colors=[
+            "#299c46",
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a",
+        ],
+        colorBackground=false,
+        colorValue=false,
+        thresholds="",
         valueMaps=[
             {
                 value: "null",
@@ -70,14 +78,10 @@
             prefixFontSize: "50%",
             valueFontSize: valueFontSize,
             postfixFontSize: "50%",
-            thresholds: "",
-            colorBackground: false,
-            colorValue: false,
-            colors: [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a",
-            ],
+            thresholds: thresholds,
+            colorBackground: colorBackground,
+            colorValue: colorValue,
+            colors: colors,
             sparkline: {
                 show: false,
                 full: false,
