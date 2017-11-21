@@ -58,7 +58,7 @@ As you build your own mixins/dashboards, you should add additional `-J` paths.
 Simple dashboard:
 
 ```jsonnet
-local grafana = import "lib/grafana.libsonnet";
+local grafana = import "grafonnet/grafana.libsonnet";
 local dashboard = grafana.dashboard;
 local row = grafana.row;
 local singlestat = grafana.singlestat;
