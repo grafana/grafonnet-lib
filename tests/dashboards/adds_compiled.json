@@ -14,7 +14,7 @@
       "foolinks",
       "barlinks"
    ],
-   "refresh": "off",
+   "refresh": "",
    "rows": [
       {
          "collapse": false,

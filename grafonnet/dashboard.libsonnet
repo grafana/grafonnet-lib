@@ -9,7 +9,7 @@ local timepickerlib = import "timepicker.libsonnet";
         time_from="now-6h",
         time_to="now",
         timezone="browser",
-        refresh="off",
+        refresh="",
         timepicker=timepickerlib.new(),
         hideControls=false,
     ):: {
