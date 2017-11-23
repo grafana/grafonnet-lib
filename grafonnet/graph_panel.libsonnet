@@ -58,20 +58,21 @@
         legend_avg=false,
         legend_alignAsTable=false,
         legend_rightSide=false,
+        legend_hideEmpty=null,
+        legend_hideZero=null,
     ):: {
         [if id != null then "id"]: id,
         title: title,
         span: span,
         [if min_span != null then "minSpan"]: min_span,
-        [if decimals != null then "decimals"]: decimals,
         type: "graph",
         datasource: datasource,
         targets: [
         ],
         renderer: "flot",
         yaxes: [
-            $.yaxe(format, min, max),
-            $.yaxe(format, min, max),
+            $.yaxe(format, min, max, decimals=decimals),
+            $.yaxe(format, min, max, decimals=decimals),
         ],
         xaxis: {
             show: true,
@@ -101,6 +102,8 @@
             alignAsTable: legend_alignAsTable,
             rightSide: legend_rightSide,
             avg: legend_avg,
+            [if legend_hideEmpty != null then "legend_hideEmpty"]: legend_hideEmpty,
+            [if legend_hideEmpty != null then "legend_hideZero"]: legend_hideZero,
         },
         nullPointMode: "null",
         steppedLine: false,
@@ -122,7 +125,8 @@
         max=null,
         label=null,
         show=true,
-        logBase=1
+        logBase=1,
+        decimals=null,
     ):: {
         label: label,
         show: show,
@@ -130,6 +134,7 @@
         min: min,
         max: max,
         format: format,
+        [if decimals != null then "decimals"]: decimals,
     },
     addTarget(target):: {
         targets+: [target],
