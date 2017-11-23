@@ -397,7 +397,6 @@
                "dashLength": 10,
                "dashes": false,
                "datasource": "-- Mixed --",
-               "decimals": 2,
                "fill": 0,
                "id": 2,
                "legend": {
@@ -466,6 +465,7 @@
                },
                "yaxes": [
                   {
+                     "decimals": 2,
                      "format": "bytes",
                      "label": null,
                      "logBase": 1,
@@ -474,6 +474,7 @@
                      "show": true
                   },
                   {
+                     "decimals": 2,
                      "format": "bytes",
                      "label": null,
                      "logBase": 1,
@@ -489,7 +490,6 @@
                "dashLength": 10,
                "dashes": false,
                "datasource": "-- Mixed --",
-               "decimals": 2,
                "fill": 0,
                "id": 3,
                "legend": {
@@ -558,6 +558,7 @@
                },
                "yaxes": [
                   {
+                     "decimals": 2,
                      "format": "bytes",
                      "label": null,
                      "logBase": 1,
@@ -566,6 +567,7 @@
                      "show": true
                   },
                   {
+                     "decimals": 2,
                      "format": "bytes",
                      "label": null,
                      "logBase": 1,
@@ -594,7 +596,6 @@
                "dashLength": 10,
                "dashes": false,
                "datasource": "-- Mixed --",
-               "decimals": 2,
                "fill": 0,
                "id": 25,
                "legend": {
@@ -664,6 +665,7 @@
                },
                "yaxes": [
                   {
+                     "decimals": 2,
                      "format": "bytes",
                      "label": null,
                      "logBase": 1,
@@ -672,6 +674,7 @@
                      "show": true
                   },
                   {
+                     "decimals": 2,
                      "format": "bytes",
                      "label": null,
                      "logBase": 1,
@@ -700,7 +703,6 @@
                "dashLength": 10,
                "dashes": false,
                "datasource": "-- Mixed --",
-               "decimals": 2,
                "fill": 0,
                "id": 15,
                "legend": {
@@ -756,6 +758,7 @@
                },
                "yaxes": [
                   {
+                     "decimals": 2,
                      "format": "short",
                      "label": null,
                      "logBase": 1,
@@ -764,6 +767,7 @@
                      "show": true
                   },
                   {
+                     "decimals": 2,
                      "format": "short",
                      "label": null,
                      "logBase": 1,
@@ -779,7 +783,6 @@
                "dashLength": 10,
                "dashes": false,
                "datasource": "-- Mixed --",
-               "decimals": 2,
                "fill": 0,
                "id": 16,
                "legend": {
@@ -835,6 +838,7 @@
                },
                "yaxes": [
                   {
+                     "decimals": 2,
                      "format": "s",
                      "label": null,
                      "logBase": 1,
@@ -843,6 +847,7 @@
                      "show": true
                   },
                   {
+                     "decimals": 2,
                      "format": "s",
                      "label": null,
                      "logBase": 1,
@@ -871,7 +876,6 @@
                "dashLength": 10,
                "dashes": false,
                "datasource": "-- Mixed --",
-               "decimals": 2,
                "fill": 0,
                "id": 5,
                "legend": {
@@ -955,6 +959,7 @@
                },
                "yaxes": [
                   {
+                     "decimals": 2,
                      "format": "short",
                      "label": null,
                      "logBase": 1,
@@ -963,6 +968,7 @@
                      "show": true
                   },
                   {
+                     "decimals": 2,
                      "format": "short",
                      "label": null,
                      "logBase": 1,
@@ -978,7 +984,6 @@
                "dashLength": 10,
                "dashes": false,
                "datasource": "-- Mixed --",
-               "decimals": 2,
                "fill": 0,
                "id": 6,
                "legend": {
@@ -1034,6 +1039,7 @@
                },
                "yaxes": [
                   {
+                     "decimals": 2,
                      "format": "short",
                      "label": null,
                      "logBase": 1,
@@ -1042,6 +1048,7 @@
                      "show": true
                   },
                   {
+                     "decimals": 2,
                      "format": "short",
                      "label": null,
                      "logBase": 1,
