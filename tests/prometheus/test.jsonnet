@@ -7,6 +7,7 @@ local prometheus = grafana.prometheus;
         "apache_up",
         datasource="prom1",
         intervalFactor=1,
+        interval="1m",
         legendFormat="{{instance}}"
     ),
 }
