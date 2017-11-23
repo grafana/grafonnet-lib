@@ -22,6 +22,14 @@ local singlestat = grafana.singlestat;
         valueName="current",
         mappingType="range",
         valueMaps=["foo"],
+        colors=[
+            "rgba(237, 129, 40, 0.89)",
+            "#d44a3a",
+            "#299c46",
+        ],
+        colorBackground=true,
+        colorValue=true,
+        thresholds="1,2",
         rangeMaps=["bar"],
     ),
     value: singlestat.new(
