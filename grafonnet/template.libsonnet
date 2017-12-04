@@ -46,7 +46,7 @@
             hide: if hide == "" then 0 else if hide == "label" then 1 else 2,
             label: label,
             name: name,
-            query: query,
+            query: std.join(",", std.filter($.filterAuto, std.split(query, ","))),
             refresh: 2,
             type: "interval",
             auto: std.count(std.split(query, ","), "auto") > 0,
@@ -94,4 +94,5 @@
         2
     else
         refresh,
+    filterAuto(str):: str != "auto",
 }
