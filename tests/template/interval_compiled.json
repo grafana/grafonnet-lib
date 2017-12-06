@@ -10,7 +10,7 @@
       "hide": 0,
       "label": null,
       "name": "interval",
-      "query": "auto,5m,10m,20m",
+      "query": "5m,10m,20m",
       "refresh": 2,
       "type": "interval"
    },
