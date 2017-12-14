@@ -103,7 +103,7 @@
             rightSide: legend_rightSide,
             avg: legend_avg,
             [if legend_hideEmpty != null then "hideEmpty"]: legend_hideEmpty,
-            [if legend_hideEmpty != null then "hideZero"]: legend_hideZero,
+            [if legend_hideZero != null then "hideZero"]: legend_hideZero,
         },
         nullPointMode: "null",
         steppedLine: false,
