@@ -38,13 +38,14 @@
       "minSpan": 6,
       "nullPointMode": "connected",
       "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
+      "postfix": "after",
+      "postfixFontSize": "15%",
+      "prefix": "before",
+      "prefixFontSize": "10%",
       "rangeMaps": [
          "bar"
       ],
+      "repeat": "interval",
       "span": 1,
       "sparkline": {
          "fillColor": "rgba(31, 118, 189, 0.18)",
