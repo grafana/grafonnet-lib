@@ -20,6 +20,7 @@ local graphPanel = grafana.graphPanel;
         bars=true,
         dashes=true,
         stack=true,
+        sort="increasing",
         repeat="$device",
         legend_show=false,
         legend_values=true,

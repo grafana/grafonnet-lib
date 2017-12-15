@@ -41,7 +41,7 @@
       "title": "test",
       "tooltip": {
          "shared": true,
-         "sort": 0,
+         "sort": 1,
          "value_type": "individual"
       },
       "type": "graph",
