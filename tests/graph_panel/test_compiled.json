@@ -5,6 +5,7 @@
       "dashLength": 10,
       "dashes": true,
       "datasource": "$PROMETHEUS",
+      "description": "description",
       "fill": 2,
       "id": 2,
       "legend": {

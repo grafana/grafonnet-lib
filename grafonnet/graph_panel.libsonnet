@@ -38,6 +38,7 @@
         fill=1,
         linewidth=1,
         decimals=null,
+        description=null,
         min_span=null,
         format="short",
         min=null,
@@ -71,6 +72,7 @@
         datasource: datasource,
         targets: [
         ],
+        [if description != null then "description"]: description,
         renderer: "flot",
         yaxes: [
             $.yaxe(format, min, max, decimals=decimals),

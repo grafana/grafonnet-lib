@@ -8,6 +8,7 @@ local graphPanel = grafana.graphPanel;
         id=2,
         decimals=2,
         datasource="$PROMETHEUS",
+        description="description",
         span=8,
         min_span=9,
         format="ms",
