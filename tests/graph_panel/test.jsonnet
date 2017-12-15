@@ -10,6 +10,7 @@ local graphPanel = grafana.graphPanel;
         datasource="$PROMETHEUS",
         description="description",
         span=8,
+        height="2011px",
         min_span=9,
         format="ms",
         min=10,

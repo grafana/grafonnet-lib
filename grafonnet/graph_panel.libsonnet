@@ -73,6 +73,7 @@
         targets: [
         ],
         [if description != null then "description"]: description,
+        [if height != null then "height"]: height,
         renderer: "flot",
         yaxes: [
             $.yaxe(format, min, max, decimals=decimals),
