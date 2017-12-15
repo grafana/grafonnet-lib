@@ -10,6 +10,7 @@
       ],
       "datasource": "prom1",
       "decimals": 2,
+      "description": "mystat",
       "format": "s",
       "gauge": {
          "maxValue": 100,
@@ -18,6 +19,7 @@
          "thresholdLabels": false,
          "thresholdMarkers": true
       },
+      "height": "42px",
       "id": 1,
       "interval": "10s",
       "links": [ ],
@@ -33,15 +35,17 @@
          }
       ],
       "maxDataPoints": 100,
+      "minSpan": 6,
       "nullPointMode": "connected",
       "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
+      "postfix": "after",
+      "postfixFontSize": "15%",
+      "prefix": "before",
+      "prefixFontSize": "10%",
       "rangeMaps": [
          "bar"
       ],
+      "repeat": "interval",
       "span": 1,
       "sparkline": {
          "fillColor": "rgba(31, 118, 189, 0.18)",

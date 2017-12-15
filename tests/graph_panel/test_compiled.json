@@ -5,7 +5,9 @@
       "dashLength": 10,
       "dashes": true,
       "datasource": "$PROMETHEUS",
+      "description": "description",
       "fill": 2,
+      "height": "2011px",
       "id": 2,
       "legend": {
          "alignAsTable": true,
@@ -41,7 +43,7 @@
       "title": "test",
       "tooltip": {
          "shared": true,
-         "sort": 0,
+         "sort": 1,
          "value_type": "individual"
       },
       "type": "graph",
