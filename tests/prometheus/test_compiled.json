@@ -3,9 +3,11 @@
       "datasource": "prom1",
       "expr": "apache_up",
       "format": "time_series",
+      "instant": true,
       "interval": "1m",
       "intervalFactor": 1,
-      "legendFormat": "{{instance}}"
+      "legendFormat": "{{instance}}",
+      "refId": "A"
    },
    "basic": {
       "expr": "up",
