@@ -10,6 +10,7 @@ local template = grafana.template;
         label="node",
         allValues="$ALL",
         tagValuesQuery="tvquery",
+        regex="([a-z+])",
         current="bar",
         hide="value",
         includeAll=true,
