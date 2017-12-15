@@ -3,9 +3,12 @@
         title,
         id=null,
         format="none",
+        description="",
         interval=null,
+        height=null,
         datasource=null,
         span=12,
+        min_span=null,
         decimals=null,
         valueName="avg",
         valueFontSize="80%",
@@ -36,7 +39,10 @@
     )::
         {
             [if id != null then "id"]: id,
+            [if height != null then "height"]: height,
+            [if description != "" then "description"]: description,
             [if transparent != null then "transparent"]: transparent,
+            [if min_span != null then "minSpan"]: min_span,
             title: title,
             span: span,
             type: "singlestat",

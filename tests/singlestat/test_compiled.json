@@ -10,6 +10,7 @@
       ],
       "datasource": "prom1",
       "decimals": 2,
+      "description": "mystat",
       "format": "s",
       "gauge": {
          "maxValue": 100,
@@ -18,6 +19,7 @@
          "thresholdLabels": false,
          "thresholdMarkers": true
       },
+      "height": "42px",
       "id": 1,
       "interval": "10s",
       "links": [ ],
@@ -33,6 +35,7 @@
          }
       ],
       "maxDataPoints": 100,
+      "minSpan": 6,
       "nullPointMode": "connected",
       "nullText": null,
       "postfix": "",
