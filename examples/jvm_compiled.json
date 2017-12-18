@@ -71,6 +71,7 @@
    "rows": [
       {
          "collapse": false,
+         "collapsed": false,
          "height": "125px",
          "id": 8,
          "panels": [
@@ -92,6 +93,7 @@
                   "thresholdLabels": false,
                   "thresholdMarkers": true
                },
+               "gridPos": { },
                "id": 30,
                "interval": null,
                "links": [ ],
@@ -168,6 +170,7 @@
                   "thresholdLabels": false,
                   "thresholdMarkers": true
                },
+               "gridPos": { },
                "id": 31,
                "interval": null,
                "links": [ ],
@@ -244,6 +247,7 @@
                   "thresholdLabels": false,
                   "thresholdMarkers": true
                },
+               "gridPos": { },
                "id": 32,
                "interval": null,
                "links": [ ],
@@ -320,6 +324,7 @@
                   "thresholdLabels": false,
                   "thresholdMarkers": true
                },
+               "gridPos": { },
                "id": 34,
                "interval": null,
                "links": [ ],
@@ -384,10 +389,12 @@
          "repeatRowId": null,
          "showTitle": false,
          "title": "Dashboard Row",
-         "titleSize": "h6"
+         "titleSize": "h6",
+         "type": "row"
       },
       {
          "collapse": false,
+         "collapsed": false,
          "height": "250px",
          "id": 1,
          "panels": [
@@ -398,6 +405,7 @@
                "dashes": false,
                "datasource": "-- Mixed --",
                "fill": 0,
+               "gridPos": { },
                "id": 2,
                "legend": {
                   "alignAsTable": true,
@@ -491,6 +499,7 @@
                "dashes": false,
                "datasource": "-- Mixed --",
                "fill": 0,
+               "gridPos": { },
                "id": 3,
                "legend": {
                   "alignAsTable": true,
@@ -583,10 +592,12 @@
          "repeatRowId": null,
          "showTitle": true,
          "title": "Memory",
-         "titleSize": "h6"
+         "titleSize": "h6",
+         "type": "row"
       },
       {
          "collapse": false,
+         "collapsed": false,
          "height": "250px",
          "id": 2,
          "panels": [
@@ -597,6 +608,7 @@
                "dashes": false,
                "datasource": "-- Mixed --",
                "fill": 0,
+               "gridPos": { },
                "id": 25,
                "legend": {
                   "alignAsTable": true,
@@ -690,10 +702,12 @@
          "repeatRowId": null,
          "showTitle": true,
          "title": "Memory pools",
-         "titleSize": "h6"
+         "titleSize": "h6",
+         "type": "row"
       },
       {
          "collapse": false,
+         "collapsed": false,
          "height": "250px",
          "id": 2,
          "panels": [
@@ -704,6 +718,7 @@
                "dashes": false,
                "datasource": "-- Mixed --",
                "fill": 0,
+               "gridPos": { },
                "id": 15,
                "legend": {
                   "alignAsTable": true,
@@ -784,6 +799,7 @@
                "dashes": false,
                "datasource": "-- Mixed --",
                "fill": 0,
+               "gridPos": { },
                "id": 16,
                "legend": {
                   "alignAsTable": true,
@@ -863,10 +879,12 @@
          "repeatRowId": null,
          "showTitle": true,
          "title": "Garbage Collection: $gc",
-         "titleSize": "h6"
+         "titleSize": "h6",
+         "type": "row"
       },
       {
          "collapse": false,
+         "collapsed": false,
          "height": "250px",
          "id": 5,
          "panels": [
@@ -877,6 +895,7 @@
                "dashes": false,
                "datasource": "-- Mixed --",
                "fill": 0,
+               "gridPos": { },
                "id": 5,
                "legend": {
                   "alignAsTable": true,
@@ -985,6 +1004,7 @@
                "dashes": false,
                "datasource": "-- Mixed --",
                "fill": 0,
+               "gridPos": { },
                "id": 6,
                "legend": {
                   "alignAsTable": true,
@@ -1064,7 +1084,8 @@
          "repeatRowId": null,
          "showTitle": true,
          "title": "Threads",
-         "titleSize": "h6"
+         "titleSize": "h6",
+         "type": "row"
       }
    ],
    "schemaVersion": 14,
