@@ -52,6 +52,7 @@
         stack=false,
         repeat=null,
         sort=0,
+        show_xaxis=true,
         legend_show=true,
         legend_values=false,
         legend_min=false,
@@ -80,7 +81,7 @@
             $.yaxe(format, min, max, decimals=decimals),
         ],
         xaxis: {
-            show: true,
+            show: show_xaxis,
             mode: "time",
             name: null,
             values: [],

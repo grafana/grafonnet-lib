@@ -51,7 +51,7 @@
          "buckets": null,
          "mode": "time",
          "name": null,
-         "show": true,
+         "show": false,
          "values": [ ]
       },
       "yaxes": [
