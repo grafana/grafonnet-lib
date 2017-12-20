@@ -23,6 +23,7 @@ local timepickerlib = import "timepicker.libsonnet";
         hideControls: hideControls,
         id: null,
         links: [],
+        panels:: [],
         refresh: refresh,
         rows: [],
         schemaVersion: 14,
@@ -53,6 +54,14 @@ local timepickerlib = import "timepicker.libsonnet";
     addRow(row):: {
         rows+: [row],
     },
+    addPanels(panels)::
+        {
+            panels+::: panels,
+        },
+    addPanel(panel, gridPos)::
+        {
+            panels+::: [panel { gridPos: gridPos }],
+        },
     addRows(rows):: {
         rows+: rows,
     },

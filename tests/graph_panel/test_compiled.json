@@ -25,12 +25,13 @@
       "lines": false,
       "linewidth": 2,
       "minSpan": 9,
-      "nullPointMode": "null",
+      "nullPointMode": "nullAsZero",
       "percentage": false,
       "pointradius": 5,
       "points": true,
       "renderer": "flot",
       "repeat": "$device",
+      "repeatDirection": "v",
       "seriesOverrides": [ ],
       "spaceLength": 10,
       "span": 8,
@@ -51,7 +52,7 @@
          "buckets": null,
          "mode": "time",
          "name": null,
-         "show": true,
+         "show": false,
          "values": [ ]
       },
       "yaxes": [

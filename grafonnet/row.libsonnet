@@ -9,6 +9,7 @@
         titleSize="h6"
     ):: {
         collapse: collapse,
+        collapsed: collapse,
         height: height,
         [if id != null then "id"]: id,
         panels: [],
@@ -21,9 +22,13 @@
             else
                 title != "Dashboard Row",
         title: title,
+        type: "row",
         titleSize: titleSize,
     },
-    addPanel(panel):: {
-        panels+: [panel],
+    addPanels(panels):: {
+        panels+: panels,
+    },
+    addPanel(panel, gridPos={}):: {
+        panels+: [panel { gridPos: gridPos }],
     },
 }

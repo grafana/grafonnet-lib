@@ -1,6 +1,7 @@
 {
    "advanced": {
       "collapse": true,
+      "collapsed": true,
       "height": "125px",
       "id": 1,
       "panels": [ ],
@@ -9,10 +10,12 @@
       "repeatRowId": null,
       "showTitle": true,
       "title": "Test Row",
-      "titleSize": "h1"
+      "titleSize": "h1",
+      "type": "row"
    },
    "basic": {
       "collapse": false,
+      "collapsed": false,
       "height": "250px",
       "panels": [ ],
       "repeat": null,
@@ -20,24 +23,28 @@
       "repeatRowId": null,
       "showTitle": false,
       "title": "Dashboard Row",
-      "titleSize": "h6"
+      "titleSize": "h6",
+      "type": "row"
    },
    "panels": {
       "collapse": false,
+      "collapsed": false,
       "height": "250px",
       "panels": [
-         "foo",
-         "bar"
+         "foo{\"gridPos\": { }}",
+         "bar{\"gridPos\": { }}"
       ],
       "repeat": null,
       "repeatIteration": null,
       "repeatRowId": null,
       "showTitle": false,
       "title": "Dashboard Row",
-      "titleSize": "h6"
+      "titleSize": "h6",
+      "type": "row"
    },
    "showTite": {
       "collapse": false,
+      "collapsed": false,
       "height": "250px",
       "panels": [ ],
       "repeat": null,
@@ -45,6 +52,7 @@
       "repeatRowId": null,
       "showTitle": true,
       "title": "foo",
-      "titleSize": "h6"
+      "titleSize": "h6",
+      "type": "row"
    }
 }

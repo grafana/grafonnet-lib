@@ -7,7 +7,7 @@
         interval=null,
         height=null,
         datasource=null,
-        span=12,
+        span=null,
         min_span=null,
         decimals=null,
         valueName="avg",
@@ -50,7 +50,7 @@
             [if transparent != null then "transparent"]: transparent,
             [if min_span != null then "minSpan"]: min_span,
             title: title,
-            span: span,
+            [if span != null then "span"]: span,
             type: "singlestat",
             datasource: datasource,
             targets: [
