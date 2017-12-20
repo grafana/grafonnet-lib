@@ -19,6 +19,7 @@ local graphPanel = grafana.graphPanel;
         lines=false,
         fill=2,
         linewidth=2,
+        nullPointMode="nullAsZero",
         points=true,
         bars=true,
         dashes=true,

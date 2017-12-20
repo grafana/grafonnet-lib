@@ -48,6 +48,7 @@
         points=false,
         bars=false,
         height=null,
+        nullPointMode="null",
         dashes=false,
         stack=false,
         repeat=null,
@@ -111,7 +112,7 @@
             [if legend_hideEmpty != null then "hideEmpty"]: legend_hideEmpty,
             [if legend_hideZero != null then "hideZero"]: legend_hideZero,
         },
-        nullPointMode: "null",
+        nullPointMode: nullPointMode,
         steppedLine: false,
         tooltip: {
             value_type: "individual",
