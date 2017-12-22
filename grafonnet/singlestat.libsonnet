@@ -16,6 +16,7 @@
         postfixFontSize="50%",
         mappingType=1,
         repeat=null,
+        repeatDirection=null,
         prefix="",
         postfix="",
         colors=[
@@ -47,6 +48,7 @@
             [if height != null then "height"]: height,
             [if description != "" then "description"]: description,
             [if repeat != null then "repeat"]: repeat,
+            [if repeatDirection != null then "repeatDirection"]: repeatDirection,
             [if transparent != null then "transparent"]: transparent,
             [if min_span != null then "minSpan"]: min_span,
             title: title,

@@ -46,6 +46,7 @@
          "bar"
       ],
       "repeat": "interval",
+      "repeatDirection": "v",
       "span": 1,
       "sparkline": {
          "fillColor": "rgba(31, 118, 189, 0.18)",
