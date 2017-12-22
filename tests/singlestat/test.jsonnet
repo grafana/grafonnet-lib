@@ -14,6 +14,7 @@ local singlestat = grafana.singlestat;
         id=1,
         format="s",
         interval="10s",
+        repeatDirection="v",
         height="42px",
         prefixFontSize="10%",
         postfixFontSize="15%",
