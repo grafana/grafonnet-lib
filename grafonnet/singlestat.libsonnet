@@ -108,8 +108,8 @@
                 thresholdLabels: false,
             },
             tableColumn: "",
+            addTarget(target):: self {
+                targets+: [target],
+            },
         },
-    addTarget(target):: {
-        targets+: [target],
-    },
 }

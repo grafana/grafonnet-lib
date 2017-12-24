@@ -5,9 +5,9 @@ local singlestat = grafana.singlestat;
     basic: singlestat.new("single"),
     target:
         singlestat.new("targets")
-        + singlestat.addTarget("target1")
-        + singlestat.addTarget("target2")
-        + singlestat.addTarget("target3")
+        .addTarget("target1")
+        .addTarget("target2")
+        .addTarget("target3")
     ,
     advanced: singlestat.new(
         "adv",

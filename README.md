@@ -79,7 +79,7 @@ dashboard.new(
             span=2,
             valueName="current",
         )
-        + singlestat.addTarget(
+        .addTarget(
             prometheus.target(
                 "time()-process_start_time_seconds{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
             )

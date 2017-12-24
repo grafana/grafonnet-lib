@@ -120,7 +120,7 @@ grafana.dashboard.new(
             span=2,
             valueName="current",
         )
-        + singlestat.addTarget(
+        .addTarget(
             prometheus.target(
                 "time()-process_start_time_seconds{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                 datasource="$PROMETHEUS_DS",
@@ -136,7 +136,7 @@ grafana.dashboard.new(
             valueName="name",
             valueFontSize="50%",
         )
-        + singlestat.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_info{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                 datasource="$PROMETHEUS_DS",
@@ -153,7 +153,7 @@ grafana.dashboard.new(
             valueName="name",
             valueFontSize="50%",
         )
-        + singlestat.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_info{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                 datasource="$PROMETHEUS_DS",
@@ -169,7 +169,7 @@ grafana.dashboard.new(
             span=2,
             valueName="current",
         )
-        + singlestat.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_classes_loaded{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                 datasource="$PROMETHEUS_DS",
