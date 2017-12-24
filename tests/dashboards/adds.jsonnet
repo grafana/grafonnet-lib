@@ -18,4 +18,51 @@ local row = grafana.row;
     .addPanel(row.new(title="id2"), { x: 34, y: 62, w: 53, h: 36 })
     .addPanel(row.new(title="id5"), { x: 44, y: 72, w: 63, h: 46 })
     .addPanels([row.new(title="id5") + { x: 41, y: 71, w: 61, h: 41 }]),
+    dashboard.new("test2")
+    .addPanel(row.new(title="id0"), { x: 14, y: 42, w: 33, h: 26 })
+    .addPanel(row.new(title="id1"), { x: 24, y: 52, w: 43, h: 36 })
+    .addPanel(row.new(title="id2"), { x: 34, y: 62, w: 53, h: 36 })
+    .addPanel(row.new(title="id5"), { x: 44, y: 72, w: 63, h: 46 }),
+    dashboard.new("subId")
+    .addPanels(
+        [
+            row.new(title="id0") + {
+                panels: [
+                    { foo: "id1" },
+                    { bar: "id2" },
+                ],
+            },
+            row.new(title="id3"),
+            row.new(title="id4"),
+            { title: "id5" },
+            { title: "id6" },
+            { title: "id7" },
+            { title: "id8" },
+            row.new(title="id9") + {
+                panels: [
+                    { foo: "id10" },
+                    { bar: "id11" },
+                ],
+            },
+            { title: "id12" },
+            { title: "id13" },
+            { title: "id14" },
+        ]
+    )
+    .addPanels(
+        [
+            row.new(title="id15") + {
+                panels: [
+                    { foo: "id16" },
+                    { bar: "id17" },
+                ],
+            },
+            row.new(title="id18"),
+            row.new(title="id19"),
+            { title: "id20" },
+            { title: "id21" },
+            { title: "id22" },
+            { title: "id23" },
+        ]
+    ),
 ]

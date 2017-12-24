@@ -13,10 +13,8 @@ local timepickerlib = import "timepicker.libsonnet";
         timepicker=timepickerlib.new(),
         hideControls=false,
     ):: {
+        local it = self,
         _annotations:: [],
-        annotations: {
-            list: [],
-        },
         editable: editable,
         gnetId: null,
         graphTooltip: 0,
@@ -29,9 +27,6 @@ local timepickerlib = import "timepicker.libsonnet";
         schemaVersion: 14,
         style: style,
         tags: tags,
-        templating: {
-            list: [],
-        },
         time: {
             from: time_from,
             to: time_to,
@@ -41,15 +36,14 @@ local timepickerlib = import "timepicker.libsonnet";
         title: title,
         version: 0,
         addAnnotation(annotation):: self {
-            local t = self._annotations,
             _annotations+:: [annotation],
-            annotations: { list: t },
         },
-        addTemplate(template):: self {
-            local t = self.templates,
-            templates+:: [template],
-            templating: { list: t },
+        addTemplate(t):: self {
+            templates+: [t],
         },
+        templates:: [],
+        annotations: { list: it._annotations },
+        templating: { list: it.templates },
         _nextPanel:: 0,
         addRow(row)::
             self {
@@ -63,14 +57,48 @@ local timepickerlib = import "timepicker.libsonnet";
                 _nextPanel: nextPanel + n,
                 rows+: [row { panels: panels }],
             },
-        addPanels(panels)::
+        addPanels(newpanels)::
             self {
                 // automatically number panels in added rows.
                 // https://github.com/kausalco/public/blob/master/klumps/grafana.libsonnet
-                local n = std.length(panels),
+                local n = std.foldl(function(numOfPanels, p)
+                    (if "panels" in p
+                     then
+                         numOfPanels + 1 + std.length(p.panels)
+                     else
+                         numOfPanels + 1), newpanels, 0),
                 local nextPanel = super._nextPanel,
-                local _panels = std.makeArray(n, function(i)
-                    panels[i] { id: nextPanel + i }),
+                local _panels = std.makeArray(
+                    std.length(newpanels), function(i)
+                        newpanels[i] {
+                            id: nextPanel + (
+                                if i == 0 then
+                                    0
+                                else
+                                    if "panels" in _panels[i - 1] then
+                                        (_panels[i - 1].id - nextPanel) + 1 + std.length(_panels[i - 1].panels)
+                                    else
+                                        (_panels[i - 1].id - nextPanel) + 1
+
+                            ),
+                            [if "panels" in newpanels[i] then "panels"]: std.makeArray(
+                                std.length(newpanels[i].panels), function(j)
+                                    newpanels[i].panels[j] {
+                                        id: 1 + j +
+                                            nextPanel + (
+                                            if i == 0 then
+                                                0
+                                            else
+                                                if "panels" in _panels[i - 1] then
+                                                    (_panels[i - 1].id - nextPanel) + 1 + std.length(_panels[i - 1].panels)
+                                                else
+                                                    (_panels[i - 1].id - nextPanel) + 1
+
+                                        ),
+                                    }
+                            ),
+                        }
+                ),
 
                 _nextPanel: nextPanel + n,
                 panels+::: _panels,
@@ -78,7 +106,8 @@ local timepickerlib = import "timepicker.libsonnet";
         addPanel(panel, gridPos):: self + self.addPanels([panel { gridPos: gridPos }]),
         addRows(rows):: self {
             rows+: rows,
-        },
+        }
+        ,
         addLink(link):: self {
             links+: [link],
         },

@@ -6,8 +6,7 @@
       "instant": true,
       "interval": "1m",
       "intervalFactor": 1,
-      "legendFormat": "{{instance}}",
-      "refId": "A"
+      "legendFormat": "{{instance}}"
    },
    "basic": {
       "expr": "up",
