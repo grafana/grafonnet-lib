@@ -68,9 +68,9 @@ dashboard.new(
     "JVM",
     tags=["java"],
 )
-+ dashboard.addRow(
+.addRow(
     row.new(id=2)
-    + row.addPanel(
+    .addPanel(
         singlestat.new(
             "uptime",
             format="s",
@@ -79,7 +79,7 @@ dashboard.new(
             span=2,
             valueName="current",
         )
-        + singlestat.addTarget(
+        .addTarget(
             prometheus.target(
                 "time()-process_start_time_seconds{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
             )

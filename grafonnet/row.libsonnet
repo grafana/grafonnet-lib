@@ -1,7 +1,6 @@
 {
     new(
         title="Dashboard Row",
-        id=null,
         height="250px",
         collapse=false,
         repeat=null,
@@ -11,7 +10,6 @@
         collapse: collapse,
         collapsed: collapse,
         height: height,
-        [if id != null then "id"]: id,
         panels: [],
         repeat: repeat,
         repeatIteration: null,
@@ -24,11 +22,11 @@
         title: title,
         type: "row",
         titleSize: titleSize,
-    },
-    addPanels(panels):: {
-        panels+: panels,
-    },
-    addPanel(panel, gridPos={}):: {
-        panels+: [panel { gridPos: gridPos }],
+        addPanels(panels):: self {
+            panels+: panels,
+        },
+        addPanel(panel, gridPos={}):: self {
+            panels+: [panel { gridPos: gridPos }],
+        },
     },
 }

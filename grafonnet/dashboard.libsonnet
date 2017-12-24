@@ -40,32 +40,47 @@ local timepickerlib = import "timepicker.libsonnet";
         timepicker: timepicker,
         title: title,
         version: 0,
-    },
-    addAnnotation(annotation):: {
-        local t = self._annotations,
-        _annotations+:: [annotation],
-        annotations: { list: t },
-    },
-    addTemplate(template):: {
-        local t = self.templates,
-        templates+:: [template],
-        templating: { list: t },
-    },
-    addRow(row):: {
-        rows+: [row],
-    },
-    addPanels(panels)::
-        {
-            panels+::: panels,
+        addAnnotation(annotation):: self {
+            local t = self._annotations,
+            _annotations+:: [annotation],
+            annotations: { list: t },
         },
-    addPanel(panel, gridPos)::
-        {
-            panels+::: [panel { gridPos: gridPos }],
+        addTemplate(template):: self {
+            local t = self.templates,
+            templates+:: [template],
+            templating: { list: t },
         },
-    addRows(rows):: {
-        rows+: rows,
-    },
-    addLink(link):: {
-        links+: [link],
+        _nextPanel:: 0,
+        addRow(row)::
+            self {
+                // automatically number panels in added rows.
+                // https://github.com/kausalco/public/blob/master/klumps/grafana.libsonnet
+                local n = std.length(row.panels),
+                local nextPanel = super._nextPanel,
+                local panels = std.makeArray(n, function(i)
+                    row.panels[i] { id: nextPanel + i }),
+
+                _nextPanel: nextPanel + n,
+                rows+: [row { panels: panels }],
+            },
+        addPanels(panels)::
+            self {
+                // automatically number panels in added rows.
+                // https://github.com/kausalco/public/blob/master/klumps/grafana.libsonnet
+                local n = std.length(panels),
+                local nextPanel = super._nextPanel,
+                local _panels = std.makeArray(n, function(i)
+                    panels[i] { id: nextPanel + i }),
+
+                _nextPanel: nextPanel + n,
+                panels+::: _panels,
+            },
+        addPanel(panel, gridPos):: self + self.addPanels([panel { gridPos: gridPos }]),
+        addRows(rows):: self {
+            rows+: rows,
+        },
+        addLink(link):: self {
+            links+: [link],
+        },
     },
 }

@@ -6,7 +6,6 @@ local row = grafana.row;
     showTite: row.new(title="foo"),
     advanced: row.new(
         title="Test Row",
-        id=1,
         height="125px",
         collapse=true,
         repeat="env",
@@ -14,6 +13,6 @@ local row = grafana.row;
         titleSize="h1"
     ),
     panels: row.new()
-            + row.addPanel("foo")
-            + row.addPanel("bar"),
+            .addPanel("foo")
+            .addPanel("bar"),
 }

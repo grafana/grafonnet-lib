@@ -5,7 +5,6 @@ local graphPanel = grafana.graphPanel;
     basic: graphPanel.new("test"),
     advanced: graphPanel.new(
         "test",
-        id=2,
         decimals=2,
         datasource="$PROMETHEUS",
         description="description",
@@ -40,6 +39,6 @@ local graphPanel = grafana.graphPanel;
         legend_hideZero=true,
     ),
     targets: graphPanel.new("with targets")
-             + graphPanel.addTarget("foo")
-             + graphPanel.addTarget("foo"),
+             .addTarget("foo")
+             .addTarget("foo"),
 }
