@@ -112,7 +112,7 @@ grafana.dashboard.new(
     row.new(
         height="125px",
     )
-    + row.addPanel(
+    .addPanel(
         singlestat.new(
             "uptime",
             format="s",
@@ -127,7 +127,7 @@ grafana.dashboard.new(
             )
         )
     )
-    + row.addPanel(
+    .addPanel(
         singlestat.new(
             "JVM vendor",
             format="s",
@@ -144,7 +144,7 @@ grafana.dashboard.new(
             )
         )
     )
-    + row.addPanel(
+    .addPanel(
         singlestat.new(
             "JVM version",
             format="s",
@@ -161,7 +161,7 @@ grafana.dashboard.new(
             )
         )
     )
-    + row.addPanel(
+    .addPanel(
         singlestat.new(
             "Classes loaded",
             format="short",
@@ -182,7 +182,7 @@ grafana.dashboard.new(
     row.new(
         title="Memory",
     )
-    + row.addPanel(
+    .addPanel(
         graphPanel.new(
             "JVM Memory Heap",
             span=6,
@@ -221,7 +221,7 @@ grafana.dashboard.new(
             )
         )
     )
-    + row.addPanel(
+    .addPanel(
         graphPanel.new(
             "JVM Memory Non-Heap",
             span=6,
@@ -265,7 +265,7 @@ grafana.dashboard.new(
     row.new(
         title="Memory pools",
     )
-    + row.addPanel(
+    .addPanel(
         graphPanel.new(
             "Memory $pool",
             repeat="pool",
@@ -312,7 +312,7 @@ grafana.dashboard.new(
         title="Garbage Collection: $gc",
         repeat="gc",
     )
-    + row.addPanel(
+    .addPanel(
         graphPanel.new(
             "Number of garbage collection",
             span=6,
@@ -338,7 +338,7 @@ grafana.dashboard.new(
             )
         )
     )
-    + row.addPanel(
+    .addPanel(
         graphPanel.new(
             "Duration of garbage collection",
             span=6,
@@ -369,7 +369,7 @@ grafana.dashboard.new(
     row.new(
         title="Threads",
     )
-    + row.addPanel(
+    .addPanel(
         graphPanel.new(
             "Thread count",
             span=6,
@@ -423,7 +423,7 @@ grafana.dashboard.new(
             )
         )
     )
-    + row.addPanel(
+    .addPanel(
         graphPanel.new(
             "New threads",
             span=6,

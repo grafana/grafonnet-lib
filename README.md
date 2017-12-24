@@ -70,7 +70,7 @@ dashboard.new(
 )
 .addRow(
     row.new(id=2)
-    + row.addPanel(
+    .addPanel(
         singlestat.new(
             "uptime",
             format="s",

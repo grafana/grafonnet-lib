@@ -13,6 +13,6 @@ local row = grafana.row;
         titleSize="h1"
     ),
     panels: row.new()
-            + row.addPanel("foo")
-            + row.addPanel("bar"),
+            .addPanel("foo")
+            .addPanel("bar"),
 }
