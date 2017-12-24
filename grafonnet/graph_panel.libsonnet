@@ -76,8 +76,8 @@
         [if height != null then "height"]: height,
         renderer: "flot",
         yaxes: [
-            $.yaxe(format, min, max, decimals=decimals),
-            $.yaxe(format, min, max, decimals=decimals),
+            self.yaxe(format, min, max, decimals=decimals),
+            self.yaxe(format, min, max, decimals=decimals),
         ],
         xaxis: {
             show: show_xaxis,
@@ -124,25 +124,25 @@
         [if repeatDirection != null then "repeatDirection"]: repeatDirection,
         seriesOverrides: [],
         thresholds: [],
-    },
-    yaxe(
-        format="short",
-        min=null,
-        max=null,
-        label=null,
-        show=true,
-        logBase=1,
-        decimals=null,
-    ):: {
-        label: label,
-        show: show,
-        logBase: logBase,
-        min: min,
-        max: max,
-        format: format,
-        [if decimals != null then "decimals"]: decimals,
-    },
-    addTarget(target):: {
-        targets+: [target],
+        yaxe(
+            format="short",
+            min=null,
+            max=null,
+            label=null,
+            show=true,
+            logBase=1,
+            decimals=null,
+        ):: {
+            label: label,
+            show: show,
+            logBase: logBase,
+            min: min,
+            max: max,
+            format: format,
+            [if decimals != null then "decimals"]: decimals,
+        },
+        addTarget(target):: self {
+            targets+: [target],
+        },
     },
 }

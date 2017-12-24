@@ -199,21 +199,21 @@ grafana.dashboard.new(
             legend_avg=true,
             legend_alignAsTable=true,
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_memory_bytes_max{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"heap\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="max"
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_memory_bytes_used{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"heap\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="used"
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_memory_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"heap\"}",
                 datasource="$PROMETHEUS_DS",
@@ -238,21 +238,21 @@ grafana.dashboard.new(
             legend_avg=true,
             legend_alignAsTable=true,
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_memory_bytes_max{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"nonheap\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="max"
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_memory_bytes_used{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"nonheap\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="used"
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_memory_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"nonheap\"}",
                 datasource="$PROMETHEUS_DS",
@@ -284,21 +284,21 @@ grafana.dashboard.new(
             legend_avg=true,
             legend_alignAsTable=true,
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_memory_pool_bytes_max{env=\"$env\",job=\"$job\",instance=\"$instance\",pool=\"$pool\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="max",
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_memory_pool_bytes_used{env=\"$env\",job=\"$job\",instance=\"$instance\",pool=\"$pool\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="used",
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_memory_pool_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\",pool=\"$pool\"}",
                 datasource="$PROMETHEUS_DS",
@@ -330,7 +330,7 @@ grafana.dashboard.new(
             legend_avg=true,
             legend_alignAsTable=true,
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "increase(jvm_gc_collection_seconds_count{env=\"$env\",job=\"$job\",instance=\"$instance\",gc=\"$gc\"}[5m])",
                 datasource="$PROMETHEUS_DS",
@@ -356,7 +356,7 @@ grafana.dashboard.new(
             legend_avg=true,
             legend_alignAsTable=true,
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "rate(jvm_gc_collection_seconds_sum{env=\"$env\",job=\"$job\",instance=\"$instance\",gc=\"$gc\"}[5m])/rate(jvm_gc_collection_seconds_count{env=\"$env\",job=\"$job\",instance=\"$instance\",gc=\"$gc\"}[5m])",
                 datasource="$PROMETHEUS_DS",
@@ -387,35 +387,35 @@ grafana.dashboard.new(
             legend_avg=true,
             legend_alignAsTable=true,
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_threads_peak{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="Peak thread count",
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_threads_current{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="Current thread count",
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_threads_daemon{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="Daemon thread count",
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_threads_deadlocked{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                 datasource="$PROMETHEUS_DS",
                 legendFormat="Cycles of JVM-threads that are in deadlock waiting to acquire object monitors or ownable synchronizers",
             )
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "jvm_threads_deadlocked_monitor{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                 datasource="$PROMETHEUS_DS",
@@ -441,7 +441,7 @@ grafana.dashboard.new(
             legend_avg=true,
             legend_alignAsTable=true,
         )
-        + graphPanel.addTarget(
+        .addTarget(
             prometheus.target(
                 "rate(jvm_threads_started_total{env=\"$env\",job=\"$job\",instance=\"$instance\"}[5m])",
                 datasource="$PROMETHEUS_DS",
