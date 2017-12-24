@@ -11,7 +11,6 @@ local singlestat = grafana.singlestat;
     ,
     advanced: singlestat.new(
         "adv",
-        id=1,
         format="s",
         interval="10s",
         repeatDirection="v",

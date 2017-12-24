@@ -110,7 +110,6 @@ grafana.dashboard.new(
 )
 + dashboard.addRow(
     row.new(
-        id=8,
         height="125px",
     )
     + row.addPanel(
@@ -118,7 +117,6 @@ grafana.dashboard.new(
             "uptime",
             format="s",
             datasource="-- Mixed --",
-            id=30,
             span=2,
             valueName="current",
         )
@@ -134,7 +132,6 @@ grafana.dashboard.new(
             "JVM vendor",
             format="s",
             datasource="-- Mixed --",
-            id=31,
             span=2,
             valueName="name",
             valueFontSize="50%",
@@ -151,7 +148,6 @@ grafana.dashboard.new(
         singlestat.new(
             "JVM version",
             format="s",
-            id=32,
             datasource="-- Mixed --",
             span=4,
             valueName="name",
@@ -169,7 +165,6 @@ grafana.dashboard.new(
         singlestat.new(
             "Classes loaded",
             format="short",
-            id=34,
             datasource="-- Mixed --",
             span=2,
             valueName="current",
@@ -186,12 +181,10 @@ grafana.dashboard.new(
 + dashboard.addRow(
     row.new(
         title="Memory",
-        id=1,
     )
     + row.addPanel(
         graphPanel.new(
             "JVM Memory Heap",
-            id=2,
             span=6,
             format="bytes",
             fill=0,
@@ -231,7 +224,6 @@ grafana.dashboard.new(
     + row.addPanel(
         graphPanel.new(
             "JVM Memory Non-Heap",
-            id=3,
             span=6,
             format="bytes",
             fill=0,
@@ -272,13 +264,11 @@ grafana.dashboard.new(
 + dashboard.addRow(
     row.new(
         title="Memory pools",
-        id=2,
     )
     + row.addPanel(
         graphPanel.new(
             "Memory $pool",
             repeat="pool",
-            id=25,
             span=6,
             min_span=6,
             format="bytes",
@@ -321,12 +311,10 @@ grafana.dashboard.new(
     row.new(
         title="Garbage Collection: $gc",
         repeat="gc",
-        id=2,
     )
     + row.addPanel(
         graphPanel.new(
             "Number of garbage collection",
-            id=15,
             span=6,
             min_span=6,
             format="short",
@@ -353,7 +341,6 @@ grafana.dashboard.new(
     + row.addPanel(
         graphPanel.new(
             "Duration of garbage collection",
-            id=16,
             span=6,
             min_span=6,
             format="s",
@@ -381,12 +368,10 @@ grafana.dashboard.new(
 + dashboard.addRow(
     row.new(
         title="Threads",
-        id=5,
     )
     + row.addPanel(
         graphPanel.new(
             "Thread count",
-            id=5,
             span=6,
             min_span=6,
             format="short",
@@ -441,7 +426,6 @@ grafana.dashboard.new(
     + row.addPanel(
         graphPanel.new(
             "New threads",
-            id=6,
             span=6,
             min_span=6,
             format="short",

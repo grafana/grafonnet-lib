@@ -73,7 +73,6 @@
          "collapse": false,
          "collapsed": false,
          "height": "125px",
-         "id": 8,
          "panels": [
             {
                "cacheTimeout": null,
@@ -94,7 +93,6 @@
                   "thresholdMarkers": true
                },
                "gridPos": { },
-               "id": 30,
                "interval": null,
                "links": [ ],
                "mappingType": 1,
@@ -171,7 +169,6 @@
                   "thresholdMarkers": true
                },
                "gridPos": { },
-               "id": 31,
                "interval": null,
                "links": [ ],
                "mappingType": 1,
@@ -248,7 +245,6 @@
                   "thresholdMarkers": true
                },
                "gridPos": { },
-               "id": 32,
                "interval": null,
                "links": [ ],
                "mappingType": 1,
@@ -325,7 +321,6 @@
                   "thresholdMarkers": true
                },
                "gridPos": { },
-               "id": 34,
                "interval": null,
                "links": [ ],
                "mappingType": 1,
@@ -396,7 +391,6 @@
          "collapse": false,
          "collapsed": false,
          "height": "250px",
-         "id": 1,
          "panels": [
             {
                "aliasColors": { },
@@ -406,7 +400,6 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
-               "id": 2,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -500,7 +493,6 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
-               "id": 3,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -599,7 +591,6 @@
          "collapse": false,
          "collapsed": false,
          "height": "250px",
-         "id": 2,
          "panels": [
             {
                "aliasColors": { },
@@ -609,7 +600,6 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
-               "id": 25,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -709,7 +699,6 @@
          "collapse": false,
          "collapsed": false,
          "height": "250px",
-         "id": 2,
          "panels": [
             {
                "aliasColors": { },
@@ -719,7 +708,6 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
-               "id": 15,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -800,7 +788,6 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
-               "id": 16,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -886,7 +873,6 @@
          "collapse": false,
          "collapsed": false,
          "height": "250px",
-         "id": 5,
          "panels": [
             {
                "aliasColors": { },
@@ -896,7 +882,6 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
-               "id": 5,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -1005,7 +990,6 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
-               "id": 6,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,

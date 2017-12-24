@@ -1,7 +1,6 @@
 {
     new(
         title,
-        id=null,
         format="none",
         description="",
         interval=null,
@@ -44,7 +43,6 @@
         transparent=null,
     )::
         {
-            [if id != null then "id"]: id,
             [if height != null then "height"]: height,
             [if description != "" then "description"]: description,
             [if repeat != null then "repeat"]: repeat,

@@ -20,7 +20,6 @@
          "thresholdMarkers": true
       },
       "height": "42px",
-      "id": 1,
       "interval": "10s",
       "links": [ ],
       "mappingType": 2,

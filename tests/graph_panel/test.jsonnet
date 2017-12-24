@@ -5,7 +5,6 @@ local graphPanel = grafana.graphPanel;
     basic: graphPanel.new("test"),
     advanced: graphPanel.new(
         "test",
-        id=2,
         decimals=2,
         datasource="$PROMETHEUS",
         description="description",

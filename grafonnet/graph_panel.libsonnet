@@ -6,7 +6,6 @@
      * @param title The title of the graph panel.
      * @param span Width of the panel
      * @param datasource Datasource
-     * @param id ID of the panel. If null, not added to the json output.
      * @param fill Fill, integer from 0 to 10
      * @param linewidth Line Width, integer from 0 to 10
      * @param decimals Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
@@ -34,7 +33,6 @@
     new(
         title,
         span=12,
-        id=null,
         fill=1,
         linewidth=1,
         decimals=null,
@@ -67,7 +65,6 @@
         legend_hideEmpty=null,
         legend_hideZero=null,
     ):: {
-        [if id != null then "id"]: id,
         title: title,
         span: span,
         [if min_span != null then "minSpan"]: min_span,

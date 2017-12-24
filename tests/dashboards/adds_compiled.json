@@ -134,7 +134,6 @@
                "y": 42
             },
             "height": "250px",
-            "id": 0,
             "panels": [ ],
             "repeat": null,
             "repeatIteration": null,
@@ -154,7 +153,6 @@
                "y": 52
             },
             "height": "250px",
-            "id": 1,
             "panels": [ ],
             "repeat": null,
             "repeatIteration": null,
@@ -174,7 +172,6 @@
                "y": 62
             },
             "height": "250px",
-            "id": 2,
             "panels": [ ],
             "repeat": null,
             "repeatIteration": null,
@@ -194,7 +191,6 @@
                "y": 72
             },
             "height": "250px",
-            "id": 5,
             "panels": [ ],
             "repeat": null,
             "repeatIteration": null,
@@ -209,7 +205,6 @@
             "collapsed": false,
             "h": 41,
             "height": "250px",
-            "id": 5,
             "panels": [ ],
             "repeat": null,
             "repeatIteration": null,
