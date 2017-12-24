@@ -63,12 +63,19 @@ local timepickerlib = import "timepicker.libsonnet";
                 _nextPanel: nextPanel + n,
                 rows+: [row { panels: panels }],
             },
-        addPanels(panels):: self {
-            panels+::: panels,
-        },
-        addPanel(panel, gridPos):: self {
-            panels+::: [panel { gridPos: gridPos }],
-        },
+        addPanels(panels)::
+            self {
+                // automatically number panels in added rows.
+                // https://github.com/kausalco/public/blob/master/klumps/grafana.libsonnet
+                local n = std.length(panels),
+                local nextPanel = super._nextPanel,
+                local _panels = std.makeArray(n, function(i)
+                    panels[i] { id: nextPanel + i }),
+
+                _nextPanel: nextPanel + n,
+                panels+::: _panels,
+            },
+        addPanel(panel, gridPos):: self + self.addPanels([panel { gridPos: gridPos }]),
         addRows(rows):: self {
             rows+: rows,
         },
