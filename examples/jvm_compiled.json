@@ -93,6 +93,7 @@
                   "thresholdMarkers": true
                },
                "gridPos": { },
+               "id": 0,
                "interval": null,
                "links": [ ],
                "mappingType": 1,
@@ -169,6 +170,7 @@
                   "thresholdMarkers": true
                },
                "gridPos": { },
+               "id": 1,
                "interval": null,
                "links": [ ],
                "mappingType": 1,
@@ -245,6 +247,7 @@
                   "thresholdMarkers": true
                },
                "gridPos": { },
+               "id": 2,
                "interval": null,
                "links": [ ],
                "mappingType": 1,
@@ -321,6 +324,7 @@
                   "thresholdMarkers": true
                },
                "gridPos": { },
+               "id": 3,
                "interval": null,
                "links": [ ],
                "mappingType": 1,
@@ -400,6 +404,7 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
+               "id": 4,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -493,6 +498,7 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
+               "id": 5,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -600,6 +606,7 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
+               "id": 6,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -708,6 +715,7 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
+               "id": 7,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -788,6 +796,7 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
+               "id": 8,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -882,6 +891,7 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
+               "id": 9,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,
@@ -990,6 +1000,7 @@
                "datasource": "-- Mixed --",
                "fill": 0,
                "gridPos": { },
+               "id": 10,
                "legend": {
                   "alignAsTable": true,
                   "avg": true,

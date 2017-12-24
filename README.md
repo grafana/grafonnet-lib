@@ -68,7 +68,7 @@ dashboard.new(
     "JVM",
     tags=["java"],
 )
-+ dashboard.addRow(
+.addRow(
     row.new(id=2)
     + row.addPanel(
         singlestat.new(

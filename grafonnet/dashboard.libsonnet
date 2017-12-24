@@ -40,32 +40,40 @@ local timepickerlib = import "timepicker.libsonnet";
         timepicker: timepicker,
         title: title,
         version: 0,
-    },
-    addAnnotation(annotation):: {
-        local t = self._annotations,
-        _annotations+:: [annotation],
-        annotations: { list: t },
-    },
-    addTemplate(template):: {
-        local t = self.templates,
-        templates+:: [template],
-        templating: { list: t },
-    },
-    addRow(row):: {
-        rows+: [row],
-    },
-    addPanels(panels)::
-        {
+        addAnnotation(annotation):: self {
+            local t = self._annotations,
+            _annotations+:: [annotation],
+            annotations: { list: t },
+        },
+        addTemplate(template):: self {
+            local t = self.templates,
+            templates+:: [template],
+            templating: { list: t },
+        },
+        _nextPanel:: 0,
+        addRow(row)::
+            self {
+                // automatically number panels in added rows.
+                // https://github.com/kausalco/public/blob/master/klumps/grafana.libsonnet
+                local n = std.length(row.panels),
+                local nextPanel = super._nextPanel,
+                local panels = std.makeArray(n, function(i)
+                    row.panels[i] { id: nextPanel + i }),
+
+                _nextPanel: nextPanel + n,
+                rows+: [row { panels: panels }],
+            },
+        addPanels(panels):: self {
             panels+::: panels,
         },
-    addPanel(panel, gridPos)::
-        {
+        addPanel(panel, gridPos):: self {
             panels+::: [panel { gridPos: gridPos }],
         },
-    addRows(rows):: {
-        rows+: rows,
-    },
-    addLink(link):: {
-        links+: [link],
+        addRows(rows):: self {
+            rows+: rows,
+        },
+        addLink(link):: self {
+            links+: [link],
+        },
     },
 }

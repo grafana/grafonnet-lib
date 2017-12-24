@@ -13,7 +13,7 @@ grafana.dashboard.new(
     time_from="now-1h",
     tags=["java"]
 )
-+ grafana.dashboard.addTemplate(
+.addTemplate(
     grafana.template.datasource(
         "PROMETHEUS_DS",
         "prometheus",
@@ -21,7 +21,7 @@ grafana.dashboard.new(
         hide="label",
     )
 )
-+ grafana.dashboard.addAnnotation(
+.addAnnotation(
     grafana.annotation.datasource(
         "Ansible",
         "-- Grafana --",
@@ -29,7 +29,7 @@ grafana.dashboard.new(
         enable=false,
     )
 )
-+ grafana.dashboard.addAnnotation(
+.addAnnotation(
     grafana.annotation.datasource(
         "Support",
         "-- Grafana --",
@@ -37,25 +37,25 @@ grafana.dashboard.new(
         enable=false,
     )
 )
-+ grafana.dashboard.addLink(
+.addLink(
     grafana.link.dashboards(
         "System",
         ["node"],
     )
 )
-+ grafana.dashboard.addLink(
+.addLink(
     grafana.link.dashboards(
         "Prometheus",
         ["prometheus"],
     )
 )
-+ grafana.dashboard.addLink(
+.addLink(
     grafana.link.dashboards(
         "Apache",
         ["apache"],
     )
 )
-+ dashboard.addTemplate(
+.addTemplate(
     template.new(
         "env",
         "$PROMETHEUS_DS",
@@ -64,7 +64,7 @@ grafana.dashboard.new(
         refresh="time",
     )
 )
-+ dashboard.addTemplate(
+.addTemplate(
     template.new(
         "job",
         "$PROMETHEUS_DS",
@@ -73,7 +73,7 @@ grafana.dashboard.new(
         refresh="time",
     )
 )
-+ dashboard.addTemplate(
+.addTemplate(
     template.new(
         "instance",
         "$PROMETHEUS_DS",
@@ -82,7 +82,7 @@ grafana.dashboard.new(
         refresh="time",
     )
 )
-+ dashboard.addTemplate(
+.addTemplate(
     template.new(
         "gc",
         "$PROMETHEUS_DS",
@@ -95,7 +95,7 @@ grafana.dashboard.new(
         hide="value",
     )
 )
-+ dashboard.addTemplate(
+.addTemplate(
     template.new(
         "pool",
         "$PROMETHEUS_DS",
@@ -108,7 +108,7 @@ grafana.dashboard.new(
         hide="value",
     )
 )
-+ dashboard.addRow(
+.addRow(
     row.new(
         height="125px",
     )
@@ -178,7 +178,7 @@ grafana.dashboard.new(
         )
     )
 )
-+ dashboard.addRow(
+.addRow(
     row.new(
         title="Memory",
     )
@@ -261,7 +261,7 @@ grafana.dashboard.new(
         )
     )
 )
-+ dashboard.addRow(
+.addRow(
     row.new(
         title="Memory pools",
     )
@@ -307,7 +307,7 @@ grafana.dashboard.new(
         )
     )
 )
-+ dashboard.addRow(
+.addRow(
     row.new(
         title="Garbage Collection: $gc",
         repeat="gc",
@@ -365,7 +365,7 @@ grafana.dashboard.new(
         )
     )
 )
-+ dashboard.addRow(
+.addRow(
     row.new(
         title="Threads",
     )
