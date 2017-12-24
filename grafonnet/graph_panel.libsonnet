@@ -141,8 +141,13 @@
             format: format,
             [if decimals != null then "decimals"]: decimals,
         },
+        _nextTarget:: 0,
         addTarget(target):: self {
-            targets+: [target],
+            // automatically ref id in added targets.
+            // https://github.com/kausalco/public/blob/master/klumps/grafana.libsonnet
+            local nextTarget = super._nextTarget,
+            _nextTarget: nextTarget + 1,
+            targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
         },
     },
 }

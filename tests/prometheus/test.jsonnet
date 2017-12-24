@@ -6,7 +6,6 @@ local prometheus = grafana.prometheus;
     advanced: prometheus.target(
         "apache_up",
         datasource="prom1",
-        refId="A",
         instant=true,
         intervalFactor=1,
         interval="1m",

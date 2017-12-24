@@ -39,6 +39,6 @@ local graphPanel = grafana.graphPanel;
         legend_hideZero=true,
     ),
     targets: graphPanel.new("with targets")
-             .addTarget("foo")
-             .addTarget("foo"),
+             .addTarget({ a: "foo" })
+             .addTarget({ b: "foo" }),
 }

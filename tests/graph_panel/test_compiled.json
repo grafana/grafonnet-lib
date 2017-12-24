@@ -175,8 +175,14 @@
       "stack": false,
       "steppedLine": false,
       "targets": [
-         "foo",
-         "foo"
+         {
+            "a": "foo",
+            "refId": "A"
+         },
+         {
+            "b": "foo",
+            "refId": "B"
+         }
       ],
       "thresholds": [ ],
       "timeFrom": null,

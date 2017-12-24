@@ -435,21 +435,24 @@
                      "expr": "jvm_memory_bytes_max{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"heap\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "max"
+                     "legendFormat": "max",
+                     "refId": "A"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_memory_bytes_used{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"heap\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "used"
+                     "legendFormat": "used",
+                     "refId": "B"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_memory_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"heap\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "committed"
+                     "legendFormat": "committed",
+                     "refId": "C"
                   }
                ],
                "thresholds": [ ],
@@ -529,21 +532,24 @@
                      "expr": "jvm_memory_bytes_max{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"nonheap\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "max"
+                     "legendFormat": "max",
+                     "refId": "A"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_memory_bytes_used{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"nonheap\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "used"
+                     "legendFormat": "used",
+                     "refId": "B"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_memory_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\",area=\"nonheap\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "committed"
+                     "legendFormat": "committed",
+                     "refId": "C"
                   }
                ],
                "thresholds": [ ],
@@ -638,21 +644,24 @@
                      "expr": "jvm_memory_pool_bytes_max{env=\"$env\",job=\"$job\",instance=\"$instance\",pool=\"$pool\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "max"
+                     "legendFormat": "max",
+                     "refId": "A"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_memory_pool_bytes_used{env=\"$env\",job=\"$job\",instance=\"$instance\",pool=\"$pool\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "used"
+                     "legendFormat": "used",
+                     "refId": "B"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_memory_pool_bytes_committed{env=\"$env\",job=\"$job\",instance=\"$instance\",pool=\"$pool\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "committed"
+                     "legendFormat": "committed",
+                     "refId": "C"
                   }
                ],
                "thresholds": [ ],
@@ -747,7 +756,8 @@
                      "expr": "increase(jvm_gc_collection_seconds_count{env=\"$env\",job=\"$job\",instance=\"$instance\",gc=\"$gc\"}[5m])",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "Garbage collections per 5m"
+                     "legendFormat": "Garbage collections per 5m",
+                     "refId": "A"
                   }
                ],
                "thresholds": [ ],
@@ -828,7 +838,8 @@
                      "expr": "rate(jvm_gc_collection_seconds_sum{env=\"$env\",job=\"$job\",instance=\"$instance\",gc=\"$gc\"}[5m])/rate(jvm_gc_collection_seconds_count{env=\"$env\",job=\"$job\",instance=\"$instance\",gc=\"$gc\"}[5m])",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "Avg of garbage Collection duration per 5m"
+                     "legendFormat": "Avg of garbage Collection duration per 5m",
+                     "refId": "A"
                   }
                ],
                "thresholds": [ ],
@@ -923,35 +934,40 @@
                      "expr": "jvm_threads_peak{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "Peak thread count"
+                     "legendFormat": "Peak thread count",
+                     "refId": "A"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_threads_current{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "Current thread count"
+                     "legendFormat": "Current thread count",
+                     "refId": "B"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_threads_daemon{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "Daemon thread count"
+                     "legendFormat": "Daemon thread count",
+                     "refId": "C"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_threads_deadlocked{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "Cycles of JVM-threads that are in deadlock waiting to acquire object monitors or ownable synchronizers"
+                     "legendFormat": "Cycles of JVM-threads that are in deadlock waiting to acquire object monitors or ownable synchronizers",
+                     "refId": "D"
                   },
                   {
                      "datasource": "$PROMETHEUS_DS",
                      "expr": "jvm_threads_deadlocked_monitor{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "Cycles of JVM-threads that are in deadlock waiting to acquire object monitors"
+                     "legendFormat": "Cycles of JVM-threads that are in deadlock waiting to acquire object monitors",
+                     "refId": "E"
                   }
                ],
                "thresholds": [ ],
@@ -1032,7 +1048,8 @@
                      "expr": "rate(jvm_threads_started_total{env=\"$env\",job=\"$job\",instance=\"$instance\"}[5m])",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "Started threads rate"
+                     "legendFormat": "Started threads rate",
+                     "refId": "A"
                   }
                ],
                "thresholds": [ ],
