@@ -96,4 +96,35 @@
     else
         refresh,
     filterAuto(str):: str != "auto",
+    custom(
+        name,
+        query,
+        current,
+        refresh="never",
+        label="",
+        valuelabels={},
+        hide="",
+    )::
+        {
+            allValue: null,
+            current: {
+                value: current,
+                text: if current in valuelabels then valuelabels[current] else current,
+            },
+            options: std.map(
+                function(i)
+                    {
+                        text: if i in valuelabels then valuelabels[i] else i,
+                        value: i,
+                    }, std.split(query, ',')
+            ),
+            hide: $.hide(hide),
+            includeAll: false,
+            label: label,
+            refresh: $.refresh(refresh),
+            multi: false,
+            name: name,
+            query: query,
+            type: "custom",
+        },
 }
