@@ -65,4 +65,9 @@ local row = grafana.row;
             { title: "id23" },
         ]
     ),
+    dashboard.new("test3")
+    .addPanel({ foo: "bar" }, { x: 14, y: 42, w: 33, h: 26 })
+    .addPanel({ foo: "bar" }, { x: 24, y: 52, w: 43, h: 36 })
+    .addPanel({ foo: "bar" }, { x: 34, y: 62, w: 53, h: 36 })
+    .addPanel({ foo: "bar" }, { x: 44, y: 72, w: 63, h: 46 }),
 ]

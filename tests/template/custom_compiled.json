@@ -1,0 +1,52 @@
+{
+   "advanced": {
+      "allValue": null,
+      "current": {
+         "text": "nouveau",
+         "value": "new"
+      },
+      "hide": 2,
+      "includeAll": false,
+      "label": "node",
+      "multi": false,
+      "name": "foo",
+      "options": [
+         {
+            "text": "nouveau",
+            "value": "new"
+         },
+         {
+            "text": "ancien",
+            "value": "old"
+         }
+      ],
+      "query": "new,old",
+      "refresh": 0,
+      "type": "custom"
+   },
+   "basic": {
+      "allValue": null,
+      "current": {
+         "text": "bar",
+         "value": "bar"
+      },
+      "hide": 0,
+      "includeAll": false,
+      "label": "",
+      "multi": false,
+      "name": "host",
+      "options": [
+         {
+            "text": "foo",
+            "value": "foo"
+         },
+         {
+            "text": "bar",
+            "value": "bar"
+         }
+      ],
+      "query": "foo,bar",
+      "refresh": 0,
+      "type": "custom"
+   }
+}
