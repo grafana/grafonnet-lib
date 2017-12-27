@@ -44,7 +44,7 @@ local timepickerlib = import "timepicker.libsonnet";
         templates:: [],
         annotations: { list: it._annotations },
         templating: { list: it.templates },
-        _nextPanel:: 0,
+        _nextPanel:: 2,
         addRow(row)::
             self {
                 // automatically number panels in added rows.
