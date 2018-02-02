@@ -12,9 +12,11 @@ local timepickerlib = import "timepicker.libsonnet";
         refresh="",
         timepicker=timepickerlib.new(),
         hideControls=false,
+        uid="",
     ):: {
         local it = self,
         _annotations:: [],
+        [if uid != "" then "uid"]: uid,
         editable: editable,
         gnetId: null,
         graphTooltip: 0,

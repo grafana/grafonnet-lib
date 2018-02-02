@@ -6,6 +6,7 @@ local dashboard = grafana.dashboard;
     adv: dashboard.new(
         "adv",
         editable=true,
+        uid="foo",
         style="light",
         tags=["foo"],
         time_from="6h",
