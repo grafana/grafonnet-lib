@@ -1,11 +1,11 @@
 {
     new(
-        title="Dashboard Row",
-        height="250px",
+        title='Dashboard Row',
+        height='250px',
         collapse=false,
         repeat=null,
         showTitle=null,
-        titleSize="h6"
+        titleSize='h6'
     ):: {
         collapse: collapse,
         collapsed: collapse,
@@ -18,9 +18,9 @@
             if showTitle != null then
                 showTitle
             else
-                title != "Dashboard Row",
+                title != 'Dashboard Row',
         title: title,
-        type: "row",
+        type: 'row',
         titleSize: titleSize,
         addPanels(panels):: self {
             panels+: panels,

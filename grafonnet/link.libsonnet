@@ -8,11 +8,11 @@
     )::
         {
             asDropdown: asDropdown,
-            icon: "external link",
+            icon: 'external link',
             includeVars: includeVars,
             keepTime: keepTime,
             tags: tags,
             title: title,
-            type: "dashboards",
+            type: 'dashboards',
         },
 }

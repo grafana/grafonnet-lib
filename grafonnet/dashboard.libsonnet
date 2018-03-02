@@ -1,22 +1,22 @@
-local timepickerlib = import "timepicker.libsonnet";
+local timepickerlib = import 'timepicker.libsonnet';
 
 {
     new(
         title,
         editable=false,
-        style="dark",
+        style='dark',
         tags=[],
-        time_from="now-6h",
-        time_to="now",
-        timezone="browser",
-        refresh="",
+        time_from='now-6h',
+        time_to='now',
+        timezone='browser',
+        refresh='',
         timepicker=timepickerlib.new(),
         hideControls=false,
-        uid="",
+        uid='',
     ):: {
         local it = self,
         _annotations:: [],
-        [if uid != "" then "uid"]: uid,
+        [if uid != '' then 'uid']: uid,
         editable: editable,
         gnetId: null,
         graphTooltip: 0,
@@ -64,7 +64,7 @@ local timepickerlib = import "timepicker.libsonnet";
                 // automatically number panels in added rows.
                 // https://github.com/kausalco/public/blob/master/klumps/grafana.libsonnet
                 local n = std.foldl(function(numOfPanels, p)
-                    (if "panels" in p
+                    (if 'panels' in p
                      then
                          numOfPanels + 1 + std.length(p.panels)
                      else
@@ -77,13 +77,13 @@ local timepickerlib = import "timepicker.libsonnet";
                                 if i == 0 then
                                     0
                                 else
-                                    if "panels" in _panels[i - 1] then
+                                    if 'panels' in _panels[i - 1] then
                                         (_panels[i - 1].id - nextPanel) + 1 + std.length(_panels[i - 1].panels)
                                     else
                                         (_panels[i - 1].id - nextPanel) + 1
 
                             ),
-                            [if "panels" in newpanels[i] then "panels"]: std.makeArray(
+                            [if 'panels' in newpanels[i] then 'panels']: std.makeArray(
                                 std.length(newpanels[i].panels), function(j)
                                     newpanels[i].panels[j] {
                                         id: 1 + j +
@@ -91,7 +91,7 @@ local timepickerlib = import "timepicker.libsonnet";
                                             if i == 0 then
                                                 0
                                             else
-                                                if "panels" in _panels[i - 1] then
+                                                if 'panels' in _panels[i - 1] then
                                                     (_panels[i - 1].id - nextPanel) + 1 + std.length(_panels[i - 1].panels)
                                                 else
                                                     (_panels[i - 1].id - nextPanel) + 1
