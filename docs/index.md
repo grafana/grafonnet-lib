@@ -37,5 +37,5 @@ code of conduct when you contribute to Grafonnet.
 We use the same [license][lic1] as [Grafana][lic2] (ASL 2.0).
 
 [lic1]:https://github.com/grafana/grafonnet-lib/blob/master/LICENSE
-[lic2]:https://github.com/grafana/grafana/blob/master/LICENSE
+[lic2]:https://github.com/grafana/grafana/blob/master/LICENSE.md
 [coc]:https://github.com/grafana/grafana/blob/master/CODE_OF_CONDUCT.md
