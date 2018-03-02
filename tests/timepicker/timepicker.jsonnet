@@ -1,4 +1,4 @@
-local grafana = import "grafonnet/grafana.libsonnet";
+local grafana = import 'grafonnet/grafana.libsonnet';
 local timepicker = grafana.timepicker;
 
 {

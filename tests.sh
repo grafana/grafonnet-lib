@@ -5,6 +5,9 @@ x=0
 for i in `find . -name '*.jsonnet' -or -name '*.libsonnet'`
 do
     t="Formating $i..."
+    if [[ $1 == "update" ]]; then
+        jsonnet fmt -i -n 4 $i
+    fi
     if jsonnet fmt --test -n 4 $i;
     then
         echo $t OK

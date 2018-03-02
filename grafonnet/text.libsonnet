@@ -1,16 +1,16 @@
 {
     new(
-        title="",
+        title='',
         span=12,
-        mode="markdown",
-        content="",
+        mode='markdown',
+        content='',
         transparent=null,
     )::
         {
-            [if transparent != null then "transparent"]: transparent,
+            [if transparent != null then 'transparent']: transparent,
             title: title,
             span: span,
-            type: "text",
+            type: 'text',
             mode: mode,
             content: content,
         },
