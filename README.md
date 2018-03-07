@@ -48,7 +48,7 @@ To be able to find the grafonnet library, you must pass the root of the git
 repository to grafonnet using the `-J` option:
 
 ```
-jsonnet -j <path> dashboard.jsonnet
+jsonnet -J <path> dashboard.jsonnet
 ```
 
 As you build your own mixins/dashboards, you should add additional `-J` paths.
