@@ -9,4 +9,5 @@
     graphPanel:: import 'graph_panel.libsonnet',
     singlestat:: import 'singlestat.libsonnet',
     prometheus:: import 'prometheus.libsonnet',
+    sql:: import 'sql.libsonnet',
 }
