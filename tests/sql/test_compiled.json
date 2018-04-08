@@ -1,0 +1,11 @@
+{
+   "advanced": {
+      "datasource": "pg_test",
+      "format": "table",
+      "rawSql": "SELECT time, value FROM table"
+   },
+   "basic": {
+      "format": "time_series",
+      "rawSql": "SELECT now() AS time, 5 AS value"
+   }
+}
