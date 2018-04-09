@@ -41,4 +41,6 @@ local graphPanel = grafana.graphPanel;
     targets: graphPanel.new('with targets')
              .addTarget({ a: 'foo' })
              .addTarget({ b: 'foo' }),
+    multipleTargets: graphPanel.new('with array of targets')
+                     .addTargets([{ a: 'foo' }, { b: 'foo' }]),
 }
