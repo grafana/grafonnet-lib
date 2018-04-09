@@ -43,4 +43,5 @@ local graphPanel = grafana.graphPanel;
              .addTarget({ b: 'foo' }),
     multipleTargets: graphPanel.new('with array of targets')
                      .addTargets([{ a: 'foo' }, { b: 'foo' }]),
+    aliasColors: graphPanel.new('with colors', aliasColors={ busy: '#bf1b00', io: '#70dbed', idle: '#7eb26d' }),
 }

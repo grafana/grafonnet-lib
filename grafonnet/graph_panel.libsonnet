@@ -28,6 +28,7 @@
      * @param legend_avg Show average in legend
      * @param legend_alignAsTable Show legend as table
      * @param legend_rightSide Show legend to the right
+     * @param aliasColors Define color mappings for graphs
      * @return A json that represents a graph panel
      */
     new(
@@ -64,6 +65,7 @@
         legend_rightSide=false,
         legend_hideEmpty=null,
         legend_hideZero=null,
+        aliasColors={},
     ):: {
         title: title,
         span: span,
@@ -119,7 +121,7 @@
         },
         timeFrom: null,
         timeShift: null,
-        aliasColors: {},
+        aliasColors: aliasColors,
         repeat: repeat,
         [if repeatDirection != null then 'repeatDirection']: repeatDirection,
         seriesOverrides: [],
