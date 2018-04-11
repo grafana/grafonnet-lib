@@ -19,7 +19,7 @@
         datasource=null,
         styles=[],
     ):: {
-        type: "table",
+        type: 'table',
         title: title,
         span: span,
         [if min_span != null then 'minSpan']: min_span,
@@ -28,7 +28,7 @@
         ],
         styles: styles,
         [if description != null then 'description']: description,
-        transform: "table",
+        transform: 'table',
         _nextTarget:: 0,
         addTarget(target):: self {
             // automatically ref id in added targets.
