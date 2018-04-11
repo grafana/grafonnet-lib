@@ -69,13 +69,12 @@ dashboard.new(
     tags=["java"],
 )
 .addRow(
-    row.new(id=2)
+    row.new()
     .addPanel(
         singlestat.new(
             "uptime",
             format="s",
             datasource="Prometheus",
-            id=3,
             span=2,
             valueName="current",
         )
@@ -94,4 +93,3 @@ Find more examples in the [examples](examples/) directory.
 [brew]:https://brew.sh/
 [jsonnet]:http://jsonnet.org/
 [jsonnetgh]:https://github.com/google/jsonnet
-
