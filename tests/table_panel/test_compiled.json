@@ -1,0 +1,56 @@
+{
+   "advanced": {
+      "datasource": "$PROMETHEUS",
+      "description": "description",
+      "span": 12,
+      "styles": [
+         {
+            "alias": "Users",
+            "colorMode": "row",
+            "colors": [
+               "rgba(245,54,54,0.9)",
+               "rgba(237,129,40,0.89)",
+               "rgba(50,172,45,0.97)"
+            ],
+            "pattern": "Users",
+            "thresholds": [
+               "0",
+               "50"
+            ],
+            "type": "number",
+            "unit": "none"
+         }
+      ],
+      "targets": [ ],
+      "title": "test",
+      "transform": "table",
+      "type": "table"
+   },
+   "basic": {
+      "datasource": null,
+      "span": 12,
+      "styles": [ ],
+      "targets": [ ],
+      "title": "test",
+      "transform": "table",
+      "type": "table"
+   },
+   "targets": {
+      "datasource": null,
+      "span": 12,
+      "styles": [ ],
+      "targets": [
+         {
+            "a": "foo",
+            "refId": "A"
+         },
+         {
+            "b": "foo",
+            "refId": "B"
+         }
+      ],
+      "title": "with targets",
+      "transform": "table",
+      "type": "table"
+   }
+}
