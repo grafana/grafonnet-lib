@@ -44,4 +44,15 @@ local graphPanel = grafana.graphPanel;
     multipleTargets: graphPanel.new('with array of targets')
                      .addTargets([{ a: 'foo' }, { b: 'foo' }]),
     aliasColors: graphPanel.new('with colors', aliasColors={ busy: '#bf1b00', io: '#70dbed', idle: '#7eb26d' }),
+    legendSort: graphPanel.new(
+        'with sorted legend',
+        legend_values=true,
+        legend_min=true,
+        legend_max=true,
+        legend_current=true,
+        legend_alignAsTable=true,
+        legend_rightSide=true,
+        legend_sort='current',
+        legend_sortDesc=true,
+    ),
 }
