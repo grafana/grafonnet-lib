@@ -167,7 +167,7 @@
         },
         resetYaxes():: self {
             yaxes: [],
-            _nextYaxis:: 0
+            _nextYaxis:: 0,
         },
         _nextYaxis:: 0,
         addYaxis(
@@ -179,9 +179,9 @@
             logBase=1,
             decimals=null,
         ):: self {
-           local nextYaxis = super._nextYaxis,
-           _nextYaxis: nextYaxis + 1,
-           yaxes+: [self.yaxe(format, min, max, label, show, logBase, decimals)],
+            local nextYaxis = super._nextYaxis,
+            _nextYaxis: nextYaxis + 1,
+            yaxes+: [self.yaxe(format, min, max, label, show, logBase, decimals)],
         },
     },
 }
