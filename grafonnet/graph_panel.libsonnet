@@ -132,6 +132,7 @@
         [if repeatDirection != null then 'repeatDirection']: repeatDirection,
         seriesOverrides: [],
         thresholds: [],
+        links: [],
         yaxe(
             format='short',
             min=null,
