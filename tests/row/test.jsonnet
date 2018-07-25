@@ -15,6 +15,6 @@ local row = grafana.row;
     panels: row.new(
         height='250px',
     )
-    .addPanel('foo')
-    .addPanel('bar'),
+            .addPanel('foo')
+            .addPanel('bar'),
 }
