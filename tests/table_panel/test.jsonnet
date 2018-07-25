@@ -2,9 +2,13 @@ local grafana = import 'grafonnet/grafana.libsonnet';
 local tablePanel = grafana.tablePanel;
 
 {
-    basic: tablePanel.new('test'),
+    basic: tablePanel.new(
+        'test',
+        span=12
+    ),
     advanced: tablePanel.new(
         'test',
+        span=12,
         datasource='$PROMETHEUS',
         description='description',
         styles=[
@@ -19,7 +23,7 @@ local tablePanel = grafana.tablePanel;
             },
         ],
     ),
-    targets: tablePanel.new('with targets')
+    targets: tablePanel.new('with targets', span=12)
              .addTarget({ a: 'foo' })
              .addTarget({ b: 'foo' }),
 }

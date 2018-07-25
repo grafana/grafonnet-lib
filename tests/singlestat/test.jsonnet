@@ -2,9 +2,9 @@ local grafana = import 'grafonnet/grafana.libsonnet';
 local singlestat = grafana.singlestat;
 
 {
-    basic: singlestat.new('single'),
+    basic: singlestat.new('single', span=12),
     target:
-        singlestat.new('targets')
+        singlestat.new('targets', span=12)
         .addTarget('target1')
         .addTarget('target2')
         .addTarget('target3')
@@ -42,6 +42,7 @@ local singlestat = grafana.singlestat;
     ),
     value: singlestat.new(
         'vv',
+        span=12,
         mappingType='value',
     ),
 }

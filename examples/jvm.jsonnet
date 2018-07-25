@@ -181,6 +181,7 @@ grafana.dashboard.new(
 .addRow(
     row.new(
         title='Memory',
+        height='250px',
     )
     .addPanel(
         graphPanel.new(
@@ -264,6 +265,7 @@ grafana.dashboard.new(
 .addRow(
     row.new(
         title='Memory pools',
+        height='250px',
     )
     .addPanel(
         graphPanel.new(
@@ -311,6 +313,7 @@ grafana.dashboard.new(
     row.new(
         title='Garbage Collection: $gc',
         repeat='gc',
+        height='250px',
     )
     .addPanel(
         graphPanel.new(
@@ -368,6 +371,7 @@ grafana.dashboard.new(
 .addRow(
     row.new(
         title='Threads',
+        height='250px',
     )
     .addPanel(
         graphPanel.new(

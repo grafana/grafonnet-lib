@@ -12,7 +12,9 @@ local row = grafana.row;
         showTitle=true,
         titleSize='h1'
     ),
-    panels: row.new()
-            .addPanel('foo')
-            .addPanel('bar'),
+    panels: row.new(
+        height='250px',
+    )
+    .addPanel('foo')
+    .addPanel('bar'),
 }

@@ -240,6 +240,7 @@
       },
       "lines": true,
       "linewidth": 1,
+      "links": [ ],
       "nullPointMode": "null",
       "percentage": false,
       "pointradius": 5,

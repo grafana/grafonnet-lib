@@ -2,7 +2,7 @@ local grafana = import 'grafonnet/grafana.libsonnet';
 local graphPanel = grafana.graphPanel;
 
 {
-    basic: graphPanel.new('test'),
+    basic: graphPanel.new('test', span=12),
     advanced: graphPanel.new(
         'test',
         decimals=2,
@@ -38,14 +38,15 @@ local graphPanel = grafana.graphPanel;
         legend_hideEmpty=true,
         legend_hideZero=true,
     ),
-    targets: graphPanel.new('with targets')
+    targets: graphPanel.new('with targets', span=12)
              .addTarget({ a: 'foo' })
              .addTarget({ b: 'foo' }),
-    multipleTargets: graphPanel.new('with array of targets')
+    multipleTargets: graphPanel.new('with array of targets', span=12)
                      .addTargets([{ a: 'foo' }, { b: 'foo' }]),
-    aliasColors: graphPanel.new('with colors', aliasColors={ busy: '#bf1b00', io: '#70dbed', idle: '#7eb26d' }),
+    aliasColors: graphPanel.new('with colors', aliasColors={ busy: '#bf1b00', io: '#70dbed', idle: '#7eb26d' }, span=12),
     legendSort: graphPanel.new(
         'with sorted legend',
+        span=12,
         legend_values=true,
         legend_min=true,
         legend_max=true,

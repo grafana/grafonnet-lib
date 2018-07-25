@@ -133,7 +133,6 @@
                "x": 14,
                "y": 42
             },
-            "height": "250px",
             "id": 2,
             "panels": [ ],
             "repeat": null,
@@ -153,7 +152,6 @@
                "x": 24,
                "y": 52
             },
-            "height": "250px",
             "id": 3,
             "panels": [ ],
             "repeat": null,
@@ -173,7 +171,6 @@
                "x": 34,
                "y": 62
             },
-            "height": "250px",
             "id": 4,
             "panels": [ ],
             "repeat": null,
@@ -193,7 +190,6 @@
                "x": 44,
                "y": 72
             },
-            "height": "250px",
             "id": 5,
             "panels": [ ],
             "repeat": null,
@@ -208,7 +204,6 @@
             "collapse": false,
             "collapsed": false,
             "h": 41,
-            "height": "250px",
             "id": 6,
             "panels": [ ],
             "repeat": null,
@@ -284,7 +279,6 @@
                "x": 14,
                "y": 42
             },
-            "height": "250px",
             "id": 2,
             "panels": [ ],
             "repeat": null,
@@ -304,7 +298,6 @@
                "x": 24,
                "y": 52
             },
-            "height": "250px",
             "id": 3,
             "panels": [ ],
             "repeat": null,
@@ -324,7 +317,6 @@
                "x": 34,
                "y": 62
             },
-            "height": "250px",
             "id": 4,
             "panels": [ ],
             "repeat": null,
@@ -344,7 +336,6 @@
                "x": 44,
                "y": 72
             },
-            "height": "250px",
             "id": 5,
             "panels": [ ],
             "repeat": null,
@@ -513,7 +504,6 @@
          {
             "collapse": false,
             "collapsed": false,
-            "height": "250px",
             "id": 17,
             "panels": [
                {
@@ -536,7 +526,6 @@
          {
             "collapse": false,
             "collapsed": false,
-            "height": "250px",
             "id": 20,
             "panels": [ ],
             "repeat": null,
@@ -550,7 +539,6 @@
          {
             "collapse": false,
             "collapsed": false,
-            "height": "250px",
             "id": 21,
             "panels": [ ],
             "repeat": null,
