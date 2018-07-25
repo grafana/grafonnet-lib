@@ -12,6 +12,7 @@ local timepickerlib = import 'timepicker.libsonnet';
         refresh='',
         timepicker=timepickerlib.new(),
         hideControls=false,
+        schemaVersion=14,
         uid='',
     ):: {
         local it = self,
@@ -26,7 +27,7 @@ local timepickerlib = import 'timepicker.libsonnet';
         panels:: [],
         refresh: refresh,
         rows: [],
-        schemaVersion: 14,
+        schemaVersion: schemaVersion,
         style: style,
         tags: tags,
         time: {
