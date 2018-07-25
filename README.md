@@ -73,6 +73,41 @@ dashboard.new(
     schemaVersion=16,
     tags=["java"],
 )
+.addTemplate(
+    grafana.template.datasource(
+        'PROMETHEUS_DS',
+        'prometheus',
+        'Prometheus',
+        hide='label',
+    )
+)
+.addTemplate(
+    template.new(
+        'env',
+        '$PROMETHEUS_DS',
+        'label_values(jvm_threads_current, env)',
+        label='Environment',
+        refresh='time',
+    )
+)
+.addTemplate(
+    template.new(
+        'job',
+        '$PROMETHEUS_DS',
+        'label_values(jvm_threads_current{env="$env"}, job)',
+        label='Job',
+        refresh='time',
+    )
+)
+.addTemplate(
+    template.new(
+        'instance',
+        '$PROMETHEUS_DS',
+        'label_values(jvm_threads_current{env="$env",job="$job"}, instance)',
+        label='Instance',
+        refresh='time',
+    )
+)
 .addPanel(
     singlestat.new(
         "uptime",
@@ -106,6 +141,41 @@ local prometheus = grafana.prometheus;
 dashboard.new(
     "JVM",
     tags=["java"],
+)
+.addTemplate(
+    grafana.template.datasource(
+        'PROMETHEUS_DS',
+        'prometheus',
+        'Prometheus',
+        hide='label',
+    )
+)
+.addTemplate(
+    template.new(
+        'env',
+        '$PROMETHEUS_DS',
+        'label_values(jvm_threads_current, env)',
+        label='Environment',
+        refresh='time',
+    )
+)
+.addTemplate(
+    template.new(
+        'job',
+        '$PROMETHEUS_DS',
+        'label_values(jvm_threads_current{env="$env"}, job)',
+        label='Job',
+        refresh='time',
+    )
+)
+.addTemplate(
+    template.new(
+        'instance',
+        '$PROMETHEUS_DS',
+        'label_values(jvm_threads_current{env="$env",job="$job"}, instance)',
+        label='Instance',
+        refresh='time',
+    )
 )
 .addRow(
     row.new()
