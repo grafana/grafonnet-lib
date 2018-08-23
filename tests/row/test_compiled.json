@@ -15,7 +15,6 @@
    "basic": {
       "collapse": false,
       "collapsed": false,
-      "height": "250px",
       "panels": [ ],
       "repeat": null,
       "repeatIteration": null,
@@ -44,7 +43,6 @@
    "showTite": {
       "collapse": false,
       "collapsed": false,
-      "height": "250px",
       "panels": [ ],
       "repeat": null,
       "repeatIteration": null,

@@ -35,7 +35,7 @@
      */
     new(
         title,
-        span=12,
+        span=null,
         fill=1,
         linewidth=1,
         decimals=null,
@@ -72,7 +72,7 @@
         aliasColors={},
     ):: {
         title: title,
-        span: span,
+        [if span != null then 'span']: span,
         [if min_span != null then 'minSpan']: min_span,
         type: 'graph',
         datasource: datasource,

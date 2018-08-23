@@ -13,15 +13,15 @@
      */
     new(
         title,
-        span=12,
         description=null,
+        span=null,
         min_span=null,
         datasource=null,
         styles=[],
     ):: {
         type: 'table',
         title: title,
-        span: span,
+        [if span != null then 'span']: span,
         [if min_span != null then 'minSpan']: min_span,
         datasource: datasource,
         targets: [

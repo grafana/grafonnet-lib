@@ -5,9 +5,9 @@ local row = grafana.row;
 [
     dashboard.new('test')
     .addTemplate({ test: true })
-    .addRow(row.new(title='1'))
-    .addRow(row.new(title='2'))
-    .addRows([row.new(title='1'), row.new(title='2')])
+    .addRow(row.new(title='1', height='250px'))
+    .addRow(row.new(title='2', height='250px'))
+    .addRows([row.new(title='1', height='250px'), row.new(title='2', height='250px')])
     .addAnnotation('foo')
     .addAnnotation('bar')
     .addLink('foolinks')
@@ -26,19 +26,19 @@ local row = grafana.row;
     dashboard.new('subId')
     .addPanels(
         [
-            row.new(title='id0') + {
+            row.new(title='id0', height='250px') + {
                 panels: [
                     { foo: 'id1' },
                     { bar: 'id2' },
                 ],
             },
-            row.new(title='id3'),
-            row.new(title='id4'),
+            row.new(title='id3', height='250px'),
+            row.new(title='id4', height='250px'),
             { title: 'id5' },
             { title: 'id6' },
             { title: 'id7' },
             { title: 'id8' },
-            row.new(title='id9') + {
+            row.new(title='id9', height='250px') + {
                 panels: [
                     { foo: 'id10' },
                     { bar: 'id11' },
