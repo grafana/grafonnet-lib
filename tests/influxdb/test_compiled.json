@@ -1,0 +1,14 @@
+{
+   "advanced": {
+      "alias": "$tag_host",
+      "datasource": "telegraf",
+      "query": "SELECT non_negative_derivative(mean(\"bytes_recv\"), 1s) *8\nFROM \"net\" WHERE (\"host\" =~ /^my_host.tld\\.net$/ AND \"interface\" =~ /^eth0$/)\nAND $timeFilter\nGROUP BY time($__interval), \"host\" fill(none)\n",
+      "rawQuery": true,
+      "resultFormat": "time_series"
+   },
+   "basic": {
+      "query": "SELECT mean(\"my_field\")\nFROM my_meas\nWHERE $timeFilter\nGROUP BY time($__interval)\n",
+      "rawQuery": true,
+      "resultFormat": "time_series"
+   }
+}
