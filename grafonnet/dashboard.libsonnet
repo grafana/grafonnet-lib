@@ -11,6 +11,7 @@ local timepickerlib = import 'timepicker.libsonnet';
         timezone='browser',
         refresh='',
         timepicker=timepickerlib.new(),
+        graphTooltip='default',
         hideControls=false,
         schemaVersion=14,
         uid='',
@@ -20,7 +21,11 @@ local timepickerlib = import 'timepicker.libsonnet';
         [if uid != '' then 'uid']: uid,
         editable: editable,
         gnetId: null,
-        graphTooltip: 0,
+        graphTooltip:
+            if std.asciiLower(graphTooltip) == 'shared_tooltip' then 2
+            else if std.asciiLower(graphTooltip) == 'shared_crosshair' then 1
+            else if std.asciiLower(graphTooltip) == 'default' then 0
+            else std.asciiLower(graphTooltip),
         hideControls: hideControls,
         id: null,
         links: [],
