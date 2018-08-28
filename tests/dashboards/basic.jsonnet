@@ -15,5 +15,6 @@ local dashboard = grafana.dashboard;
         refresh='1m',
         timepicker='hi',
         hideControls=true,
+        graphTooltip='shared_crosshair',
     ),
 }
