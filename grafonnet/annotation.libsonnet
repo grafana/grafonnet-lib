@@ -18,6 +18,7 @@
     iconColor='rgba(255, 96, 96, 1)',
     tags=[],
     type='tags',
+    builtIn=null,
   )::
     {
       datasource: datasource,
@@ -29,5 +30,6 @@
       showIn: 0,
       tags: tags,
       type: type,
+      [if builtIn != null then 'builtIn']: builtIn,
     },
 }
