@@ -1,6 +1,7 @@
 {
   target(
     expr,
+    format='time_series',
     intervalFactor=2,
     legendFormat='',
     datasource=null,
@@ -9,7 +10,7 @@
   ):: {
     [if datasource != null then 'datasource']: datasource,
     expr: expr,
-    format: 'time_series',
+    format: format,
     intervalFactor: intervalFactor,
     legendFormat: legendFormat,
     [if interval != null then 'interval']: interval,
