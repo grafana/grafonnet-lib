@@ -13,5 +13,6 @@ local annotation = grafana.annotation;
     iconColor='rgba(25, 6, 6, 2)',
     tags=['foo'],
     type='rows',
+    builtIn=1,
   ),
 }
