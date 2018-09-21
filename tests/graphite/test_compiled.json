@@ -1,0 +1,14 @@
+{
+   "advanced": {
+      "datasource": "graphite",
+      "hide": true,
+      "target": "#A",
+      "targetFull": "my.awesome.metric",
+      "textEditor": false
+   },
+   "basic": {
+      "hide": false,
+      "target": "metric",
+      "textEditor": false
+   }
+}
