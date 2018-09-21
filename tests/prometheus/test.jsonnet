@@ -11,4 +11,8 @@ local prometheus = grafana.prometheus;
     interval='1m',
     legendFormat='{{instance}}'
   ),
+  heatmap: prometheus.target(
+    'heatmap',
+    format='heatmap',
+  ),
 }
