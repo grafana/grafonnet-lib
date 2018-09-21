@@ -13,5 +13,11 @@
       "format": "time_series",
       "intervalFactor": 2,
       "legendFormat": ""
+   },
+   "heatmap": {
+      "expr": "heatmap",
+      "format": "heatmap",
+      "intervalFactor": 2,
+      "legendFormat": ""
    }
 }
