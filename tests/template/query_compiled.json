@@ -15,7 +15,7 @@
       "query": "newtest-query",
       "refresh": 0,
       "regex": "([a-z+])",
-      "sort": 0,
+      "sort": 2,
       "tagValuesQuery": "tvquery",
       "tags": [ ],
       "tagsQuery": "",

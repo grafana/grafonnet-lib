@@ -14,6 +14,7 @@ local template = grafana.template;
     current='bar',
     hide='value',
     includeAll=true,
+    sort=2,
     multi=true,
   ),
   refresh: [
