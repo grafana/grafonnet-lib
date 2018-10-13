@@ -6,7 +6,7 @@ x=0
 for i in `find . -name '*.jsonnet' -or -name '*.libsonnet'`
 do
     t="Formating $i..."
-    if [[ $1 == "update" ]]; then
+    if [[ "$1" == "update" ]]; then
         jsonnet fmt -i $jsonnet_fmt $i
     fi
     if jsonnet fmt --test $jsonnet_fmt $i;
@@ -32,7 +32,7 @@ do
         continue
     fi
 
-    if [[ $1 == "update" ]]; then cp $json $json_e; fi
+    if [[ "$1" == "update" ]]; then cp $json $json_e; fi
 
     t="Checking $i..."
     if diff -urt $json $json_e
