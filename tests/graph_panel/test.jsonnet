@@ -39,13 +39,7 @@ local graphPanel = grafana.graphPanel;
     legend_hideEmpty=true,
     legend_hideZero=true,
     value_type='cumulative',
-    thresholds=[{
-      colorMode: 'critical',
-      fill: true,
-      line: true,
-      op: 'lt',
-      value: 5
-    }],
+    thresholds=[{ colorMode: 'critical', fill: true, line: true, op: 'lt', value: 5 }],
     logBase1Y=2,
   ),
   targets: graphPanel.new('with targets', span=12)
