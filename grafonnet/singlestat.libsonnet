@@ -41,10 +41,10 @@
       },
     ],
     transparent=null,
-    sparkline= {
-      fillColor: "rgba(31, 118, 189, 0.18)",
+    sparkline={
+      fillColor: 'rgba(31, 118, 189, 0.18)',
       full: false,
-      lineColor: "rgb(31, 120, 193)",
+      lineColor: 'rgb(31, 120, 193)',
       show: false,
     },
   )::
