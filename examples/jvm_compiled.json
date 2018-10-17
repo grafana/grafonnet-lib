@@ -27,6 +27,7 @@
          }
       ]
    },
+   "description": "",
    "editable": false,
    "gnetId": null,
    "graphTooltip": 0,
@@ -41,8 +42,10 @@
          "tags": [
             "node"
          ],
+         "targetBlank": false,
          "title": "System",
-         "type": "dashboards"
+         "type": "dashboards",
+         "url": ""
       },
       {
          "asDropdown": true,
@@ -52,8 +55,10 @@
          "tags": [
             "prometheus"
          ],
+         "targetBlank": false,
          "title": "Prometheus",
-         "type": "dashboards"
+         "type": "dashboards",
+         "url": ""
       },
       {
          "asDropdown": true,
@@ -63,8 +68,10 @@
          "tags": [
             "apache"
          ],
+         "targetBlank": false,
          "title": "Apache",
-         "type": "dashboards"
+         "type": "dashboards",
+         "url": ""
       }
    ],
    "refresh": "1m",
@@ -135,7 +142,8 @@
                      "expr": "time()-process_start_time_seconds{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": ""
+                     "legendFormat": "",
+                     "refId": "A"
                   }
                ],
                "thresholds": "",
@@ -212,7 +220,8 @@
                      "expr": "jvm_info{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "{{vendor}}"
+                     "legendFormat": "{{vendor}}",
+                     "refId": "A"
                   }
                ],
                "thresholds": "",
@@ -289,7 +298,8 @@
                      "expr": "jvm_info{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "{{version}}"
+                     "legendFormat": "{{version}}",
+                     "refId": "A"
                   }
                ],
                "thresholds": "",
@@ -366,7 +376,8 @@
                      "expr": "jvm_classes_loaded{env=\"$env\",job=\"$job\",instance=\"$instance\"}",
                      "format": "time_series",
                      "intervalFactor": 2,
-                     "legendFormat": "{{version}}"
+                     "legendFormat": "{{version}}",
+                     "refId": "A"
                   }
                ],
                "thresholds": "",

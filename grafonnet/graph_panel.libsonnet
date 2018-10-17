@@ -92,12 +92,10 @@
     ],
     [if description != null then 'description']: description,
     [if height != null then 'height']: height,
-    [if format != 'short' then formatY1]: format,
-    [if format != 'short' then formatY2]: format,
     renderer: 'flot',
     yaxes: [
-      self.yaxe(formatY1, min, max, decimals=decimals, logBase=logBase1Y),
-      self.yaxe(formatY2, min, max, decimals=decimals, logBase=logBase2Y),
+      self.yaxe(if format != 'short' then format else formatY1, min, max, decimals=decimals, logBase=logBase1Y),
+      self.yaxe(if format != 'short' then format else formatY2, min, max, decimals=decimals, logBase=logBase2Y),
     ],
     xaxis: {
       show: show_xaxis,
