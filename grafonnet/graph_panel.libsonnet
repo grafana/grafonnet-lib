@@ -10,6 +10,7 @@
    * @param linewidth Line Width, integer from 0 to 10
    * @param decimals Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
    * @param min_span Min span
+   * @param format Unit of the Y axes
    * @param formatY1 Unit of the first Y axe
    * @param formatY2 Unit of the second Y axe
    * @param min Min of the Y axes
@@ -34,7 +35,8 @@
    * @param aliasColors Define color mappings for graphs
    * @param valueType Type of tooltip value
    * @param thresholds Configuration of graph thresholds
-   * @param logBase1Y Value of base of logarithm
+   * @param logBase1Y Value of logarithm base of the first Y axe
+   * @param logBase2Y Value of logarithm base of the second Y axe
    * @return A json that represents a graph panel
    */
   new(
@@ -45,6 +47,7 @@
     decimals=null,
     description=null,
     min_span=null,
+    format='short',
     formatY1='short',
     formatY2='short',
     min=null,
@@ -78,6 +81,7 @@
     value_type='individual',
     thresholds=[],
     logBase1Y=1,
+    logBase2Y=1,
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -88,10 +92,12 @@
     ],
     [if description != null then 'description']: description,
     [if height != null then 'height']: height,
+    [if format != 'short' then formatY1]: format,
+    [if format != 'short' then formatY2]: format,
     renderer: 'flot',
     yaxes: [
-      self.yaxe(formatY1, min, max, decimals=decimals),
-      self.yaxe(formatY2, min, max, decimals=decimals),
+      self.yaxe(formatY1, min, max, decimals=decimals, logBase=logBase1Y),
+      self.yaxe(formatY2, min, max, decimals=decimals, logBase=logBase2Y),
     ],
     xaxis: {
       show: show_xaxis,
@@ -152,7 +158,7 @@
     ):: {
       label: label,
       show: show,
-      logBase: logBase1Y,
+      logBase: logBase,
       min: min,
       max: max,
       format: format,
