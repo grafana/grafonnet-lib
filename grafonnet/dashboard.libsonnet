@@ -15,12 +15,13 @@ local timepickerlib = import 'timepicker.libsonnet';
     hideControls=false,
     schemaVersion=14,
     uid='',
-    description= '',
+    description= null,
   ):: {
     local it = self,
     _annotations:: [],
     [if uid != '' then 'uid']: uid,
     editable: editable,
+    [if description != null then 'description']: description,
     gnetId: null,
     graphTooltip:
       if std.asciiLower(graphTooltip) == 'shared_tooltip' then 2
@@ -44,7 +45,6 @@ local timepickerlib = import 'timepicker.libsonnet';
     timepicker: timepicker,
     title: title,
     version: 0,
-    description: description,
     addAnnotation(annotation):: self {
       _annotations+:: [annotation],
     },
