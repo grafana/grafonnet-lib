@@ -41,6 +41,12 @@
       },
     ],
     transparent=null,
+    sparkline= {
+      fillColor: "rgba(31, 118, 189, 0.18)",
+      full: false,
+      lineColor: "rgb(31, 120, 193)",
+      show: false,
+    },
   )::
     {
       [if height != null then 'height']: height,
@@ -94,12 +100,7 @@
       colorBackground: colorBackground,
       colorValue: colorValue,
       colors: colors,
-      sparkline: {
-        show: false,
-        full: false,
-        lineColor: 'rgb(31, 120, 193)',
-        fillColor: 'rgba(31, 118, 189, 0.18)',
-      },
+      sparkline: sparkline,
       gauge: {
         show: false,
         minValue: 0,
@@ -108,8 +109,11 @@
         thresholdLabels: false,
       },
       tableColumn: '',
+      _nextTarget:: 0,
       addTarget(target):: self {
-        targets+: [target],
+        local nextTarget = super._nextTarget,
+        _nextTarget: nextTarget + 1,
+        targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
       },
     },
 }

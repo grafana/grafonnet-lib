@@ -3,6 +3,7 @@
       "annotations": {
          "list": [ ]
       },
+      "description": "my awesome dashboard",
       "editable": true,
       "gnetId": null,
       "graphTooltip": 1,
@@ -33,6 +34,7 @@
       "annotations": {
          "list": [ ]
       },
+      "description": "",
       "editable": false,
       "gnetId": null,
       "graphTooltip": 0,

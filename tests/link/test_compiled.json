@@ -1,14 +1,16 @@
 {
    "advance": {
       "asDropdown": false,
-      "icon": "external link",
+      "icon": "info",
       "includeVars": true,
       "keepTime": true,
       "tags": [
          "advanced"
       ],
+      "targetBlank": true,
       "title": "adv",
-      "type": "dashboards"
+      "type": "link",
+      "url": "https://wiki.company.com"
    },
    "basic": {
       "asDropdown": true,
@@ -19,7 +21,9 @@
          "nodes",
          "system"
       ],
+      "targetBlank": false,
       "title": "node",
-      "type": "dashboards"
+      "type": "dashboards",
+      "url": ""
    }
 }

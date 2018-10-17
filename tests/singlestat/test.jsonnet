@@ -39,6 +39,12 @@ local singlestat = grafana.singlestat;
     colorValue=true,
     thresholds='1,2',
     rangeMaps=['bar'],
+    sparkline={
+      fillColor: "rgba(189, 174, 189, 0.18)",
+      full: false,
+      lineColor: "rgb(193, 185, 31)",
+      show: true,
+    },
   ),
   value: singlestat.new(
     'vv',

@@ -10,7 +10,8 @@
    * @param linewidth Line Width, integer from 0 to 10
    * @param decimals Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
    * @param min_span Min span
-   * @param format Unit of the Y axes
+   * @param formatY1 Unit of the first Y axe
+   * @param formatY2 Unit of the second Y axe
    * @param min Min of the Y axes
    * @param max Max of the Y axes
    * @param lines Display lines, boolean
@@ -31,6 +32,9 @@
    * @param legend_sort Sort order of legend
    * @param legend_sortDesc Sort legend descending
    * @param aliasColors Define color mappings for graphs
+   * @param valueType Type of tooltip value
+   * @param thresholds Configuration of graph thresholds
+   * @param logBase1Y Value of base of logarithm
    * @return A json that represents a graph panel
    */
   new(
@@ -41,7 +45,8 @@
     decimals=null,
     description=null,
     min_span=null,
-    format='short',
+    formatY1='short',
+    formatY2='short',
     min=null,
     max=null,
     lines=true,
@@ -70,7 +75,9 @@
     legend_sort=null,
     legend_sortDesc=null,
     aliasColors={},
-    value_type='individual'
+    value_type='individual',
+    thresholds=[],
+    logBase1Y=1,
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -83,8 +90,8 @@
     [if height != null then 'height']: height,
     renderer: 'flot',
     yaxes: [
-      self.yaxe(format, min, max, decimals=decimals),
-      self.yaxe(format, min, max, decimals=decimals),
+      self.yaxe(formatY1, min, max, decimals=decimals),
+      self.yaxe(formatY2, min, max, decimals=decimals),
     ],
     xaxis: {
       show: show_xaxis,
@@ -132,7 +139,7 @@
     repeat: repeat,
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
     seriesOverrides: [],
-    thresholds: [],
+    thresholds: thresholds,
     links: [],
     yaxe(
       format='short',
@@ -145,7 +152,7 @@
     ):: {
       label: label,
       show: show,
-      logBase: logBase,
+      logBase: logBase1Y,
       min: min,
       max: max,
       format: format,

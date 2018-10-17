@@ -13,7 +13,8 @@ local graphPanel = grafana.graphPanel;
     span=8,
     height='2011px',
     min_span=9,
-    format='ms',
+    formatY1='kbytes',
+    formatY2='ms',
     min=10,
     max=10,
     lines=false,
@@ -37,6 +38,15 @@ local graphPanel = grafana.graphPanel;
     legend_rightSide=true,
     legend_hideEmpty=true,
     legend_hideZero=true,
+    value_type='cumulative',
+    thresholds=[{
+      colorMode: 'critical',
+      fill: true,
+      line: true,
+      op: 'lt',
+      value: 5
+    }],
+    logBase1Y=2,
   ),
   targets: graphPanel.new('with targets', span=12)
            .addTarget({ a: 'foo' })

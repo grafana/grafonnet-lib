@@ -16,5 +16,6 @@ local dashboard = grafana.dashboard;
     timepicker='hi',
     hideControls=true,
     graphTooltip='shared_crosshair',
+    description='my awesome dashboard',
   ),
 }

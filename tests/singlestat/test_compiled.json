@@ -48,10 +48,10 @@
       "repeatDirection": "v",
       "span": 1,
       "sparkline": {
-         "fillColor": "rgba(31, 118, 189, 0.18)",
+         "fillColor": "rgba(189, 174, 189, 0.18)",
          "full": false,
-         "lineColor": "rgb(31, 120, 193)",
-         "show": false
+         "lineColor": "rgb(193, 185, 31)",
+         "show": true
       },
       "tableColumn": "",
       "targets": [ ],
@@ -186,9 +186,9 @@
       },
       "tableColumn": "",
       "targets": [
-         "target1",
-         "target2",
-         "target3"
+         "target1{\"refId\": \"A\"}",
+         "target2{\"refId\": \"B\"}",
+         "target3{\"refId\": \"C\"}"
       ],
       "thresholds": "",
       "title": "targets",
