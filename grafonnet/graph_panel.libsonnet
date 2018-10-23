@@ -184,5 +184,28 @@
       _nextYaxis: nextYaxis + 1,
       yaxes+: [self.yaxe(format, min, max, label, show, logBase, decimals)],
     },
+    addAlert(
+      name,
+      executionErrorState='alerting',
+      frequency='60s',
+      handler=1,
+      noDataState='no_data',
+      notifications=[],
+    ):: self {
+      local it = self,
+      _conditions:: [],
+      alert: {
+        name: name,
+        conditions: it._conditions,
+        executionErrorState: executionErrorState,
+        frequency: frequency,
+        handler: handler,
+        noDataState: noDataState,
+        notifications: notifications,
+      },
+      addCondition(condition):: self {
+        _conditions+: [condition],
+      },
+    },
   },
 }

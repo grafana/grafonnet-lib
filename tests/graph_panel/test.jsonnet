@@ -56,4 +56,7 @@ local graphPanel = grafana.graphPanel;
     legend_sort='current',
     legend_sortDesc=true,
   ),
+  alerts: graphPanel.new('with alerts', span=12)
+          .addAlert('name of alert')
+          .addCondition([]),
 }
