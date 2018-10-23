@@ -94,7 +94,7 @@
       show: show_xaxis,
       mode: x_axis_mode,
       name: null,
-      values: [x_axis_values],
+      values: if x_axis_mode == 'series' then [x_axis_values] else [],
       buckets: null,
     },
     lines: lines,
