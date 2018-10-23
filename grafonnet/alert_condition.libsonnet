@@ -33,7 +33,7 @@
         type: operatorType,
       },
       query: {
-        params: [ queryRefId, queryTimeStart, queryTimeEnd ],
+        params: [queryRefId, queryTimeStart, queryTimeEnd],
       },
       reducer: {
         params: if std.type(reducerParams) == 'array' then reducerParams else [reducerParams],
