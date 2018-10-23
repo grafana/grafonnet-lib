@@ -49,7 +49,7 @@
       "span": 1,
       "sparkline": {
          "fillColor": "rgba(189, 174, 189, 0.18)",
-         "full": false,
+         "full": true,
          "lineColor": "rgb(193, 185, 31)",
          "show": true
       },

@@ -41,12 +41,10 @@
       },
     ],
     transparent=null,
-    sparkline={
-      fillColor: 'rgba(31, 118, 189, 0.18)',
-      full: false,
-      lineColor: 'rgb(31, 120, 193)',
-      show: false,
-    },
+    sparklineFillColor='rgba(31, 118, 189, 0.18)',
+    sparklineFull=false,
+    sparklineLineColor='rgb(31, 120, 193)',
+    sparklineShow=false,
   )::
     {
       [if height != null then 'height']: height,
@@ -100,13 +98,18 @@
       colorBackground: colorBackground,
       colorValue: colorValue,
       colors: colors,
-      sparkline: sparkline,
       gauge: {
         show: false,
         minValue: 0,
         maxValue: 100,
         thresholdMarkers: true,
         thresholdLabels: false,
+      },
+      sparkline: {
+        fillColor: sparklineFillColor,
+        full: sparklineFull,
+        lineColor: sparklineLineColor,
+        show: sparklineShow,
       },
       tableColumn: '',
       _nextTarget:: 0,
