@@ -22,10 +22,10 @@ local timepickerlib = import 'timepicker.libsonnet';
     editable: editable,
     gnetId: null,
     graphTooltip:
-      if std.asciiLower(graphTooltip) == 'shared_tooltip' then 2
-      else if std.asciiLower(graphTooltip) == 'shared_crosshair' then 1
-      else if std.asciiLower(graphTooltip) == 'default' then 0
-      else std.asciiLower(graphTooltip),
+      if graphTooltip == 'shared_tooltip' then 2
+      else if graphTooltip == 'shared_crosshair' then 1
+      else if graphTooltip == 'default' then 0
+      else graphTooltip,
     hideControls: hideControls,
     id: null,
     links: [],
