@@ -218,6 +218,148 @@
          }
       ]
    },
+   "graph_series": {
+      "aliasColors": { },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "legend": {
+         "alignAsTable": false,
+         "avg": false,
+         "current": false,
+         "max": false,
+         "min": false,
+         "rightSide": false,
+         "show": true,
+         "total": false,
+         "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [ ],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [ ],
+      "spaceLength": 10,
+      "span": 12,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [ ],
+      "thresholds": [ ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "series",
+      "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+         "buckets": null,
+         "mode": "series",
+         "name": null,
+         "show": true,
+         "values": [
+            "total"
+         ]
+      },
+      "yaxes": [
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         },
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         }
+      ]
+   },
+   "graph_series_custom_value": {
+      "aliasColors": { },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "legend": {
+         "alignAsTable": false,
+         "avg": false,
+         "current": false,
+         "max": false,
+         "min": false,
+         "rightSide": false,
+         "show": true,
+         "total": false,
+         "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [ ],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [ ],
+      "spaceLength": 10,
+      "span": 12,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [ ],
+      "thresholds": [ ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "series",
+      "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+         "buckets": null,
+         "mode": "series",
+         "name": null,
+         "show": true,
+         "values": [
+            "current"
+         ]
+      },
+      "yaxes": [
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         },
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         }
+      ]
+   },
    "legendSort": {
       "aliasColors": { },
       "bars": false,

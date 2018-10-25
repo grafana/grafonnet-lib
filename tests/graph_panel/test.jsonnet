@@ -38,6 +38,8 @@ local graphPanel = grafana.graphPanel;
     legend_hideEmpty=true,
     legend_hideZero=true,
   ),
+  graph_series: graphPanel.new('series', span=12, x_axis_mode='series',),
+  graph_series_custom_value: graphPanel.new('series', span=12, x_axis_mode='series', x_axis_values='current',),
   targets: graphPanel.new('with targets', span=12)
            .addTarget({ a: 'foo' })
            .addTarget({ b: 'foo' }),
