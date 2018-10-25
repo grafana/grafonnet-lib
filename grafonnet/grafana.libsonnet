@@ -13,4 +13,5 @@
   prometheus:: import 'prometheus.libsonnet',
   sql:: import 'sql.libsonnet',
   graphite:: import 'graphite.libsonnet',
+  alertCondition:: import 'alert_condition.libsonnet',
 }
