@@ -67,6 +67,7 @@ local dashboard = grafana.dashboard;
 local row = grafana.row;
 local singlestat = grafana.singlestat;
 local prometheus = grafana.prometheus;
+local template = grafana.template;
 
 dashboard.new(
   'JVM',
@@ -137,6 +138,7 @@ local dashboard = grafana.dashboard;
 local row = grafana.row;
 local singlestat = grafana.singlestat;
 local prometheus = grafana.prometheus;
+local template = grafana.template;
 
 dashboard.new(
   'JVM',
