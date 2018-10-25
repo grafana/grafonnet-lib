@@ -41,6 +41,11 @@
       },
     ],
     transparent=null,
+    gaugeShow=false,
+    gaugeMinValue=0,
+    gaugeMaxValue=100,
+    gaugeThresholdMarkers=true,
+    gaugeThresholdLabels=false,
   )::
     {
       [if height != null then 'height']: height,
@@ -101,11 +106,11 @@
         fillColor: 'rgba(31, 118, 189, 0.18)',
       },
       gauge: {
-        show: false,
-        minValue: 0,
-        maxValue: 100,
-        thresholdMarkers: true,
-        thresholdLabels: false,
+        show: gaugeShow,
+        minValue: gaugeMinValue,
+        maxValue: gaugeMaxValue,
+        thresholdMarkers: gaugeThresholdMarkers,
+        thresholdLabels: gaugeThresholdLabels,
       },
       tableColumn: '',
       addTarget(target):: self {
