@@ -208,6 +208,7 @@
       addCondition(condition):: self {
         _conditions+: [condition],
       },
+      addConditions(conditions):: std.foldl(function(p, c) p.addCondition(c), conditions, it),
     },
   },
 }
