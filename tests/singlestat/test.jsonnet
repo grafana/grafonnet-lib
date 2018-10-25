@@ -39,6 +39,11 @@ local singlestat = grafana.singlestat;
     colorValue=true,
     thresholds='1,2',
     rangeMaps=['bar'],
+    gaugeShow=true,
+    gaugeMinValue=10,
+    gaugeMaxValue=23,
+    gaugeThresholdMarkers=true,
+    gaugeThresholdLabels=true,
   ),
   value: singlestat.new(
     'vv',
