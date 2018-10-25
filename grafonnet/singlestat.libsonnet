@@ -45,6 +45,11 @@
     sparklineFull=false,
     sparklineLineColor='rgb(31, 120, 193)',
     sparklineShow=false,
+    gaugeShow=false,
+    gaugeMinValue=0,
+    gaugeMaxValue=100,
+    gaugeThresholdMarkers=true,
+    gaugeThresholdLabels=false,
   )::
     {
       [if height != null then 'height']: height,
@@ -99,11 +104,11 @@
       colorValue: colorValue,
       colors: colors,
       gauge: {
-        show: false,
-        minValue: 0,
-        maxValue: 100,
-        thresholdMarkers: true,
-        thresholdLabels: false,
+        show: gaugeShow,
+        minValue: gaugeMinValue,
+        maxValue: gaugeMaxValue,
+        thresholdMarkers: gaugeThresholdMarkers,
+        thresholdLabels: gaugeThresholdLabels,
       },
       sparkline: {
         fillColor: sparklineFillColor,

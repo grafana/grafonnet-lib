@@ -13,10 +13,10 @@
       "description": "mystat",
       "format": "s",
       "gauge": {
-         "maxValue": 100,
-         "minValue": 0,
-         "show": false,
-         "thresholdLabels": false,
+         "maxValue": 23,
+         "minValue": 10,
+         "show": true,
+         "thresholdLabels": true,
          "thresholdMarkers": true
       },
       "height": "42px",

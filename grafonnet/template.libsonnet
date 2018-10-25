@@ -12,6 +12,7 @@
     refresh='never',
     includeAll=false,
     multi=false,
+    sort=0,
   )::
     {
       allValue: allValues,
@@ -26,7 +27,7 @@
       query: query,
       refresh: $.refresh(refresh),
       regex: regex,
-      sort: 0,
+      sort: sort,
       tagValuesQuery: tagValuesQuery,
       tags: [],
       tagsQuery: '',

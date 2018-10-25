@@ -1,0 +1,47 @@
+{
+   "advanced": {
+      "evaluator": {
+         "params": [
+            1234,
+            4321
+         ],
+         "type": "within_range"
+      },
+      "operator": {
+         "type": "or"
+      },
+      "query": {
+         "params": [
+            "B",
+            "15m",
+            "now-1h"
+         ]
+      },
+      "reducer": {
+         "params": [ ],
+         "type": "diff"
+      },
+      "type": "query"
+   },
+   "basic": {
+      "evaluator": {
+         "params": [ ],
+         "type": "gt"
+      },
+      "operator": {
+         "type": "and"
+      },
+      "query": {
+         "params": [
+            "A",
+            "5m",
+            "now"
+         ]
+      },
+      "reducer": {
+         "params": [ ],
+         "type": "avg"
+      },
+      "type": "query"
+   }
+}

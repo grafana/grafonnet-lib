@@ -43,6 +43,11 @@ local singlestat = grafana.singlestat;
     sparklineFull=true,
     sparklineLineColor='rgb(193, 185, 31)',
     sparklineShow=true,
+    gaugeShow=true,
+    gaugeMinValue=10,
+    gaugeMaxValue=23,
+    gaugeThresholdMarkers=true,
+    gaugeThresholdLabels=true,
   ),
   value: singlestat.new(
     'vv',

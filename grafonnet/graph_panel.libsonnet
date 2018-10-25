@@ -17,6 +17,7 @@
    * @param max Max of the Y axes
    * @param lines Display lines, boolean
    * @param points Display points, boolean
+   * @param pointradius Radius of the points, allowed values are 0.5 or [1 ... 10] with step 1
    * @param bars Display bars, boolean
    * @param dashes Display line as dashes
    * @param stack Stack values
@@ -55,6 +56,7 @@
     lines=true,
     datasource=null,
     points=false,
+    pointradius=5,
     bars=false,
     height=null,
     nullPointMode='null',
@@ -111,7 +113,7 @@
     dashLength: 10,
     spaceLength: 10,
     points: points,
-    pointradius: 5,
+    pointradius: pointradius,
     bars: bars,
     stack: stack,
     percentage: false,
@@ -194,6 +196,29 @@
       local nextYaxis = super._nextYaxis,
       _nextYaxis: nextYaxis + 1,
       yaxes+: [self.yaxe(format, min, max, label, show, logBase, decimals)],
+    },
+    addAlert(
+      name,
+      executionErrorState='alerting',
+      frequency='60s',
+      handler=1,
+      noDataState='no_data',
+      notifications=[],
+    ):: self {
+      local it = self,
+      _conditions:: [],
+      alert: {
+        name: name,
+        conditions: it._conditions,
+        executionErrorState: executionErrorState,
+        frequency: frequency,
+        handler: handler,
+        noDataState: noDataState,
+        notifications: notifications,
+      },
+      addCondition(condition):: self {
+        _conditions+: [condition],
+      },
     },
   },
 }
