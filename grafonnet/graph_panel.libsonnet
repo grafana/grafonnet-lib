@@ -13,6 +13,8 @@
    * @param format Unit of the Y axes
    * @param min Min of the Y axes
    * @param max Max of the Y axes
+   * @param x_axis_mode X axis mode, one of [time, series, histogram]
+   * @param x_axis_values Chosen value of series, one of [avg, min, max, total, count]
    * @param lines Display lines, boolean
    * @param points Display points, boolean
    * @param pointradius Radius of the points, allowed values are 0.5 or [1 ... 10] with step 1
@@ -45,6 +47,8 @@
     format='short',
     min=null,
     max=null,
+    x_axis_mode='time',
+    x_axis_values='total',
     lines=true,
     datasource=null,
     points=false,
@@ -90,9 +94,9 @@
     ],
     xaxis: {
       show: show_xaxis,
-      mode: 'time',
+      mode: x_axis_mode,
       name: null,
-      values: [],
+      values: if x_axis_mode == 'series' then [x_axis_values] else [],
       buckets: null,
     },
     lines: lines,
