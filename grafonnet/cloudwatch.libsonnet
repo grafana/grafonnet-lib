@@ -4,9 +4,9 @@
    *
    * @param region
    * @param namespace
+   * @param metric
    * @param datasource
-   * @param metricName
-   * @param statistics
+   * @param statistic
    * @param alias
    * @param highResolution
    * @param period
