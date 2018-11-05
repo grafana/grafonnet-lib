@@ -30,7 +30,7 @@
     namespace: namespace,
     metricName: metric,
     [if datasource != null then 'datasource']: datasource,
-    statistic: [statistic],
+    statistics: [statistic],
     [if alias != null then 'alias']: alias,
     highResolution: highResolution,
     period: period,
