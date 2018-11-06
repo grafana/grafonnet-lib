@@ -42,6 +42,8 @@ local graphPanel = grafana.graphPanel;
     thresholds=[{ colorMode: 'critical', fill: true, line: true, op: 'lt', value: 5 }],
     logBase1Y=2,
   ),
+  graph_series: graphPanel.new('series', span=12, x_axis_mode='series',),
+  graph_series_custom_value: graphPanel.new('series', span=12, x_axis_mode='series', x_axis_values='current',),
   targets: graphPanel.new('with targets', span=12)
            .addTarget({ a: 'foo' })
            .addTarget({ b: 'foo' }),
@@ -63,4 +65,7 @@ local graphPanel = grafana.graphPanel;
   alerts: graphPanel.new('with alerts', span=12)
           .addAlert('name of alert')
           .addCondition([]),
+  alertsWithMultipleConditions: graphPanel.new('with alert conditions as an array', span=12)
+                                .addAlert('name of alert')
+                                .addConditions([{ c1: 'params' }, { c2: 'params' }]),
 }

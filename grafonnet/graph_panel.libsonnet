@@ -15,6 +15,8 @@
    * @param formatY2 Unit of the second Y axe
    * @param min Min of the Y axes
    * @param max Max of the Y axes
+   * @param x_axis_mode X axis mode, one of [time, series, histogram]
+   * @param x_axis_values Chosen value of series, one of [avg, min, max, total, count]
    * @param lines Display lines, boolean
    * @param points Display points, boolean
    * @param pointradius Radius of the points, allowed values are 0.5 or [1 ... 10] with step 1
@@ -38,6 +40,7 @@
    * @param thresholds Configuration of graph thresholds
    * @param logBase1Y Value of logarithm base of the first Y axe
    * @param logBase2Y Value of logarithm base of the second Y axe
+   * @param transparent Boolean (default: false) If set to true the panel will be transparent
    * @return A json that represents a graph panel
    */
   new(
@@ -53,6 +56,8 @@
     formatY2=null,
     min=null,
     max=null,
+    x_axis_mode='time',
+    x_axis_values='total',
     lines=true,
     datasource=null,
     points=false,
@@ -84,6 +89,8 @@
     thresholds=[],
     logBase1Y=1,
     logBase2Y=1,
+    transparent=false,
+    value_type='individual'
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -101,9 +108,9 @@
     ],
     xaxis: {
       show: show_xaxis,
-      mode: 'time',
+      mode: x_axis_mode,
       name: null,
-      values: [],
+      values: if x_axis_mode == 'series' then [x_axis_values] else [],
       buckets: null,
     },
     lines: lines,
@@ -141,6 +148,7 @@
     },
     timeFrom: null,
     timeShift: null,
+    [if transparent == true then 'transparent']: transparent,
     aliasColors: aliasColors,
     repeat: repeat,
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
@@ -219,6 +227,7 @@
       addCondition(condition):: self {
         _conditions+: [condition],
       },
+      addConditions(conditions):: std.foldl(function(p, c) p.addCondition(c), conditions, it),
     },
   },
 }
