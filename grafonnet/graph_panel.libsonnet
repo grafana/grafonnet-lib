@@ -34,6 +34,7 @@
    * @param legend_sort Sort order of legend
    * @param legend_sortDesc Sort legend descending
    * @param aliasColors Define color mappings for graphs
+   * @param transparent Boolean (default: false) If set to true the panel will be transparent
    * @return A json that represents a graph panel
    */
   new(
@@ -76,6 +77,7 @@
     legend_sort=null,
     legend_sortDesc=null,
     aliasColors={},
+    transparent=false,
     value_type='individual'
   ):: {
     title: title,
@@ -134,6 +136,7 @@
     },
     timeFrom: null,
     timeShift: null,
+    [if transparent == true then 'transparent']: transparent,
     aliasColors: aliasColors,
     repeat: repeat,
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
