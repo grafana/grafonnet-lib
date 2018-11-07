@@ -11,7 +11,7 @@
       "namespace": "AWS/ApplicationELB",
       "period": "1m",
       "region": "eu-west-1",
-      "statistic": [
+      "statistics": [
          "Sum"
       ]
    },
@@ -22,7 +22,7 @@
       "namespace": "AWS/ApplicationELB",
       "period": "1m",
       "region": "eu-west-1",
-      "statistic": [
+      "statistics": [
          "Average"
       ]
    }
