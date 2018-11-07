@@ -85,7 +85,6 @@
     legend_sort=null,
     legend_sortDesc=null,
     aliasColors={},
-    value_type='individual',
     thresholds=[],
     logBase1Y=1,
     logBase2Y=1,
