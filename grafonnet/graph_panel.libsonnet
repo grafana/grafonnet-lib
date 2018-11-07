@@ -11,6 +11,8 @@
    * @param decimals Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
    * @param min_span Min span
    * @param format Unit of the Y axes
+   * @param formatY1 Unit of the first Y axe
+   * @param formatY2 Unit of the second Y axe
    * @param min Min of the Y axes
    * @param max Max of the Y axes
    * @param x_axis_mode X axis mode, one of [time, series, histogram]
@@ -34,6 +36,10 @@
    * @param legend_sort Sort order of legend
    * @param legend_sortDesc Sort legend descending
    * @param aliasColors Define color mappings for graphs
+   * @param valueType Type of tooltip value
+   * @param thresholds Configuration of graph thresholds
+   * @param logBase1Y Value of logarithm base of the first Y axe
+   * @param logBase2Y Value of logarithm base of the second Y axe
    * @param transparent Boolean (default: false) If set to true the panel will be transparent
    * @return A json that represents a graph panel
    */
@@ -46,6 +52,8 @@
     description=null,
     min_span=null,
     format='short',
+    formatY1=null,
+    formatY2=null,
     min=null,
     max=null,
     x_axis_mode='time',
@@ -77,6 +85,10 @@
     legend_sort=null,
     legend_sortDesc=null,
     aliasColors={},
+    value_type='individual',
+    thresholds=[],
+    logBase1Y=1,
+    logBase2Y=1,
     transparent=false,
     value_type='individual'
   ):: {
@@ -91,8 +103,8 @@
     [if height != null then 'height']: height,
     renderer: 'flot',
     yaxes: [
-      self.yaxe(format, min, max, decimals=decimals),
-      self.yaxe(format, min, max, decimals=decimals),
+      self.yaxe(if formatY1 != null then formatY1 else format, min, max, decimals=decimals, logBase=logBase1Y),
+      self.yaxe(if formatY2 != null then formatY2 else format, min, max, decimals=decimals, logBase=logBase2Y),
     ],
     xaxis: {
       show: show_xaxis,
@@ -141,7 +153,7 @@
     repeat: repeat,
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
     seriesOverrides: [],
-    thresholds: [],
+    thresholds: thresholds,
     links: [],
     yaxe(
       format='short',

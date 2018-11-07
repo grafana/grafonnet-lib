@@ -41,6 +41,10 @@
       },
     ],
     transparent=null,
+    sparklineFillColor='rgba(31, 118, 189, 0.18)',
+    sparklineFull=false,
+    sparklineLineColor='rgb(31, 120, 193)',
+    sparklineShow=false,
     gaugeShow=false,
     gaugeMinValue=0,
     gaugeMaxValue=100,
@@ -99,12 +103,6 @@
       colorBackground: colorBackground,
       colorValue: colorValue,
       colors: colors,
-      sparkline: {
-        show: false,
-        full: false,
-        lineColor: 'rgb(31, 120, 193)',
-        fillColor: 'rgba(31, 118, 189, 0.18)',
-      },
       gauge: {
         show: gaugeShow,
         minValue: gaugeMinValue,
@@ -112,9 +110,18 @@
         thresholdMarkers: gaugeThresholdMarkers,
         thresholdLabels: gaugeThresholdLabels,
       },
+      sparkline: {
+        fillColor: sparklineFillColor,
+        full: sparklineFull,
+        lineColor: sparklineLineColor,
+        show: sparklineShow,
+      },
       tableColumn: '',
+      _nextTarget:: 0,
       addTarget(target):: self {
-        targets+: [target],
+        local nextTarget = super._nextTarget,
+        _nextTarget: nextTarget + 1,
+        targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
       },
     },
 }

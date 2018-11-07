@@ -9,5 +9,9 @@ local link = grafana.link;
     asDropdown=false,
     includeVars=true,
     keepTime=true,
+    icon='info',
+    url='https://wiki.company.com',
+    targetBlank=true,
+    type='link',
   ),
 }

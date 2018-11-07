@@ -38,14 +38,22 @@
       "stack": true,
       "steppedLine": false,
       "targets": [ ],
-      "thresholds": [ ],
+      "thresholds": [
+         {
+            "colorMode": "critical",
+            "fill": true,
+            "line": true,
+            "op": "lt",
+            "value": 5
+         }
+      ],
       "timeFrom": null,
       "timeShift": null,
       "title": "test",
       "tooltip": {
          "shared": true,
          "sort": 1,
-         "value_type": "individual"
+         "value_type": "cumulative"
       },
       "type": "graph",
       "xaxis": {
@@ -58,9 +66,9 @@
       "yaxes": [
          {
             "decimals": 2,
-            "format": "ms",
+            "format": "kbytes",
             "label": null,
-            "logBase": 1,
+            "logBase": 2,
             "max": 10,
             "min": 10,
             "show": true
