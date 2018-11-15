@@ -15,4 +15,5 @@
   graphite:: import 'graphite.libsonnet',
   alertCondition:: import 'alert_condition.libsonnet',
   cloudwatch:: import 'cloudwatch.libsonnet',
+  elasticsearch:: import 'elasticsearch.libsonnet',
 }
