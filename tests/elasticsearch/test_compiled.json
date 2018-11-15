@@ -1,0 +1,73 @@
+{
+   "advanced": {
+      "alias": "{{metric.device}}",
+      "bucketAggs": [
+         {
+            "field": "metric.device",
+            "id": "2",
+            "settings": {
+               "min_doc_count": 1,
+               "order": "desc",
+               "orderBy": "_term",
+               "size": "10"
+            },
+            "type": "terms"
+         },
+         {
+            "field": "@timestamp",
+            "id": "3",
+            "settings": {
+               "interval": "1s",
+               "min_doc_count": 0,
+               "trimEdges": 0
+            },
+            "type": "date_histogram"
+         }
+      ],
+      "id": null,
+      "metrics": [
+         {
+            "field": "metric.value",
+            "id": "1",
+            "settings": {
+               "percents": [
+                  "90"
+               ]
+            },
+            "type": "percentiles"
+         }
+      ],
+      "query": "metric.source: iostat AND metric.type: blockdev_request_size_KB",
+      "timeField": "metric.begin"
+   },
+   "basic": {
+      "alias": null,
+      "bucketAggs": [
+         {
+            "field": "timestamp",
+            "id": null,
+            "settings": {
+               "interval": "1s",
+               "min_doc_count": 0,
+               "trimEdges": 0
+            },
+            "type": "date_histogram"
+         }
+      ],
+      "id": null,
+      "metrics": [
+         {
+            "field": "value",
+            "id": null,
+            "settings": {
+               "percents": [
+                  "90"
+               ]
+            },
+            "type": "percentiles"
+         }
+      ],
+      "query": "up",
+      "timeField": "@timestamp"
+   }
+}
