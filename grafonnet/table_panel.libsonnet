@@ -46,5 +46,6 @@
       styles+: [style],
       columns+: [column_],
     },
+    addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
   },
 }
