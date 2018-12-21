@@ -17,4 +17,5 @@
   alertCondition:: import 'alert_condition.libsonnet',
   cloudwatch:: import 'cloudwatch.libsonnet',
   elasticsearch:: import 'elasticsearch.libsonnet',
+  heatmapPanel:: import 'heatmap_panel.libsonnet',
 }
