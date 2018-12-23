@@ -36,11 +36,11 @@
    * @param legend_sort Sort order of legend
    * @param legend_sortDesc Sort legend descending
    * @param aliasColors Define color mappings for graphs
-   * @param valueType Type of tooltip value
    * @param thresholds Configuration of graph thresholds
    * @param logBase1Y Value of logarithm base of the first Y axe
    * @param logBase2Y Value of logarithm base of the second Y axe
    * @param transparent Boolean (default: false) If set to true the panel will be transparent
+   * @param value_type Type of tooltip value
    * @return A json that represents a graph panel
    */
   new(
