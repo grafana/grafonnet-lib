@@ -1,4 +1,31 @@
 {
+   "__inputs": [ ],
+   "__requires": [
+      {
+         "id": "Grafana",
+         "name": "grafana",
+         "type": "grafana",
+         "version": "5.0.0"
+      },
+      {
+         "id": "Graph",
+         "name": "graph",
+         "type": "panel",
+         "version": "5.0.0"
+      },
+      {
+         "id": "Prometheus",
+         "name": "prometheus",
+         "type": "datasource",
+         "version": "5.0.0"
+      },
+      {
+         "id": "Singlestat",
+         "name": "singlestat",
+         "type": "panel",
+         "version": "5.0.0"
+      }
+   ],
    "annotations": {
       "list": [
          {

@@ -454,3 +454,7 @@ grafana.dashboard.new(
     )
   )
 )
+.addRequired('grafana', 'grafana', 'Grafana', '5.0.0')
+.addRequired('panel', 'graph', 'Graph', '5.0.0')
+.addRequired('datasource', 'prometheus', 'Prometheus', '5.0.0')
+.addRequired('panel', 'singlestat', 'Singlestat', '5.0.0')
