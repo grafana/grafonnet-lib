@@ -1,5 +1,7 @@
 [
    {
+      "__inputs": [ ],
+      "__requires": [ ],
       "annotations": {
          "list": [
             "foo",
@@ -114,6 +116,8 @@
       "version": 0
    },
    {
+      "__inputs": [ ],
+      "__requires": [ ],
       "annotations": {
          "list": [ ]
       },
@@ -260,6 +264,8 @@
       "version": 0
    },
    {
+      "__inputs": [ ],
+      "__requires": [ ],
       "annotations": {
          "list": [ ]
       },
@@ -389,6 +395,8 @@
       "version": 0
    },
    {
+      "__inputs": [ ],
+      "__requires": [ ],
       "annotations": {
          "list": [ ]
       },
@@ -608,6 +616,8 @@
       "version": 0
    },
    {
+      "__inputs": [ ],
+      "__requires": [ ],
       "annotations": {
          "list": [ ]
       },

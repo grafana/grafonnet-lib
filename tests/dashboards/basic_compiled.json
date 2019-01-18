@@ -1,5 +1,7 @@
 {
    "adv": {
+      "__inputs": [ ],
+      "__requires": [ ],
       "annotations": {
          "list": [ ]
       },
@@ -31,6 +33,8 @@
       "version": 0
    },
    "simple": {
+      "__inputs": [ ],
+      "__requires": [ ],
       "annotations": {
          "list": [ ]
       },

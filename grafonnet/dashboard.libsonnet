@@ -117,5 +117,29 @@ local timepickerlib = import 'timepicker.libsonnet';
     addLink(link):: self {
       links+: [link],
     },
+    required:: [],
+    __requires: it.required,
+    addRequired(type, name, id, version):: self {
+      required+: [{type: type, name: name, id: id, version: version},],
+    },
+    inputs:: [],
+    __inputs: it.inputs,
+    addInput(
+      name,
+      label,
+      type,
+      pluginId,
+      pluginName,
+      description='',
+    ):: self {
+      inputs+: [{
+        name: name,
+        label: label,
+        type: type,
+        pluginId: pluginId,
+        pluginName: pluginName,
+        description: description,
+      }],
+    },
   },
 }
