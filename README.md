@@ -35,7 +35,7 @@ brew install jsonnet
 Clone this git repository:
 
 ```
-git clone git@github.com:grafana/grafonnet-lib.git
+git clone https://github.com/grafana/grafonnet-lib.git
 ```
 
 Then import the grafonnet in your jsonnet code:
