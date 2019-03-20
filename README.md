@@ -53,6 +53,28 @@ jsonnet -J <path> dashboard.jsonnet
 
 As you build your own mixins/dashboards, you should add additional `-J` paths.
 
+### docker
+
+You can also run `jsonnet` with `grafonnet` in a docker container, which can be built
+with the provided [Dockerfile](Dockerfile).
+
+To do that, you will need to clone this repo locally, and have
+docker installed to be able to build and run the image:
+```
+docker build -t grafonnet -f Dockerfile .
+```
+When the image is run, you should get a shell session inside the container:
+```
+docker run --rm -it -v /path/to/cloned/grafonnet-lib:/opt/grafonnet-lib --name grafonnet grafonnet
+```
+This would map the locally cloned `grafonnet-lib` repo into `/opt/grafonnet-lib/`
+directory inside the container.
+
+Now `jsonnet` can be run to build JSON, which would be ready for import into Grafana, for example:
+```
+jsonnet -J /opt/grafonnet-lib -o /opt/grafonnet-lib/examples/jvm.json /opt/grafonnet-lib/examples/jvm.jsonnet
+```
+
 ## Examples
 
 Simple Grafana 5.x dashboard:
