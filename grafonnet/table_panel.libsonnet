@@ -9,6 +9,7 @@
    * @param datasource Datasource
    * @param min_span Min span
    * @param styles Styles for the panel
+   * @param columns Table columns for the panel
    * @return A json that represents a table panel
    */
   new(
@@ -18,6 +19,7 @@
     min_span=null,
     datasource=null,
     styles=[],
+    columns=[],
   ):: {
     type: 'table',
     title: title,
@@ -27,6 +29,7 @@
     targets: [
     ],
     styles: styles,
+    columns: columns,
     [if description != null then 'description']: description,
     transform: 'table',
     _nextTarget:: 0,
@@ -36,6 +39,12 @@
       local nextTarget = super._nextTarget,
       _nextTarget: nextTarget + 1,
       targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
+    },
+    addColumn(field, style):: self {
+      local style_ = style { pattern: field },
+      local column_ = { text: field, value: field },
+      styles+: [style],
+      columns+: [column_],
     },
   },
 }
