@@ -207,8 +207,10 @@
     addAlert(
       name,
       executionErrorState='alerting',
+      forDuration='5m',
       frequency='60s',
       handler=1,
+      message='',
       noDataState='no_data',
       notifications=[],
     ):: self {
@@ -218,10 +220,12 @@
         name: name,
         conditions: it._conditions,
         executionErrorState: executionErrorState,
+        'for': forDuration,
         frequency: frequency,
         handler: handler,
         noDataState: noDataState,
         notifications: notifications,
+        message: message,
       },
       addCondition(condition):: self {
         _conditions+: [condition],
