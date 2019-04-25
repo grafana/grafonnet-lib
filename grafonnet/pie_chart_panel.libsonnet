@@ -18,6 +18,7 @@
     span=null,
     min_span=null,
     datasource=null,
+    height=null,
     aliasColors={},
     pieType='pie',
   ):: {
@@ -27,6 +28,7 @@
     aliasColors: aliasColors,
     [if span != null then 'span']: span,
     [if min_span != null then 'minSpan']: min_span,
+    [if height != null then 'height']: height,
     datasource: datasource,
     targets: [
     ],
