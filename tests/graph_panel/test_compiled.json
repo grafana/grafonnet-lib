@@ -67,7 +67,7 @@
          {
             "decimals": 2,
             "format": "kbytes",
-            "label": null,
+            "label": "labelY1",
             "logBase": 2,
             "max": 10,
             "min": 10,
@@ -76,7 +76,7 @@
          {
             "decimals": 2,
             "format": "ms",
-            "label": null,
+            "label": "labelY2",
             "logBase": 1,
             "max": 10,
             "min": 10,

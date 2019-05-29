@@ -15,6 +15,8 @@
    * @param formatY2 Unit of the second Y axe
    * @param min Min of the Y axes
    * @param max Max of the Y axes
+   * @param labelY1 Label of the first Y axe
+   * @param labelY2 Label of the second Y axe
    * @param x_axis_mode X axis mode, one of [time, series, histogram]
    * @param x_axis_values Chosen value of series, one of [avg, min, max, total, count]
    * @param lines Display lines, boolean
@@ -56,6 +58,8 @@
     formatY2=null,
     min=null,
     max=null,
+    labelY1=null,
+    labelY2=null,
     x_axis_mode='time',
     x_axis_values='total',
     lines=true,
@@ -102,8 +106,8 @@
     [if height != null then 'height']: height,
     renderer: 'flot',
     yaxes: [
-      self.yaxe(if formatY1 != null then formatY1 else format, min, max, decimals=decimals, logBase=logBase1Y),
-      self.yaxe(if formatY2 != null then formatY2 else format, min, max, decimals=decimals, logBase=logBase2Y),
+      self.yaxe(if formatY1 != null then formatY1 else format, min, max, decimals=decimals, logBase=logBase1Y, label=labelY1),
+      self.yaxe(if formatY2 != null then formatY2 else format, min, max, decimals=decimals, logBase=logBase2Y, label=labelY2),
     ],
     xaxis: {
       show: show_xaxis,
