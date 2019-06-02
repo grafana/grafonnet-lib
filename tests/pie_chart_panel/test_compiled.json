@@ -1,0 +1,42 @@
+{
+   "advanced": {
+      "aliasColors": {
+         "2xx": "#7EB26D",
+         "4xx": "#F2C96D",
+         "5xx": "#BF1B00"
+      },
+      "datasource": "$PROMETHEUS",
+      "pieType": "donut",
+      "span": 12,
+      "targets": [ ],
+      "title": "test",
+      "type": "grafana-piechart-panel"
+   },
+   "basic": {
+      "aliasColors": { },
+      "datasource": null,
+      "pieType": "pie",
+      "span": 12,
+      "targets": [ ],
+      "title": "test",
+      "type": "grafana-piechart-panel"
+   },
+   "targets": {
+      "aliasColors": { },
+      "datasource": null,
+      "pieType": "pie",
+      "span": 12,
+      "targets": [
+         {
+            "a": "foo",
+            "refId": "A"
+         },
+         {
+            "b": "foo",
+            "refId": "B"
+         }
+      ],
+      "title": "with targets",
+      "type": "grafana-piechart-panel"
+   }
+}
