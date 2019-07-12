@@ -89,7 +89,8 @@
     logBase1Y=1,
     logBase2Y=1,
     transparent=false,
-    value_type='individual'
+    value_type='individual',
+    shared_tooltip=true
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -143,7 +144,7 @@
     steppedLine: false,
     tooltip: {
       value_type: value_type,
-      shared: true,
+      shared: shared_tooltip,
       sort: if sort == 'decreasing' then 2 else if sort == 'increasing' then 1 else sort,
     },
     timeFrom: null,
