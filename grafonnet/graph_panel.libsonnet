@@ -90,7 +90,8 @@
     logBase2Y=1,
     transparent=false,
     value_type='individual',
-    shared_tooltip=true
+    shared_tooltip=true,
+    percentage=false
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -124,7 +125,7 @@
     pointradius: pointradius,
     bars: bars,
     stack: stack,
-    percentage: false,
+    percentage: percentage,
     legend: {
       show: legend_show,
       values: legend_values,
