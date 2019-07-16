@@ -4,23 +4,23 @@
     id=null,
     datasource=null,
     metrics=[{
-      field: "value",
+      field: 'value',
       id: null,
-      type: "percentiles",
+      type: 'percentiles',
       settings: {
         percents: [
-          "90",
+          '90',
         ],
       },
     }],
     bucketAggs=[{
-      field: "timestamp",
+      field: 'timestamp',
       id: null,
-      type: "date_histogram",
+      type: 'date_histogram',
       settings: {
-          interval: "1s",
-          min_doc_count: 0,
-          trimEdges: 0
+        interval: '1s',
+        min_doc_count: 0,
+        trimEdges: 0,
       },
     }],
     timeField,
@@ -32,7 +32,7 @@
     timeField: timeField,
     bucketAggs: bucketAggs,
     metrics: metrics,
-    alias: alias
+    alias: alias,
     // TODO: generate bucket ids
-  }
+  },
 }

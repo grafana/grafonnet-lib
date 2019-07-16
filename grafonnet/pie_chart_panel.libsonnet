@@ -22,7 +22,7 @@
     aliasColors={},
     pieType='pie',
   ):: {
-    type: "grafana-piechart-panel",
+    type: 'grafana-piechart-panel',
     pieType: pieType,
     title: title,
     aliasColors: aliasColors,
