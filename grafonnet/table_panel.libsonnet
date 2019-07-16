@@ -31,7 +31,7 @@
     styles: styles,
     columns: columns,
     [if description != null then 'description']: description,
-    transform: 'table',
+    transform: transform,
     _nextTarget:: 0,
     addTarget(target):: self + self.addTargets([target]),
     addTargets(newtargets)::

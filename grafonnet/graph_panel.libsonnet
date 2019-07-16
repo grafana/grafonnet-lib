@@ -41,6 +41,8 @@
    * @param logBase2Y Value of logarithm base of the second Y axe
    * @param transparent Boolean (default: false) If set to true the panel will be transparent
    * @param value_type Type of tooltip value
+   * @param shared_tooltip Boolean Allow to group or spit tooltips on mouseover within a chart
+   * @param percentage Boolean (defaut: false) show as percentages
    * @return A json that represents a graph panel
    */
   new(
