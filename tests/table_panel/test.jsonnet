@@ -11,6 +11,12 @@ local tablePanel = grafana.tablePanel;
     span=12,
     datasource='$PROMETHEUS',
     description='description',
+    columns=[
+      {
+        text: 'Users',
+        value: 'Users',
+      },
+    ],
     styles=[
       {
         alias: 'Users',

@@ -1,5 +1,11 @@
 {
    "advanced": {
+      "columns": [
+         {
+            "text": "Users",
+            "value": "Users"
+         }
+      ],
       "datasource": "$PROMETHEUS",
       "description": "description",
       "span": 12,
@@ -27,6 +33,7 @@
       "type": "table"
    },
    "basic": {
+      "columns": [ ],
       "datasource": null,
       "span": 12,
       "styles": [ ],
@@ -36,6 +43,7 @@
       "type": "table"
    },
    "targets": {
+      "columns": [ ],
       "datasource": null,
       "span": 12,
       "styles": [ ],
