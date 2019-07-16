@@ -1,0 +1,329 @@
+{
+   "advanced_timeseries": {
+      "cards": {
+         "cardPadding": 2,
+         "cardRound": 200
+      },
+      "color": {
+         "cardColor": "#0a437c",
+         "colorScale": "sqrt",
+         "exponent": 0.25,
+         "max": 140,
+         "min": 1,
+         "mode": "opacity"
+      },
+      "dataFormat": "timeseries",
+      "datasource": null,
+      "description": "description",
+      "heatmap": { },
+      "highlightCards": true,
+      "legend": {
+         "show": true
+      },
+      "minSpan": 6,
+      "repeat": "PROMETHEUS_DS",
+      "repeatDirection": "h",
+      "title": "advanced timeseries test",
+      "tooltip": {
+         "show": true,
+         "showHistogram": true
+      },
+      "tooltipDecimals": 5,
+      "type": "heatmap",
+      "xAxis": {
+         "show": true
+      },
+      "xBucketNumber": 10,
+      "xBucketSize": "1h",
+      "yAxis": {
+         "decimals": 3,
+         "format": "none",
+         "logBase": 1,
+         "max": 100,
+         "min": 0,
+         "show": true,
+         "splitFactor": null
+      },
+      "yBucketBound": "lower",
+      "yBucketNumber": 4,
+      "yBucketSize": 5
+   },
+   "advanced_tsbuckets": {
+      "cards": {
+         "cardPadding": 15,
+         "cardRound": 10
+      },
+      "color": {
+         "cardColor": "#705da0",
+         "colorScale": "sqrt",
+         "exponent": 0.25,
+         "mode": "opacity"
+      },
+      "dataFormat": "tsbuckets",
+      "datasource": "default",
+      "description": "description",
+      "heatmap": { },
+      "highlightCards": true,
+      "legend": {
+         "show": false
+      },
+      "repeat": "PROMETHEUS_DS",
+      "repeatDirection": "v",
+      "title": "advanced tsbuckets test",
+      "tooltip": {
+         "show": true,
+         "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+         "show": false
+      },
+      "xBucketNumber": null,
+      "xBucketSize": null,
+      "yAxis": {
+         "decimals": 3,
+         "format": "short",
+         "show": true,
+         "splitFactor": null
+      },
+      "yBucketBound": "auto"
+   },
+   "basic_color_opacity": {
+      "cards": {
+         "cardPadding": null,
+         "cardRound": null
+      },
+      "color": {
+         "cardColor": "#b4ff00",
+         "colorScale": "sqrt",
+         "exponent": 0.5,
+         "mode": "opacity"
+      },
+      "dataFormat": "tsbuckets",
+      "datasource": null,
+      "heatmap": { },
+      "highlightCards": true,
+      "legend": {
+         "show": false
+      },
+      "title": "basic color opacity test",
+      "tooltip": {
+         "show": true,
+         "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+         "show": true
+      },
+      "xBucketNumber": null,
+      "xBucketSize": null,
+      "yAxis": {
+         "decimals": null,
+         "format": "short",
+         "show": true,
+         "splitFactor": null
+      },
+      "yBucketBound": "auto"
+   },
+   "basic_timeseries": {
+      "cards": {
+         "cardPadding": null,
+         "cardRound": null
+      },
+      "color": {
+         "cardColor": "#b4ff00",
+         "colorScale": "sqrt",
+         "colorScheme": "interpolateOranges",
+         "exponent": 0.5,
+         "mode": "spectrum"
+      },
+      "dataFormat": "timeseries",
+      "datasource": null,
+      "heatmap": { },
+      "highlightCards": true,
+      "legend": {
+         "show": false
+      },
+      "title": "basic timeseries test",
+      "tooltip": {
+         "show": true,
+         "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+         "show": true
+      },
+      "xBucketNumber": null,
+      "xBucketSize": null,
+      "yAxis": {
+         "decimals": null,
+         "format": "short",
+         "logBase": 1,
+         "max": null,
+         "min": null,
+         "show": true,
+         "splitFactor": null
+      },
+      "yBucketBound": "auto",
+      "yBucketNumber": null,
+      "yBucketSize": null
+   },
+   "basic_tsbuckets": {
+      "cards": {
+         "cardPadding": null,
+         "cardRound": null
+      },
+      "color": {
+         "cardColor": "#b4ff00",
+         "colorScale": "sqrt",
+         "colorScheme": "interpolateOranges",
+         "exponent": 0.5,
+         "mode": "spectrum"
+      },
+      "dataFormat": "tsbuckets",
+      "datasource": null,
+      "heatmap": { },
+      "highlightCards": true,
+      "legend": {
+         "show": false
+      },
+      "title": "basic tsbuckets test",
+      "tooltip": {
+         "show": true,
+         "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+         "show": true
+      },
+      "xBucketNumber": null,
+      "xBucketSize": null,
+      "yAxis": {
+         "decimals": null,
+         "format": "short",
+         "show": true,
+         "splitFactor": null
+      },
+      "yBucketBound": "auto"
+   },
+   "color_opacity_black_linear": {
+      "cards": {
+         "cardPadding": null,
+         "cardRound": null
+      },
+      "color": {
+         "cardColor": "#000000",
+         "colorScale": "linear",
+         "exponent": 0.5,
+         "mode": "opacity"
+      },
+      "dataFormat": "tsbuckets",
+      "datasource": null,
+      "heatmap": { },
+      "highlightCards": true,
+      "legend": {
+         "show": false
+      },
+      "title": "color opacity black linear test",
+      "tooltip": {
+         "show": true,
+         "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+         "show": true
+      },
+      "xBucketNumber": null,
+      "xBucketSize": null,
+      "yAxis": {
+         "decimals": null,
+         "format": "short",
+         "show": true,
+         "splitFactor": null
+      },
+      "yBucketBound": "auto"
+   },
+   "color_spectrum_cubehelix": {
+      "cards": {
+         "cardPadding": null,
+         "cardRound": null
+      },
+      "color": {
+         "cardColor": "#b4ff00",
+         "colorScale": "sqrt",
+         "colorScheme": "interpolateCubehelixDefault",
+         "exponent": 0.5,
+         "max": 100,
+         "min": 0,
+         "mode": "spectrum"
+      },
+      "dataFormat": "tsbuckets",
+      "datasource": null,
+      "heatmap": { },
+      "highlightCards": true,
+      "legend": {
+         "show": false
+      },
+      "title": "color spectrum cubehelix test",
+      "tooltip": {
+         "show": true,
+         "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+         "show": true
+      },
+      "xBucketNumber": null,
+      "xBucketSize": null,
+      "yAxis": {
+         "decimals": null,
+         "format": "short",
+         "show": true,
+         "splitFactor": null
+      },
+      "yBucketBound": "auto"
+   },
+   "y_axis": {
+      "cards": {
+         "cardPadding": null,
+         "cardRound": null
+      },
+      "color": {
+         "cardColor": "#b4ff00",
+         "colorScale": "sqrt",
+         "colorScheme": "interpolateOranges",
+         "exponent": 0.5,
+         "mode": "spectrum"
+      },
+      "dataFormat": "timeseries",
+      "datasource": null,
+      "heatmap": { },
+      "highlightCards": true,
+      "legend": {
+         "show": false
+      },
+      "title": "y axis test",
+      "tooltip": {
+         "show": true,
+         "showHistogram": false
+      },
+      "type": "heatmap",
+      "xAxis": {
+         "show": true
+      },
+      "xBucketNumber": null,
+      "xBucketSize": null,
+      "yAxis": {
+         "decimals": 3,
+         "format": "percentunit",
+         "logBase": 1,
+         "max": 150,
+         "min": 0,
+         "show": true,
+         "splitFactor": null
+      },
+      "yBucketBound": "auto",
+      "yBucketNumber": null,
+      "yBucketSize": null
+   }
+}
