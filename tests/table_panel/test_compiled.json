@@ -42,23 +42,44 @@
       "transform": "table",
       "type": "table"
    },
-   "targets": {
-      "columns": [ ],
-      "datasource": null,
-      "span": 12,
-      "styles": [ ],
-      "targets": [
-         {
-            "a": "foo",
-            "refId": "A"
-         },
-         {
-            "b": "foo",
-            "refId": "B"
-         }
-      ],
-      "title": "with targets",
-      "transform": "table",
-      "type": "table"
-   }
+   "targets": [
+      {
+         "columns": [ ],
+         "datasource": null,
+         "span": 12,
+         "styles": [ ],
+         "targets": [
+            {
+               "a": "foo",
+               "refId": "A"
+            },
+            {
+               "b": "foo",
+               "refId": "B"
+            }
+         ],
+         "title": "with targets",
+         "transform": "table",
+         "type": "table"
+      },
+      {
+         "columns": [ ],
+         "datasource": null,
+         "span": 12,
+         "styles": [ ],
+         "targets": [
+            {
+               "a": "foo",
+               "refId": "A"
+            },
+            {
+               "b": "foo",
+               "refId": "\u0083"
+            }
+         ],
+         "title": "with batch targets",
+         "transform": "table",
+         "type": "table"
+      }
+   ]
 }

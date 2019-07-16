@@ -29,7 +29,12 @@ local tablePanel = grafana.tablePanel;
       },
     ],
   ),
-  targets: tablePanel.new('with targets', span=12)
-           .addTarget({ a: 'foo' })
-           .addTarget({ b: 'foo' }),
+  targets:
+    [
+      tablePanel.new('with targets', span=12)
+      .addTarget({ a: 'foo' })
+      .addTarget({ b: 'foo' }),
+      tablePanel.new('with batch targets', span=12)
+      .addTargets([{ a: 'foo' }, { b: 'foo' }]),
+    ],
 }
