@@ -9,7 +9,8 @@
    * @param datasource Datasource
    * @param min_span Min span
    * @param styles Styles for the panel
-   * @param columns Table columns for the panel
+   * @param columns Columns for the panel
+   * @param transform allow table manipulation to present data as desired
    * @return A json that represents a table panel
    */
   new(
@@ -19,7 +20,8 @@
     min_span=null,
     datasource=null,
     styles=[],
-    columns=[],
+    transform='table',
+    columns=[]
   ):: {
     type: 'table',
     title: title,
