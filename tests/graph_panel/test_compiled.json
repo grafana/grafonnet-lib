@@ -5,6 +5,7 @@
       "dashLength": 10,
       "dashes": true,
       "datasource": "$PROMETHEUS",
+      "decimals": 2,
       "description": "description",
       "fill": 2,
       "height": "2011px",

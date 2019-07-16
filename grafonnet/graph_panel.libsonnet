@@ -94,6 +94,7 @@
     title: title,
     [if span != null then 'span']: span,
     [if min_span != null then 'minSpan']: min_span,
+    [if decimals != null then 'decimals']: decimals,
     type: 'graph',
     datasource: datasource,
     targets: [
