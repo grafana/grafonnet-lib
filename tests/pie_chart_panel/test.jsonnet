@@ -11,7 +11,7 @@ local PieChartPanel = grafana.pieChartPanel;
     span=12,
     datasource='$PROMETHEUS',
     description='description',
-    aliasColors={"2xx":"#7EB26D","4xx":"#F2C96D","5xx":"#BF1B00"},
+    aliasColors={ '2xx': '#7EB26D', '4xx': '#F2C96D', '5xx': '#BF1B00' },
     pieType='donut',
   ),
   targets: PieChartPanel.new('with targets', span=12)

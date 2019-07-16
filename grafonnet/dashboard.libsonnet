@@ -120,7 +120,7 @@ local timepickerlib = import 'timepicker.libsonnet';
     required:: [],
     __requires: it.required,
     addRequired(type, name, id, version):: self {
-      required+: [{type: type, name: name, id: id, version: version},],
+      required+: [{ type: type, name: name, id: id, version: version }],
     },
     inputs:: [],
     __inputs: it.inputs,

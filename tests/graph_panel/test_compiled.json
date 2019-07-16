@@ -90,8 +90,10 @@
             [ ]
          ],
          "executionErrorState": "alerting",
+         "for": "5m",
          "frequency": "60s",
          "handler": 1,
+         "message": "",
          "name": "name of alert",
          "noDataState": "no_data",
          "notifications": [ ]
@@ -175,8 +177,10 @@
             }
          ],
          "executionErrorState": "alerting",
+         "for": "5m",
          "frequency": "60s",
          "handler": 1,
+         "message": "",
          "name": "name of alert",
          "noDataState": "no_data",
          "notifications": [ ]
