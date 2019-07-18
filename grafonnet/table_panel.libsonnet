@@ -11,6 +11,7 @@
    * @param styles Styles for the panel
    * @param columns Columns for the panel
    * @param transform allow table manipulation to present data as desired
+   * @param transparent Boolean (default: false) If set to true the panel will be transparent
    * @return A json that represents a table panel
    */
   new(
@@ -21,6 +22,7 @@
     datasource=null,
     styles=[],
     transform='table',
+    transparent=false,
     columns=[]
   ):: {
     type: 'table',
@@ -34,6 +36,7 @@
     columns: columns,
     [if description != null then 'description']: description,
     transform: transform,
+    [if transparent == true then 'transparent']: transparent,
     _nextTarget:: 0,
     addTarget(target):: self + self.addTargets([target]),
     addTargets(newtargets)::
