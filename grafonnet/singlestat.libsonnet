@@ -50,6 +50,7 @@
     gaugeMaxValue=100,
     gaugeThresholdMarkers=true,
     gaugeThresholdLabels=false,
+    timeFrom='1h'
   )::
     {
       [if height != null then 'height']: height,
@@ -100,6 +101,7 @@
       valueFontSize: valueFontSize,
       postfixFontSize: postfixFontSize,
       thresholds: thresholds,
+      [if timeFrom != null then 'timeFrom']: timeFrom,
       colorBackground: colorBackground,
       colorValue: colorValue,
       colors: colors,
