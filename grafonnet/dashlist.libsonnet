@@ -17,7 +17,7 @@
   new(
     title,
     description=null,
-    query="",
+    query=null,
     tags=[],
     recent=true,
     search=false,
@@ -27,7 +27,7 @@
   ):: {
     type: 'dashlist',
     title: title,
-    query: query,
+    query: if query != null then query else "",
     tags: tags,
     recent: recent,
     search: search,
