@@ -5,6 +5,7 @@
    *
    * @param title The title of the graph panel.
    * @param span Width of the panel
+   * @param height Height of the panel
    * @param description Description of the panel
    * @param datasource Datasource
    * @param min_span Min span
@@ -17,6 +18,7 @@
     description=null,
     span=null,
     min_span=null,
+    height=null,
     datasource=null,
     styles=[],
     columns=[],
@@ -25,6 +27,7 @@
     title: title,
     [if span != null then 'span']: span,
     [if min_span != null then 'minSpan']: min_span,
+    [if height != null then 'height']: height,
     datasource: datasource,
     targets: [
     ],
