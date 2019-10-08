@@ -52,10 +52,11 @@
       "timeShift": null,
       "title": "test",
       "tooltip": {
-         "shared": true,
+         "shared": false,
          "sort": 1,
          "value_type": "cumulative"
       },
+      "transparent": true,
       "type": "graph",
       "xaxis": {
          "buckets": null,

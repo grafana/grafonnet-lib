@@ -50,7 +50,7 @@
     gaugeMaxValue=100,
     gaugeThresholdMarkers=true,
     gaugeThresholdLabels=false,
-    timeFrom='1h'
+    timeFrom=null,
   )::
     {
       [if height != null then 'height']: height,

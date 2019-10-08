@@ -8,6 +8,10 @@
       ],
       "datasource": "$PROMETHEUS",
       "description": "description",
+      "sort": {
+         "col": 1,
+         "desc": true
+      },
       "span": 12,
       "styles": [
          {
@@ -30,6 +34,7 @@
       "targets": [ ],
       "title": "test",
       "transform": "table",
+      "transparent": true,
       "type": "table"
    },
    "basic": {
@@ -39,7 +44,6 @@
       "styles": [ ],
       "targets": [ ],
       "title": "test",
-      "transform": "table",
       "type": "table"
    },
    "targets": [
@@ -59,7 +63,6 @@
             }
          ],
          "title": "with targets",
-         "transform": "table",
          "type": "table"
       },
       {
@@ -78,7 +81,6 @@
             }
          ],
          "title": "with batch targets",
-         "transform": "table",
          "type": "table"
       }
    ]

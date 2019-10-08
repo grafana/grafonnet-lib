@@ -56,6 +56,7 @@
       "tableColumn": "",
       "targets": [ ],
       "thresholds": "1,2",
+      "timeFrom": "30m",
       "title": "adv",
       "transparent": true,
       "type": "singlestat",

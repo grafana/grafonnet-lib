@@ -22,7 +22,7 @@
     min_span=null,
     datasource=null,
     styles=[],
-    transform='table',
+    transform=null,
     transparent=false,
     columns=[],
     sort=null
@@ -38,7 +38,7 @@
     columns: columns,
     [if sort != null then 'sort']: sort,
     [if description != null then 'description']: description,
-    transform: transform,
+    [if transform != null then 'transform']: transform,
     [if transparent == true then 'transparent']: transparent,
 
     _nextTarget:: 0,
