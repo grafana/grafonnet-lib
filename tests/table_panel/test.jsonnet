@@ -28,6 +28,12 @@ local tablePanel = grafana.tablePanel;
         unit: 'none',
       },
     ],
+    transform='table',
+    transparent=true,
+    sort={
+      col: 1,
+      desc: true,
+    }
   ),
   targets:
     [

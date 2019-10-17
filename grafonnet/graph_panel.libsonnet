@@ -41,6 +41,8 @@
    * @param logBase2Y Value of logarithm base of the second Y axe
    * @param transparent Boolean (default: false) If set to true the panel will be transparent
    * @param value_type Type of tooltip value
+   * @param shared_tooltip Boolean Allow to group or spit tooltips on mouseover within a chart
+   * @param percentage Boolean (defaut: false) show as percentages
    * @return A json that represents a graph panel
    */
   new(
@@ -89,7 +91,9 @@
     logBase1Y=1,
     logBase2Y=1,
     transparent=false,
-    value_type='individual'
+    value_type='individual',
+    shared_tooltip=true,
+    percentage=false
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -123,7 +127,7 @@
     pointradius: pointradius,
     bars: bars,
     stack: stack,
-    percentage: false,
+    percentage: percentage,
     legend: {
       show: legend_show,
       values: legend_values,
@@ -143,7 +147,7 @@
     steppedLine: false,
     tooltip: {
       value_type: value_type,
-      shared: true,
+      shared: shared_tooltip,
       sort: if sort == 'decreasing' then 2 else if sort == 'increasing' then 1 else sort,
     },
     timeFrom: null,

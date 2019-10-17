@@ -48,6 +48,7 @@ local singlestat = grafana.singlestat;
     gaugeMaxValue=23,
     gaugeThresholdMarkers=true,
     gaugeThresholdLabels=true,
+    timeFrom='30m',
   ),
   value: singlestat.new(
     'vv',

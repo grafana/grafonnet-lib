@@ -5,6 +5,8 @@
     mode='markdown',
     content='',
     transparent=null,
+    description=null,
+    datasource=null,
   )::
     {
       [if transparent != null then 'transparent']: transparent,
@@ -13,5 +15,7 @@
       type: 'text',
       mode: mode,
       content: content,
+      [if description != null then 'description']: description,
+      datasource: datasource,
     },
 }

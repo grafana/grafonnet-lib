@@ -9,7 +9,10 @@
    * @param datasource Datasource
    * @param min_span Min span
    * @param styles Styles for the panel
-   * @param columns Table columns for the panel
+   * @param columns Columns for the panel
+   * @param sort Sorting instruction for the panel
+   * @param transform allow table manipulation to present data as desired
+   * @param transparent Boolean (default: false) If set to true the panel will be transparent
    * @return A json that represents a table panel
    */
   new(
@@ -19,7 +22,10 @@
     min_span=null,
     datasource=null,
     styles=[],
+    transform=null,
+    transparent=false,
     columns=[],
+    sort=null
   ):: {
     type: 'table',
     title: title,
@@ -30,8 +36,11 @@
     ],
     styles: styles,
     columns: columns,
+    [if sort != null then 'sort']: sort,
     [if description != null then 'description']: description,
-    transform: 'table',
+    [if transform != null then 'transform']: transform,
+    [if transparent == true then 'transparent']: transparent,
+
     _nextTarget:: 0,
     addTarget(target):: self + self.addTargets([target]),
     addTargets(newtargets)::
