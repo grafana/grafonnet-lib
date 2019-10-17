@@ -1,6 +1,7 @@
 {
   target(
     query,
+    timeField,
     id=null,
     datasource=null,
     metrics=[{
@@ -23,7 +24,6 @@
         trimEdges: 0,
       },
     }],
-    timeField,
     alias=null,
   ):: {
     [if datasource != null then 'datasource']: datasource,
