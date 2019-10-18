@@ -37,4 +37,10 @@ local tablePanel = grafana.tablePanel;
       tablePanel.new('with batch targets', span=12)
       .addTargets([{ a: 'foo' }, { b: 'foo' }]),
     ],
+  hideColumns: tablePanel.new(
+    'test',
+    span=12,
+  ).
+  hideColumn('Time').
+  hideColumn('Space')
 }

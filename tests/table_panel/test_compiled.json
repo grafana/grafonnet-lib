@@ -42,6 +42,27 @@
       "transform": "table",
       "type": "table"
    },
+   "hideColumns": {
+      "columns": [ ],
+      "datasource": null,
+      "span": 12,
+      "styles": [
+         {
+            "alias": "Time",
+            "pattern": "Time",
+            "type": "hidden"
+         },
+         {
+            "alias": "Space",
+            "pattern": "Space",
+            "type": "hidden"
+         }
+      ],
+      "targets": [ ],
+      "title": "test",
+      "transform": "table",
+      "type": "table"
+   },
    "targets": [
       {
          "columns": [ ],
