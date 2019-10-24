@@ -90,7 +90,7 @@
     addColumn(field, style):: self {
       local style_ = style { pattern: field },
       local column_ = { text: field, value: field },
-      styles+: [style],
+      styles+: [style_],
       columns+: [column_],
     },
   },
