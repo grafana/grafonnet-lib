@@ -51,6 +51,7 @@ local timepickerlib = import 'timepicker.libsonnet';
     addTemplate(t):: self {
       templates+: [t],
     },
+    addTemplates(templates):: std.foldl(function(p, t) p.addTemplate(t), templates, self),
     templates:: [],
     annotations: { list: it._annotations },
     templating: { list: it.templates },
