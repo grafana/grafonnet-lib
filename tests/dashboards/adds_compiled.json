@@ -78,7 +78,13 @@
       "templating": {
          "list": [
             {
-               "test": true
+               "test1": true
+            },
+            {
+               "test2": true
+            },
+            {
+               "test3": true
             }
          ]
       },
