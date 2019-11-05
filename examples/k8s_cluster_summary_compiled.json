@@ -341,7 +341,6 @@
                "targets": [
                   {
                      "expr": "up{job=\"kubernetes-nodes\"}",
-                     "transform": "table",
                      "format": "table",
                      "instant": true,
                      "intervalFactor": 1,
@@ -350,7 +349,6 @@
                   }
                ],
                "title": "Node Info",
-               "transform": "table",
                "type": "table"
             }
          ],
@@ -1310,7 +1308,6 @@
                   }
                ],
                "title": "Deployment Replicas - Up To Date",
-               "transform": "table",
                "type": "table"
             }
          ],
@@ -2275,7 +2272,6 @@
                   {
                      "expr": "kube_pod_container_status_waiting_reason{reason!=\"ContainerCreating\"} > 0",
                      "transform": "table",
-                     "format": "table",
                      "instant": true,
                      "intervalFactor": 1,
                      "legendFormat": "",
@@ -2283,7 +2279,6 @@
                   }
                ],
                "title": "Container Failed to Start",
-               "transform": "table",
                "type": "table"
             }
          ],
