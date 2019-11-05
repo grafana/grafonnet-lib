@@ -349,7 +349,6 @@
                   }
                ],
                "title": "Node Info",
-               "transform": "table",
                "type": "table"
             }
          ],
@@ -1309,7 +1308,6 @@
                   }
                ],
                "title": "Deployment Replicas - Up To Date",
-               "transform": "table",
                "type": "table"
             }
          ],
@@ -2281,7 +2279,6 @@
                   }
                ],
                "title": "Container Failed to Start",
-               "transform": "table",
                "type": "table"
             }
          ],
