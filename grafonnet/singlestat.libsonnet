@@ -51,6 +51,7 @@
     gaugeThresholdMarkers=true,
     gaugeThresholdLabels=false,
     timeFrom=null,
+    links=[],
   )::
     {
       [if height != null then 'height']: height,
@@ -65,7 +66,7 @@
       datasource: datasource,
       targets: [
       ],
-      links: [],
+      links: links,
       [if decimals != null then 'decimals']: decimals,
       maxDataPoints: 100,
       interval: interval,
