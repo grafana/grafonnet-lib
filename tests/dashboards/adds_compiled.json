@@ -5,7 +5,9 @@
       "annotations": {
          "list": [
             "foo",
-            "bar"
+            "bar",
+            "foo2",
+            "bar2"
          ]
       },
       "editable": false,

@@ -11,6 +11,7 @@ local row = grafana.row;
   .addRows([row.new(title='1', height='250px'), row.new(title='2', height='250px')])
   .addAnnotation('foo')
   .addAnnotation('bar')
+  .addAnnotations(['foo2', 'bar2'])
   .addLink('foolinks')
   .addLink('barlinks'),
   dashboard.new('test2')
