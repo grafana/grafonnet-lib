@@ -21,7 +21,13 @@
       },
       "height": "42px",
       "interval": "10s",
-      "links": [ ],
+      "links": [
+         {
+            "targetBlank": true,
+            "title": "My link title",
+            "url": "https://grafana.com"
+         }
+      ],
       "mappingType": 2,
       "mappingTypes": [
          {
