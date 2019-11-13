@@ -93,5 +93,12 @@
       styles+: [style_],
       columns+: [column_],
     },
+    hideColumn(field):: self {
+      styles+: [{
+        alias: field,
+        pattern: field,
+        type: 'hidden',
+      }],
+    },
   },
 }
