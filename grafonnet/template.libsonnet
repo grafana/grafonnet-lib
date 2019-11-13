@@ -104,10 +104,13 @@
     refresh='never',
     label='',
     valuelabels={},
+    multi=false,
+    allValues=null,
+    includeAll=false,
     hide='',
   )::
     {
-      allValue: null,
+      allValue: allValues,
       current: {
         value: current,
         text: if current in valuelabels then valuelabels[current] else current,
@@ -120,10 +123,10 @@
           }, std.split(query, ',')
       ),
       hide: $.hide(hide),
-      includeAll: false,
+      includeAll: includeAll,
       label: label,
       refresh: $.refresh(refresh),
-      multi: false,
+      multi: multi,
       name: name,
       query: query,
       type: 'custom',
