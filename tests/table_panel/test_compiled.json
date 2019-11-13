@@ -64,7 +64,6 @@
       ],
       "targets": [ ],
       "title": "test",
-      "transform": "table",
       "type": "table"
    },
    "targets": [
