@@ -41,6 +41,6 @@ local tablePanel = grafana.tablePanel;
     'test',
     span=12,
   ).
-  hideColumn('Time').
-  hideColumn('Space')
+    hideColumn('Time').
+    hideColumn('Space'),
 }
