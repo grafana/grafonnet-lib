@@ -32,6 +32,8 @@
          }
       ],
       "targets": [ ],
+      "timeFrom": "24h",
+      "timeShift": "1h",
       "title": "test",
       "transform": "table",
       "transparent": true,
@@ -43,6 +45,8 @@
       "span": 12,
       "styles": [ ],
       "targets": [ ],
+      "timeFrom": null,
+      "timeShift": null,
       "title": "test",
       "type": "table"
    },
@@ -63,6 +67,8 @@
          }
       ],
       "targets": [ ],
+      "timeFrom": null,
+      "timeShift": null,
       "title": "test",
       "type": "table"
    },
@@ -82,6 +88,8 @@
                "refId": "B"
             }
          ],
+         "timeFrom": null,
+         "timeShift": null,
          "title": "with targets",
          "type": "table"
       },
@@ -100,6 +108,8 @@
                "refId": "\u0083"
             }
          ],
+         "timeFrom": null,
+         "timeShift": null,
          "title": "with batch targets",
          "type": "table"
       }

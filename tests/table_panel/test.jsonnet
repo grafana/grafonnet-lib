@@ -33,7 +33,9 @@ local tablePanel = grafana.tablePanel;
     sort={
       col: 1,
       desc: true,
-    }
+    },
+    time_from='24h',
+    time_shift='1h',
   ),
   targets:
     [

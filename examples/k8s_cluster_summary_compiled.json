@@ -348,6 +348,8 @@
                      "refId": "A"
                   }
                ],
+               "timeFrom": null,
+               "timeShift": null,
                "title": "Node Info",
                "type": "table"
             }
@@ -1307,6 +1309,8 @@
                      "refId": "A"
                   }
                ],
+               "timeFrom": null,
+               "timeShift": null,
                "title": "Deployment Replicas - Up To Date",
                "type": "table"
             }
@@ -2278,6 +2282,8 @@
                      "refId": "A"
                   }
                ],
+               "timeFrom": null,
+               "timeShift": null,
                "title": "Container Failed to Start",
                "type": "table"
             }
