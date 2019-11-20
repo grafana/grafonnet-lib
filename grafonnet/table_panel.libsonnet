@@ -27,7 +27,9 @@
     transform=null,
     transparent=false,
     columns=[],
-    sort=null
+    sort=null,
+    time_from=null,
+    time_shift=null,
   ):: {
     type: 'table',
     title: title,
@@ -39,6 +41,8 @@
     ],
     styles: styles,
     columns: columns,
+    timeFrom: time_from,
+    timeShift: time_shift,
     [if sort != null then 'sort']: sort,
     [if description != null then 'description']: description,
     [if transform != null then 'transform']: transform,
