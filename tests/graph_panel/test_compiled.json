@@ -60,8 +60,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "time",
          "name": null,
          "show": false,
@@ -146,8 +144,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "time",
          "name": null,
          "show": true,
@@ -235,8 +231,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "time",
          "name": null,
          "show": true,
@@ -310,8 +304,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "time",
          "name": null,
          "show": true,
@@ -381,8 +373,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "time",
          "name": null,
          "show": true,
@@ -452,8 +442,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "series",
          "name": null,
          "show": true,
@@ -525,8 +513,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "series",
          "name": null,
          "show": true,
@@ -600,8 +586,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "time",
          "name": null,
          "show": true,
@@ -680,8 +664,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "time",
          "name": null,
          "show": true,
@@ -760,8 +742,6 @@
       "type": "graph",
       "xaxis": {
          "buckets": null,
-         "max": null,
-         "min": null,
          "mode": "time",
          "name": null,
          "show": true,

@@ -243,8 +243,6 @@
          "type": "graph",
          "xaxis": {
             "buckets": null,
-            "max": null,
-            "min": null,
             "mode": "time",
             "name": null,
             "show": true,
