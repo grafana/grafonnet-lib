@@ -52,6 +52,7 @@
     gaugeThresholdLabels=false,
     timeFrom=null,
     links=[],
+    tableColumn='',
   )::
     {
       [if height != null then 'height']: height,
@@ -119,7 +120,7 @@
         lineColor: sparklineLineColor,
         show: sparklineShow,
       },
-      tableColumn: '',
+      tableColumn: tableColumn,
       _nextTarget:: 0,
       addTarget(target):: self {
         local nextTarget = super._nextTarget,
