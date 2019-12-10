@@ -97,7 +97,9 @@
     transparent=false,
     value_type='individual',
     shared_tooltip=true,
-    percentage=false
+    percentage=false,
+    time_from=null,
+    time_shift=null,
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -154,8 +156,8 @@
       shared: shared_tooltip,
       sort: if sort == 'decreasing' then 2 else if sort == 'increasing' then 1 else sort,
     },
-    timeFrom: null,
-    timeShift: null,
+    timeFrom: time_from,
+    timeShift: time_shift,
     [if transparent == true then 'transparent']: transparent,
     aliasColors: aliasColors,
     repeat: repeat,
