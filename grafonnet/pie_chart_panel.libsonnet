@@ -24,7 +24,7 @@
     valueName='current',
     showLegend=true,
     showLegendPercentage=true,
-    legendType="Right side",
+    legendType='Right side',
   ):: {
     type: 'grafana-piechart-panel',
     [if description != null then 'description']: description,
@@ -37,9 +37,9 @@
     valueName: valueName,
     datasource: datasource,
     legend: {
-        show: showLegend,
-        values: true,
-        percentage: showLegendPercentage
+      show: showLegend,
+      values: true,
+      percentage: showLegendPercentage,
     },
     legendType: legendType,
     targets: [
