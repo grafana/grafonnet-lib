@@ -127,7 +127,7 @@
       values: if x_axis_mode == 'series' then [x_axis_values] else [],
       buckets: if x_axis_mode == 'histogram' then [x_axis_buckets] else null,
       [if x_axis_min != null then "min"]: x_axis_min,
-      [if x_axis_max != null then "max"]: x_axis_max
+      [if x_axis_max != null then "max"]: x_axis_max,
     },
     lines: lines,
     fill: fill,
