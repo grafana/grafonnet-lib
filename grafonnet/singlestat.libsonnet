@@ -53,6 +53,7 @@
     timeFrom=null,
     links=[],
     tableColumn='',
+    maxPerRow=null,
   )::
     {
       [if height != null then 'height']: height,
@@ -77,6 +78,7 @@
       postfix: postfix,
       nullText: null,
       valueMaps: valueMaps,
+      [if maxPerRow != null then 'maxPerRow']: maxPerRow,
       mappingTypes: [
         {
           name: 'value to text',
