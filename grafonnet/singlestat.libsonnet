@@ -78,7 +78,7 @@
       postfix: postfix,
       nullText: null,
       valueMaps: valueMaps,
-      maxPerRow: maxPerRow
+      maxPerRow: maxPerRow,
       mappingTypes: [
         {
           name: 'value to text',
