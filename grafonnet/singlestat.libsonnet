@@ -52,6 +52,7 @@
     gaugeThresholdLabels=false,
     timeFrom=null,
     links=[],
+    maxPerRow=0,
   )::
     {
       [if height != null then 'height']: height,
@@ -76,6 +77,7 @@
       postfix: postfix,
       nullText: null,
       valueMaps: valueMaps,
+      maxPerRow: maxPerRow
       mappingTypes: [
         {
           name: 'value to text',
