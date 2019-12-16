@@ -52,6 +52,7 @@
     gaugeThresholdLabels=false,
     timeFrom=null,
     links=[],
+    tableColumn='',
     maxPerRow=0,
   )::
     {
@@ -121,7 +122,7 @@
         lineColor: sparklineLineColor,
         show: sparklineShow,
       },
-      tableColumn: '',
+      tableColumn: tableColumn,
       _nextTarget:: 0,
       addTarget(target):: self {
         local nextTarget = super._nextTarget,
