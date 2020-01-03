@@ -6,9 +6,7 @@
     description='',
     height=null,
     transparent=null,
-
-
-  )::
+    )::
     {
     [if description != '' then 'description']: description,
     [if height != null then 'height']: height,
