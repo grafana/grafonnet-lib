@@ -73,4 +73,7 @@ local graphPanel = grafana.graphPanel;
   alertsWithMultipleConditions: graphPanel.new('with alert conditions as an array', span=12)
                                 .addAlert('name of alert')
                                 .addConditions([{ c1: 'params' }, { c2: 'params' }]),
+  links: graphPanel.new('with links', span=12)
+         .addLink('foolinks')
+         .addLink('barlinks'),
 }
