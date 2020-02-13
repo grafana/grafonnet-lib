@@ -52,6 +52,8 @@
     gaugeThresholdLabels=false,
     timeFrom=null,
     links=[],
+    tableColumn='',
+    maxPerRow=null,
   )::
     {
       [if height != null then 'height']: height,
@@ -76,6 +78,7 @@
       postfix: postfix,
       nullText: null,
       valueMaps: valueMaps,
+      [if maxPerRow != null then 'maxPerRow']: maxPerRow,
       mappingTypes: [
         {
           name: 'value to text',
@@ -119,7 +122,7 @@
         lineColor: sparklineLineColor,
         show: sparklineShow,
       },
-      tableColumn: '',
+      tableColumn: tableColumn,
       _nextTarget:: 0,
       addTarget(target):: self {
         local nextTarget = super._nextTarget,

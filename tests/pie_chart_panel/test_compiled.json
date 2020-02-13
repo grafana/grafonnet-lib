@@ -6,24 +6,47 @@
          "5xx": "#BF1B00"
       },
       "datasource": "$PROMETHEUS",
+      "description": "description",
+      "legend": {
+         "percentage": true,
+         "show": true,
+         "values": true
+      },
+      "legendType": "Right side",
       "pieType": "donut",
       "span": 12,
       "targets": [ ],
       "title": "test",
-      "type": "grafana-piechart-panel"
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
    },
    "basic": {
       "aliasColors": { },
       "datasource": null,
+      "description": "",
+      "legend": {
+         "percentage": true,
+         "show": true,
+         "values": true
+      },
+      "legendType": "Right side",
       "pieType": "pie",
       "span": 12,
       "targets": [ ],
       "title": "test",
-      "type": "grafana-piechart-panel"
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
    },
    "targets": {
       "aliasColors": { },
       "datasource": null,
+      "description": "",
+      "legend": {
+         "percentage": true,
+         "show": true,
+         "values": true
+      },
+      "legendType": "Right side",
       "pieType": "pie",
       "span": 12,
       "targets": [
@@ -37,6 +60,7 @@
          }
       ],
       "title": "with targets",
-      "type": "grafana-piechart-panel"
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
    }
 }
