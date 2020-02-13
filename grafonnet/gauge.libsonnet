@@ -8,6 +8,7 @@
     transparent=null,
     repeat=null,
     repeatDirection=null,
+    unit=null
   )::
     {
       [if description != '' then 'description']: description,
@@ -23,6 +24,7 @@
           calcs: [
             calc,
           ],
+          [if unit != null then 'unit']: unit,
         },
       },
       _nextTarget:: 0,
