@@ -6,11 +6,15 @@
     description='',
     height=null,
     transparent=null,
+    repeat=null,
+    repeatDirection=null,
   )::
     {
       [if description != '' then 'description']: description,
       [if height != null then 'height']: height,
       [if transparent != null then 'transparent']: transparent,
+      [if repeat != null then 'repeat']: repeat,
+      [if repeatDirection != null then 'repeatDirection']: repeatDirection,
       title: title,
       type: 'gauge',
       datasource: datasource,
