@@ -19,6 +19,9 @@
    * @param labelY2 Label of the second Y axe
    * @param x_axis_mode X axis mode, one of [time, series, histogram]
    * @param x_axis_values Chosen value of series, one of [avg, min, max, total, count]
+   * @param x_axis_buckets restricts the x axis to this amount of buckets
+   * @param x_axis_min restricts the x axis to display from this value if supplied
+   * @param x_axis_max restricts the x axis to display up to this value if supplied
    * @param lines Display lines, boolean
    * @param points Display points, boolean
    * @param pointradius Radius of the points, allowed values are 0.5 or [1 ... 10] with step 1
@@ -64,6 +67,9 @@
     labelY2=null,
     x_axis_mode='time',
     x_axis_values='total',
+    x_axis_buckets=null,
+    x_axis_min=null,
+    x_axis_max=null,
     lines=true,
     datasource=null,
     points=false,
@@ -121,7 +127,9 @@
       mode: x_axis_mode,
       name: null,
       values: if x_axis_mode == 'series' then [x_axis_values] else [],
-      buckets: null,
+      buckets: if x_axis_mode == 'histogram' then [x_axis_buckets] else null,
+      [if x_axis_min != null then 'min']: x_axis_min,
+      [if x_axis_max != null then 'max']: x_axis_max,
     },
     lines: lines,
     fill: fill,
