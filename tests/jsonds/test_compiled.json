@@ -1,0 +1,6 @@
+{
+  "datasource": {
+    "target": "target_name",
+    "type": "table"
+  }
+}
