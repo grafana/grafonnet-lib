@@ -225,6 +225,7 @@
       message='',
       noDataState='no_data',
       notifications=[],
+      alertRuleTags={},
     ):: self {
       local it = self,
       _conditions:: [],
@@ -238,6 +239,7 @@
         noDataState: noDataState,
         notifications: notifications,
         message: message,
+        alertRuleTags: alertRuleTags,
       },
       addCondition(condition):: self {
         _conditions+: [condition],
