@@ -43,6 +43,7 @@
     title,
     datasource=null,
     description=null,
+    span=null,
     cards_cardPadding=null,
     cards_cardRound=null,
     color_cardColor='#b4ff00',
@@ -77,6 +78,7 @@
 
   ):: {
     title: title,
+    [if span != null then 'span']: span,    
     type: 'heatmap',
     [if description != null then 'description']: description,
     datasource: datasource,
