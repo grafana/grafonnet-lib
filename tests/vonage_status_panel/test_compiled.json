@@ -1,0 +1,71 @@
+{
+   "advanced": {
+      "clusterName": "My panel",
+      "colorMode": "Metric",
+      "colors": {
+         "crit": "rgba(245, 54, 54, 0.9)",
+         "disable": "#C4162A",
+         "ok": "rgba(50, 128, 45, 0.9)",
+         "warn": "rgba(237, 129, 40, 0.9)"
+      },
+      "description": "",
+      "flipCard": false,
+      "flipTime": 5,
+      "isGrayOnNoData": true,
+      "isHideAlertsOnDisable": false,
+      "isIgnoreOKColors": false,
+      "maxAlertNumber": 5,
+      "namePrefix": "My",
+      "title": "test",
+      "type": "vonage-status-panel"
+   },
+   "basic": {
+      "colorMode": "Panel",
+      "colors": {
+         "crit": "rgba(245, 54, 54, 0.9)",
+         "disable": "rgba(128, 128, 128, 0.9)",
+         "ok": "rgba(50, 128, 45, 0.9)",
+         "warn": "rgba(237, 129, 40, 0.9)"
+      },
+      "description": "",
+      "flipCard": false,
+      "flipTime": 5,
+      "isGrayOnNoData": false,
+      "isHideAlertsOnDisable": false,
+      "isIgnoreOKColors": false,
+      "title": "test",
+      "type": "vonage-status-panel"
+   },
+   "target": {
+      "colorMode": "Panel",
+      "colors": {
+         "crit": "rgba(245, 54, 54, 0.9)",
+         "disable": "rgba(128, 128, 128, 0.9)",
+         "ok": "rgba(50, 128, 45, 0.9)",
+         "warn": "rgba(237, 129, 40, 0.9)"
+      },
+      "description": "",
+      "flipCard": false,
+      "flipTime": 5,
+      "isGrayOnNoData": false,
+      "isHideAlertsOnDisable": false,
+      "isIgnoreOKColors": false,
+      "targets": [
+         {
+            "aggregation": "Last",
+            "alias": "alias",
+            "crit": 1,
+            "dateFormat": "YYYY-MM-DD HH:mm:ss",
+            "decimals": 3,
+            "display": true,
+            "displayType": "Regular",
+            "refId": "A",
+            "units": "none",
+            "valueHandler": "Number Threshold",
+            "warn": 0.5
+         }
+      ],
+      "title": "test",
+      "type": "vonage-status-panel"
+   }
+}
