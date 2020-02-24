@@ -56,6 +56,7 @@
     highlightCards=true,
     legend_show=false,
     minSpan=null,
+    span=null,
     repeat=null,
     repeatDirection=null,
     tooltipDecimals=null,
@@ -100,6 +101,7 @@
       show: legend_show,
     },
     [if minSpan != null then 'minSpan']: minSpan,
+    [if span != null then 'span']: span,
     [if repeat != null then 'repeat']: repeat,
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
     tooltip: {

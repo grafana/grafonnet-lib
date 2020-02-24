@@ -23,6 +23,7 @@ local heatmapPanel = grafana.heatmapPanel;
       dataFormat='timeseries',
       legend_show=true,
       minSpan=6,
+      span=12,
       repeat='PROMETHEUS_DS',
       repeatDirection='h',
       tooltipDecimals=5,

@@ -23,6 +23,7 @@
       "minSpan": 6,
       "repeat": "PROMETHEUS_DS",
       "repeatDirection": "h",
+      "span": 12,
       "title": "advanced timeseries test",
       "tooltip": {
          "show": true,
