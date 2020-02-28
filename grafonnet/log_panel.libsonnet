@@ -1,4 +1,17 @@
 {
+  /**
+   * Returns a new log panel that can be added in a row.
+   * It requires the log panel plugin in grafana, which is built-in.
+   *
+   * @param title The title of the log panel.
+   * @param span Width of the panel
+   * @param datasource Datasource
+   * @showLabels boolean to show or hide labels
+   * @showTime boolean to show or hide time for each line
+   * @wrapLogMessage true to wrap log line to the next line
+   * @sortOrder sort log by time (can be Descending or Ascending )
+   * @return A json that represents a log panel
+   */
   new(
     title='',
     datasource=null,
