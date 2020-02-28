@@ -3,7 +3,7 @@
     type,
     target
   ):: {
-    "type": type,
-    target: target
+    type: type,
+    target: target,
   },
 }

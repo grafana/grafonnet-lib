@@ -1,6 +1,6 @@
 {
-  "datasource": {
-    "target": "target_name",
-    "type": "table"
-  }
+   "datasource": {
+      "target": "target_name",
+      "type": "table"
+   }
 }

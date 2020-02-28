@@ -3,6 +3,6 @@ local jsonds = grafana.jsonds;
 
 {
   datasource: jsonds.target(
-   "table", "target_name"
-  )
+    'table', 'target_name'
+  ),
 }
