@@ -48,6 +48,7 @@
    * @param value_type Type of tooltip value
    * @param shared_tooltip Boolean Allow to group or spit tooltips on mouseover within a chart
    * @param percentage Boolean (defaut: false) show as percentages
+   * @param seriesOverrides List of series overrides (defaut: [])
    * @return A json that represents a graph panel
    */
   new(
@@ -106,6 +107,7 @@
     percentage=false,
     time_from=null,
     time_shift=null,
+    seriesOverrides=[],
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -170,7 +172,7 @@
     aliasColors: aliasColors,
     repeat: repeat,
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
-    seriesOverrides: [],
+    seriesOverrides: seriesOverrides,
     thresholds: thresholds,
     links: [],
     yaxe(
