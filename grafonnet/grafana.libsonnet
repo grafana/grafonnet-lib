@@ -1,4 +1,5 @@
 {
+  alertlist:: import 'alertlist.libsonnet',
   dashboard:: import 'dashboard.libsonnet',
   template:: import 'template.libsonnet',
   text:: import 'text.libsonnet',
