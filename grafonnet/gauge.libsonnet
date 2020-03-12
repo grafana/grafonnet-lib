@@ -1,4 +1,8 @@
 {
+    /**
+   * @param repeat repeat for variable
+   * @param repeatDirection h(horizontal) or v(vertical)
+   */
   new(
     title,
     datasource=null,
@@ -11,8 +15,8 @@
     max=null,
     min=null,
     unit=null,
-    repeat=null, # repeat for variable
-    repeatDirection=null, # h(horizontal) or v(vertical)
+    repeat=null,
+    repeatDirection=null,
     maxPerRow=null,
   )::
     {
