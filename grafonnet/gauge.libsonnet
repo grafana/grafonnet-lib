@@ -30,13 +30,13 @@
           calcs: [
             calc,
           ],
-        defaults: {
-        [if decimals != null then 'decimals']: decimals,
-        [if max != null then 'max']: max,
-        [if min != null then 'min']: min,
-        [if unit != null then 'unit']: unit,
-        },
-        thresholds: thresholds,
+          defaults: {
+            [if decimals != null then 'decimals']: decimals,
+            [if max != null then 'max']: max,
+            [if min != null then 'min']: min,
+            [if unit != null then 'unit']: unit,
+          },
+          thresholds: thresholds,
         },
       },
       _nextTarget:: 0,
