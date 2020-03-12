@@ -251,6 +251,8 @@ If we use [Jsonnet Bundler](https://github.com/jsonnet-bundler/jsonnet-bundler)
 alongside our new library, we can have it import both the code for all the
 plugins we depend upon, and Grafonnet itself, in one seamless step.
 
+See a full list of public 'plugins' for Grafonnet [here](plugins.md).
+
 [brew]:https://brew.sh/
 [jsonnet]:http://jsonnet.org/
 [jsonnetgh]:https://github.com/google/jsonnet
