@@ -11,8 +11,8 @@
     max=null,
     min=null,
     unit=null,
-    repeat=null,
-    repeatDirection=null,
+    repeat=null, # repeat for variable
+    repeatDirection=null, # h(horizontal) or v(vertical)
     maxPerRow=null,
   )::
     {
@@ -46,6 +46,5 @@
         targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
       },
     },
-
 }
 
