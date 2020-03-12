@@ -1,8 +1,4 @@
 {
-    /**
-   * @param repeat repeat for variable
-   * @param repeatDirection h(horizontal) or v(vertical)
-   */
   new(
     title,
     datasource=null,
