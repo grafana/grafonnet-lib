@@ -13,9 +13,9 @@ Grafana has a wide ecosystem of plugins, and there is no reason why Grafonnet
 could not be used to deploy dashboards containing resources provided by
 these plugins.
 
-However, *maintaining* Grafonnet, with all these plugins, would be difficult.
-Therefore, into the future, Grafonnet will limit itself to features that are
-present within Grafana without the use of additional plugins.
+However, *maintaining* Grafonnet, with support for all these plugins, would be
+difficult. Therefore, into the future, Grafonnet will limit itself to features
+that are present within Grafana without the use of additional plugins.
 
 Fortunately, Grafonnet uses Jsonnet, and adding support for your own plugins
 is easy. See the [Adding support for plugins](#adding-plugins-to-grafonnet)
