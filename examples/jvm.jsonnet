@@ -199,6 +199,7 @@ grafana.dashboard.new(
       legend_total=false,
       legend_avg=true,
       legend_alignAsTable=true,
+      legend_sideWidth=200,
     )
     .addTarget(
       prometheus.target(
