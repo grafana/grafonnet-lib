@@ -114,6 +114,7 @@
          "max": false,
          "min": false,
          "rightSide": false,
+         "sideWidth": 200,
          "show": true,
          "total": false,
          "values": false

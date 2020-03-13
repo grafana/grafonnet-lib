@@ -38,6 +38,7 @@ local graphPanel = grafana.graphPanel;
     legend_avg=true,
     legend_alignAsTable=true,
     legend_rightSide=true,
+    legend_sideWidth=200,
     legend_hideEmpty=true,
     legend_hideZero=true,
     value_type='cumulative',
