@@ -4,7 +4,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": true,
-      "datasource": "$PROMETHEUS",
+      "datasource": "default",
       "decimals": 2,
       "description": "description",
       "fill": 2,
@@ -50,7 +50,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "test",
+      "title": "Advanced",
       "tooltip": {
          "shared": false,
          "sort": 1,
@@ -136,7 +136,7 @@
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "with alerts",
+      "title": "Alerts",
       "tooltip": {
          "shared": true,
          "sort": 0,
@@ -224,7 +224,7 @@
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "with alert conditions as an array",
+      "title": "Alerts With Multiple Conditions",
       "tooltip": {
          "shared": true,
          "sort": 0,
@@ -297,7 +297,7 @@
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "with colors",
+      "title": "Alias Colors",
       "tooltip": {
          "shared": true,
          "sort": 0,
@@ -366,7 +366,7 @@
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "test",
+      "title": "Basic",
       "tooltip": {
          "shared": true,
          "sort": 0,
@@ -435,7 +435,7 @@
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "series",
+      "title": "Graph Series",
       "tooltip": {
          "shared": true,
          "sort": 0,
@@ -506,7 +506,7 @@
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "series",
+      "title": "Graph Series Custom Value",
       "tooltip": {
          "shared": true,
          "sort": 0,
@@ -521,77 +521,6 @@
          "values": [
             "current"
          ]
-      },
-      "yaxes": [
-         {
-            "format": "short",
-            "label": null,
-            "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true
-         },
-         {
-            "format": "short",
-            "label": null,
-            "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true
-         }
-      ]
-   },
-   "legendSort": {
-      "aliasColors": { },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fill": 1,
-      "legend": {
-         "alignAsTable": true,
-         "avg": false,
-         "current": true,
-         "max": true,
-         "min": true,
-         "rightSide": true,
-         "show": true,
-         "sort": "current",
-         "sortDesc": true,
-         "total": false,
-         "values": true
-      },
-      "lines": true,
-      "linewidth": 1,
-      "links": [ ],
-      "nullPointMode": "null",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "repeat": null,
-      "seriesOverrides": [ ],
-      "spaceLength": 10,
-      "span": 12,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [ ],
-      "thresholds": [ ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "with sorted legend",
-      "tooltip": {
-         "shared": true,
-         "sort": 0,
-         "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-         "buckets": null,
-         "mode": "time",
-         "name": null,
-         "show": true,
-         "values": [ ]
       },
       "yaxes": [
          {
@@ -657,7 +586,78 @@
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "with array of targets",
+      "title": "Multiple Targets",
+      "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+         "buckets": null,
+         "mode": "time",
+         "name": null,
+         "show": true,
+         "values": [ ]
+      },
+      "yaxes": [
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         },
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         }
+      ]
+   },
+   "sortedLegend": {
+      "aliasColors": { },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "legend": {
+         "alignAsTable": true,
+         "avg": false,
+         "current": true,
+         "max": true,
+         "min": true,
+         "rightSide": true,
+         "show": true,
+         "sort": "current",
+         "sortDesc": true,
+         "total": false,
+         "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [ ],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [ ],
+      "spaceLength": 10,
+      "span": 12,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [ ],
+      "thresholds": [ ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Sorted Legend",
       "tooltip": {
          "shared": true,
          "sort": 0,
@@ -735,7 +735,7 @@
       "thresholds": [ ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "with targets",
+      "title": "Targets",
       "tooltip": {
          "shared": true,
          "sort": 0,
