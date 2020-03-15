@@ -18,7 +18,7 @@ difficult. Therefore, into the future, Grafonnet will limit itself to features
 that are present within Grafana without the use of additional plugins.
 
 Fortunately, Grafonnet uses Jsonnet, and adding support for your own plugins
-is easy. See the [Adding support for plugins](#adding-plugins-to-grafonnet)
+is easy. See the "[Adding Plugins to Grafonnet](#adding-plugins-to-grafonnet)"
 section for details of how to do this.
 
 ## Getting started
