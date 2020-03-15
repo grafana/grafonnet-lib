@@ -1,6 +1,6 @@
 # Grafonnet Plugins
 
-Jsonnet makes it easy to patch an existing library. Therefore,
+Jsonnet makes it easy to patch an existing library.
 although the base Grafonnet only supports core Grafana features,
 it is easy to extend it with additional 'plugins', which are
 simply a directories of libsonnet files, and can be used like
