@@ -3,7 +3,7 @@
 Jsonnet makes it easy to patch an existing library.
 Although Grafonnet only supports core Grafana features,
 it is easy to extend it with additional 'plugins', which are
-simply a directories of libsonnet files, and can be used like
+simply directories of libsonnet files, and can be used like
 so:
 
 ```jsonnet
