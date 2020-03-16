@@ -45,7 +45,7 @@
   )::
     {
       current: $.current(current),
-      hide: if hide == '' then 0 else if hide == 'label' then 1 else 2,
+      hide: $.hide(hide),
       label: label,
       name: name,
       query: std.join(',', std.filter($.filterAuto, std.split(query, ','))),
