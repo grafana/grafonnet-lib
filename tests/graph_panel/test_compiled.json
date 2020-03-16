@@ -24,7 +24,13 @@
       },
       "lines": false,
       "linewidth": 2,
-      "links": [ ],
+      "links": [
+         {
+            "targetBlank": true,
+            "title": "foolink",
+            "url": "https://example.com"
+         }
+      ],
       "minSpan": 9,
       "nullPointMode": "nullAsZero",
       "percentage": false,

@@ -98,6 +98,7 @@
     legend_sortDesc=null,
     aliasColors={},
     thresholds=[],
+    links=[],
     logBase1Y=1,
     logBase2Y=1,
     transparent=false,
