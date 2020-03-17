@@ -131,4 +131,19 @@
       query: query,
       type: 'custom',
     },
+  text(
+    name,
+    label=''
+  )::
+    {
+      current: {
+        selected: false,
+        text: '',
+        value: '',
+      },
+      name: name,
+      label: label,
+      query: '',
+      type: 'textbox',
+    },
 }
