@@ -247,5 +247,8 @@
       },
       addConditions(conditions):: std.foldl(function(p, c) p.addCondition(c), conditions, it),
     },
+    addLink(link):: self {
+      links+: [link],
+    },
   },
 }
