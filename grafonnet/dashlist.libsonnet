@@ -27,7 +27,7 @@
   ):: {
     type: 'dashlist',
     title: title,
-    query: if query != null then query else "",
+    query: if query != null then query else '',
     tags: tags,
     recent: recent,
     search: search,

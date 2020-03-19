@@ -9,5 +9,5 @@ local Pluginlist = grafana.pluginlist;
     'test',
     description='description',
     limit=5
-  )
+  ),
 }
