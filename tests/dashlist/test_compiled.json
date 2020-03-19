@@ -1,0 +1,28 @@
+{
+   "advanced": {
+      "description": "description",
+      "headings": true,
+      "limit": 5,
+      "query": "",
+      "recent": false,
+      "search": true,
+      "starred": false,
+      "tags": [
+         "test0",
+         "test1"
+      ],
+      "title": "test",
+      "type": "dashlist"
+   },
+   "basic": {
+      "headings": true,
+      "limit": 10,
+      "query": "",
+      "recent": true,
+      "search": false,
+      "starred": false,
+      "tags": [ ],
+      "title": "test",
+      "type": "dashlist"
+   }
+}

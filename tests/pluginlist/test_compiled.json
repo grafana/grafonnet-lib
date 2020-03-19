@@ -1,0 +1,12 @@
+{
+   "advanced": {
+      "description": "description",
+      "limit": 5,
+      "title": "test",
+      "type": "pluginlist"
+   },
+   "basic": {
+      "title": "test",
+      "type": "pluginlist"
+   }
+}
