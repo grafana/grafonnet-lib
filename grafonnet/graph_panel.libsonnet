@@ -15,8 +15,13 @@
    * @param formatY2 Unit of the second Y axe
    * @param min Min of the Y axes
    * @param max Max of the Y axes
+   * @param labelY1 Label of the first Y axe
+   * @param labelY2 Label of the second Y axe
    * @param x_axis_mode X axis mode, one of [time, series, histogram]
    * @param x_axis_values Chosen value of series, one of [avg, min, max, total, count]
+   * @param x_axis_buckets restricts the x axis to this amount of buckets
+   * @param x_axis_min restricts the x axis to display from this value if supplied
+   * @param x_axis_max restricts the x axis to display up to this value if supplied
    * @param lines Display lines, boolean
    * @param points Display points, boolean
    * @param pointradius Radius of the points, allowed values are 0.5 or [1 ... 10] with step 1
@@ -41,6 +46,8 @@
    * @param logBase2Y Value of logarithm base of the second Y axe
    * @param transparent Boolean (default: false) If set to true the panel will be transparent
    * @param value_type Type of tooltip value
+   * @param shared_tooltip Boolean Allow to group or spit tooltips on mouseover within a chart
+   * @param percentage Boolean (defaut: false) show as percentages
    * @return A json that represents a graph panel
    */
   new(
@@ -56,8 +63,13 @@
     formatY2=null,
     min=null,
     max=null,
+    labelY1=null,
+    labelY2=null,
     x_axis_mode='time',
     x_axis_values='total',
+    x_axis_buckets=null,
+    x_axis_min=null,
+    x_axis_max=null,
     lines=true,
     datasource=null,
     points=false,
@@ -86,10 +98,15 @@
     legend_sortDesc=null,
     aliasColors={},
     thresholds=[],
+    links=[],
     logBase1Y=1,
     logBase2Y=1,
     transparent=false,
-    value_type='individual'
+    value_type='individual',
+    shared_tooltip=true,
+    percentage=false,
+    time_from=null,
+    time_shift=null,
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -103,15 +120,17 @@
     [if height != null then 'height']: height,
     renderer: 'flot',
     yaxes: [
-      self.yaxe(if formatY1 != null then formatY1 else format, min, max, decimals=decimals, logBase=logBase1Y),
-      self.yaxe(if formatY2 != null then formatY2 else format, min, max, decimals=decimals, logBase=logBase2Y),
+      self.yaxe(if formatY1 != null then formatY1 else format, min, max, decimals=decimals, logBase=logBase1Y, label=labelY1),
+      self.yaxe(if formatY2 != null then formatY2 else format, min, max, decimals=decimals, logBase=logBase2Y, label=labelY2),
     ],
     xaxis: {
       show: show_xaxis,
       mode: x_axis_mode,
       name: null,
       values: if x_axis_mode == 'series' then [x_axis_values] else [],
-      buckets: null,
+      buckets: if x_axis_mode == 'histogram' then [x_axis_buckets] else null,
+      [if x_axis_min != null then 'min']: x_axis_min,
+      [if x_axis_max != null then 'max']: x_axis_max,
     },
     lines: lines,
     fill: fill,
@@ -123,7 +142,7 @@
     pointradius: pointradius,
     bars: bars,
     stack: stack,
-    percentage: false,
+    percentage: percentage,
     legend: {
       show: legend_show,
       values: legend_values,
@@ -143,18 +162,18 @@
     steppedLine: false,
     tooltip: {
       value_type: value_type,
-      shared: true,
+      shared: shared_tooltip,
       sort: if sort == 'decreasing' then 2 else if sort == 'increasing' then 1 else sort,
     },
-    timeFrom: null,
-    timeShift: null,
+    timeFrom: time_from,
+    timeShift: time_shift,
     [if transparent == true then 'transparent']: transparent,
     aliasColors: aliasColors,
     repeat: repeat,
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
     seriesOverrides: [],
     thresholds: thresholds,
-    links: [],
+    links: links,
     yaxe(
       format='short',
       min=null,
@@ -181,17 +200,12 @@
       targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
     },
     addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
-    _nextSeriesOverride:: 0,
     addSeriesOverride(override):: self {
-      local nextOverride = super._nextSerieOverride,
-      _nextSeriesOverride: nextOverride + 1,
       seriesOverrides+: [override],
     },
     resetYaxes():: self {
       yaxes: [],
-      _nextYaxis:: 0,
     },
-    _nextYaxis:: 0,
     addYaxis(
       format='short',
       min=null,
@@ -201,8 +215,6 @@
       logBase=1,
       decimals=null,
     ):: self {
-      local nextYaxis = super._nextYaxis,
-      _nextYaxis: nextYaxis + 1,
       yaxes+: [self.yaxe(format, min, max, label, show, logBase, decimals)],
     },
     addAlert(
@@ -214,6 +226,7 @@
       message='',
       noDataState='no_data',
       notifications=[],
+      alertRuleTags={},
     ):: self {
       local it = self,
       _conditions:: [],
@@ -227,11 +240,15 @@
         noDataState: noDataState,
         notifications: notifications,
         message: message,
+        alertRuleTags: alertRuleTags,
       },
       addCondition(condition):: self {
         _conditions+: [condition],
       },
       addConditions(conditions):: std.foldl(function(p, c) p.addCondition(c), conditions, it),
+    },
+    addLink(link):: self {
+      links+: [link],
     },
   },
 }

@@ -28,6 +28,14 @@ local tablePanel = grafana.tablePanel;
         unit: 'none',
       },
     ],
+    transform='table',
+    transparent=true,
+    sort={
+      col: 1,
+      desc: true,
+    },
+    time_from='24h',
+    time_shift='1h',
   ),
   targets:
     [
@@ -37,4 +45,10 @@ local tablePanel = grafana.tablePanel;
       tablePanel.new('with batch targets', span=12)
       .addTargets([{ a: 'foo' }, { b: 'foo' }]),
     ],
+  hideColumns: tablePanel.new(
+    'test',
+    span=12,
+  ).
+    hideColumn('Time').
+    hideColumn('Space'),
 }

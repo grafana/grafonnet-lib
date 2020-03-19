@@ -50,6 +50,10 @@
     gaugeMaxValue=100,
     gaugeThresholdMarkers=true,
     gaugeThresholdLabels=false,
+    timeFrom=null,
+    links=[],
+    tableColumn='',
+    maxPerRow=null,
   )::
     {
       [if height != null then 'height']: height,
@@ -64,7 +68,7 @@
       datasource: datasource,
       targets: [
       ],
-      links: [],
+      links: links,
       [if decimals != null then 'decimals']: decimals,
       maxDataPoints: 100,
       interval: interval,
@@ -74,6 +78,7 @@
       postfix: postfix,
       nullText: null,
       valueMaps: valueMaps,
+      [if maxPerRow != null then 'maxPerRow']: maxPerRow,
       mappingTypes: [
         {
           name: 'value to text',
@@ -100,6 +105,7 @@
       valueFontSize: valueFontSize,
       postfixFontSize: postfixFontSize,
       thresholds: thresholds,
+      [if timeFrom != null then 'timeFrom']: timeFrom,
       colorBackground: colorBackground,
       colorValue: colorValue,
       colors: colors,
@@ -116,7 +122,7 @@
         lineColor: sparklineLineColor,
         show: sparklineShow,
       },
-      tableColumn: '',
+      tableColumn: tableColumn,
       _nextTarget:: 0,
       addTarget(target):: self {
         local nextTarget = super._nextTarget,

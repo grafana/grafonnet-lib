@@ -4,12 +4,14 @@ local row = grafana.row;
 
 [
   dashboard.new('test')
-  .addTemplate({ test: true })
+  .addTemplate({ test1: true })
+  .addTemplates([{ test2: true }, { test3: true }])
   .addRow(row.new(title='1', height='250px'))
   .addRow(row.new(title='2', height='250px'))
   .addRows([row.new(title='1', height='250px'), row.new(title='2', height='250px')])
   .addAnnotation('foo')
   .addAnnotation('bar')
+  .addAnnotations(['foo2', 'bar2'])
   .addLink('foolinks')
   .addLink('barlinks'),
   dashboard.new('test2')

@@ -1,0 +1,13 @@
+{
+   "basic": {
+      "current": {
+         "selected": false,
+         "text": "",
+         "value": ""
+      },
+      "label": "Text Box Name",
+      "name": "text_box_name",
+      "query": "",
+      "type": "textbox"
+   }
+}

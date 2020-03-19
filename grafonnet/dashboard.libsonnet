@@ -45,12 +45,14 @@ local timepickerlib = import 'timepicker.libsonnet';
     timepicker: timepicker,
     title: title,
     version: 0,
-    addAnnotation(annotation):: self {
-      _annotations+:: [annotation],
+    addAnnotations(annotations):: self {
+      _annotations+:: annotations,
     },
-    addTemplate(t):: self {
-      templates+: [t],
+    addAnnotation(a):: self.addAnnotations([a]),
+    addTemplates(templates):: self {
+      templates+: templates,
     },
+    addTemplate(t):: self.addTemplates([t]),
     templates:: [],
     annotations: { list: it._annotations },
     templating: { list: it.templates },

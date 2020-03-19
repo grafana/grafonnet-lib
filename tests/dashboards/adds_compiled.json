@@ -5,7 +5,9 @@
       "annotations": {
          "list": [
             "foo",
-            "bar"
+            "bar",
+            "foo2",
+            "bar2"
          ]
       },
       "editable": false,
@@ -78,7 +80,13 @@
       "templating": {
          "list": [
             {
-               "test": true
+               "test1": true
+            },
+            {
+               "test2": true
+            },
+            {
+               "test3": true
             }
          ]
       },

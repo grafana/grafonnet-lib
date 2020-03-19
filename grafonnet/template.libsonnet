@@ -45,7 +45,7 @@
   )::
     {
       current: $.current(current),
-      hide: if hide == '' then 0 else if hide == 'label' then 1 else 2,
+      hide: $.hide(hide),
       label: label,
       name: name,
       query: std.join(',', std.filter($.filterAuto, std.split(query, ','))),
@@ -104,10 +104,13 @@
     refresh='never',
     label='',
     valuelabels={},
+    multi=false,
+    allValues=null,
+    includeAll=false,
     hide='',
   )::
     {
-      allValue: null,
+      allValue: allValues,
       current: {
         value: current,
         text: if current in valuelabels then valuelabels[current] else current,
@@ -120,12 +123,27 @@
           }, std.split(query, ',')
       ),
       hide: $.hide(hide),
-      includeAll: false,
+      includeAll: includeAll,
       label: label,
       refresh: $.refresh(refresh),
-      multi: false,
+      multi: multi,
       name: name,
       query: query,
       type: 'custom',
+    },
+  text(
+    name,
+    label=''
+  )::
+    {
+      current: {
+        selected: false,
+        text: '',
+        value: '',
+      },
+      name: name,
+      label: label,
+      query: '',
+      type: 'textbox',
     },
 }

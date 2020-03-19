@@ -48,6 +48,14 @@ local singlestat = grafana.singlestat;
     gaugeMaxValue=23,
     gaugeThresholdMarkers=true,
     gaugeThresholdLabels=true,
+    timeFrom='30m',
+    links=[
+      {
+        targetBlank: true,
+        title: 'My link title',
+        url: 'https://grafana.com',
+      },
+    ],
   ),
   value: singlestat.new(
     'vv',

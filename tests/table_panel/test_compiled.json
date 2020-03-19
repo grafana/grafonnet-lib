@@ -8,6 +8,10 @@
       ],
       "datasource": "$PROMETHEUS",
       "description": "description",
+      "sort": {
+         "col": 1,
+         "desc": true
+      },
       "span": 12,
       "styles": [
          {
@@ -28,8 +32,11 @@
          }
       ],
       "targets": [ ],
+      "timeFrom": "24h",
+      "timeShift": "1h",
       "title": "test",
       "transform": "table",
+      "transparent": true,
       "type": "table"
    },
    "basic": {
@@ -38,8 +45,31 @@
       "span": 12,
       "styles": [ ],
       "targets": [ ],
+      "timeFrom": null,
+      "timeShift": null,
       "title": "test",
-      "transform": "table",
+      "type": "table"
+   },
+   "hideColumns": {
+      "columns": [ ],
+      "datasource": null,
+      "span": 12,
+      "styles": [
+         {
+            "alias": "Time",
+            "pattern": "Time",
+            "type": "hidden"
+         },
+         {
+            "alias": "Space",
+            "pattern": "Space",
+            "type": "hidden"
+         }
+      ],
+      "targets": [ ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "test",
       "type": "table"
    },
    "targets": [
@@ -58,8 +88,9 @@
                "refId": "B"
             }
          ],
+         "timeFrom": null,
+         "timeShift": null,
          "title": "with targets",
-         "transform": "table",
          "type": "table"
       },
       {
@@ -77,8 +108,9 @@
                "refId": "\u0083"
             }
          ],
+         "timeFrom": null,
+         "timeShift": null,
          "title": "with batch targets",
-         "transform": "table",
          "type": "table"
       }
    ]

@@ -7,7 +7,9 @@
     datasource=null,
     interval=null,
     instant=null,
+    hide=null,
   ):: {
+    [if hide != null then 'hide']: hide,
     [if datasource != null then 'datasource']: datasource,
     expr: expr,
     format: format,

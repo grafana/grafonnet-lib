@@ -17,6 +17,8 @@ local graphPanel = grafana.graphPanel;
     formatY2='ms',
     min=10,
     max=10,
+    labelY1='labelY1',
+    labelY2='labelY2',
     lines=false,
     fill=2,
     linewidth=2,
@@ -40,7 +42,11 @@ local graphPanel = grafana.graphPanel;
     legend_hideZero=true,
     value_type='cumulative',
     thresholds=[{ colorMode: 'critical', fill: true, line: true, op: 'lt', value: 5 }],
+    links=[{ targetBlank: true, title: 'foolink', url: 'https://example.com' }],
     logBase1Y=2,
+    transparent=true,
+    shared_tooltip=false,
+    percentage=false,
   ),
   graph_series: graphPanel.new('series', span=12, x_axis_mode='series',),
   graph_series_custom_value: graphPanel.new('series', span=12, x_axis_mode='series', x_axis_values='current',),
@@ -68,4 +74,7 @@ local graphPanel = grafana.graphPanel;
   alertsWithMultipleConditions: graphPanel.new('with alert conditions as an array', span=12)
                                 .addAlert('name of alert')
                                 .addConditions([{ c1: 'params' }, { c2: 'params' }]),
+  links: graphPanel.new('with links', span=12)
+         .addLink('foolinks')
+         .addLink('barlinks'),
 }

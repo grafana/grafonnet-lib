@@ -21,7 +21,13 @@
       },
       "height": "42px",
       "interval": "10s",
-      "links": [ ],
+      "links": [
+         {
+            "targetBlank": true,
+            "title": "My link title",
+            "url": "https://grafana.com"
+         }
+      ],
       "mappingType": 2,
       "mappingTypes": [
          {
@@ -56,6 +62,7 @@
       "tableColumn": "",
       "targets": [ ],
       "thresholds": "1,2",
+      "timeFrom": "30m",
       "title": "adv",
       "transparent": true,
       "type": "singlestat",
