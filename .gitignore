@@ -1,2 +1,3 @@
 site
 *_test_output.json
+.DS_Store
