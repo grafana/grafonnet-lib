@@ -16,5 +16,4 @@ local grafonnet = (import 'grafonnet-lib/grafana.libsonnet')
 
 ## Plugin List
 
-(the idea of plugins is new. Please submit a PR to add your plugin
-here).
+* [Status panel (by Vonage)](https://grafana.com/grafana/plugins/vonage-status-panel) template plugin: [link](https://github.com/DifferentialOrange/grafonnet-status-panel).
