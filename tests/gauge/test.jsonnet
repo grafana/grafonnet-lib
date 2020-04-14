@@ -9,12 +9,13 @@ local gauge = grafana.gauge;
     .addTarget('target2')
     .addTarget('target3')
   ,
-  advanced: gauge.new('advanced',
-  	calc='sum',
+  advanced: gauge.new(
+    'advanced',
+    calc='sum',
     datasource='prom1',
     height='42px',
-  	span=6,
-  	timeFrom='5m',
-  	transparent=true
-  )
+    span=6,
+    timeFrom='5m',
+    transparent=true
+  ),
 }
