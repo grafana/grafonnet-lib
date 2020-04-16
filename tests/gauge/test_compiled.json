@@ -1,0 +1,49 @@
+{
+   "advanced": {
+      "datasource": "prom1",
+      "height": "42px",
+      "options": {
+         "fieldOptions": {
+            "calcs": [
+               "sum"
+            ]
+         }
+      },
+      "span": 6,
+      "timeFrom": "5m",
+      "title": "advanced",
+      "transparent": true,
+      "type": "gauge"
+   },
+   "basic": {
+      "datasource": null,
+      "options": {
+         "fieldOptions": {
+            "calcs": [
+               "mean"
+            ]
+         }
+      },
+      "span": 12,
+      "title": "single",
+      "type": "gauge"
+   },
+   "target": {
+      "datasource": null,
+      "options": {
+         "fieldOptions": {
+            "calcs": [
+               "mean"
+            ]
+         }
+      },
+      "span": 12,
+      "targets": [
+         "target1{\"refId\": \"A\"}",
+         "target2{\"refId\": \"B\"}",
+         "target3{\"refId\": \"C\"}"
+      ],
+      "title": "targets",
+      "type": "gauge"
+   }
+}
