@@ -15,7 +15,7 @@ local gauge = grafana.gauge;
     datasource='prom1',
     height='42px',
     span=6,
-    timeFrom='5m',
+    time_from='5m',
     transparent=true
   ),
 }
