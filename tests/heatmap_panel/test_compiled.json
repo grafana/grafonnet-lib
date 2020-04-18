@@ -16,6 +16,7 @@
       "datasource": null,
       "description": "description",
       "heatmap": { },
+      "hideZeroBuckets": true,
       "highlightCards": true,
       "legend": {
          "show": true
@@ -64,6 +65,7 @@
       "datasource": "default",
       "description": "description",
       "heatmap": { },
+      "hideZeroBuckets": true,
       "highlightCards": true,
       "legend": {
          "show": false
@@ -103,6 +105,7 @@
       "dataFormat": "tsbuckets",
       "datasource": null,
       "heatmap": { },
+      "hideZeroBuckets": false,
       "highlightCards": true,
       "legend": {
          "show": false
@@ -141,6 +144,7 @@
       "dataFormat": "timeseries",
       "datasource": null,
       "heatmap": { },
+      "hideZeroBuckets": false,
       "highlightCards": true,
       "legend": {
          "show": false
@@ -184,6 +188,7 @@
       "dataFormat": "tsbuckets",
       "datasource": null,
       "heatmap": { },
+      "hideZeroBuckets": false,
       "highlightCards": true,
       "legend": {
          "show": false
@@ -221,6 +226,7 @@
       "dataFormat": "tsbuckets",
       "datasource": null,
       "heatmap": { },
+      "hideZeroBuckets": false,
       "highlightCards": true,
       "legend": {
          "show": false
@@ -261,6 +267,7 @@
       "dataFormat": "tsbuckets",
       "datasource": null,
       "heatmap": { },
+      "hideZeroBuckets": false,
       "highlightCards": true,
       "legend": {
          "show": false
@@ -299,6 +306,7 @@
       "dataFormat": "timeseries",
       "datasource": null,
       "heatmap": { },
+      "hideZeroBuckets": false,
       "highlightCards": true,
       "legend": {
          "show": false

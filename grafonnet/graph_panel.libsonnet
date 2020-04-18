@@ -98,6 +98,7 @@
     legend_sortDesc=null,
     aliasColors={},
     thresholds=[],
+    links=[],
     logBase1Y=1,
     logBase2Y=1,
     transparent=false,
@@ -172,7 +173,7 @@
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
     seriesOverrides: [],
     thresholds: thresholds,
-    links: [],
+    links: links,
     yaxe(
       format='short',
       min=null,
@@ -245,6 +246,9 @@
         _conditions+: [condition],
       },
       addConditions(conditions):: std.foldl(function(p, c) p.addCondition(c), conditions, it),
+    },
+    addLink(link):: self {
+      links+: [link],
     },
   },
 }

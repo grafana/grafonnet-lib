@@ -42,6 +42,7 @@ local graphPanel = grafana.graphPanel;
     legend_hideZero=true,
     value_type='cumulative',
     thresholds=[{ colorMode: 'critical', fill: true, line: true, op: 'lt', value: 5 }],
+    links=[{ targetBlank: true, title: 'foolink', url: 'https://example.com' }],
     logBase1Y=2,
     transparent=true,
     shared_tooltip=false,
@@ -73,4 +74,7 @@ local graphPanel = grafana.graphPanel;
   alertsWithMultipleConditions: graphPanel.new('Alerts With Multiple Conditions', span=12)
                                 .addAlert('name of alert')
                                 .addConditions([{ c1: 'params' }, { c2: 'params' }]),
+  links: graphPanel.new('with links', span=12)
+         .addLink('foolinks')
+         .addLink('barlinks'),
 }
