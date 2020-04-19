@@ -9,7 +9,7 @@ describe('Graph Panel', function() {
       let panels = []
       for (let [i, [name, panel]] of Object.entries(Object.entries(str))) {
         panel['id'] = parseInt(i)
-        panel['gridPos'] = {'w': 24, 'h': 6 }
+        panel['gridPos'] = {'w': 6, 'h': 4, 'x': i * 6 % 24 }
         if (name == "alerts" || name == "alertsWithMultipleConditions") {
           // Skip panels with alerts. They are incompatible with the
           // test datasource and result in 500 errors.
@@ -29,7 +29,6 @@ describe('Graph Panel', function() {
 
   it('renders all graph panels', function() {
     cy.visit('/d/graph-panel/graph-panel')
-    cy.get('.custom-scrollbar .view:first-child').scrollTo('bottom') // lazy loading
     for (const title of panelTitles) {
       cy.contains(title)
     }
