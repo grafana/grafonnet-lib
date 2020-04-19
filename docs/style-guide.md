@@ -2,23 +2,32 @@
 
 ## Code Style
 
-Grafonnet carries no specific code style opinions. Only to use and enforce those of [Jsonnet tooling](https://jsonnet.org/learning/tools.html). Particularly `jsonnetfmt` and `jsonnet-lint`.
+Grafonnet carries no specific code style opinions. Only to use and enforce those
+of [Jsonnet tooling](https://jsonnet.org/learning/tools.html). Particularly
+`jsonnetfmt` and `jsonnet-lint`.
 
 ## Component Composition
 
-Grafonnet is, however, opinionated about component composition. This is to ensure consistency among components and hopefully keep the codebase simple.
+Grafonnet is, however, opinionated about component composition. This is to
+ensure consistency among components and hopefully keep the codebase simple.
 
 ### Interfaces
 
 All panels should implement the same one function interface, `panel.new`.
 
-All datasource targets should implement the same one function interface, `datasource.target`.
+All datasource targets should implement the same one function interface,
+`datasource.target`.
 
-Most components are either panels or datasource targets so these two interfaces cover the bases for the most part. An exception is `template` which implements a function for each template type.
+Most components are either panels or datasource targets so these two interfaces
+cover the bases for the most part. An exception is `template` which implements a
+function for each template type.
 
 ### Mutator Functions and Chaining
 
-Being that components are to implement a single function, they are expected to have mutator functions to build upon them. Each function should return the component itself so mutator functions can be chained. A common example is `panel.addTarget` for appending a datasource target.
+Being that components are to implement a single function, they are expected to
+have mutator functions to build upon them. Each function should return the
+component itself so mutator functions can be chained. A common example is
+`panel.addTarget` for appending a datasource target.
 
 ```libsonnet
 graphPanel.new(

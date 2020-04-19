@@ -29,9 +29,12 @@ templates, rows, panels...) as well as a number of datasources and plugins.
 ## Code of Conduct
 
 Grafonnet is developed withing the Grafana community. Therefore we are following
-the same [Code of Conduct as Grafana](https://github.com/grafana/grafana/blob/master/CODE_OF_CONDUCT.md). You need to agree and follow the
-code of conduct when you contribute to Grafonnet.
+the same [Code of Conduct as
+Grafana](https://github.com/grafana/grafana/blob/master/CODE_OF_CONDUCT.md). You
+need to agree and follow the code of conduct when you contribute to Grafonnet.
 
 ## License
 
-We use the same [license](https://github.com/grafana/grafonnet-lib/blob/master/LICENSE) as [Grafana](https://github.com/grafana/grafana/blob/master/LICENSE) (ASL 2.0).
+We use the same
+[license](https://github.com/grafana/grafonnet-lib/blob/master/LICENSE) as
+[Grafana](https://github.com/grafana/grafana/blob/master/LICENSE) (ASL 2.0).
