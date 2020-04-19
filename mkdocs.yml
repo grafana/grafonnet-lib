@@ -4,5 +4,7 @@ theme:
   palette:
     primary: 'Deep orange'
     accent: 'Orange'
-pages:
+nav:
   - Home: 'index.md'
+  - Style Guide: 'style-guide.md'
+  - Comunity Plugins: 'community-plugins.md'
