@@ -2,11 +2,11 @@ local grafana = import 'grafonnet/grafana.libsonnet';
 local graphPanel = grafana.graphPanel;
 
 {
-  basic: graphPanel.new('test', span=12),
+  basic: graphPanel.new('Basic', span=12),
   advanced: graphPanel.new(
-    'test',
+    'Advanced',
     decimals=2,
-    datasource='$PROMETHEUS',
+    datasource='default',
     description='description',
     show_xaxis=false,
     repeatDirection='v',
@@ -48,16 +48,16 @@ local graphPanel = grafana.graphPanel;
     shared_tooltip=false,
     percentage=false,
   ),
-  graph_series: graphPanel.new('series', span=12, x_axis_mode='series',),
-  graph_series_custom_value: graphPanel.new('series', span=12, x_axis_mode='series', x_axis_values='current',),
-  targets: graphPanel.new('with targets', span=12)
+  graph_series: graphPanel.new('Graph Series', span=12, x_axis_mode='series',),
+  graph_series_custom_value: graphPanel.new('Graph Series Custom Value', span=12, x_axis_mode='series', x_axis_values='current',),
+  targets: graphPanel.new('Targets', span=12)
            .addTarget({ a: 'foo' })
            .addTarget({ b: 'foo' }),
-  multipleTargets: graphPanel.new('with array of targets', span=12)
+  multipleTargets: graphPanel.new('Multiple Targets', span=12)
                    .addTargets([{ a: 'foo' }, { b: 'foo' }]),
-  aliasColors: graphPanel.new('with colors', aliasColors={ busy: '#bf1b00', io: '#70dbed', idle: '#7eb26d' }, span=12),
-  legendSort: graphPanel.new(
-    'with sorted legend',
+  aliasColors: graphPanel.new('Alias Colors', aliasColors={ busy: '#bf1b00', io: '#70dbed', idle: '#7eb26d' }, span=12),
+  sortedLegend: graphPanel.new(
+    'Sorted Legend',
     span=12,
     legend_values=true,
     legend_min=true,
@@ -68,10 +68,10 @@ local graphPanel = grafana.graphPanel;
     legend_sort='current',
     legend_sortDesc=true,
   ),
-  alerts: graphPanel.new('with alerts', span=12)
+  alerts: graphPanel.new('Alerts', span=12)
           .addAlert('name of alert')
           .addCondition([]),
-  alertsWithMultipleConditions: graphPanel.new('with alert conditions as an array', span=12)
+  alertsWithMultipleConditions: graphPanel.new('Alerts With Multiple Conditions', span=12)
                                 .addAlert('name of alert')
                                 .addConditions([{ c1: 'params' }, { c2: 'params' }]),
   links: graphPanel.new('with links', span=12)
