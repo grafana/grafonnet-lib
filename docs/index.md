@@ -33,7 +33,7 @@ See the [Community Plugins page](community-plugins) for more info on this.
 
 ## Code of Conduct
 
-Grafonnet is developed withing the Grafana community. Therefore we are following
+Grafonnet is developed within the Grafana community. Therefore we are following
 the same [Code of Conduct as
 Grafana](https://github.com/grafana/grafana/blob/master/CODE_OF_CONDUCT.md). You
 need to agree and follow the code of conduct when you contribute to Grafonnet.
