@@ -4,7 +4,11 @@
 
 Grafonnet carries no specific code style opinions. Only to use and enforce those
 of [Jsonnet tooling](https://jsonnet.org/learning/tools.html). Particularly
-`jsonnetfmt` and `jsonnet-lint`.
+`jsonnetfmt`.
+
+Running `make test-update` will run the repository's unit tests while updating
+files with `jsonnetfmt`. This is a good way to ensure your contributions are
+formatted correctly.
 
 ## Component Composition
 
