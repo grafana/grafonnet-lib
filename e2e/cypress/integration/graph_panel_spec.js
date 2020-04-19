@@ -28,7 +28,7 @@ describe('Graph Panel', function() {
   })
 
   it('renders all graph panels', function() {
-    cy.visit('http://admin:admin@localhost:3030/d/graph-panel/graph-panel')
+    cy.visit('/d/graph-panel/graph-panel')
     cy.get('.custom-scrollbar .view:first-child').scrollTo('bottom') // lazy loading
     for (const title of panelTitles) {
       cy.contains(title)
