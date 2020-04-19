@@ -6,8 +6,6 @@ Grafonnet provides a simple way of writing Grafana dashboards. It leverages the
 data templating language [Jsonnet][jsonnet]. It enables you to write reusable
 components that you can use and reuse for multiple dashboards.
 
-![screenshot](screenshot.png)
-
 ## Contribution Guidelines
 Grafana has a wide ecosystem of plugins, and there is no reason why Grafonnet
 could not be used to deploy dashboards containing resources provided by
