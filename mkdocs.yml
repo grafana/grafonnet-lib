@@ -6,5 +6,6 @@ theme:
     accent: 'Orange'
 nav:
   - Home: 'index.md'
+  - Getting Started: 'getting-started.md'
   - Style Guide: 'style-guide.md'
   - Comunity Plugins: 'community-plugins.md'
