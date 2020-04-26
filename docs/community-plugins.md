@@ -1,4 +1,4 @@
-# Grafonnet Plugins
+# Community Plugins
 
 Jsonnet makes it easy to patch an existing library.
 Although Grafonnet only supports core Grafana features,
