@@ -1,0 +1,29 @@
+{
+   "advanced": {
+      "datasource": "$PROMETHEUS",
+      "description": "description",
+      "limit": 20,
+      "onlyAlertsOnDashboard": true,
+      "show": "current",
+      "sortOrder": 2,
+      "span": 5,
+      "stateFilter": [
+         "ok",
+         "pending"
+      ],
+      "title": "Alerts List",
+      "transparent": true,
+      "type": "alertlist"
+   },
+   "basic": {
+      "datasource": null,
+      "limit": 10,
+      "onlyAlertsOnDashboard": true,
+      "show": "current",
+      "sortOrder": 1,
+      "span": 12,
+      "stateFilter": [ ],
+      "title": "",
+      "type": "alertlist"
+   }
+}
