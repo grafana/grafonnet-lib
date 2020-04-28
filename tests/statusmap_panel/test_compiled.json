@@ -1,0 +1,102 @@
+{
+   "discrete_color_mode": {
+      "cards": {
+         "cardHSpacing": 20,
+         "cardMinWidth": 50,
+         "cardRound": 10,
+         "cardVSpacing": 20
+      },
+      "cards_cardRound": 10,
+      "color": {
+         "cardColor": "#f2dd11",
+         "defaultColor": "#002500",
+         "mode": "discrete",
+         "thresholds": [
+            {
+               "color": "#F2495C",
+               "tooltip": "error",
+               "value": "0"
+            },
+            {
+               "color": "#73BF69",
+               "tooltip": "ok",
+               "value": "1"
+            }
+         ]
+      },
+      "data": {
+         "decimals": 1,
+         "unitFormat": "integer"
+      },
+      "datasource": "Prometheus",
+      "description": "Panel description",
+      "highlightCards": true,
+      "legend": {
+         "show": true
+      },
+      "nullPointMode": "as empty",
+      "title": "Discrete color mode",
+      "type": "flant-statusmap-panel",
+      "useMax": true,
+      "yAxisSort": "metrics"
+   },
+   "opacity_color_mode": {
+      "cards": {
+         "cardHSpacing": 20,
+         "cardMinWidth": 50,
+         "cardRound": 10,
+         "cardVSpacing": 20
+      },
+      "cards_cardRound": 10,
+      "color": {
+         "cardColor": "#f2dd11",
+         "colorScale": "sqrt",
+         "exponent": 1,
+         "mode": "opacity"
+      },
+      "data": {
+         "decimals": 1,
+         "unitFormat": "integer"
+      },
+      "datasource": "Prometheus",
+      "description": "Panel description",
+      "highlightCards": true,
+      "legend": {
+         "show": true
+      },
+      "nullPointMode": "as empty",
+      "title": "Opacity color mode",
+      "type": "flant-statusmap-panel",
+      "useMax": true,
+      "yAxisSort": "a → z"
+   },
+   "spectrum_color_mode": {
+      "cards": {
+         "cardHSpacing": 20,
+         "cardMinWidth": 50,
+         "cardRound": 10,
+         "cardVSpacing": 20
+      },
+      "cards_cardRound": 10,
+      "color": {
+         "cardColor": "#b4ff00",
+         "colorScheme": "interpolateGnYlRd",
+         "mode": "spectrum"
+      },
+      "data": {
+         "decimals": 1,
+         "unitFormat": "integer"
+      },
+      "datasource": "Prometheus",
+      "description": "Panel description",
+      "highlightCards": true,
+      "legend": {
+         "show": true
+      },
+      "nullPointMode": "as empty",
+      "title": "Spectrum color mode",
+      "type": "flant-statusmap-panel",
+      "useMax": true,
+      "yAxisSort": "a → z"
+   }
+}
