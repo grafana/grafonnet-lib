@@ -42,14 +42,14 @@
     description=null,
     color_mode='spectrum',
     color_cardColor='#b4ff00',
-    color_colorScale='sqrt',    
-    color_exponent=0.5,    
+    color_colorScale='sqrt',
+    color_exponent=0.5,
     color_colorScheme='interpolateGnYlRd',
-    color_defaultColor= '#757575',
-    color_thresholds= [],
+    color_defaultColor='#757575',
+    color_thresholds=[],
     cards_cardMinWidth=5,
-    cards_cardVSpacing= 2,
-    cards_cardHSpacing= 2,
+    cards_cardVSpacing=2,
+    cards_cardHSpacing=2,
     cards_cardRound=null,
     xAxis_show=true,
     xAxis_labelFormat='%a %m/%d',
@@ -63,7 +63,7 @@
     nullPointMode='as empty',
     yAxisSort='metrics',
     highlightCards=true,
-    useMax=true,    
+    useMax=true,
   ):: {
     title: title,
     type: 'flant-statusmap-panel',
@@ -73,7 +73,7 @@
       cardMinWidth: cards_cardMinWidth,
       cardVSpacing: cards_cardVSpacing,
       cardHSpacing: cards_cardHSpacing,
-      cardRound: cards_cardRound
+      cardRound: cards_cardRound,
     },
     color: {
       mode: color_mode,
@@ -90,7 +90,7 @@
     data: {
       unitFormat: data_unitFormat,
       [if data_decimals != null then 'decimals']: data_decimals,
-    },    
+    },
     [if cards_cardRound != null then 'cards_cardRound']: cards_cardRound,
 
     nullPointMode: 'as empty',
