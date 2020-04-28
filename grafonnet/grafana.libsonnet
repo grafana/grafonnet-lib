@@ -21,6 +21,7 @@
   cloudwatch:: import 'cloudwatch.libsonnet',
   elasticsearch:: import 'elasticsearch.libsonnet',
   heatmapPanel:: import 'heatmap_panel.libsonnet',
+  statusMap:: import 'statusmap_panel.libsonnet',
   dashlist:: import 'dashlist.libsonnet',
   pluginlist:: import 'pluginlist.libsonnet',
   gauge:: import 'gauge.libsonnet',
