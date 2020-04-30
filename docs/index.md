@@ -25,9 +25,9 @@ that would not be covered by Grafonnet already.
 
 Grafonnet aims to support any basic feature of dashboards (annotations,
 templates, rows, panels...) as well as a number of datasources and plugins. That
-is, official plugins only.
+is, core Grafana features and plugins only.
 
-We do, however, encourage development and use of community Grafonnet plugins.
+We do, however, encourage development and use of community Grafonnet extensions.
 See the [Community Plugins](community-plugins) page for more info on this.
 
 ## Code of Conduct

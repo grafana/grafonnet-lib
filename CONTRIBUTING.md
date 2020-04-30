@@ -10,10 +10,9 @@ participants to adhere to it.
 
 ## Plugin Scope
 
-**Grafonnet only aims to support official plugins.**
+**Grafonnet only aims to support core features and plugins.**
 
-We've drawn this line to ensure that the code base stays focused and manageable
-over time. We do, however, encourage development and use of community Grafonnet
-plugins. See the [Community
-Plugins](https://grafana.github.io/grafonnet-lib/community-plugins/) page for
-more info on this.
+While Grafonnet itself only supports core Grafana functionality, we strongly
+encourage development and use of community Grafonnet extensions. See the
+[Community Plugins](https://grafana.github.io/grafonnet-lib/community-plugins/)
+page for more info on this.

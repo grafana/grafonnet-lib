@@ -1,7 +1,7 @@
 # Community Plugins
 
 Jsonnet makes it easy to patch an existing library. Although Grafonnet only
-supports core Grafana features, it is easy to extend. For example:
+supports core Grafana features and plugins, it is easy to extend. For example:
 
 ```jsonnet
 local grafonnet = (import 'grafonnet-lib/grafana.libsonnet')
