@@ -1,4 +1,7 @@
 {
+  /**
+   * @name link.dashboards
+   */
   dashboards(
     title,
     tags,

@@ -1,4 +1,7 @@
 {
+  /**
+   * @name singlestat.new
+   */
   new(
     title,
     format='none',

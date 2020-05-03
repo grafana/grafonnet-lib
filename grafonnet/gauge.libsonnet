@@ -1,4 +1,7 @@
 {
+  /**
+   * @name gauge.new
+   */
   new(
     title,
     datasource=null,

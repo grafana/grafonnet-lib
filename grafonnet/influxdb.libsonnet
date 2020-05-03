@@ -2,6 +2,8 @@
   /**
    * Return an InfluxDB Target
    *
+   * @name influxdb.target
+   *
    * @param query Raw InfluxQL statement
    * @param alias Alias By pattern
    * @param datasource Datasource

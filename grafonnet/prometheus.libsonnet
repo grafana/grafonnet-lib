@@ -1,4 +1,7 @@
 {
+  /**
+   * @name prometheus.target
+   */
   target(
     expr,
     format='time_series',

@@ -1,7 +1,9 @@
 {
-  /*
+  /**
    * Returns a heatmap panel.
    * Requires the heatmap panel plugin in Grafana, which is built-in.
+   *
+   * @name heatmapPanel.new
    *
    * @param title The title of the heatmap panel
    * @param datasource Datasource

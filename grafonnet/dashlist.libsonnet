@@ -3,6 +3,8 @@
    * Returns a new dashlist panel that can be added in a row.
    * It requires the dashlist panel plugin in grafana, which is built-in.
    *
+   * @name dashlist.new
+   *
    * @param title The title of the dashlist panel.
    * @param description Description of the panel
    * @param query Query to search by

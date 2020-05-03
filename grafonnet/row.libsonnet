@@ -1,4 +1,7 @@
 {
+  /**
+   * @name row.new
+   */
   new(
     title='Dashboard Row',
     height=null,

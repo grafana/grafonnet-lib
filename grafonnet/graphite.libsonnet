@@ -2,6 +2,8 @@
   /**
    * Return an Graphite Target
    *
+   * @name graphite.target
+   *
    * @param target Graphite Query. Nested queries are possible by adding the query reference (refId).
    * @param targetFull Expanding the @target. Used in nested queries.
    * @param hide Disable query on graph.

@@ -1,4 +1,7 @@
 {
+  /**
+   * @name alertlist.new
+   */
   new(
     title='',
     span=null,
