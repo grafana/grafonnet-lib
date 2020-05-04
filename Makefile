@@ -23,6 +23,6 @@ gen-api-docs: # Generate api-docs.md from source code comments.
 		-u $$UID \
 		-v $$PWD:$$PWD \
 		-w $$PWD \
-		trotttrotttrott/jsonnetdoc:4f806c6 \
+		trotttrotttrott/jsonnetdoc:219e41b \
 		grafonnet --markdown \
 		> docs/api-docs.md
