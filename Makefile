@@ -20,9 +20,8 @@ test-update:  # Run all unit tests while copying test_output.json to compiled.js
 
 gen-api-docs: # Generate api-docs.md from source code comments.
 	@docker run --rm \
-		-u $$UID \
-		-v $$PWD:$$PWD \
 		-w $$PWD \
+		-v $$PWD:$$PWD \
 		trotttrotttrott/jsonnetdoc:219e41b \
 		grafonnet --markdown \
 		> docs/api-docs.md
