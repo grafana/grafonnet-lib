@@ -1,4 +1,7 @@
 {
+  /**
+   * @name elasticsearch.target
+   */
   target(
     query,
     timeField,

@@ -1,4 +1,7 @@
 {
+  /**
+   * @name template.new
+   */
   new(
     name,
     datasource,
@@ -34,6 +37,9 @@
       type: 'query',
       useTags: false,
     },
+  /**
+   * @name template.interval
+   */
   interval(
     name,
     query,
@@ -66,6 +72,9 @@
     else
       current,
   },
+  /**
+   * @name template.datasource
+   */
   datasource(
     name,
     query,
@@ -97,6 +106,9 @@
   else
     refresh,
   filterAuto(str):: str != 'auto',
+  /**
+   * @name template.custom
+   */
   custom(
     name,
     query,
@@ -131,6 +143,9 @@
       query: query,
       type: 'custom',
     },
+  /**
+   * @name template.text
+   */
   text(
     name,
     label=''

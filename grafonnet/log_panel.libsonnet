@@ -3,6 +3,8 @@
    * Returns a new log panel that can be added in a row.
    * It requires the log panel plugin in grafana, which is built-in.
    *
+   * @name logPanel.new
+   *
    * @param title The title of the log panel.
    * @param span Width of the panel
    * @param datasource Datasource

@@ -1,4 +1,7 @@
 {
+  /**
+   * @name timepicker.new
+   */
   new(
     refresh_intervals=[
       '5s',

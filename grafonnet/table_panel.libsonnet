@@ -3,6 +3,8 @@
    * Returns a new table panel that can be added in a row.
    * It requires the table panel plugin in grafana, which is built-in.
    *
+   * @name table.new
+   *
    * @param title The title of the graph panel.
    * @param span Width of the panel
    * @param height Height of the panel

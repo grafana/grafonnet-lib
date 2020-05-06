@@ -3,6 +3,8 @@
    * Returns a new pie chart panel that can be added in a row.
    * It requires the pie chart panel plugin in grafana, which needs to be explicitly installed.
    *
+   * @name pieChartPanel.new
+   *
    * @param title The title of the pie chart panel.
    * @param description Description of the panel
    * @param span Width of the panel

@@ -1,4 +1,7 @@
 {
+  /**
+   * @name sql.target
+   */
   target(
     rawSql,
     datasource=null,

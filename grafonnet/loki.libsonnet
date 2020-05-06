@@ -1,4 +1,7 @@
 {
+  /**
+   * @name loki.target
+   */
   target(
     expr,
     hide=null,
