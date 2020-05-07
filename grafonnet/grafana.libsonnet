@@ -24,4 +24,5 @@
   dashlist:: import 'dashlist.libsonnet',
   pluginlist:: import 'pluginlist.libsonnet',
   gauge:: import 'gauge.libsonnet',
+  polystat:: import 'polystat_panel.libsonnet',
 }
