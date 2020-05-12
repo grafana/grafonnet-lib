@@ -20,20 +20,7 @@
       "query": "SELECT non_negative_derivative(mean(\"bytes_recv\"), 1s) *8\nFROM \"net\" WHERE (\"host\" =~ /^my_host.tld\\.net$/ AND \"interface\" =~ /^eth0$/)\nAND $timeFilter\nGROUP BY time($__interval), \"host\" fill(none)\n",
       "rawQuery": true,
       "resultFormat": "time_series",
-      "select": [
-         [
-            {
-               "params": [
-                  "value"
-               ],
-               "type": "field"
-            },
-            {
-               "params": [ ],
-               "type": "mean"
-            }
-         ]
-      ],
+      "select": [ ],
       "tags": [ ]
    },
    "rawQuery_basic": {
@@ -55,20 +42,7 @@
       "query": "SELECT mean(\"my_field\")\nFROM my_meas\nWHERE $timeFilter\nGROUP BY time($__interval)\n",
       "rawQuery": true,
       "resultFormat": "time_series",
-      "select": [
-         [
-            {
-               "params": [
-                  "value"
-               ],
-               "type": "field"
-            },
-            {
-               "params": [ ],
-               "type": "mean"
-            }
-         ]
-      ],
+      "select": [ ],
       "tags": [ ]
    },
    "tagged_query_advanced": {
@@ -119,6 +93,7 @@
             "value": "msk"
          },
          {
+            "condition": "AND",
             "key": "instance",
             "operator": "=~",
             "value": "/storage/"
@@ -162,6 +137,77 @@
             "key": "metric_name",
             "operator": "=",
             "value": "ram_usage"
+         }
+      ]
+   },
+   "tagged_query_multiple_selections": {
+      "alias": "$tag_host",
+      "groupBy": [
+         {
+            "params": [
+               "$__interval"
+            ],
+            "type": "time"
+         },
+         {
+            "params": [
+               "instance"
+            ],
+            "type": "tag"
+         },
+         {
+            "params": [
+               "zone"
+            ],
+            "type": "tag"
+         },
+         {
+            "params": [
+               0
+            ],
+            "type": "fill"
+         }
+      ],
+      "measurement": "mem",
+      "policy": "ret_30w",
+      "resultFormat": "time_series",
+      "select": [
+         [
+            {
+               "params": [
+                  "used_percent"
+               ],
+               "type": "field"
+            },
+            {
+               "params": [
+                  95
+               ],
+               "type": "percentile"
+            }
+         ],
+         [
+            {
+               "params": [
+                  "used_bytes"
+               ],
+               "type": "field"
+            },
+            {
+               "params": [ ],
+               "type": "mean"
+            },
+            {
+               "params": " / 1000",
+               "type": "math"
+            }
+         ]
+      ],
+      "tags": [
+         {
+            "key": "host",
+            "operator": "=",
+            "value": "msk"
          }
       ]
    },
