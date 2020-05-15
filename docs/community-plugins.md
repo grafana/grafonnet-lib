@@ -1,20 +1,20 @@
 # Community Plugins
 
-Jsonnet makes it easy to patch an existing library.
-Although Grafonnet only supports core Grafana features,
-it is easy to extend it with additional 'plugins', which are
-simply directories of libsonnet files, and can be used like
-so:
+Jsonnet makes it easy to patch an existing library. Although Grafonnet only
+supports core Grafana features and plugins, it is easy to extend. For example:
 
 ```jsonnet
 local grafonnet = (import 'grafonnet-lib/grafana.libsonnet')
-                + (import 'my-plugin-lib/my-plugin.libsonnet');
+                  + (import 'my-plugin-lib/my-plugin.libsonnet');
 {
-  ....our dashboards
+  ...
 }
 ```
 
 ## Plugin List
+
+If you've developed a Grafonnet extension for supporting a community plugin,
+please submit a pull request to get it added to this list.
 
 * [Status panel (by Vonage)](https://grafana.com/grafana/plugins/vonage-status-panel) template plugin: [link](https://github.com/DifferentialOrange/grafonnet-status-panel).
 * [Statusmap panel (by Flant)](https://grafana.com/grafana/plugins/flant-statusmap-panel) template plugin: [link](https://github.com/blablacar/grafonnet-lib-plugins).

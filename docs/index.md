@@ -23,13 +23,12 @@ that would not be covered by Grafonnet already.
 
 ## Scope
 
-Grafonnet aims at supporting any basic feature of dashboards (annotations,
-templates, rows, panels...) as well as a number of datasources and plugins.
+Grafonnet aims to support any basic feature of dashboards (annotations,
+templates, rows, panels...) as well as a number of datasources and plugins. That
+is, core Grafana features and plugins only.
 
-We'd like to limit the Grafana plugins supported in Grafonnet to only official plugins.
-
-We do, however, encourage development and use of community Grafonnet plugins.
-See the [Community Plugins page](community-plugins) for more info on this.
+We do, however, encourage development and use of community Grafonnet extensions.
+See the [Community Plugins](community-plugins) page for more info on this.
 
 ## Code of Conduct
 

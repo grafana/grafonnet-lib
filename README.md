@@ -6,9 +6,9 @@ A Jsonnet library for generating Grafana dashboards.
 
 See the full docs here: https://grafana.github.io/grafonnet-lib/
 
-## Code of Conduct
+## Contributing
 
-Grafonnet is developed within the Grafana community. Therefore we are following
-the same [Code of Conduct as
-Grafana](https://github.com/grafana/grafana/blob/master/CODE_OF_CONDUCT.md). You
-need to agree and follow the code of conduct when you contribute to Grafonnet.
+Please contribute! If you're interested, please start by reading the
+[contributing guide](CONTRIBUTING.md). Before you begin work please take note of
+our code of conduct and ensure that what you'd like to contribute is within the
+scope of what Grafonnet attempts to support.
