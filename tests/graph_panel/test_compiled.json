@@ -19,6 +19,7 @@
          "min": true,
          "rightSide": true,
          "show": false,
+         "sideWidth": 200,
          "total": true,
          "values": true
       },
@@ -121,6 +122,7 @@
          "min": false,
          "rightSide": false,
          "show": true,
+         "sideWidth": null,
          "total": false,
          "values": false
       },
@@ -209,6 +211,7 @@
          "min": false,
          "rightSide": false,
          "show": true,
+         "sideWidth": null,
          "total": false,
          "values": false
       },
@@ -282,6 +285,7 @@
          "min": false,
          "rightSide": false,
          "show": true,
+         "sideWidth": null,
          "total": false,
          "values": false
       },
@@ -351,6 +355,7 @@
          "min": false,
          "rightSide": false,
          "show": true,
+         "sideWidth": null,
          "total": false,
          "values": false
       },
@@ -420,6 +425,7 @@
          "min": false,
          "rightSide": false,
          "show": true,
+         "sideWidth": null,
          "total": false,
          "values": false
       },
@@ -491,6 +497,7 @@
          "min": false,
          "rightSide": false,
          "show": true,
+         "sideWidth": null,
          "total": false,
          "values": false
       },
@@ -562,6 +569,7 @@
          "min": false,
          "rightSide": false,
          "show": true,
+         "sideWidth": null,
          "total": false,
          "values": false
       },
@@ -634,6 +642,7 @@
          "min": false,
          "rightSide": false,
          "show": true,
+         "sideWidth": null,
          "total": false,
          "values": false
       },
@@ -712,6 +721,7 @@
          "min": true,
          "rightSide": true,
          "show": true,
+         "sideWidth": null,
          "sort": "current",
          "sortDesc": true,
          "total": false,
@@ -783,6 +793,7 @@
          "min": false,
          "rightSide": false,
          "show": true,
+         "sideWidth": null,
          "total": false,
          "values": false
       },

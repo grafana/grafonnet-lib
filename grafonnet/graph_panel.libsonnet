@@ -40,6 +40,7 @@
    * @param legend_avg Show average in legend
    * @param legend_alignAsTable Show legend as table
    * @param legend_rightSide Show legend to the right
+   * @param legend_sideWidth Legend width
    * @param legend_sort Sort order of legend
    * @param legend_sortDesc Sort legend descending
    * @param aliasColors Define color mappings for graphs
@@ -94,6 +95,7 @@
     legend_avg=false,
     legend_alignAsTable=false,
     legend_rightSide=false,
+    legend_sideWidth=null,
     legend_hideEmpty=null,
     legend_hideZero=null,
     legend_sort=null,
@@ -154,6 +156,7 @@
       total: legend_total,
       alignAsTable: legend_alignAsTable,
       rightSide: legend_rightSide,
+      sideWidth: legend_sideWidth,
       avg: legend_avg,
       [if legend_hideEmpty != null then 'hideEmpty']: legend_hideEmpty,
       [if legend_hideZero != null then 'hideZero']: legend_hideZero,

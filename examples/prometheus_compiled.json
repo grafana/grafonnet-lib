@@ -199,6 +199,7 @@
             "min": false,
             "rightSide": false,
             "show": true,
+            "sideWidth": null,
             "total": false,
             "values": false
          },
