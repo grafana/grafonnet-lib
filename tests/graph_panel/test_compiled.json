@@ -570,8 +570,6 @@
          "rightSide": false,
          "show": true,
          "sideWidth": null,
-         "sort": "current",
-         "sortDesc": true,
          "total": false,
          "values": false
       },
@@ -723,6 +721,7 @@
          "min": true,
          "rightSide": true,
          "show": true,
+         "sideWidth": null,
          "sort": "current",
          "sortDesc": true,
          "total": false,
