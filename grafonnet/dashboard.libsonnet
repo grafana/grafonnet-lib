@@ -1,6 +1,9 @@
 local timepickerlib = import 'timepicker.libsonnet';
 
 {
+  /**
+   * @name dashboard.new
+   */
   new(
     title,
     editable=false,

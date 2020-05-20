@@ -6,7 +6,10 @@ jobs:
       - checkout
       - run:
           name: unit tests
-          command: docker run -w $PWD -v $PWD:$PWD --entrypoint sh sparkprime/jsonnet tests.sh
+          command: make test
+      - run:
+          name: api-docs
+          command: make gen-api-docs
       - run:
           name: docs
           command: docker run --rm -u $UID -it -p 8000:8000 -v $PWD:/docs squidfunk/mkdocs-material build

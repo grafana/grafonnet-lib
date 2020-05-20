@@ -2,6 +2,8 @@
   /**
    * Return a CloudWatch Target
    *
+   * @name cloudwatch.target
+   *
    * @param region
    * @param namespace
    * @param metric

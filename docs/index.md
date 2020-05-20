@@ -1,4 +1,4 @@
-# <center>![Grafonnet logo](images/grafonnet.png)</center>
+# ![Grafonnet logo](images/grafonnet.png)
 
 Grafonnet provides an easy and maintainable way of writing
 [grafana](https://grafana.org) dashboards. Instead of generating JSON files and
@@ -23,19 +23,22 @@ that would not be covered by Grafonnet already.
 
 ## Scope
 
-Grafonnet aims at supporting any basic feature of dashboards (annotations,
-templates, rows, panels...) as well as a number of datasources and plugins.
+Grafonnet aims to support any basic feature of dashboards (annotations,
+templates, rows, panels...) as well as a number of datasources and plugins. That
+is, core Grafana features and plugins only.
+
+We do, however, encourage development and use of community Grafonnet extensions.
+See the [Community Plugins](community-plugins) page for more info on this.
 
 ## Code of Conduct
 
-Grafonnet is developed withing the Grafana community. Therefore we are following
-the same [Code of Conduct as Grafana][coc]. You need to agree and follow the
-code of conduct when you contribute to Grafonnet.
+Grafonnet is developed within the Grafana community. Therefore we are following
+the same [Code of Conduct as
+Grafana](https://github.com/grafana/grafana/blob/master/CODE_OF_CONDUCT.md). You
+need to agree and follow the code of conduct when you contribute to Grafonnet.
 
 ## License
 
-We use the same [license][lic1] as [Grafana][lic2] (ASL 2.0).
-
-[lic1]:https://github.com/grafana/grafonnet-lib/blob/master/LICENSE
-[lic2]:https://github.com/grafana/grafana/blob/master/LICENSE.md
-[coc]:https://github.com/grafana/grafana/blob/master/CODE_OF_CONDUCT.md
+We use the same
+[license](https://github.com/grafana/grafonnet-lib/blob/master/LICENSE) as
+[Grafana](https://github.com/grafana/grafana/blob/master/LICENSE) (ASL 2.0).

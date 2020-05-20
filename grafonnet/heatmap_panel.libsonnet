@@ -1,7 +1,9 @@
 {
-  /*
+  /**
    * Returns a heatmap panel.
    * Requires the heatmap panel plugin in Grafana, which is built-in.
+   *
+   * @name heatmapPanel.new
    *
    * @param title The title of the heatmap panel
    * @param datasource Datasource
@@ -18,6 +20,7 @@
    * @param color_mode How to display difference in frequency with color, default 'opacity'
    * @param dataFormat How to format the data, default is 'timeseries'
    * @param highlightCards TODO: document
+   * @param hideZeroBuckets Whether or not to hide empty buckets, default is false
    * @param legend_show Show legend
    * @param minSpan Minimum span of the panel when repeated on a template variable
    * @param repeat Variable used to repeat the heatmap panel
@@ -54,6 +57,7 @@
     color_mode='spectrum',
     dataFormat='timeseries',
     highlightCards=true,
+    hideZeroBuckets=false,
     legend_show=false,
     minSpan=null,
     span=null,
@@ -96,6 +100,7 @@
     },
     [if dataFormat != null then 'dataFormat']: dataFormat,
     heatmap: {},
+    hideZeroBuckets: hideZeroBuckets,
     highlightCards: highlightCards,
     legend: {
       show: legend_show,

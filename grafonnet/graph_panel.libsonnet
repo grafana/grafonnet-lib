@@ -3,6 +3,8 @@
    * Returns a new graph panel that can be added in a row.
    * It requires the graph panel plugin in grafana, which is built-in.
    *
+   * @name graphPanel.new
+   *
    * @param title The title of the graph panel.
    * @param span Width of the panel
    * @param datasource Datasource
@@ -100,6 +102,7 @@
     legend_sortDesc=null,
     aliasColors={},
     thresholds=[],
+    links=[],
     logBase1Y=1,
     logBase2Y=1,
     transparent=false,
@@ -129,7 +132,7 @@
       mode: x_axis_mode,
       name: null,
       values: if x_axis_mode == 'series' then [x_axis_values] else [],
-      buckets: if x_axis_mode == 'histogram' then [x_axis_buckets] else null,
+      buckets: if x_axis_mode == 'histogram' then x_axis_buckets else null,
       [if x_axis_min != null then 'min']: x_axis_min,
       [if x_axis_max != null then 'max']: x_axis_max,
     },
@@ -175,7 +178,7 @@
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
     seriesOverrides: [],
     thresholds: thresholds,
-    links: [],
+    links: links,
     yaxe(
       format='short',
       min=null,
@@ -248,6 +251,9 @@
         _conditions+: [condition],
       },
       addConditions(conditions):: std.foldl(function(p, c) p.addCondition(c), conditions, it),
+    },
+    addLink(link):: self {
+      links+: [link],
     },
   },
 }

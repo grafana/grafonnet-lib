@@ -4,5 +4,10 @@ theme:
   palette:
     primary: 'Deep orange'
     accent: 'Orange'
-pages:
+nav:
   - Home: 'index.md'
+  - Getting Started: 'getting-started.md'
+  - Examples: 'examples.md'
+  - Style Guide: 'style-guide.md'
+  - Community Plugins: 'community-plugins.md'
+  - API Docs: 'api-docs.md'
