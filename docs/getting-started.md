@@ -42,3 +42,6 @@ jsonnet -J <path> dashboard.jsonnet
 ```
 
 As you build your own mixins/dashboards, you should add additional `-J` paths.
+
+[brew]:https://brew.sh/
+[jsonnetgh]:https://github.com/google/jsonnet
