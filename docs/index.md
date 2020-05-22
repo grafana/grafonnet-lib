@@ -14,7 +14,7 @@ those dashboards under version control end up putting large, independent JSON
 files under source control.
 
 When doing so, it is hard to maintain the same links, templates, or even
-annotation between graphes. It usually requires a lot of custom tooling to
+annotation between graphs. It usually requires a lot of custom tooling to
 change and keep those Json files aligned. There are alternatives, like
 [grafanalib](https://github.com/weaveworks/grafanalib), that makes thing easier.
 However, as Grafonnet is using [jsonnet](http://jsonnet.org/), a superset of
