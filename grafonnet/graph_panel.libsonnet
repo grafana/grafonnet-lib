@@ -11,14 +11,16 @@
    * @param fill Fill, integer from 0 to 10
    * @param linewidth Line Width, integer from 0 to 10
    * @param decimals Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
+   * @param decimals1Y Override automatic decimal precision for the first Y axis. If null, use decimals parameter.
+   * @param decimals2Y Override automatic decimal precision for the second Y axis. If null, use decimals parameter.
    * @param min_span Min span
    * @param format Unit of the Y axes
-   * @param formatY1 Unit of the first Y axe
-   * @param formatY2 Unit of the second Y axe
+   * @param formatY1 Unit of the first Y axis
+   * @param formatY2 Unit of the second Y axis
    * @param min Min of the Y axes
    * @param max Max of the Y axes
-   * @param labelY1 Label of the first Y axe
-   * @param labelY2 Label of the second Y axe
+   * @param labelY1 Label of the first Y axis
+   * @param labelY2 Label of the second Y axis
    * @param x_axis_mode X axis mode, one of [time, series, histogram]
    * @param x_axis_values Chosen value of series, one of [avg, min, max, total, count]
    * @param x_axis_buckets restricts the x axis to this amount of buckets
@@ -28,6 +30,7 @@
    * @param points Display points, boolean
    * @param pointradius Radius of the points, allowed values are 0.5 or [1 ... 10] with step 1
    * @param bars Display bars, boolean
+   * @param staircase Display line as staircase, boolean
    * @param dashes Display line as dashes
    * @param stack Stack values
    * @param repeat Variable used to repeat the graph panel
@@ -45,8 +48,8 @@
    * @param legend_sortDesc Sort legend descending
    * @param aliasColors Define color mappings for graphs
    * @param thresholds Configuration of graph thresholds
-   * @param logBase1Y Value of logarithm base of the first Y axe
-   * @param logBase2Y Value of logarithm base of the second Y axe
+   * @param logBase1Y Value of logarithm base of the first Y axis
+   * @param logBase2Y Value of logarithm base of the second Y axis
    * @param transparent Boolean (default: false) If set to true the panel will be transparent
    * @param value_type Type of tooltip value
    * @param shared_tooltip Boolean Allow to group or spit tooltips on mouseover within a chart
@@ -59,6 +62,8 @@
     fill=1,
     linewidth=1,
     decimals=null,
+    decimalsY1=null,
+    decimalsY2=null,
     description=null,
     min_span=null,
     format='short',
@@ -78,6 +83,7 @@
     points=false,
     pointradius=5,
     bars=false,
+    staircase=false,
     height=null,
     nullPointMode='null',
     dashes=false,
@@ -124,8 +130,22 @@
     [if height != null then 'height']: height,
     renderer: 'flot',
     yaxes: [
-      self.yaxe(if formatY1 != null then formatY1 else format, min, max, decimals=decimals, logBase=logBase1Y, label=labelY1),
-      self.yaxe(if formatY2 != null then formatY2 else format, min, max, decimals=decimals, logBase=logBase2Y, label=labelY2),
+      self.yaxe(
+        if formatY1 != null then formatY1 else format,
+        min,
+        max,
+        decimals=(if decimalsY1 != null then decimalsY1 else decimals),
+        logBase=logBase1Y,
+        label=labelY1
+      ),
+      self.yaxe(
+        if formatY2 != null then formatY2 else format,
+        min,
+        max,
+        decimals=(if decimalsY2 != null then decimalsY2 else decimals),
+        logBase=logBase2Y,
+        label=labelY2
+      ),
     ],
     xaxis: {
       show: show_xaxis,
@@ -164,7 +184,7 @@
       [if legend_sortDesc != null then 'sortDesc']: legend_sortDesc,
     },
     nullPointMode: nullPointMode,
-    steppedLine: false,
+    steppedLine: staircase,
     tooltip: {
       value_type: value_type,
       shared: shared_tooltip,
