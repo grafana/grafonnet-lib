@@ -18,4 +18,14 @@ local gauge = grafana.gauge;
     time_from='5m',
     transparent=true
   ),
+  threshold: gauge.new(
+    'threshold',
+    calc='mean',
+    datasource='mem',
+    labels=true,
+    markers=false,
+    max=95,
+    min=10,
+    pluginVersion='6.7.3',
+  ).addThreshold('green').addThreshold('yellow', 50).addThreshold('red', 80),
 }

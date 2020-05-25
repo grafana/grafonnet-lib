@@ -6,8 +6,24 @@
          "fieldOptions": {
             "calcs": [
                "sum"
-            ]
-         }
+            ],
+            "defaults": {
+               "mappings": [ ],
+               "max": 100,
+               "min": 0,
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [ ]
+               },
+               "title": null,
+               "unit": "percent"
+            },
+            "overrides": [ ],
+            "values": false
+         },
+         "orientation": "auto",
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
       },
       "span": 6,
       "timeFrom": "5m",
@@ -21,8 +37,24 @@
          "fieldOptions": {
             "calcs": [
                "mean"
-            ]
-         }
+            ],
+            "defaults": {
+               "mappings": [ ],
+               "max": 100,
+               "min": 0,
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [ ]
+               },
+               "title": null,
+               "unit": "percent"
+            },
+            "overrides": [ ],
+            "values": false
+         },
+         "orientation": "auto",
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
       },
       "span": 12,
       "title": "single",
@@ -34,8 +66,24 @@
          "fieldOptions": {
             "calcs": [
                "mean"
-            ]
-         }
+            ],
+            "defaults": {
+               "mappings": [ ],
+               "max": 100,
+               "min": 0,
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [ ]
+               },
+               "title": null,
+               "unit": "percent"
+            },
+            "overrides": [ ],
+            "values": false
+         },
+         "orientation": "auto",
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
       },
       "span": 12,
       "targets": [
@@ -44,6 +92,48 @@
          "target3{\"refId\": \"C\"}"
       ],
       "title": "targets",
+      "type": "gauge"
+   },
+   "threshold": {
+      "datasource": "mem",
+      "options": {
+         "fieldOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "defaults": {
+               "mappings": [ ],
+               "max": 95,
+               "min": 10,
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                     {
+                        "color": "green",
+                        "value": null
+                     },
+                     {
+                        "color": "yellow",
+                        "value": 50
+                     },
+                     {
+                        "color": "red",
+                        "value": 80
+                     }
+                  ]
+               },
+               "title": null,
+               "unit": "percent"
+            },
+            "overrides": [ ],
+            "values": false
+         },
+         "orientation": "auto",
+         "showThresholdLabels": true,
+         "showThresholdMarkers": false
+      },
+      "pluginVersion": "6.7.3",
+      "title": "threshold",
       "type": "gauge"
    }
 }
