@@ -8,6 +8,8 @@
    * @param title The title of the graph panel.
    * @param description (optional) The description of the panel
    * @param span (optional) Width of the panel
+   * @param gridHeight (optional) Height of the panel in Grafana grid units
+   * @param gridWidth (optional) Width of the panel in Grafana grid units (max: 24)
    * @param datasource (optional) Datasource
    * @param fill (default `1`) , integer from 0 to 10
    * @param fillGradient (default `0`) , integer from 0 to 10
@@ -99,6 +101,8 @@
     bars=false,
     staircase=false,
     height=null,
+    gridHeight=null,
+    gridWidth=null,
     nullPointMode='null',
     dashes=false,
     stack=false,
@@ -218,6 +222,10 @@
     seriesOverrides: [],
     thresholds: thresholds,
     links: links,
+    [if (gridHeight != null || gridWidth != null) then 'gridPos']: {
+      h: gridHeight,
+      w: gridWidth,
+    },
     yaxe(
       format='short',
       min=null,

@@ -6,6 +6,8 @@
    *
    * @param title Panel title.
    * @param description (optional) Panel description.
+   * @param gridHeight (optional) Height of the panel in Grafana grid units.
+   * @param gridWidth (optional) Width of the panel in Grafana grid units (max: 24).
    * @param transparent (default `false`) Whether to display the panel without a background.
    * @param datasource (optional) Panel datasource.
    * @param allValues (default `false`) Show all values instead of reducing to one.
@@ -41,6 +43,8 @@
   new(
     title,
     description=null,
+    gridHeight=null,
+    gridWidth=null,
     transparent=false,
     datasource=null,
     allValues=false,
@@ -70,6 +74,10 @@
     datasource: datasource,
     targets: [],
     links: [],
+    [if (gridHeight != null || gridWidth != null) then 'gridPos']: {
+      h: gridHeight,
+      w: gridWidth,
+    },
     [if repeat != null then 'repeat']: repeat,
     [if repeat != null then 'repeatDirection']: repeatDirection,
     [if repeat != null then 'repeatMaxPerRow']: repeatMaxPerRow,

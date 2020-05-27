@@ -9,6 +9,8 @@
    * @param description (optional) Description of the panel
    * @param span (optional)  Width of the panel
    * @param height (optional)  Height of the panel
+   * @param gridHeight (optional) Height of the panel in Grafana grid units
+   * @param gridWidth (optional) Width of the panel in Grafana grid units (max: 24)
    * @param datasource (optional) Datasource
    * @param min_span (optional)  Min span
    * @param styles (optional) Array of styles for the panel
@@ -33,6 +35,8 @@
     span=null,
     min_span=null,
     height=null,
+    gridHeight=null,
+    gridWidth=null,
     datasource=null,
     styles=[],
     transform=null,
@@ -60,6 +64,10 @@
     [if description != null then 'description']: description,
     [if transform != null then 'transform']: transform,
     [if transparent == true then 'transparent']: transparent,
+    [if (gridHeight != null || gridWidth != null) then 'gridPos']: {
+      h: gridHeight,
+      w: gridWidth,
+    },
     _nextTarget:: 0,
     addTarget(target):: self {
       local nextTarget = super._nextTarget,
