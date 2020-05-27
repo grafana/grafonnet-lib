@@ -123,17 +123,33 @@
   )::
     {
       allValue: allValues,
-      current: {
-        value: current,
-        text: if current in valuelabels then valuelabels[current] else current,
-      },
-      options: std.map(
-        function(i)
-          {
-            text: if i in valuelabels then valuelabels[i] else i,
-            value: i,
-          }, std.split(query, ',')
-      ),
+      current:
+        if current == 'all' then {
+          selected: true,
+          text: 'All',
+          value: '$__all',
+        } else {
+          selected: true,
+          value: current,
+          text: if current in valuelabels then valuelabels[current] else current,
+        },
+      options:
+        (if includeAll then
+           [{
+             selected: if (current == 'all') then true else false,
+             text: 'All',
+             value: '$__all',
+           }]
+         else [])
+        +
+        std.map(
+          function(i)
+            {
+              selected: if (i in valuelabels && valuelabels[i] == current) || (i == current) then true else false,
+              text: if i in valuelabels then valuelabels[i] else i,
+              value: i,
+            }, std.split(query, ',')
+        ),
       hide: $.hide(hide),
       includeAll: includeAll,
       label: label,
@@ -160,5 +176,30 @@
       label: label,
       query: '',
       type: 'textbox',
+    },
+  /**
+   * @name template.constant
+   */
+  constant(
+    name,
+    label='',
+    value='',
+    hide='',
+  )::
+    {
+      current: [{
+        selected: true,
+        value: value,
+        text: value,
+      }],
+      options: [{
+        selected: true,
+        value: value,
+        text: value,
+      }],
+      hide: $.hide(hide),
+      label: label,
+      name: name,
+      type: 'constant',
     },
 }

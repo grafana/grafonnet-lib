@@ -2,6 +2,7 @@
    "advanced": {
       "allValue": null,
       "current": {
+         "selected": true,
          "text": "nouveau",
          "value": "new"
       },
@@ -12,10 +13,12 @@
       "name": "foo",
       "options": [
          {
+            "selected": true,
             "text": "nouveau",
             "value": "new"
          },
          {
+            "selected": false,
             "text": "ancien",
             "value": "old"
          }
@@ -27,6 +30,7 @@
    "basic": {
       "allValue": null,
       "current": {
+         "selected": true,
          "text": "bar",
          "value": "bar"
       },
@@ -37,15 +41,50 @@
       "name": "host",
       "options": [
          {
+            "selected": false,
             "text": "foo",
             "value": "foo"
          },
          {
+            "selected": true,
             "text": "bar",
             "value": "bar"
          }
       ],
       "query": "foo,bar",
+      "refresh": 0,
+      "type": "custom"
+   },
+   "includeAll": {
+      "allValue": null,
+      "current": {
+         "selected": true,
+         "text": "All",
+         "value": "$__all"
+      },
+      "hide": 0,
+      "includeAll": true,
+      "label": "",
+      "multi": false,
+      "name": "zone",
+      "options": [
+         {
+            "selected": true,
+            "text": "All",
+            "value": "$__all"
+         },
+         {
+            "selected": false,
+            "text": "msk",
+            "value": "msk"
+         },
+         {
+            "selected": false,
+            "text": "spb",
+            "value": "spb"
+         }
+      ],
+      "query": "msk,spb",
       "refresh": 0,
       "type": "custom"
    }

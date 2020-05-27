@@ -11,4 +11,10 @@ local template = grafana.template;
     hide='value',
     valuelabels={ new: 'nouveau', old: 'ancien' },
   ),
+  includeAll: template.custom(
+    'zone',
+    'msk,spb',
+    'all',
+    includeAll=true,
+  ),
 }
