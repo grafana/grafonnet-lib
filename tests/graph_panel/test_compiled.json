@@ -340,6 +340,78 @@
          }
       ]
    },
+   "axis_decimals": {
+      "aliasColors": { },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "decimals": 2,
+      "fill": 1,
+      "legend": {
+         "alignAsTable": false,
+         "avg": false,
+         "current": false,
+         "max": false,
+         "min": false,
+         "rightSide": false,
+         "show": true,
+         "sideWidth": null,
+         "total": false,
+         "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [ ],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [ ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [ ],
+      "thresholds": [ ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Axis decimals",
+      "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+         "buckets": null,
+         "mode": "time",
+         "name": null,
+         "show": true,
+         "values": [ ]
+      },
+      "yaxes": [
+         {
+            "decimals": 1,
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         },
+         {
+            "decimals": 2,
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         }
+      ]
+   },
    "basic": {
       "aliasColors": { },
       "bars": false,
@@ -746,6 +818,75 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Sorted Legend",
+      "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+         "buckets": null,
+         "mode": "time",
+         "name": null,
+         "show": true,
+         "values": [ ]
+      },
+      "yaxes": [
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         },
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         }
+      ]
+   },
+   "staircase_line": {
+      "aliasColors": { },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "legend": {
+         "alignAsTable": false,
+         "avg": false,
+         "current": false,
+         "max": false,
+         "min": false,
+         "rightSide": false,
+         "show": true,
+         "sideWidth": null,
+         "total": false,
+         "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [ ],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [ ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": true,
+      "targets": [ ],
+      "thresholds": [ ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Staircase line",
       "tooltip": {
          "shared": true,
          "sort": 0,
