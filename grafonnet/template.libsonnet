@@ -9,6 +9,8 @@
     label=null,
     allValues=null,
     tagValuesQuery='',
+    tagsQuery='',
+    useTags=false,
     current=null,
     hide='',
     regex='',
@@ -33,9 +35,9 @@
       sort: sort,
       tagValuesQuery: tagValuesQuery,
       tags: [],
-      tagsQuery: '',
+      tagsQuery: tagsQuery,
       type: 'query',
-      useTags: false,
+      useTags: useTags,
     },
   /**
    * @name template.interval
