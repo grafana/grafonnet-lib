@@ -11,8 +11,8 @@
    * @param fill Fill, integer from 0 to 10
    * @param linewidth Line Width, integer from 0 to 10
    * @param decimals Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
-   * @param decimals1Y Override automatic decimal precision for the first Y axis. If null, use decimals parameter.
-   * @param decimals2Y Override automatic decimal precision for the second Y axis. If null, use decimals parameter.
+   * @param decimalsY1 Override automatic decimal precision for the first Y axis. If null, use decimals parameter.
+   * @param decimalsY2 Override automatic decimal precision for the second Y axis. If null, use decimals parameter.
    * @param min_span Min span
    * @param format Unit of the Y axes
    * @param formatY1 Unit of the first Y axis
