@@ -23,4 +23,9 @@ git clone https://github.com/grafana/grafonnet-lib.git
 A slightly more advanced approach is to use
 [jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler).
 
+```
+jb init
+jb install https://github.com/grafana/grafonnet-lib/grafonnet
+```
+
 See the [Usage](usage) page for next steps.
