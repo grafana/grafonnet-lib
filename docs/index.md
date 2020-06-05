@@ -1,14 +1,15 @@
 # ![Grafonnet logo](images/grafonnet.png)
 
 Grafonnet provides an easy and maintainable way of writing
-[grafana](https://grafana.org) dashboards. Instead of generating JSON files and
+[Grafana](https://grafana.org) dashboards. Instead of generating JSON files and
 maintaining them, you can easily create your own dashboards using the many
 helpers grafonnet-lib offers you, thanks to the data templating language
-[jsonnet](http://jsonnet.org/).
+[Jsonnet](http://jsonnet.org/).
 
 ## Grafana dashboard
 
-[Grafana](https://grafana.org) is using JSON as format for the dashboards. While
+[A dashboard in Grafana is represented by a JSON
+object](https://grafana.com/docs/grafana/latest/reference/dashboard/). While
 this choice makes sense from a technical point of view, people who want to keep
 those dashboards under version control end up putting large, independent JSON
 files under source control.
@@ -17,8 +18,8 @@ When doing so, it is hard to maintain the same links, templates, or even
 annotation between graphs. It usually requires a lot of custom tooling to
 change and keep those Json files aligned. There are alternatives, like
 [grafanalib](https://github.com/weaveworks/grafanalib), that makes thing easier.
-However, as Grafonnet is using [jsonnet](http://jsonnet.org/), a superset of
-Json, it gives you out of the box a very easy way to use any feature of grafana
+However, as Grafonnet is using [Jsonnet](http://jsonnet.org/), a superset of
+JSON, it gives you out of the box a very easy way to use any feature of grafana
 that would not be covered by Grafonnet already.
 
 ## Scope
