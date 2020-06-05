@@ -115,7 +115,7 @@ The above URL assumes you're running a Grafana instance locally. You can do that
 by running a Grafana container on your local Docker engine:
 
 ```
-docker run --rm -p 3000:3000 grafana/grafana
+docker run --rm -d -p 3000:3000 grafana/grafana
 ```
 
 ## Grizzly
