@@ -117,3 +117,53 @@ by running a Grafana container on your local Docker engine:
 ```
 docker run --rm -p 3000:3000 grafana/grafana
 ```
+
+## Grizzly
+
+Another way you could manage your Grafonnet code is by using
+[Grizzly](https://github.com/malcolmholmes/grizzly). Grizzly is a command line
+tool for managing Grafana dashboards as code written in Jsonnet.
+
+In this section, we'll assume you've used
+[jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler) to install
+Grafonnet. In which case your current directory would look like this:
+
+```
+▸ tree -L 2 .
+.
+├── dashboards.jsonnet
+├── jsonnetfile.json
+├── jsonnetfile.lock.json
+└── vendor
+    ├── github.com
+    └── grafonnet -> github.com/grafana/grafonnet-lib/grafonnet
+
+3 directories, 3 files
+```
+
+`dashboards.jsonnet` (now plural) will look slightly different than before:
+
+```
+local grafana = import 'grafonnet/grafana.libsonnet';
+
+{
+  grafanaDashboards:: {
+    empty_dashboard: grafana.dashboard.new('Empty Dashboard'),
+  },
+}
+```
+
+First you need to set the `GRAFANA_URL` environment variable:
+
+```
+export GRAFANA_URL=http://admin:admin@localhost:3000
+```
+
+Next create the dashboard with on your Grafana instance with:
+
+```
+grr apply dashboards.jsonnet
+```
+
+Check [Grizzly's GitHub page](https://github.com/malcolmholmes/grizzly) for
+other commands and documentation.
