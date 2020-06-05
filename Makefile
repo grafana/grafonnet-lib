@@ -6,7 +6,7 @@ test:         # Run all unit tests.
 	@docker run --rm \
 		-w $$PWD \
 		-v $$PWD:$$PWD \
-		--entrypoint sh \
+		--entrypoint bash \
 		bitnami/jsonnet:0.16.0 \
 		tests.sh
 
@@ -14,7 +14,7 @@ test-update:  # Run all unit tests while copying test_output.json to compiled.js
 	@docker run --rm \
 		-w $$PWD \
 		-v $$PWD:$$PWD \
-		--entrypoint sh \
+		--entrypoint bash \
 		bitnami/jsonnet:0.16.0 \
 		tests.sh update
 
