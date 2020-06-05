@@ -19,6 +19,8 @@
    * @param formatY2 Unit of the second Y axis
    * @param min Min of the Y axes
    * @param max Max of the Y axes
+   * @param minY2 Min of the second Y axis. If null, use min parameter.
+   * @param maxY2 Max of the second Y axis. If null, use max parameter.
    * @param labelY1 Label of the first Y axis
    * @param labelY2 Label of the second Y axis
    * @param x_axis_mode X axis mode, one of [time, series, histogram]
@@ -71,6 +73,8 @@
     formatY2=null,
     min=null,
     max=null,
+    minY2=null,
+    maxY2=null,
     labelY1=null,
     labelY2=null,
     x_axis_mode='time',
@@ -140,8 +144,8 @@
       ),
       self.yaxe(
         if formatY2 != null then formatY2 else format,
-        min,
-        max,
+        if minY2 != null then minY2 else min,
+        if maxY2 != null then maxY2 else max,
         decimals=(if decimalsY2 != null then decimalsY2 else decimals),
         logBase=logBase2Y,
         label=labelY2
