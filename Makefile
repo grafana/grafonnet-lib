@@ -7,7 +7,7 @@ test:         # Run all unit tests.
 		-w $$PWD \
 		-v $$PWD:$$PWD \
 		--entrypoint sh \
-		sparkprime/jsonnet \
+		bitnami/jsonnet:0.16.0 \
 		tests.sh
 
 test-update:  # Run all unit tests while copying test_output.json to compiled.json file.
@@ -15,7 +15,7 @@ test-update:  # Run all unit tests while copying test_output.json to compiled.js
 		-w $$PWD \
 		-v $$PWD:$$PWD \
 		--entrypoint sh \
-		sparkprime/jsonnet \
+		bitnami/jsonnet:0.16.0 \
 		tests.sh update
 
 gen-api-docs: # Generate api-docs.md from source code comments.
