@@ -2,46 +2,30 @@
 
 ## Prerequisites
 
-Grafonnet requires Jsonnet.
+You must first install Jsonnet.
 
-### Linux
+See the instructions on its GitHub page:
 
-You must build the binary. For details, [see the GitHub
-repository][jsonnetgh].
+[https://github.com/google/jsonnet#packages](https://github.com/google/jsonnet#packages)
 
-### Mac OS X
+There is also an implementation in Go if you'd prefer:
 
-Jsonnet is available in Homebrew. If you do not have Homebrew installed,
-[install it][brew].
-
-Then run:
-
-```
-brew install jsonnet
-```
+[https://github.com/google/go-jsonnet#installation-instructions](https://github.com/google/go-jsonnet#installation-instructions)
 
 ## Install Grafonnet
 
-Clone this git repository:
+Simplest way to install Grafonnet is to clone the repository:
 
 ```
 git clone https://github.com/grafana/grafonnet-lib.git
 ```
 
-Then import the grafonnet in your jsonnet code:
+A slightly more advanced approach is to use
+[jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler).
 
 ```
-local grafana = import 'grafonnet/grafana.libsonnet';
+jb init
+jb install https://github.com/grafana/grafonnet-lib/grafonnet
 ```
 
-To be able to find the grafonnet library, you must pass the root of the git
-repository to grafonnet using the `-J` option:
-
-```
-jsonnet -J <path> dashboard.jsonnet
-```
-
-As you build your own mixins/dashboards, you should add additional `-J` paths.
-
-[brew]:https://brew.sh/
-[jsonnetgh]:https://github.com/google/jsonnet
+See the [Usage](usage) page for next steps.
