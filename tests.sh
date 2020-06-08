@@ -7,9 +7,9 @@ for i in `find . -name '*.jsonnet' -or -name '*.libsonnet'`
 do
     t="Formatting $i..."
     if [[ "$1" == "update" ]]; then
-        jsonnet fmt -i $jsonnet_fmt $i
+        jsonnetfmt -i $jsonnet_fmt $i
     fi
-    if jsonnet fmt --test $jsonnet_fmt $i;
+    if jsonnetfmt --test $jsonnet_fmt $i;
     then
         echo $t OK
     else
