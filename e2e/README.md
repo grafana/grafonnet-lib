@@ -19,17 +19,17 @@ our human abilities to assert truth.
 
 ## Usage
 
-`docker-compose` is used to run Cypress and Grafana. Run the tests with:
+`docker-compose` is used to run Cypress and Grafana. There are two targets in
+[Makefile](../Makefile) to help run it.
 
-```
-GRAFANA_VERSION=latest \
-docker-compose up \
-  --abort-on-container-exit \
-  --exit-code-from e2e
-```
+`make e2e`: runs tests headless and exits.
 
-See also the `e2e` target in [Makefile](../Makefile). This is intended to be
-used with CI.
+`make e2e-local`: opens the [the test
+runner](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview)
+and exposes Grafana to the host machine - http://localhost:3030.  This requires
+an X11 server to work. [This
+post](https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/#Interactive-mode)
+describes how to set this up with [XQuartz](https://www.xquartz.org/).
 
 ## Notes
 
