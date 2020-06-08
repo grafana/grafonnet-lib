@@ -3,7 +3,10 @@ services:
   grafana:
     image: grafana/grafana:${GRAFANA_VERSION?err}
   e2e:
-    build: .
+    build:
+      context: .
+      args:
+        CYPRESS_IMAGE: cypress/base:12
     command: npx cypress run
     depends_on:
       - grafana

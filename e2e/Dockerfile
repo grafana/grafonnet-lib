@@ -1,4 +1,6 @@
-FROM cypress/base:12
+ARG CYPRESS_IMAGE
+
+FROM $CYPRESS_IMAGE
 WORKDIR /e2e
 
 # dependencies will be installed only if the package files change
