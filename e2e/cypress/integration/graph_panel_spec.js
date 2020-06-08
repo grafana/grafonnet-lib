@@ -5,7 +5,7 @@ describe('Graph Panel', function() {
   let panelTitles = []
 
   before(function() {
-    cy.readFile('../tests/graph_panel/test_compiled.json').then(function(str) {
+    cy.readFile('./tests/graph_panel/test_compiled.json').then(function(str) {
       let panels = []
       for (let [i, [name, panel]] of Object.entries(Object.entries(str))) {
         panel['id'] = parseInt(i)
