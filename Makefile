@@ -31,10 +31,10 @@ e2e:          # Run all end-to-end tests.
 		--abort-on-container-exit \
 		--exit-code-from e2e
 
-e2e-local:    # Run e2e tests in Cypress test runner.
+e2e-dev:    # Run e2e tests in Cypress test runner.
 	GRAFANA_VERSION=${E2E_GRAFANA_VERSION} \
 	DISPLAY=$$(ipconfig getifaddr en0):0 \
-	docker-compose -f e2e/docker-compose.local.yml up \
+	docker-compose -f e2e/docker-compose.dev.yml up \
 		--abort-on-container-exit \
 		--exit-code-from e2e
 

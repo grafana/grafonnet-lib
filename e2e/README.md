@@ -24,9 +24,9 @@ our human abilities to assert truth.
 
 `make e2e`: runs tests headless and exits.
 
-`make e2e-local`: opens the [the test
+`make e2e-dev`: opens the [the test
 runner](https://docs.cypress.io/guides/core-concepts/test-runner.html#Overview)
-and exposes Grafana to the host machine - http://localhost:3030.  This requires
+and exposes Grafana to the host machine - http://localhost:3030. This requires
 an X11 server to work. [This
 post](https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/#Interactive-mode)
 describes how to set this up with [XQuartz](https://www.xquartz.org/).

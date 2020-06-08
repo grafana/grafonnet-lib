@@ -9,7 +9,7 @@ services:
       context: .
       args:
         CYPRESS_IMAGE: cypress/included:4.7.0
-    image: grafonnet-e2e-local
+    image: grafonnet-e2e-dev
     entrypoint: cypress open --project .
     depends_on:
       - grafana
