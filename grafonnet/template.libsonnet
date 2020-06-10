@@ -154,18 +154,24 @@
     hide='',
   )::
     {
+      // self has dynamic scope, so self may not be myself below.
+      // '$' can't be used neither as this object is not top-level object.
+      local custom = self,
+
       allValue: allValues,
       current: {
-        value: current,
-        text: if current in valuelabels then valuelabels[current] else current,
+        // Both 'all' and 'All' are accepted for consistency.
+        value: if includeAll && (current == 'All' || current == 'all') then
+          if multi then ['$__all'] else '$__all'
+        else
+          current,
+        text: if std.isArray(current) then
+          std.join(' + ', std.map(custom.valuelabel, current))
+        else
+          custom.valuelabel(current),
+        [if multi then 'selected']: true,
       },
-      options: std.map(
-        function(i)
-          {
-            text: if i in valuelabels then valuelabels[i] else i,
-            value: i,
-          }, std.split(query, ',')
-      ),
+      options: std.map(self.option, self.query_array(query)),
       hide: $.hide(hide),
       includeAll: includeAll,
       label: label,
@@ -174,6 +180,23 @@
       name: name,
       query: query,
       type: 'custom',
+
+      valuelabel(value):: if value in valuelabels then
+        valuelabels[value]
+      else value,
+
+      option(option):: {
+          text: custom.valuelabel(option),
+          value: if includeAll && option == 'All' then '$__all' else option,
+          [if multi then 'selected' else null]: if multi && std.isArray(current) then
+            std.member(current, option)
+          else if multi then
+            current == option
+          else
+            null,
+        },
+      query_array(query):: std.split(
+        if includeAll then 'All,' +  query else query, ',')
     },
   /**
    * @name template.text

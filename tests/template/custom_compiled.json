@@ -48,5 +48,76 @@
       "query": "foo,bar",
       "refresh": 0,
       "type": "custom"
+   },
+   "multi": {
+      "allValue": null,
+      "current": {
+         "selected": true,
+         "text": "nouveau + ancien",
+         "value": [
+            "new",
+            "old"
+         ]
+      },
+      "hide": 0,
+      "includeAll": false,
+      "label": "",
+      "multi": true,
+      "name": "foo",
+      "options": [
+         {
+            "selected": true,
+            "text": "nouveau",
+            "value": "new"
+         },
+         {
+            "selected": false,
+            "text": "attual",
+            "value": "current"
+         },
+         {
+            "selected": true,
+            "text": "ancien",
+            "value": "old"
+         }
+      ],
+      "query": "new,current,old",
+      "refresh": 0,
+      "type": "custom"
+   },
+   "multiIncludeAll": {
+      "allValue": null,
+      "current": {
+         "selected": true,
+         "text": "All",
+         "value": [
+            "$__all"
+         ]
+      },
+      "hide": 0,
+      "includeAll": true,
+      "label": "",
+      "multi": true,
+      "name": "foo",
+      "options": [
+         {
+            "selected": true,
+            "text": "All",
+            "value": "$__all"
+         },
+         {
+            "selected": false,
+            "text": "nouveau",
+            "value": "new"
+         },
+         {
+            "selected": false,
+            "text": "ancien",
+            "value": "old"
+         }
+      ],
+      "query": "new,old",
+      "refresh": 0,
+      "type": "custom"
    }
 }
