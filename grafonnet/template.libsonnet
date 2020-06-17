@@ -188,7 +188,7 @@
       option(option):: {
           text: custom.valuelabel(option),
           value: if includeAll && option == 'All' then '$__all' else option,
-          [if multi then 'selected' else null]: if multi && std.isArray(current) then
+          [if multi then 'selected']: if multi && std.isArray(current) then
             std.member(current, option)
           else if multi then
             current == option
