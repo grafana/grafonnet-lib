@@ -186,17 +186,18 @@
       else value,
 
       option(option):: {
-          text: custom.valuelabel(option),
-          value: if includeAll && option == 'All' then '$__all' else option,
-          [if multi then 'selected']: if multi && std.isArray(current) then
-            std.member(current, option)
-          else if multi then
-            current == option
-          else
-            null,
-        },
+        text: custom.valuelabel(option),
+        value: if includeAll && option == 'All' then '$__all' else option,
+        [if multi then 'selected']: if multi && std.isArray(current) then
+          std.member(current, option)
+        else if multi then
+          current == option
+        else
+          null,
+      },
       query_array(query):: std.split(
-        if includeAll then 'All,' +  query else query, ',')
+        if includeAll then 'All,' + query else query, ','
+      ),
     },
   /**
    * @name template.text
