@@ -1,9 +1,6 @@
 {
   "license": "Apache-2.0",
-  "scripts": {
-    "grafana-instance": "docker run --rm --name=grafana -p 3030:3000 grafana/grafana:6.6.2"
-  },
   "devDependencies": {
-    "cypress": "^4.4.0"
+    "cypress": "^4.7.0"
   }
 }

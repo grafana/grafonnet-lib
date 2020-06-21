@@ -23,6 +23,21 @@ test-update:  # Run all unit tests while copying test_output.json to compiled.js
 		bitnami/jsonnet:0.16.0 \
 		tests.sh update
 
+E2E_GRAFANA_VERSION=7.0.3
+
+e2e:          # Run all end-to-end tests.
+	GRAFANA_VERSION=${E2E_GRAFANA_VERSION} \
+	docker-compose -f e2e/docker-compose.yml up \
+		--abort-on-container-exit \
+		--exit-code-from e2e
+
+e2e-dev:    # Run e2e tests in Cypress test runner.
+	GRAFANA_VERSION=${E2E_GRAFANA_VERSION} \
+	DISPLAY=$$(ipconfig getifaddr en0):0 \
+	docker-compose -f e2e/docker-compose.dev.yml up \
+		--abort-on-container-exit \
+		--exit-code-from e2e
+
 gen-api-docs: # Generate api-docs.md from source code comments.
 	@docker run --rm \
 		-w $$PWD \
@@ -30,3 +45,5 @@ gen-api-docs: # Generate api-docs.md from source code comments.
 		trotttrotttrott/jsonnetdoc:219e41b \
 		grafonnet --markdown \
 		> docs/api-docs.md
+
+.PHONY: help test test-update e2e gen-api-docs
