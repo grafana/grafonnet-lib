@@ -1,0 +1,200 @@
+{
+   "advanced": {
+      "datasource": null,
+      "description": "An advanced stat panel configuration",
+      "fieldConfig": {
+         "defaults": {
+            "links": [ ],
+            "mappings": [ ],
+            "thresholds": {
+               "mode": "percentage",
+               "steps": [ ]
+            },
+            "unit": "none"
+         }
+      },
+      "links": [ ],
+      "options": {
+         "colorMode": "value",
+         "graphMode": "area",
+         "justifyMode": "auto",
+         "orientation": "auto",
+         "reduceOptions": {
+            "calcs": [
+               "sum"
+            ],
+            "fields": "",
+            "values": true
+         }
+      },
+      "targets": [ ],
+      "title": "advanced",
+      "transparent": true,
+      "type": "stat"
+   },
+   "basic": {
+      "datasource": null,
+      "fieldConfig": {
+         "defaults": {
+            "links": [ ],
+            "mappings": [ ],
+            "thresholds": {
+               "mode": "absolute",
+               "steps": [ ]
+            },
+            "unit": "none"
+         }
+      },
+      "links": [ ],
+      "options": {
+         "colorMode": "value",
+         "graphMode": "area",
+         "justifyMode": "auto",
+         "orientation": "auto",
+         "reduceOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "fields": "",
+            "values": false
+         }
+      },
+      "targets": [ ],
+      "title": "basic",
+      "transparent": false,
+      "type": "stat"
+   },
+   "links": {
+      "datasource": null,
+      "fieldConfig": {
+         "defaults": {
+            "links": [ ],
+            "mappings": [ ],
+            "thresholds": {
+               "mode": "absolute",
+               "steps": [ ]
+            },
+            "unit": "none"
+         }
+      },
+      "links": [
+         {
+            "targetBlank": true,
+            "title": "test link",
+            "url": "https://test"
+         },
+         {
+            "title": "test link 2",
+            "url": "http://test2"
+         }
+      ],
+      "options": {
+         "colorMode": "value",
+         "graphMode": "area",
+         "justifyMode": "auto",
+         "orientation": "auto",
+         "reduceOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "fields": "",
+            "values": false
+         }
+      },
+      "targets": [ ],
+      "title": "links",
+      "transparent": false,
+      "type": "stat"
+   },
+   "mappings": {
+      "datasource": null,
+      "fieldConfig": {
+         "defaults": {
+            "links": [ ],
+            "mappings": [
+               {
+                  "id": 0,
+                  "text": "10*2",
+                  "type": 1,
+                  "value": "100"
+               },
+               {
+                  "from": "0",
+                  "id": 1,
+                  "text": "Less than 100",
+                  "to": "99",
+                  "type": 2
+               }
+            ],
+            "thresholds": {
+               "mode": "absolute",
+               "steps": [ ]
+            },
+            "unit": "none"
+         }
+      },
+      "links": [ ],
+      "options": {
+         "colorMode": "value",
+         "graphMode": "area",
+         "justifyMode": "auto",
+         "orientation": "auto",
+         "reduceOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "fields": "",
+            "values": false
+         }
+      },
+      "targets": [ ],
+      "title": "mappings",
+      "transparent": false,
+      "type": "stat"
+   },
+   "thresholds": {
+      "datasource": null,
+      "fieldConfig": {
+         "defaults": {
+            "links": [ ],
+            "mappings": [ ],
+            "thresholds": {
+               "mode": "absolute",
+               "steps": [
+                  {
+                     "color": "yellow",
+                     "value": 0
+                  },
+                  {
+                     "color": "green",
+                     "value": 75
+                  },
+                  {
+                     "color": "red",
+                     "value": 90
+                  }
+               ]
+            },
+            "unit": "none"
+         }
+      },
+      "links": [ ],
+      "options": {
+         "colorMode": "value",
+         "graphMode": "area",
+         "justifyMode": "auto",
+         "orientation": "auto",
+         "reduceOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "fields": "",
+            "values": false
+         }
+      },
+      "targets": [ ],
+      "title": "thresholds",
+      "transparent": false,
+      "type": "stat"
+   }
+}
