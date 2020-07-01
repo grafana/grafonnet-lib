@@ -1,6 +1,6 @@
 {
   /**
-   * [Gauge panel](https://grafana.com/docs/grafana/latest/panels/visualizations/gauge-panel/).
+   * Creates a [gauge panel](https://grafana.com/docs/grafana/latest/panels/visualizations/gauge-panel/).
    *
    * @name gauge.new
    *
@@ -13,7 +13,7 @@
    * @param reducerFunction Function to use to reduce values to when using single value.
    * @param fields Fields that should be included in the panel.
    * @param showThresholdLabels
-   * @parama showThresholdMarkers
+   * @param showThresholdMarkers
    * @param unit Panel unit field option.
    * @param min Leave empty to calculate based on all values.
    * @param max Leave empty to calculate based on all values.
@@ -27,9 +27,9 @@
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
-   * @method addLink(link) Adds a link. Ex: `{ title: 'Link Title', url: 'https://....', targetBlank: true }`.
+   * @method addLink(link) Adds a link. Aregument format: `{ title: 'Link Title', url: 'https://...', targetBlank: true }`.
    * @method addLinks(links) Adds an array of links.
-   * @method addThreshold(step) Adds a threshold step.  Ex: `{ color: 'green', value: 0 }`.
+   * @method addThreshold(step) Adds a threshold step. Aregument format: `{ color: 'green', value: 0 }`.
    * @method addThresholds(steps) Adds an array of threshold steps.
    * @method addMapping(mapping) Adds a value mapping.
    * @method addMappings(mappings) Adds an array of value mappings.
