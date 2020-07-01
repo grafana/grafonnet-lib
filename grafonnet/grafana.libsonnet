@@ -23,6 +23,6 @@
   heatmapPanel:: import 'heatmap_panel.libsonnet',
   dashlist:: import 'dashlist.libsonnet',
   pluginlist:: import 'pluginlist.libsonnet',
-  gauge:: import 'gauge.libsonnet',
+  gaugePanel:: import 'gauge_panel.libsonnet',
   statPanel:: import 'stat_panel.libsonnet',
 }
