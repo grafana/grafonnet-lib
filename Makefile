@@ -42,7 +42,7 @@ gen-api-docs: # Generate api-docs.md from source code comments.
 	@docker run --rm \
 		-w $$PWD \
 		-v $$PWD:$$PWD \
-		trotttrotttrott/jsonnetdoc:219e41b \
+		trotttrotttrott/jsonnetdoc:ece56aa \
 		grafonnet --markdown \
 		> docs/api-docs.md
 
