@@ -57,6 +57,11 @@
     [if description != null then 'description']: description,
     transparent: transparent,
     datasource: datasource,
+    targets: [],
+    links: [],
+    [if repeat != null then 'repeat']: repeat,
+    [if repeat != null then 'repeatDirection']: repeatDirection,
+    [if repeat != null then 'repeatMaxPerRow']: repeatMaxPerRow,
 
     options: {
       reduceOptions: {
@@ -90,7 +95,7 @@
       },
     },
 
-    targets: [],
+    // targets
     _nextTarget:: 0,
     addTarget(target):: self {
       local nextTarget = super._nextTarget,
@@ -99,17 +104,19 @@
     },
     addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
 
-    links: [],
+    // links
     addLink(link):: self {
       links+: [link],
     },
     addLinks(links):: std.foldl(function(p, l) p.addLink(l), links, self),
 
+    // thresholds
     addThreshold(step):: self {
       fieldConfig+: { defaults+: { thresholds+: { steps+: [step] } } },
     },
     addThresholds(steps):: std.foldl(function(p, s) p.addThreshold(s), steps, self),
 
+    // mappings
     _nextMapping:: 0,
     addMapping(mapping):: self {
       local nextMapping = super._nextMapping,
@@ -118,13 +125,10 @@
     },
     addMappings(mappings):: std.foldl(function(p, m) p.addMapping(m), mappings, self),
 
+    // data links
     addDataLink(link):: self {
       fieldConfig+: { defaults+: { links+: [link] } },
     },
     addDataLinks(links):: std.foldl(function(p, l) p.addDataLink(l), links, self),
-
-    [if repeat != null then 'repeat']: repeat,
-    [if repeat != null then 'repeatDirection']: repeatDirection,
-    [if repeat != null then 'repeatMaxPerRow']: repeatMaxPerRow,
   },
 }
