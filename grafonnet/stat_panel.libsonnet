@@ -26,6 +26,17 @@
    * @param repeat Name of variable that should be used to repeat this panel.
    * @param repeatDirection 'h' for horizontal or 'v' for vertical.
    * @param repeatMaxPerRow Maximum panels per row in repeat mode.
+   *
+   * @method addTarget(target) Adds a target object.
+   * @method addTargets(targets) Adds an array of targets.
+   * @method addLink(link) Adds a link. Ex: `{ title: 'Link Title', url: 'https://....', targetBlank: true }`.
+   * @method addLinks(links) Adds an array of links.
+   * @method addThreshold(step) Adds a threshold step.  Ex: `{ color: 'green', value: 0 }`.
+   * @method addThresholds(steps) Adds an array of threshold steps.
+   * @method addMapping(mapping) Adds a value mapping.
+   * @method addMappings(mappings) Adds an array of value mappings.
+   * @method addDataLink(link) Adds a data link.
+   * @method addDataLinks(links) Adds an array of data links.
    */
   new(
     title,
