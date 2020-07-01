@@ -1,80 +1,126 @@
 {
   /**
+   * [Gauge panel](https://grafana.com/docs/grafana/latest/panels/visualizations/gauge-panel/).
+   *
    * @name gauge.new
+   *
+   * @param title Panel title.
+   * @param description Panel description.
+   * @param transparent Whether to display the panel without a background.
+   * @param datasource Panel datasource.
+   * @param allValues Show all values instead of reducing to one.
+   * @param valueLimit Limit of values in all values mode.
+   * @param reducerFunction Function to use to reduce values to when using single value.
+   * @param fields Fields that should be included in the panel.
+   * @param showThresholdLabels
+   * @parama showThresholdMarkers
+   * @param unit Panel unit field option.
+   * @param min Leave empty to calculate based on all values.
+   * @param max Leave empty to calculate based on all values.
+   * @param decimals Number of decimal places to show.
+   * @param displayName Change the field or series name.
+   * @param noValue What to show when there is no value.
+   * @param thresholdsMode 'absolute' or 'percentage'.
+   * @param repeat Name of variable that should be used to repeat this panel.
+   * @param repeatDirection 'h' for horizontal or 'v' for vertical.
+   * @param repeatMaxPerRow Maximum panels per row in repeat mode.
    */
   new(
     title,
+    description=null,
+    transparent=false,
     datasource=null,
-    calc='mean',
-    time_from=null,
-    span=null,
-    description='',
-    height=null,
-    transparent=null,
-    max=100,
-    min=0,
-    gauge_title=null,
+    allValues=false,
+    valueLimit=null,
+    reducerFunction='mean',
+    fields='',
+    showThresholdLabels=false,
+    showThresholdMarkers=true,
     unit='percent',
-    values=false,
-    labels=false,
-    markers=true,
-    orientation='auto',
-    threshold_mode='absolute',
-    pluginVersion=null,
-  )::
-    {
-      [if description != '' then 'description']: description,
-      [if height != null then 'height']: height,
-      [if transparent != null then 'transparent']: transparent,
-      [if time_from != null then 'timeFrom']: time_from,
-      [if span != null then 'span']: span,
-      title: title,
-      type: 'gauge',
-      [if pluginVersion != null then 'pluginVersion']: pluginVersion,
-      datasource: datasource,
-      options: {
-        fieldOptions: {
-          calcs: [
-            calc,
-          ],
-          defaults: {
-            mappings: [],
-            max: max,
-            min: min,
-            thresholds: {
-              mode: threshold_mode,
-              steps: [],
-            },
-            title: gauge_title,
-            unit: unit,
-          },
-          overrides: [],
-          values: values,
-        },
-        orientation: orientation,
-        showThresholdLabels: labels,
-        showThresholdMarkers: markers,
-      },
-      _nextTarget:: 0,
-      addTarget(target):: self {
-        local nextTarget = super._nextTarget,
-        _nextTarget: nextTarget + 1,
-        targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
-      },
-      addThreshold(color, value=null):: self {
-        options+: {
-          fieldOptions+: {
-            defaults+: {
-              thresholds+: {
-                steps+: [{
-                  color: color,
-                  value: value,
-                }],
-              },
-            },
-          },
-        },
+    min=0,
+    max=100,
+    decimals=null,
+    displayName=null,
+    noValue=null,
+    thresholdsMode='absolute',
+    repeat=null,
+    repeatDirection='h',
+    repeatMaxPerRow=null,
+  ):: {
+
+    type: 'gauge',
+    title: title,
+    [if description != null then 'description']: description,
+    transparent: transparent,
+    datasource: datasource,
+    targets: [],
+    links: [],
+    [if repeat != null then 'repeat']: repeat,
+    [if repeat != null then 'repeatDirection']: repeatDirection,
+    [if repeat != null then 'repeatMaxPerRow']: repeatMaxPerRow,
+
+    options: {
+      reduceOptions: {
+        values: allValues,
+        [if allValues && valueLimit != null then 'limit']: valueLimit,
+        calcs: [
+          reducerFunction,
+        ],
+        fields: fields,
       },
     },
 
+    fieldConfig: {
+      defaults: {
+        unit: unit,
+        [if min != null then 'min']: min,
+        [if max != null then 'max']: max,
+        [if decimals != null then 'decimals']: decimals,
+        [if displayName != null then 'displayName']: displayName,
+        [if noValue != null then 'noValue']: noValue,
+        thresholds: {
+          mode: thresholdsMode,
+          steps: [],
+        },
+        mappings: [],
+        links: [],
+      },
+    },
+
+    // targets
+    _nextTarget:: 0,
+    addTarget(target):: self {
+      local nextTarget = super._nextTarget,
+      _nextTarget: nextTarget + 1,
+      targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
+    },
+    addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
+
+    // links
+    addLink(link):: self {
+      links+: [link],
+    },
+    addLinks(links):: std.foldl(function(p, l) p.addLink(l), links, self),
+
+    // thresholds
+    addThreshold(step):: self {
+      fieldConfig+: { defaults+: { thresholds+: { steps+: [step] } } },
+    },
+    addThresholds(steps):: std.foldl(function(p, s) p.addThreshold(s), steps, self),
+
+    // mappings
+    _nextMapping:: 0,
+    addMapping(mapping):: self {
+      local nextMapping = super._nextMapping,
+      _nextMapping: nextMapping + 1,
+      fieldConfig+: { defaults+: { mappings+: [mapping { id: nextMapping }] } },
+    },
+    addMappings(mappings):: std.foldl(function(p, m) p.addMapping(m), mappings, self),
+
+    // data links
+    addDataLink(link):: self {
+      fieldConfig+: { defaults+: { links+: [link] } },
+    },
+    addDataLinks(links):: std.foldl(function(p, l) p.addDataLink(l), links, self),
+  },
 }
