@@ -23,7 +23,7 @@ test-update:  # Run all unit tests while copying test_output.json to compiled.js
 		bitnami/jsonnet:0.16.0 \
 		tests.sh update
 
-E2E_GRAFANA_VERSION ?= 7.0.4
+E2E_GRAFANA_VERSION ?= 7.0.5
 
 e2e:          # Run all end-to-end tests.
 	GRAFANA_VERSION=${E2E_GRAFANA_VERSION} \
