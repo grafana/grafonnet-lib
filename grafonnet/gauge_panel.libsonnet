@@ -12,8 +12,8 @@
    * @param valueLimit Limit of values in all values mode.
    * @param reducerFunction Function to use to reduce values to when using single value.
    * @param fields Fields that should be included in the panel.
-   * @param showThresholdLabels
-   * @param showThresholdMarkers
+   * @param showThresholdLabels Render the threshold values around the gauge bar.
+   * @param showThresholdMarkers Render the thresholds as an outer bar.
    * @param unit Panel unit field option.
    * @param min Leave empty to calculate based on all values.
    * @param max Leave empty to calculate based on all values.
@@ -79,6 +79,8 @@
         ],
         fields: fields,
       },
+      showThresholdLabels: showThresholdLabels,
+      showThresholdMarkers: showThresholdMarkers,
     },
 
     fieldConfig: {
