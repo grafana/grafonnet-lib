@@ -26,7 +26,7 @@
    * @param repeat Name of variable that should be used to repeat this panel.
    * @param repeatDirection 'h' for horizontal or 'v' for vertical.
    * @param repeatMaxPerRow Maximum panels per row in repeat mode.
-   * @param pluginVersion Plugin version the panel should be modeled for.
+   * @param pluginVersion Plugin version the panel should be modeled for. This has been tested with the default, '7', and '6.7'.
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
