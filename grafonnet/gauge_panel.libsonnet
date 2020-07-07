@@ -24,6 +24,7 @@
    * @param repeat Name of variable that should be used to repeat this panel.
    * @param repeatDirection 'h' for horizontal or 'v' for vertical.
    * @param repeatMaxPerRow Maximum panels per row in repeat mode.
+   * @param pluginVersion Plugin version the panel should be modeled for.
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
@@ -57,6 +58,7 @@
     repeat=null,
     repeatDirection='h',
     repeatMaxPerRow=null,
+    pluginVersion='7',
   ):: {
 
     type: 'gauge',
@@ -69,36 +71,6 @@
     [if repeat != null then 'repeat']: repeat,
     [if repeat != null then 'repeatDirection']: repeatDirection,
     [if repeat != null then 'repeatMaxPerRow']: repeatMaxPerRow,
-
-    options: {
-      reduceOptions: {
-        values: allValues,
-        [if allValues && valueLimit != null then 'limit']: valueLimit,
-        calcs: [
-          reducerFunction,
-        ],
-        fields: fields,
-      },
-      showThresholdLabels: showThresholdLabels,
-      showThresholdMarkers: showThresholdMarkers,
-    },
-
-    fieldConfig: {
-      defaults: {
-        unit: unit,
-        [if min != null then 'min']: min,
-        [if max != null then 'max']: max,
-        [if decimals != null then 'decimals']: decimals,
-        [if displayName != null then 'displayName']: displayName,
-        [if noValue != null then 'noValue']: noValue,
-        thresholds: {
-          mode: thresholdsMode,
-          steps: [],
-        },
-        mappings: [],
-        links: [],
-      },
-    },
 
     // targets
     _nextTarget:: 0,
@@ -115,25 +87,107 @@
     },
     addLinks(links):: std.foldl(function(p, l) p.addLink(l), links, self),
 
-    // thresholds
-    addThreshold(step):: self {
-      fieldConfig+: { defaults+: { thresholds+: { steps+: [step] } } },
-    },
+    pluginVersion: pluginVersion,
+  } + (
+
+    if pluginVersion >= '7' then {
+      options: {
+        reduceOptions: {
+          values: allValues,
+          [if allValues && valueLimit != null then 'limit']: valueLimit,
+          calcs: [
+            reducerFunction,
+          ],
+          fields: fields,
+        },
+        showThresholdLabels: showThresholdLabels,
+        showThresholdMarkers: showThresholdMarkers,
+      },
+      fieldConfig: {
+        defaults: {
+          unit: unit,
+          [if min != null then 'min']: min,
+          [if max != null then 'max']: max,
+          [if decimals != null then 'decimals']: decimals,
+          [if displayName != null then 'displayName']: displayName,
+          [if noValue != null then 'noValue']: noValue,
+          thresholds: {
+            mode: thresholdsMode,
+            steps: [],
+          },
+          mappings: [],
+          links: [],
+        },
+      },
+
+      // thresholds
+      addThreshold(step):: self {
+        fieldConfig+: { defaults+: { thresholds+: { steps+: [step] } } },
+      },
+
+      // mappings
+      _nextMapping:: 0,
+      addMapping(mapping):: self {
+        local nextMapping = super._nextMapping,
+        _nextMapping: nextMapping + 1,
+        fieldConfig+: { defaults+: { mappings+: [mapping { id: nextMapping }] } },
+      },
+
+      // data links
+      addDataLink(link):: self {
+        fieldConfig+: { defaults+: { links+: [link] } },
+      },
+
+    } else {
+
+      options: {
+        fieldOptions: {
+          values: allValues,
+          [if allValues && valueLimit != null then 'limit']: valueLimit,
+          calcs: [
+            reducerFunction,
+          ],
+          fields: fields,
+          defaults: {
+            unit: unit,
+            [if min != null then 'min']: min,
+            [if max != null then 'max']: max,
+            [if decimals != null then 'decimals']: decimals,
+            [if displayName != null then 'displayName']: displayName,
+            [if noValue != null then 'noValue']: noValue,
+            thresholds: {
+              mode: thresholdsMode,
+              steps: [],
+            },
+            mappings: [],
+            links: [],
+          },
+        },
+        showThresholdLabels: showThresholdLabels,
+        showThresholdMarkers: showThresholdMarkers,
+      },
+
+      // thresholds
+      addThreshold(step):: self {
+        options+: { fieldOptions+: { defaults+: { thresholds+: { steps+: [step] } } } },
+      },
+
+      // mappings
+      _nextMapping:: 0,
+      addMapping(mapping):: self {
+        local nextMapping = super._nextMapping,
+        _nextMapping: nextMapping + 1,
+        options+: { fieldOptions+: { defaults+: { mappings+: [mapping { id: nextMapping }] } } },
+      },
+
+      // data links
+      addDataLink(link):: self {
+        options+: { fieldOptions+: { defaults+: { links+: [link] } } },
+      },
+    }
+  ) + {
     addThresholds(steps):: std.foldl(function(p, s) p.addThreshold(s), steps, self),
-
-    // mappings
-    _nextMapping:: 0,
-    addMapping(mapping):: self {
-      local nextMapping = super._nextMapping,
-      _nextMapping: nextMapping + 1,
-      fieldConfig+: { defaults+: { mappings+: [mapping { id: nextMapping }] } },
-    },
     addMappings(mappings):: std.foldl(function(p, m) p.addMapping(m), mappings, self),
-
-    // data links
-    addDataLink(link):: self {
-      fieldConfig+: { defaults+: { links+: [link] } },
-    },
     addDataLinks(links):: std.foldl(function(p, l) p.addDataLink(l), links, self),
   },
 }
