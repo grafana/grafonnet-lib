@@ -27,8 +27,41 @@
             "values": true
          }
       },
+      "pluginVersion": "7",
       "targets": [ ],
       "title": "advanced",
+      "transparent": true,
+      "type": "stat"
+   },
+   "advanced_grafana6": {
+      "datasource": null,
+      "description": "An advanced stat panel configuration for Grafana 6.7.x",
+      "links": [ ],
+      "options": {
+         "colorMode": "value",
+         "fieldOptions": {
+            "calcs": [
+               "sum"
+            ],
+            "defaults": {
+               "links": [ ],
+               "mappings": [ ],
+               "thresholds": {
+                  "mode": "percentage",
+                  "steps": [ ]
+               },
+               "unit": "none"
+            },
+            "fields": "",
+            "values": true
+         },
+         "graphMode": "area",
+         "justifyMode": "auto",
+         "orientation": "auto"
+      },
+      "pluginVersion": "6.7",
+      "targets": [ ],
+      "title": "advanced_grafana6",
       "transparent": true,
       "type": "stat"
    },
@@ -59,8 +92,40 @@
             "values": false
          }
       },
+      "pluginVersion": "7",
       "targets": [ ],
       "title": "basic",
+      "transparent": false,
+      "type": "stat"
+   },
+   "basic_grafana6": {
+      "datasource": null,
+      "links": [ ],
+      "options": {
+         "colorMode": "value",
+         "fieldOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "defaults": {
+               "links": [ ],
+               "mappings": [ ],
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [ ]
+               },
+               "unit": "none"
+            },
+            "fields": "",
+            "values": false
+         },
+         "graphMode": "area",
+         "justifyMode": "auto",
+         "orientation": "auto"
+      },
+      "pluginVersion": "6.7",
+      "targets": [ ],
+      "title": "basic_grafana6",
       "transparent": false,
       "type": "stat"
    },
@@ -101,6 +166,7 @@
             "values": false
          }
       },
+      "pluginVersion": "7",
       "targets": [ ],
       "title": "links",
       "transparent": false,
@@ -147,6 +213,7 @@
             "values": false
          }
       },
+      "pluginVersion": "7",
       "targets": [ ],
       "title": "mappings",
       "transparent": false,
@@ -192,8 +259,53 @@
             "values": false
          }
       },
+      "pluginVersion": "7",
       "targets": [ ],
       "title": "thresholds",
+      "transparent": false,
+      "type": "stat"
+   },
+   "thresholds_grafana6": {
+      "datasource": null,
+      "links": [ ],
+      "options": {
+         "colorMode": "value",
+         "fieldOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "defaults": {
+               "links": [ ],
+               "mappings": [ ],
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                     {
+                        "color": "yellow",
+                        "value": 0
+                     },
+                     {
+                        "color": "green",
+                        "value": 75
+                     },
+                     {
+                        "color": "red",
+                        "value": 90
+                     }
+                  ]
+               },
+               "unit": "none"
+            },
+            "fields": "",
+            "values": false
+         },
+         "graphMode": "area",
+         "justifyMode": "auto",
+         "orientation": "auto"
+      },
+      "pluginVersion": "6.7",
+      "targets": [ ],
+      "title": "thresholds_grafana6",
       "transparent": false,
       "type": "stat"
    }
