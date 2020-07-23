@@ -12,6 +12,13 @@
    * @param datasource Datasource
    * @param aliasColors Define color mappings
    * @param pieType Type of pie chart (one of pie or donut)
+   * @param showLegend Show legend
+   * @param showLegendPercentage Show percentage values in the legend
+   * @param legendType Type of legend (one of 'Right side', 'Under graph' or 'On graph')
+   * @param valueName Type of tooltip value
+   * @param repeat Variable used to repeat the pie chart
+   * @param repeatDirection Which direction to repeat the panel, 'h' for horizontal and 'v' for vertical
+   * @param maxPerRow Number of panels to display when repeated. Used in combination with repeat.
    * @return A json that represents a pie chart panel
    */
   new(
@@ -27,6 +34,9 @@
     showLegend=true,
     showLegendPercentage=true,
     legendType='Right side',
+    repeat=null,
+    repeatDirection=null,
+    maxPerRow=null,
   ):: {
     type: 'grafana-piechart-panel',
     [if description != null then 'description']: description,
@@ -36,6 +46,9 @@
     [if span != null then 'span']: span,
     [if min_span != null then 'minSpan']: min_span,
     [if height != null then 'height']: height,
+    [if repeat != null then 'repeat']: repeat,
+    [if repeatDirection != null then 'repeatDirection']: repeatDirection,
+    [if maxPerRow != null then 'maxPerRow']: maxPerRow,
     valueName: valueName,
     datasource: datasource,
     legend: {
