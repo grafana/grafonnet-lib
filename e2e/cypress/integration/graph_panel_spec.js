@@ -1,30 +1,16 @@
-const fs = require('fs')
-
 describe('Graph Panel', function() {
 
   let panelTitles = []
 
   before(function() {
-    cy.readFile('./tests/graph_panel/test_compiled.json').then(function(str) {
-      let panels = []
-      for (let [i, [name, panel]] of Object.entries(Object.entries(str))) {
-        panel['id'] = parseInt(i)
-        panel['gridPos'] = {'w': 6, 'h': 4, 'x': i * 6 % 24 }
-        if (name == "alerts" || name == "alertsWithMultipleConditions") {
-          // Skip panels with alerts. They are incompatible with the
-          // test datasource and result in 500 errors.
-          continue
-        }
-        panelTitles.push(panel.title)
-        panels.push(panel)
-      }
-      let dashboardJSON = {
-        "uid": "graph-panel",
-        "title": "Graph Panel",
-        "panels": panels
-      }
-      cy.createDashboard(dashboardJSON)
-    })
+    let testDir = './tests/graph_panel/test_compiled.json'
+    let uid = 'graph-panel'
+
+    // Exclude panels with alerts. They are incompatible with the test
+    // datasource. They will cause dashboard creation to fail.
+    let excludePanels = ["alerts", "alertsWithMultipleConditions"]
+
+    panelTitles = cy.createDashboardFromUnitTests(testDir, uid, excludePanels)
   })
 
   it('renders all graph panels', function() {
