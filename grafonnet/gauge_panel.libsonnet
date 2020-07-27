@@ -2,7 +2,7 @@
   /**
    * Creates a [gauge panel](https://grafana.com/docs/grafana/latest/panels/visualizations/gauge-panel/).
    *
-   * @name gauge.new
+   * @name gaugePanel.new
    *
    * @param title Panel title.
    * @param description Panel description.

@@ -2,7 +2,7 @@
   /**
    * Creates a [stat panel](https://grafana.com/docs/grafana/latest/panels/visualizations/stat-panel/).
    *
-   * @name stat.new
+   * @name statPanel.new
    *
    * @param title Panel title.
    * @param description Panel description.
