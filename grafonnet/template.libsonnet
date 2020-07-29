@@ -161,4 +161,20 @@
       query: '',
       type: 'textbox',
     },
+  /**
+   * @name template.adhoc
+   */
+  adhoc(
+    name,
+    datasource,
+    label=null,
+    hide='',
+  )::
+    {
+      datasource: datasource,
+      hide: $.hide(hide),
+      label: label,
+      name: name,
+      type: 'adhoc',
+    },
 }

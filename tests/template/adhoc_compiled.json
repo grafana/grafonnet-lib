@@ -1,0 +1,16 @@
+{
+   "advanced": {
+      "datasource": "prometheus",
+      "hide": 1,
+      "label": "foo",
+      "name": "adhoc_name",
+      "type": "adhoc"
+   },
+   "basic": {
+      "datasource": "prometheus",
+      "hide": 0,
+      "label": null,
+      "name": "adhoc_name",
+      "type": "adhoc"
+   }
+}
