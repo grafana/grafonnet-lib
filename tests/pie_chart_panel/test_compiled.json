@@ -13,7 +13,10 @@
          "values": true
       },
       "legendType": "Right side",
+      "maxPerRow": 5,
       "pieType": "donut",
+      "repeat": "repeat_variable",
+      "repeatDirection": "h",
       "span": 12,
       "targets": [ ],
       "title": "test",
