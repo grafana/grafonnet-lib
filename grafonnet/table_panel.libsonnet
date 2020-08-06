@@ -16,6 +16,7 @@
    * @param sort Sorting instruction for the panel
    * @param transform allow table manipulation to present data as desired
    * @param transparent Boolean (default: false) If set to true the panel will be transparent
+   * @param links Set of links for the panel.
    * @return A json that represents a table panel
    */
   new(
@@ -32,6 +33,7 @@
     sort=null,
     time_from=null,
     time_shift=null,
+    links=[],
   ):: {
     type: 'table',
     title: title,
@@ -45,6 +47,7 @@
     columns: columns,
     timeFrom: time_from,
     timeShift: time_shift,
+    links: links,
     [if sort != null then 'sort']: sort,
     [if description != null then 'description']: description,
     [if transform != null then 'transform']: transform,
@@ -68,6 +71,9 @@
         pattern: field,
         type: 'hidden',
       }],
+    },
+    addLink(link):: self {
+      links+: [link],
     },
   },
 }

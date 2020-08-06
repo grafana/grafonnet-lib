@@ -8,6 +8,7 @@
       ],
       "datasource": "$PROMETHEUS",
       "description": "description",
+      "links": [ ],
       "sort": {
          "col": 1,
          "desc": true
@@ -42,6 +43,7 @@
    "basic": {
       "columns": [ ],
       "datasource": null,
+      "links": [ ],
       "span": 12,
       "styles": [ ],
       "targets": [ ],
@@ -53,6 +55,7 @@
    "hideColumns": {
       "columns": [ ],
       "datasource": null,
+      "links": [ ],
       "span": 12,
       "styles": [
          {
@@ -76,6 +79,7 @@
       {
          "columns": [ ],
          "datasource": null,
+         "links": [ ],
          "span": 12,
          "styles": [ ],
          "targets": [
@@ -96,6 +100,7 @@
       {
          "columns": [ ],
          "datasource": null,
+         "links": [ ],
          "span": 12,
          "styles": [ ],
          "targets": [
