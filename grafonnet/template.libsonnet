@@ -1,6 +1,25 @@
 {
   /**
-   * @name template.new
+   * Returns a new template that can be added to a dashboard.
+   * See what's a [template](https://grafana.com/docs/grafana/latest/variables/templates-and-variables/#templates)
+   * 
+   * @name template.new Instanciate a new template.
+   * 
+   * @param name Name of variable
+   * @param datasource Template [datasource](https://grafana.com/docs/grafana/latest/variables/variable-types/add-data-source-variable/)
+   * @param query [Query expression](https://grafana.com/docs/grafana/latest/variables/variable-types/add-query-variable/) for the datasource.
+   * @param label (optional) Display name of the variable dropdown. If null, then the dropdown label will be the variable name.
+   * @param allValues (optional) Formatting for [multi-value variables](https://grafana.com/docs/grafana/latest/variables/formatting-multi-value-variables/#formatting-multi-value-variables)
+   * @param tagValuesQuery (optional, experimental feature) Group values into [selectable tags](https://grafana.com/docs/grafana/latest/variables/variable-value-tags/)
+   * @param current
+   * @param hide Choose a hide option: '' (default) the variable dropdown displays the variable Name or Label value. 'label' the variable dropdown only displays the selected variable value and a down arrow. Any other value, no variable dropdown is displayed on the dashboard.
+   * @param regex (optional) Regex expression to filter or capture specific parts of the names returned by your data source query. To see examples, refer to [Filter variables with regex](https://grafana.com/docs/grafana/latest/variables/filter-variables-with-regex/).
+   * @param refresh 'never' (default): Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. 'load': Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. 'time': Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
+   * @param includeAll Whether all value option is available or not. False by default.
+   * @param multi Whether multiple values can be selected or not from variable value list. False by default.
+   * @param sort 0 (default): Without Sort, 1: Alphabetical (asc), 2: Alphabetical (desc), 3: Numerical (asc), 4: Numerical (desc).
+   *
+   * @return A [template](https://grafana.com/docs/grafana/latest/variables/templates-and-variables/#templates)
    */
   new(
     name,
