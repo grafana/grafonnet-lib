@@ -25,5 +25,6 @@
   pluginlist:: import 'pluginlist.libsonnet',
   gauge:: error 'gauge is removed, migrate to gaugePanel',
   gaugePanel:: import 'gauge_panel.libsonnet',
+  barGaugePanel:: import 'bar_gauge_panel.libsonnet',
   statPanel:: import 'stat_panel.libsonnet',
 }
