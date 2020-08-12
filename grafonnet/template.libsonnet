@@ -60,7 +60,7 @@
    * Use an [interval variable](https://grafana.com/docs/grafana/latest/variables/variable-types/add-interval-variable/) to represent time spans such as '1m', '1h', '1d'. You can think of them as a dashboard-wide "group by time" command. Interval variables change how the data is grouped in the visualization. You can also use the Auto Option to return a set number of data points per time span.
    * You can use an interval variable as a parameter to group by time (for InfluxDB), date histogram interval (for Elasticsearch), or as a summarize function parameter (for Graphite).
    *
-   * @name template.interval Returns a new interval variable for templating.
+   * @name template.interval
    *
    * @param name Variable name
    * @param query
