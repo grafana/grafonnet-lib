@@ -3,7 +3,7 @@
    * Returns a new template that can be added to a dashboard.
    * See what's a [template](https://grafana.com/docs/grafana/latest/variables/templates-and-variables/#templates).
    *
-   * @name template.new Returns a new template.
+   * @name template.new
    *
    * @param name Name of variable
    * @param datasource Template [datasource](https://grafana.com/docs/grafana/latest/variables/variable-types/add-data-source-variable/)
