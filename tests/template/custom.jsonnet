@@ -11,4 +11,19 @@ local template = grafana.template;
     hide='value',
     valuelabels={ new: 'nouveau', old: 'ancien' },
   ),
+  multi: template.custom(
+    'foo',
+    'new,current,old',
+    ['new', 'old'],
+    valuelabels={ new: 'nouveau', current: 'attual', old: 'ancien' },
+    multi=true,
+  ),
+  multiIncludeAll: template.custom(
+    'foo',
+    'new,old',
+    'All',
+    valuelabels={ new: 'nouveau', old: 'ancien' },
+    multi=true,
+    includeAll=true,
+  ),
 }
