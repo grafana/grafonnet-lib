@@ -36,6 +36,7 @@ local tablePanel = grafana.tablePanel;
     },
     time_from='24h',
     time_shift='1h',
+    links=[{ targetBlank: true, title: 'foolink', url: 'https://example.com' }],
   ),
   targets:
     [

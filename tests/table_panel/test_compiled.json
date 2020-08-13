@@ -8,7 +8,13 @@
       ],
       "datasource": "$PROMETHEUS",
       "description": "description",
-      "links": [ ],
+      "links": [
+         {
+            "targetBlank": true,
+            "title": "foolink",
+            "url": "https://example.com"
+         }
+      ],
       "sort": {
          "col": 1,
          "desc": true
