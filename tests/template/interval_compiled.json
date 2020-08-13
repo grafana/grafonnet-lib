@@ -1,5 +1,35 @@
 {
-   "auto": {
+   "auto1": {
+      "auto": true,
+      "auto_count": 300,
+      "auto_min": "10s",
+      "current": {
+         "text": "auto",
+         "value": "$__auto_interval"
+      },
+      "hide": 0,
+      "label": null,
+      "name": "interval",
+      "query": "5m,10m,20m",
+      "refresh": 2,
+      "type": "interval"
+   },
+   "auto2": {
+      "auto": true,
+      "auto_count": 300,
+      "auto_min": "10s",
+      "current": {
+         "text": "auto",
+         "value": "$__auto_interval"
+      },
+      "hide": 0,
+      "label": null,
+      "name": "interval",
+      "query": "5m,10m,20m",
+      "refresh": 2,
+      "type": "interval"
+   },
+   "auto3": {
       "auto": true,
       "auto_count": 300,
       "auto_min": "10s",
