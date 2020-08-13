@@ -105,7 +105,21 @@
       current,
   },
   /**
+   * Data [source variables](https://grafana.com/docs/grafana/latest/variables/variable-types/add-data-source-variable/)
+   * allow you to quickly change the data source for an entire dashboard.
+   * They are useful if you have multiple instances of a data source, perhaps in different environments.
+   *
    * @name template.datasource
+   *
+   * @param name Data source variable name. Ex: `'PROMETHEUS_DS'`.
+   * @param query Type of data source. Ex: `'prometheus'`.
+   * @param current Ex: `'Prometheus'`.
+   * @param hide `''` (default) the variable dropdown displays the variable Name or Label value. 'label' the variable dropdown only displays the selected variable value and a down arrow. Any other value, no variable dropdown is displayed on the dashboard.
+   * @param label (optional) Display name of the variable dropdown. If null, then the dropdown label will be the variable name.
+   * @param regex (optional) Regex filter for which data source instances to choose from in the variable value drop-down list. Leave this field empty to display all instances.
+   * @param refresh 'never': Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. 'load' (default): Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. 'time': Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
+   *
+   * @return A [data source variable](https://grafana.com/docs/grafana/latest/variables/variable-types/add-data-source-variable/).
    */
   datasource(
     name,
