@@ -24,4 +24,5 @@ local template = grafana.template;
     template.new('host', 'elastic', 'test-5-5', refresh=5),
   ],
   current: template.new('host', 'elastic', 'test-never-0', current='all'),
+  currentAuto: template.new('host', 'elastic', 'test-auto-1', current='auto'),
 }

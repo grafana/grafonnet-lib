@@ -65,6 +65,29 @@
       "type": "query",
       "useTags": false
    },
+   "currentAuto": {
+      "allValue": null,
+      "current": {
+         "text": "auto",
+         "value": "$__auto_interval"
+      },
+      "datasource": "elastic",
+      "hide": 0,
+      "includeAll": false,
+      "label": null,
+      "multi": false,
+      "name": "host",
+      "options": [ ],
+      "query": "test-auto-1",
+      "refresh": 0,
+      "regex": "",
+      "sort": 0,
+      "tagValuesQuery": "",
+      "tags": [ ],
+      "tagsQuery": "",
+      "type": "query",
+      "useTags": false
+   },
    "refresh": [
       {
          "allValue": null,
