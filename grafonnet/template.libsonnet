@@ -235,7 +235,20 @@
       type: 'textbox',
     },
   /**
+   * [Ad hoc filters](https://grafana.com/docs/grafana/latest/variables/variable-types/add-ad-hoc-filters/)
+   * allow you to add key/value filters that are automatically added to all metric queries
+   * that use the specified data source. Unlike other variables, you do not use ad hoc filters in queries.
+   * Instead, you use ad hoc filters to write filters for existing queries.
+   * Note: Ad hoc filter variables only work with InfluxDB, Prometheus, and Elasticsearch data sources.
+   *
    * @name template.adhoc
+   *
+   * @param name Variable name.
+   * @param datasource Target data source
+   * @param label (optional) Display name of the variable dropdown. If you don’t enter a display name, then the dropdown label will be the variable name.
+   * @param hide `''` (default) the variable dropdown displays the variable Name or Label value. 'label' the variable dropdown only displays the selected variable value and a down arrow. Any other value, no variable dropdown is displayed on the dashboard.
+   *
+   * @return An ad hoc filter
    */
   adhoc(
     name,
