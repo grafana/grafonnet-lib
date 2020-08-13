@@ -153,7 +153,23 @@
     refresh,
   filterAuto(str):: str != 'auto',
   /**
+   * Use a [custom variable](https://grafana.com/docs/grafana/latest/variables/variable-types/add-custom-variable/)
+   * for values that do not change.
+   *
    * @name template.custom
+   * This might be numbers, strings, or even other variables.
+   * @param name Variable name
+   * @param query Comma separated without spacing list of selectable values.
+   * @param current Selected value
+   * @param refresh 'never': Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. 'load' (default): Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. 'time': Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
+   * @param label (default `''`) Display name of the variable dropdown. If you don’t enter a display name, then the dropdown label will be the variable name.
+   * @param valuelabels (default `{}`) Display names for values defined in query. For example, if `query='new,old'`, then you may display them as follows `valuelabels={new: 'nouveau', old: 'ancien'}`.
+   * @param multi (default `false`) Whether multiple values can be selected or not from variable value list.
+   * @param allValues (optional) Formatting for [multi-value variables](https://grafana.com/docs/grafana/latest/variables/formatting-multi-value-variables/#formatting-multi-value-variables)
+   * @param includeAll (default `false`) Whether all value option is available or not.
+   * @param hide `''` (default) the variable dropdown displays the variable Name or Label value. 'label' the variable dropdown only displays the selected variable value and a down arrow. Any other value, no variable dropdown is displayed on the dashboard.
+   *
+   * @return A custom variable.
    */
   custom(
     name,
