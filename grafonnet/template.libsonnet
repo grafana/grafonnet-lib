@@ -206,7 +206,18 @@
       type: 'custom',
     },
   /**
+   * [Text box variables](https://grafana.com/docs/grafana/latest/variables/variable-types/add-text-box-variable/)
+   * display a free text input field with an optional default value.
+   * This is the most flexible variable, because you can enter any value.
+   * Use this type of variable if you have metrics with high cardinality or if you want to
+   * update multiple panels in a dashboard at the same time.
+   *
    * @name template.text
+   *
+   * @param name Variable name.
+   * @param label (default `''`) Display name of the variable dropdown. If you don’t enter a display name, then the dropdown label will be the variable name.
+   *
+   * @return A text box variable.
    */
   text(
     name,
