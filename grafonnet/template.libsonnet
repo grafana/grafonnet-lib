@@ -67,8 +67,8 @@
    * @param current Currently selected interval. Must be one of the values in the query. `'auto'` is allowed if defined in the query.
    * @param hide (default `''`) `''`: the variable dropdown displays the variable Name or Label value. `'label'`: the variable dropdown only displays the selected variable value and a down arrow. Any other value: no variable dropdown is displayed on the dashboard.
    * @param label (optional) Display name of the variable dropdown. If null, then the dropdown label will be the variable name.
-   * @param auto_count (default: `300`) Valid only if `'auto'` is defined in query. Number of times the current time range will be divided to calculate the value, similar to the Max data points query option. For example, if the current visible time range is 30 minutes, then the auto interval groups the data into 30 one-minute increments. The default value is 30 steps.
-   * @param auto_min (default: `'10s'`) Valid only if `'auto'` is defined in query. The minimum threshold below which the step count intervals will not divide the time. To continue the 30 minute example, if the minimum interval is set to `'2m'`, then Grafana would group the data into 15 two-minute increments.
+   * @param auto_count (default `300`) Valid only if `'auto'` is defined in query. Number of times the current time range will be divided to calculate the value, similar to the Max data points query option. For example, if the current visible time range is 30 minutes, then the auto interval groups the data into 30 one-minute increments. The default value is 30 steps.
+   * @param auto_min (default `'10s'`) Valid only if `'auto'` is defined in query. The minimum threshold below which the step count intervals will not divide the time. To continue the 30 minute example, if the minimum interval is set to `'2m'`, then Grafana would group the data into 15 two-minute increments.
    *
    * @return A new interval variable for templating.
    */
