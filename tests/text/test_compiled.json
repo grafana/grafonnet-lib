@@ -4,6 +4,9 @@
       "datasource": "$PROMETHEUS",
       "description": "description",
       "mode": "html",
+      "repeat": "my-variable",
+      "repeatDirection": "v",
+      "repeatMaxPerRow": 12,
       "span": 5,
       "title": "foo",
       "transparent": true,
@@ -13,6 +16,17 @@
       "content": "",
       "datasource": null,
       "mode": "markdown",
+      "span": 12,
+      "title": "",
+      "type": "text"
+   },
+   "repeat": {
+      "content": "",
+      "datasource": null,
+      "mode": "markdown",
+      "repeat": "my-variable",
+      "repeatDirection": "h",
+      "repeatMaxPerRow": null,
       "span": 12,
       "title": "",
       "type": "text"
