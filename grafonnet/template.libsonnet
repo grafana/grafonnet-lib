@@ -10,14 +10,14 @@
    * @param query [Query expression](https://grafana.com/docs/grafana/latest/variables/variable-types/add-query-variable/) for the datasource.
    * @param label (optional) Display name of the variable dropdown. If null, then the dropdown label will be the variable name.
    * @param allValues (optional) Formatting for [multi-value variables](https://grafana.com/docs/grafana/latest/variables/formatting-multi-value-variables/#formatting-multi-value-variables)
-   * @param tagValuesQuery (optional, experimental feature) Group values into [selectable tags](https://grafana.com/docs/grafana/latest/variables/variable-value-tags/)
-   * @param current `null` (default), `'all'` for all, or any other custom text value.
-   * @param hide `''` (default) the variable dropdown displays the variable Name or Label value. 'label' the variable dropdown only displays the selected variable value and a down arrow. Any other value, no variable dropdown is displayed on the dashboard.
-   * @param regex (optional) Regex expression to filter or capture specific parts of the names returned by your data source query. To see examples, refer to [Filter variables with regex](https://grafana.com/docs/grafana/latest/variables/filter-variables-with-regex/).
-   * @param refresh 'never' (default): Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. 'load': Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. 'time': Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
-   * @param includeAll Whether all value option is available or not. False by default.
-   * @param multi Whether multiple values can be selected or not from variable value list. False by default.
-   * @param sort 0 (default): Without Sort, 1: Alphabetical (asc), 2: Alphabetical (desc), 3: Numerical (asc), 4: Numerical (desc).
+   * @param tagValuesQuery (default `''`) Group values into [selectable tags](https://grafana.com/docs/grafana/latest/variables/variable-value-tags/)
+   * @param current (default `null`) Can be `null`, `'all'` for all, or any other custom text value.
+   * @param hide (default `''`) `''`: the variable dropdown displays the variable Name or Label value. `'label'`: the variable dropdown only displays the selected variable value and a down arrow. Any other value: no variable dropdown is displayed on the dashboard.
+   * @param regex (default `''`) Regex expression to filter or capture specific parts of the names returned by your data source query. To see examples, refer to [Filter variables with regex](https://grafana.com/docs/grafana/latest/variables/filter-variables-with-regex/).
+   * @param refresh (default `'never'`) `'never'`: variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. `'load'`: Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. `'time'`: Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
+   * @param includeAll (default `false`) Whether all value option is available or not.
+   * @param multi (default `false`) Whether multiple values can be selected or not from variable value list.
+   * @param sort (default `0`) `0`: Without Sort, `1`: Alphabetical (asc), `2`: Alphabetical (desc), `3`: Numerical (asc), `4`: Numerical (desc).
    *
    * @return A [template](https://grafana.com/docs/grafana/latest/variables/templates-and-variables/#templates)
    */
@@ -65,10 +65,10 @@
    * @param name Variable name
    * @param query Comma separated values without spacing of intervals available for selection. Add `'auto'` in the query to turn on the Auto Option. Ex: `'auto,5m,10m,20m'`.
    * @param current Currently selected interval. Must be one of the values in the query. `'auto'` is allowed if defined in the query.
-   * @param hide `''` (default) the variable dropdown displays the variable Name or Label value. 'label' the variable dropdown only displays the selected variable value and a down arrow. Any other value, no variable dropdown is displayed on the dashboard.
+   * @param hide (default `''`) `''`: the variable dropdown displays the variable Name or Label value. `'label'`: the variable dropdown only displays the selected variable value and a down arrow. Any other value: no variable dropdown is displayed on the dashboard.
    * @param label (optional) Display name of the variable dropdown. If null, then the dropdown label will be the variable name.
-   * @param auto_count (default: 300) Valid only if 'auto' is defined in query. Number of times the current time range will be divided to calculate the value, similar to the Max data points query option. For example, if the current visible time range is 30 minutes, then the auto interval groups the data into 30 one-minute increments. The default value is 30 steps.
-   * @param auto_min (default: '10s') Valid only if 'auto' is defined in query. The minimum threshold below which the step count intervals will not divide the time. To continue the 30 minute example, if the minimum interval is set to 2m, then Grafana would group the data into 15 two-minute increments.
+   * @param auto_count (default: `300`) Valid only if `'auto'` is defined in query. Number of times the current time range will be divided to calculate the value, similar to the Max data points query option. For example, if the current visible time range is 30 minutes, then the auto interval groups the data into 30 one-minute increments. The default value is 30 steps.
+   * @param auto_min (default: `'10s'`) Valid only if `'auto'` is defined in query. The minimum threshold below which the step count intervals will not divide the time. To continue the 30 minute example, if the minimum interval is set to `'2m'`, then Grafana would group the data into 15 two-minute increments.
    *
    * @return A new interval variable for templating.
    */
@@ -114,10 +114,10 @@
    * @param name Data source variable name. Ex: `'PROMETHEUS_DS'`.
    * @param query Type of data source. Ex: `'prometheus'`.
    * @param current Ex: `'Prometheus'`.
-   * @param hide `''` (default) the variable dropdown displays the variable Name or Label value. 'label' the variable dropdown only displays the selected variable value and a down arrow. Any other value, no variable dropdown is displayed on the dashboard.
+   * @param hide (default `''`) `''`: the variable dropdown displays the variable Name or Label value. `'label'`: the variable dropdown only displays the selected variable value and a down arrow. Any other value: no variable dropdown is displayed on the dashboard.
    * @param label (optional) Display name of the variable dropdown. If null, then the dropdown label will be the variable name.
-   * @param regex (optional) Regex filter for which data source instances to choose from in the variable value drop-down list. Leave this field empty to display all instances.
-   * @param refresh 'never': Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. 'load' (default): Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. 'time': Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
+   * @param regex (default `''`) Regex filter for which data source instances to choose from in the variable value drop-down list. Leave this field empty to display all instances.
+   * @param refresh (default `'load'`) `'never'`: Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. `'load'`: Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. `'time'`: Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
    *
    * @return A [data source variable](https://grafana.com/docs/grafana/latest/variables/variable-types/add-data-source-variable/).
    */
@@ -161,13 +161,13 @@
    * @param name Variable name
    * @param query Comma separated without spacing list of selectable values.
    * @param current Selected value
-   * @param refresh 'never': Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. 'load' (default): Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. 'time': Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
+   * @param refresh (default `'never'`) `'never'`: Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. `'load'`: Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. `'time'`: Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
    * @param label (default `''`) Display name of the variable dropdown. If you don’t enter a display name, then the dropdown label will be the variable name.
    * @param valuelabels (default `{}`) Display names for values defined in query. For example, if `query='new,old'`, then you may display them as follows `valuelabels={new: 'nouveau', old: 'ancien'}`.
    * @param multi (default `false`) Whether multiple values can be selected or not from variable value list.
    * @param allValues (optional) Formatting for [multi-value variables](https://grafana.com/docs/grafana/latest/variables/formatting-multi-value-variables/#formatting-multi-value-variables)
    * @param includeAll (default `false`) Whether all value option is available or not.
-   * @param hide `''` (default) the variable dropdown displays the variable Name or Label value. 'label' the variable dropdown only displays the selected variable value and a down arrow. Any other value, no variable dropdown is displayed on the dashboard.
+   * @param hide (default `''`) `''`: the variable dropdown displays the variable Name or Label value. `'label'`: the variable dropdown only displays the selected variable value and a down arrow. Any other value: no variable dropdown is displayed on the dashboard.
    *
    * @return A custom variable.
    */
@@ -246,7 +246,7 @@
    * @param name Variable name.
    * @param datasource Target data source
    * @param label (optional) Display name of the variable dropdown. If you don’t enter a display name, then the dropdown label will be the variable name.
-   * @param hide `''` (default) the variable dropdown displays the variable Name or Label value. 'label' the variable dropdown only displays the selected variable value and a down arrow. Any other value, no variable dropdown is displayed on the dashboard.
+   * @param hide (default `''`) `''`: the variable dropdown displays the variable Name or Label value. `'label'`: the variable dropdown only displays the selected variable value and a down arrow. Any other value: no variable dropdown is displayed on the dashboard.
    *
    * @return An ad hoc filter
    */

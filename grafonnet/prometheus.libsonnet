@@ -6,8 +6,8 @@
    * @name prometheus.target
    *
    * @param expr PromQL query to be exercised against Prometheus. Checkout [Prometheus documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/).
-   * @param format (default 'time_series') Switch between `'table'`, `'time_series'` or `'heatmap'`. Table will only work in the Table panel. Heatmap is suitable for displaying metrics of the Histogram type on a Heatmap panel. Under the hood, it converts cumulative histograms to regular ones and sorts series by the bucket bound.
-   * @param intervalFactor (default 2)
+   * @param format (default `'time_series'`) Switch between `'table'`, `'time_series'` or `'heatmap'`. Table will only work in the Table panel. Heatmap is suitable for displaying metrics of the Histogram type on a Heatmap panel. Under the hood, it converts cumulative histograms to regular ones and sorts series by the bucket bound.
+   * @param intervalFactor (default `2`)
    * @param legendFormat (default `''`) Controls the name of the time series, using name or pattern. For example `{{hostname}}` is replaced with the label value for the label `hostname`.
    * @param datasource (optional) Name of the Prometheus datasource. Leave by default otherwise.
    * @param interval (optional)
