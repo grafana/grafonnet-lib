@@ -1,0 +1,19 @@
+{
+   "advanced": {
+      "convertToUTC": true,
+      "format": "time_series",
+      "location": "US",
+      "orderByCol": "2",
+      "orderBySort": "2",
+      "rawQuery": true,
+      "rawSql": "SELECT $__timeGroup(date_time_col, '1h'), sum(value) as value FROM yourtable GROUP BY time ORDER BY time"
+   },
+   "basic": {
+      "convertToUTC": false,
+      "format": "time_series",
+      "orderByCol": "1",
+      "orderBySort": "1",
+      "rawQuery": true,
+      "rawSql": "SELECT $__timeGroup(date_time_col, '1h'), sum(value) as value FROM yourtable GROUP BY time ORDER BY time"
+   }
+}
