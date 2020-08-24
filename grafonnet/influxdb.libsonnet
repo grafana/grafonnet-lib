@@ -8,6 +8,7 @@
    *
    * @param alias 'Alias By' pattern
    * @param datasource Datasource
+   * @param hide Disable query on graph
    *
    * @param rawQuery Enable/disable raw query mode
    *
@@ -26,6 +27,7 @@
 
     alias=null,
     datasource=null,
+    hide=null,
 
     rawQuery=null,
 
@@ -42,6 +44,7 @@
 
     [if alias != null then 'alias']: alias,
     [if datasource != null then 'datasource']: datasource,
+    [if hide != null then 'hide']: hide,
 
     [if query != null then 'query']: query,
     [if rawQuery != null then 'rawQuery']: rawQuery,
