@@ -38,6 +38,6 @@
       datasource: datasource,
       [if repeat != null then 'repeat']: repeat,
       [if repeat != null then 'repeatDirection']: repeatDirection,
-      [if repeat != null then 'repeatMaxPerRow']: repeatMaxPerRow,
+      [if repeat != null then 'maxPerRow']: repeatMaxPerRow,
     },
 }
