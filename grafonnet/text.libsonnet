@@ -24,7 +24,7 @@
     description=null,
     datasource=null,
     repeat=null,
-    repeatDirection='h',
+    repeatDirection=null,
     repeatMaxPerRow=null,
   )::
     {
