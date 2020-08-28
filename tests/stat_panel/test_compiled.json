@@ -130,6 +130,38 @@
       "transparent": false,
       "type": "stat"
    },
+   "field_title_grafana6": {
+      "datasource": null,
+      "links": [ ],
+      "options": {
+         "colorMode": "value",
+         "fieldOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "defaults": {
+               "links": [ ],
+               "mappings": [ ],
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [ ]
+               },
+               "title": "My values:",
+               "unit": "none"
+            },
+            "fields": "",
+            "values": false
+         },
+         "graphMode": "area",
+         "justifyMode": "auto",
+         "orientation": "auto"
+      },
+      "pluginVersion": "6.6.0",
+      "targets": [ ],
+      "title": "",
+      "transparent": false,
+      "type": "stat"
+   },
    "links": {
       "datasource": null,
       "fieldConfig": {
