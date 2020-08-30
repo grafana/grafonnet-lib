@@ -87,8 +87,8 @@
             "format": "ms",
             "label": "labelY2",
             "logBase": 1,
-            "max": 10,
-            "min": 10,
+            "max": 200,
+            "min": 100,
             "show": true
          }
       ]
