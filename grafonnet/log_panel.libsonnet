@@ -1,18 +1,20 @@
 {
   /**
-   * Returns a new log panel that can be added in a row.
+   * Creates a [log panel](https://grafana.com/docs/grafana/latest/panels/visualizations/logs-panel/).
    * It requires the log panel plugin in grafana, which is built-in.
    *
    * @name logPanel.new
    *
-   * @param title The title of the log panel.
-   * @param span Width of the panel
-   * @param datasource Datasource
-   * @showLabels boolean to show or hide labels
-   * @showTime boolean to show or hide time for each line
-   * @wrapLogMessage true to wrap log line to the next line
-   * @sortOrder sort log by time (can be Descending or Ascending )
-   * @return A json that represents a log panel
+   * @param title (default `''`) The title of the log panel.
+   * @param span (optional) Width of the panel
+   * @param datasource (optional) Datasource
+   * @showLabels (default `false`) Whether to show or hide labels
+   * @showTime (default `true`) Whether to show or hide time for each line
+   * @wrapLogMessage (default `true`) Whether to wrap log line to the next line
+   * @sortOrder (default `'Descending'`) sort log by time (can be 'Descending' or 'Ascending' )
+   *
+   * @method addTarget(target) Adds a target object
+   * @method addTargets(targets) Adds an array of targets
    */
   new(
     title='',

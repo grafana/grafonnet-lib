@@ -1,23 +1,29 @@
 {
   /**
-   * Returns a new table panel that can be added in a row.
+   * Creates a [table panel](https://grafana.com/docs/grafana/latest/panels/visualizations/table-panel/) that can be added in a row.
    * It requires the table panel plugin in grafana, which is built-in.
    *
    * @name table.new
    *
    * @param title The title of the graph panel.
-   * @param span Width of the panel
-   * @param height Height of the panel
-   * @param description Description of the panel
-   * @param datasource Datasource
-   * @param min_span Min span
-   * @param styles Styles for the panel
-   * @param columns Columns for the panel
-   * @param sort Sorting instruction for the panel
-   * @param transform allow table manipulation to present data as desired
-   * @param transparent Boolean (default: false) If set to true the panel will be transparent
-   * @param links Set of links for the panel.
+   * @param description (optional) Description of the panel
+   * @param span (optional)  Width of the panel
+   * @param height (optional)  Height of the panel
+   * @param datasource (optional) Datasource
+   * @param min_span (optional)  Min span
+   * @param styles (optional) Array of styles for the panel
+   * @param columns (optional) Array of columns for the panel
+   * @param sort (optional) Sorting instruction for the panel
+   * @param transform (optional) Allow table manipulation to present data as desired
+   * @param transparent (default: 'false') Whether to display the panel without a background
+   * @param links (optional) Array of links for the panel.
    * @return A json that represents a table panel
+   *
+   * @method addTarget(target) Adds a target object
+   * @method addTargets(targets) Adds an array of targets
+   * @method addColumn(field, style) Adds a column
+   * @method hideColumn(field) Hides a column
+   * @method addLink(link) Adds a link
    */
   new(
     title,

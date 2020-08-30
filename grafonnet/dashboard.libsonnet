@@ -2,7 +2,34 @@ local timepickerlib = import 'timepicker.libsonnet';
 
 {
   /**
+   * Creates a [dashboard](https://grafana.com/docs/grafana/latest/features/dashboard/dashboards/)
+   *
    * @name dashboard.new
+   *
+   * @param title The title of the dashboard
+   * @param editable (default: `false`) Whether the dashboard is editable via Grafana UI.
+   * @param style (default: `'dark'`) Theme of dashboard, `'dark'` or `'light'`
+   * @param tags (optional) Array of tags associated to the dashboard, e.g.`['tag1','tag2']`
+   * @param time_from (default: `'now-6h'`)
+   * @param time_to (default: `'now'`)
+   * @param timezone (default: `'browser'`) Timezone of the dashboard, `'utc'` or `'browser'`
+   * @param refresh (default: `''`) Auto-refresh interval, e.g. `'30s'`
+   * @param timepicker (optional) See timepicker API
+   * @param graphTooltip (default: `'default'`) `'default'` : no shared crosshair or tooltip (0), `'shared_crosshair'`: shared crosshair (1), `'shared_tooltip'`: shared crosshair AND shared tooltip (2)
+   * @param hideControls (default: `false`)
+   * @param schemaVersion (default: `14`) Version of the Grafana JSON schema, incremented each time an update brings changes. `26` for Grafana 7.1.5, `22` for Grafana 6.7.4, `16` for Grafana 5.4.5, `14` for Grafana 4.6.3. etc.
+   * @param uid (default: `''`) Unique dashboard identifier as a string (8-40), that can be chosen by users. Used to identify a dashboard to update when using Grafana REST API.
+   * @param description (optional)
+   *
+   * @method addTemplate(template) Add a template variable
+   * @method addTemplates(templates) Adds an array of template variables
+   * @method addAnnotation(annotation) Add an [annotation](https://grafana.com/docs/grafana/latest/dashboards/annotations/)
+   * @method addPanel(panel,gridPos) Appends a panel, with an optional grid position in grid coordinates, e.g. `gridPos={'x':0, 'y':0, 'w':12, 'h': 9}`
+   * @method addPanels(panels) Appends an array of panels
+   * @method addLink(link) Adds a [dashboard link](https://grafana.com/docs/grafana/latest/linking/dashboard-links/)
+   * @method addRequired(type, name, id, version)
+   * @method addInput(name, label, type, pluginId, pluginName, description, value)
+   * @method addRow(row) Adds a row. This is the legacy row concept from Grafana < 5, when rows were needed for layout. Rows should now be added via `addPanel`.
    */
   new(
     title,
