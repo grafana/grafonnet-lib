@@ -1,11 +1,10 @@
 {
   /**
-   * Returns a new template that can be added to a dashboard.
-   * See what's a [template](https://grafana.com/docs/grafana/latest/variables/templates-and-variables/#templates).
+   * Creates a [template](https://grafana.com/docs/grafana/latest/variables/templates-and-variables/#templates) that can be added to a dashboard.
    *
    * @name template.new
    *
-   * @param name Name of variable
+   * @param name Name of variable.
    * @param datasource Template [datasource](https://grafana.com/docs/grafana/latest/variables/variable-types/add-data-source-variable/)
    * @param query [Query expression](https://grafana.com/docs/grafana/latest/variables/variable-types/add-query-variable/) for the datasource.
    * @param label (optional) Display name of the variable dropdown. If null, then the dropdown label will be the variable name.

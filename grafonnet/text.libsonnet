@@ -9,8 +9,8 @@
    * @param datasource (optional) Panel datasource.
    * @param span (optional)
    * @param content (default `''`)
-   * @param mode (default `'markdown'`)
-   * @param transparent (optional)
+   * @param mode (default `'markdown'`) Rendering of the content: 'markdown','html', ...
+   * @param transparent (optional) Whether to display the panel without a background.
    * @param repeat (optional) Name of variable that should be used to repeat this panel.
    * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
    * @param repeatMaxPerRow (optional) Maximum panels per row in repeat mode.

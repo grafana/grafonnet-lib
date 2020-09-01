@@ -1,25 +1,28 @@
 {
   /**
-   * Returns a new pie chart panel that can be added in a row.
-   * It requires the pie chart panel plugin in grafana, which needs to be explicitly installed.
+   * Creates a pie chart panel.
+   * It requires the [pie chart panel plugin in grafana](https://grafana.com/grafana/plugins/grafana-piechart-panel),
+   * which needs to be explicitly installed.
    *
    * @name pieChartPanel.new
    *
    * @param title The title of the pie chart panel.
-   * @param description Description of the panel
-   * @param span Width of the panel
-   * @param min_span Min span
-   * @param datasource Datasource
-   * @param aliasColors Define color mappings
-   * @param pieType Type of pie chart (one of pie or donut)
-   * @param showLegend Show legend
-   * @param showLegendPercentage Show percentage values in the legend
-   * @param legendType Type of legend (one of 'Right side', 'Under graph' or 'On graph')
-   * @param valueName Type of tooltip value
-   * @param repeat Variable used to repeat the pie chart
-   * @param repeatDirection Which direction to repeat the panel, 'h' for horizontal and 'v' for vertical
-   * @param maxPerRow Number of panels to display when repeated. Used in combination with repeat.
+   * @param description (default `''`) Description of the panel
+   * @param span (optional) Width of the panel
+   * @param min_span (optional) Min span
+   * @param datasource (optional) Datasource
+   * @param aliasColors (optional) Define color mappings
+   * @param pieType (default `'pie'`) Type of pie chart (one of pie or donut)
+   * @param showLegend (default `true`) Show legend
+   * @param showLegendPercentage (default `true`) Show percentage values in the legend
+   * @param legendType (default `'Right side'`) Type of legend (one of 'Right side', 'Under graph' or 'On graph')
+   * @param valueName (default `'current') Type of tooltip value
+   * @param repeat (optional) Variable used to repeat the pie chart
+   * @param repeatDirection (optional) Which direction to repeat the panel, 'h' for horizontal and 'v' for vertical
+   * @param maxPerRow (optional) Number of panels to display when repeated. Used in combination with repeat.
    * @return A json that represents a pie chart panel
+   *
+   * @method addTarget(target) Adds a target object.
    */
   new(
     title,

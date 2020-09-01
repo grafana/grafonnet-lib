@@ -6,8 +6,8 @@
    * @name pluginlist.new
    *
    * @param title The title of the pluginlist panel.
-   * @param description Description of the panel
-   * @param limit Set maximum items in a list
+   * @param description (optional) Description of the panel
+   * @param limit (optional) Set maximum items in a list
    * @return A json that represents a pluginlist panel
    */
   new(

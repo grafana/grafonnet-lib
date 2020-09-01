@@ -1,6 +1,6 @@
 {
   /**
-   * [Prometheus target](https://grafana.com/docs/grafana/latest/features/datasources/prometheus/)
+   * Creates a [Prometheus target](https://grafana.com/docs/grafana/latest/features/datasources/prometheus/)
    * to be added to panels.
    *
    * @name prometheus.target
@@ -10,7 +10,7 @@
    * @param intervalFactor (default `2`)
    * @param legendFormat (default `''`) Controls the name of the time series, using name or pattern. For example `{{hostname}}` is replaced with the label value for the label `hostname`.
    * @param datasource (optional) Name of the Prometheus datasource. Leave by default otherwise.
-   * @param interval (optional)
+   * @param interval (optional) Time span used to aggregate or group data points by time. By default Grafana uses an automatic interval calculated based on the width of the graph.
    * @param instant (optional) Perform an "instant" query, to return only the latest value that Prometheus has scraped for the requested time series. Instant queries return results much faster than normal range queries. Use them to look up label sets.
    * @param hide (optional) Set to `true` to hide the target from the panel.
    *
