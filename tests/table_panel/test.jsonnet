@@ -43,14 +43,26 @@ local transformation = grafana.transformation;
     [
       tablePanel.new('with targets', span=12)
       .addTarget({ a: 'foo' })
-      .addTarget({ b: 'foo' })
+      .addTarget({ b: 'foo' }),
+      tablePanel.new('with batch targets', span=12)
+      .addTargets([{ a: 'foo' }, { b: 'foo' }]),
+    ],
+  transformations:
+    [
+      tablePanel.new('with transformations', span=12)
       .addTransformation(transformation.new("seriesToColumns", options={
             "byField": "instance"
+          }))
+      .addTransformation(transformation.new("filterFieldsByName", options={
+            "include": {
+              "names": [
+                "instance",
+              ]
+            }
           })),
-      tablePanel.new('with batch targets', span=12)
-      .addTargets([{ a: 'foo' }, { b: 'foo' }])
+      tablePanel.new('with batch transformations', span=12)
       .addTransformations([
-       transformation.new("filterFieldsByName", options={
+          transformation.new("filterFieldsByName", options={
             "include": {
               "names": [
                 "instance",
