@@ -4,8 +4,8 @@ local transformation = grafana.transformation;
 {
   basic: transformation.new(),
   advanced: transformation.new(
-    "seriesToColumns", options={
-            "byField": "instance"
-          }
+    'seriesToColumns', options={
+      byField: 'instance',
+    }
   ),
 }

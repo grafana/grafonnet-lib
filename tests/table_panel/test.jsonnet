@@ -50,40 +50,41 @@ local transformation = grafana.transformation;
   transformations:
     [
       tablePanel.new('with transformations', span=12)
-      .addTransformation(transformation.new("seriesToColumns", options={
-            "byField": "instance"
-          }))
-      .addTransformation(transformation.new("filterFieldsByName", options={
-            "include": {
-              "names": [
-                "instance",
-              ]
-            }
-          })),
+      .addTransformation(transformation.new('seriesToColumns', options={
+        byField: 'instance',
+      }))
+      .addTransformation(transformation.new('filterFieldsByName', options={
+        include: {
+          names: [
+            'instance',
+          ],
+        },
+      })),
       tablePanel.new('with batch transformations', span=12)
       .addTransformations([
-          transformation.new("filterFieldsByName", options={
-            "include": {
-              "names": [
-                "instance",
-                "nodename",
-                "Value #D",
-                "Value #B",
-                "Value #C",
-                "Value #E",
-                "Value #F",
-                "Value #G",
-                "Value #H",
-                "Value #I",
-                "Value #J",
-                "Value #K",
-                "Value #L"
-              ]
-            }
-          }),
-          transformation.new("seriesToColumns", options={
-            "byField": "instance"
-          })])
+        transformation.new('filterFieldsByName', options={
+          include: {
+            names: [
+              'instance',
+              'nodename',
+              'Value #D',
+              'Value #B',
+              'Value #C',
+              'Value #E',
+              'Value #F',
+              'Value #G',
+              'Value #H',
+              'Value #I',
+              'Value #J',
+              'Value #K',
+              'Value #L',
+            ],
+          },
+        }),
+        transformation.new('seriesToColumns', options={
+          byField: 'instance',
+        }),
+      ]),
     ],
   hideColumns: tablePanel.new(
     'test',

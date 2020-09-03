@@ -7,6 +7,6 @@
     options={}
   ):: {
     id: id,
-    options: options
+    options: options,
   },
 }
