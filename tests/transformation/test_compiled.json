@@ -1,0 +1,12 @@
+{
+   "advanced": {
+      "id": "seriesToColumns",
+      "options": {
+         "byField": "instance"
+      }
+   },
+   "basic": {
+      "id": "",
+      "options": { }
+   }
+}
