@@ -24,6 +24,8 @@
    * @method addColumn(field, style) Adds a column
    * @method hideColumn(field) Hides a column
    * @method addLink(link) Adds a link
+   * @method addTransformation(transformation) Adds a transformation object
+   * @method addTransformations(transformations) Adds an array of transformations
    */
   new(
     title,
@@ -81,5 +83,9 @@
     addLink(link):: self {
       links+: [link],
     },
+    addTransformation(transformation):: self {
+      transformations+: [transformation],
+    },
+    addTransformations(transformations):: std.foldl(function(p, t) p.addTransformation(t), transformations, self),
   },
 }

@@ -101,6 +101,14 @@
          "timeFrom": null,
          "timeShift": null,
          "title": "with targets",
+         "transformations": [
+            {
+               "id": "seriesToColumns",
+               "options": {
+                  "byField": "instance"
+               }
+            }
+         ],
          "type": "table"
       },
       {
@@ -122,6 +130,36 @@
          "timeFrom": null,
          "timeShift": null,
          "title": "with batch targets",
+         "transformations": [
+            {
+               "id": "filterFieldsByName",
+               "options": {
+                  "include": {
+                     "names": [
+                        "instance",
+                        "nodename",
+                        "Value #D",
+                        "Value #B",
+                        "Value #C",
+                        "Value #E",
+                        "Value #F",
+                        "Value #G",
+                        "Value #H",
+                        "Value #I",
+                        "Value #J",
+                        "Value #K",
+                        "Value #L"
+                     ]
+                  }
+               }
+            },
+            {
+               "id": "seriesToColumns",
+               "options": {
+                  "byField": "instance"
+               }
+            }
+         ],
          "type": "table"
       }
    ]

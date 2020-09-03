@@ -1,5 +1,6 @@
 local grafana = import 'grafonnet/grafana.libsonnet';
 local tablePanel = grafana.tablePanel;
+local transformation = grafana.transformation;
 
 {
   basic: tablePanel.new(
@@ -42,9 +43,35 @@ local tablePanel = grafana.tablePanel;
     [
       tablePanel.new('with targets', span=12)
       .addTarget({ a: 'foo' })
-      .addTarget({ b: 'foo' }),
+      .addTarget({ b: 'foo' })
+      .addTransformation(transformation.new("seriesToColumns", options={
+            "byField": "instance"
+          })),
       tablePanel.new('with batch targets', span=12)
-      .addTargets([{ a: 'foo' }, { b: 'foo' }]),
+      .addTargets([{ a: 'foo' }, { b: 'foo' }])
+      .addTransformations([
+       transformation.new("filterFieldsByName", options={
+            "include": {
+              "names": [
+                "instance",
+                "nodename",
+                "Value #D",
+                "Value #B",
+                "Value #C",
+                "Value #E",
+                "Value #F",
+                "Value #G",
+                "Value #H",
+                "Value #I",
+                "Value #J",
+                "Value #K",
+                "Value #L"
+              ]
+            }
+          }),
+          transformation.new("seriesToColumns", options={
+            "byField": "instance"
+          })])
     ],
   hideColumns: tablePanel.new(
     'test',
