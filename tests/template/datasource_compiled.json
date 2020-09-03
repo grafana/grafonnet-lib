@@ -5,12 +5,15 @@
          "value": "newtest-query"
       },
       "hide": 2,
+      "includeAll": false,
       "label": "foo",
+      "multi": false,
       "name": "newhost",
       "options": [ ],
       "query": "newelastic",
       "refresh": 2,
       "regex": "prom.*",
+      "skipUrlSync": false,
       "type": "datasource"
    },
    "basic": {
@@ -19,12 +22,15 @@
          "value": "Prometheus 1"
       },
       "hide": 0,
+      "includeAll": false,
       "label": null,
+      "multi": false,
       "name": "prom",
       "options": [ ],
       "query": "prometheus",
       "refresh": 1,
       "regex": "",
+      "skipUrlSync": false,
       "type": "datasource"
    }
 }
