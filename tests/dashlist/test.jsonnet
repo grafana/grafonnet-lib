@@ -17,5 +17,5 @@ local Dashlist = grafana.dashlist;
   folderId: Dashlist.new(
     'test',
     folderId=3
-  )
+  ),
 }
