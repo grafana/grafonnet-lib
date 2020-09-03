@@ -1,6 +1,7 @@
 {
    "advanced": {
       "description": "description",
+      "folderId": null,
       "headings": true,
       "limit": 5,
       "query": "",
@@ -15,6 +16,19 @@
       "type": "dashlist"
    },
    "basic": {
+      "folderId": null,
+      "headings": true,
+      "limit": 10,
+      "query": "",
+      "recent": true,
+      "search": false,
+      "starred": false,
+      "tags": [ ],
+      "title": "test",
+      "type": "dashlist"
+   },
+   "folderId": {
+      "folderId": 3,
       "headings": true,
       "limit": 10,
       "query": "",

@@ -26,6 +26,7 @@
     starred=false,
     headings=true,
     limit=10,
+    folderId=null,
   ):: {
     type: 'dashlist',
     title: title,
@@ -37,5 +38,6 @@
     headings: headings,
     limit: limit,
     [if description != null then 'description']: description,
+    folderId: folderId,
   },
 }
