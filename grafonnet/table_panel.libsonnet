@@ -28,7 +28,7 @@
   new(
     title,
     description=null,
-    fontSize='100%',
+    font_size='100%',
     span=null,
     min_span=null,
     height=null,
@@ -48,7 +48,7 @@
     [if min_span != null then 'minSpan']: min_span,
     [if height != null then 'height']: height,
     datasource: datasource,
-    fontSize: fontSize,
+    fontSize: font_size,
     targets: [
     ],
     styles: styles,
