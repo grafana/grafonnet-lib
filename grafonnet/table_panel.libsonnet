@@ -7,16 +7,18 @@
    *
    * @param title The title of the graph panel.
    * @param description (optional) Description of the panel
-   * @param span (optional)  Width of the panel
-   * @param height (optional)  Height of the panel
+   * @param fontSize (optional) Font size
+   * @param pageSize (optional) Number of rows per page
+   * @param span (optional) Width of the panel
+   * @param height (optional) Height of the panel
    * @param datasource (optional) Datasource
-   * @param min_span (optional)  Min span
+   * @param min_span (optional) Min span
    * @param styles (optional) Array of styles for the panel
    * @param columns (optional) Array of columns for the panel
    * @param sort (optional) Sorting instruction for the panel
    * @param transform (optional) Allow table manipulation to present data as desired
    * @param transparent (default: 'false') Whether to display the panel without a background
-   * @param links (optional) Array of links for the panel.
+   * @param links (optional) Array of links for the panel
    * @return A json that represents a table panel
    *
    * @method addTarget(target) Adds a target object
