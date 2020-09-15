@@ -29,6 +29,7 @@
     title,
     description=null,
     font_size='100%',
+    page_size=null,
     span=null,
     min_span=null,
     height=null,
@@ -49,6 +50,7 @@
     [if height != null then 'height']: height,
     datasource: datasource,
     fontSize: font_size,
+    pageSize: page_size,
     targets: [
     ],
     styles: styles,
