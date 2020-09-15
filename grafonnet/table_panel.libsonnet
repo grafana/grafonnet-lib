@@ -30,8 +30,8 @@
   new(
     title,
     description=null,
-    font_size='100%',
-    page_size=null,
+    fontSize='100%',
+    pageSize=null,
     span=null,
     min_span=null,
     height=null,
@@ -51,8 +51,8 @@
     [if min_span != null then 'minSpan']: min_span,
     [if height != null then 'height']: height,
     datasource: datasource,
-    fontSize: font_size,
-    pageSize: page_size,
+    fontSize: fontSize,
+    pageSize: pageSize,
     targets: [
     ],
     styles: styles,
