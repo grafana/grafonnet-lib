@@ -8,6 +8,7 @@
       ],
       "datasource": "$PROMETHEUS",
       "description": "description",
+      "fontSize": "100%",
       "links": [
          {
             "targetBlank": true,
@@ -15,6 +16,7 @@
             "url": "https://example.com"
          }
       ],
+      "pageSize": null,
       "sort": {
          "col": 1,
          "desc": true
@@ -49,7 +51,9 @@
    "basic": {
       "columns": [ ],
       "datasource": null,
+      "fontSize": "100%",
       "links": [ ],
+      "pageSize": null,
       "span": 12,
       "styles": [ ],
       "targets": [ ],
@@ -61,7 +65,9 @@
    "hideColumns": {
       "columns": [ ],
       "datasource": null,
+      "fontSize": "100%",
       "links": [ ],
+      "pageSize": null,
       "span": 12,
       "styles": [
          {
@@ -85,7 +91,9 @@
       {
          "columns": [ ],
          "datasource": null,
+         "fontSize": "100%",
          "links": [ ],
+         "pageSize": null,
          "span": 12,
          "styles": [ ],
          "targets": [
@@ -106,7 +114,9 @@
       {
          "columns": [ ],
          "datasource": null,
+         "fontSize": "100%",
          "links": [ ],
+         "pageSize": null,
          "span": 12,
          "styles": [ ],
          "targets": [
