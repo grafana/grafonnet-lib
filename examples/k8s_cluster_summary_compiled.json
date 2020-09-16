@@ -251,9 +251,11 @@
             {
                "columns": [ ],
                "datasource": "$datasource",
+               "fontSize": "100%",
                "gridPos": { },
                "id": 5,
                "links": [ ],
+               "pageSize": null,
                "span": 12,
                "styles": [
                   {
@@ -1295,9 +1297,11 @@
             {
                "columns": [ ],
                "datasource": "$datasource",
+               "fontSize": "100%",
                "gridPos": { },
                "id": 17,
                "links": [ ],
+               "pageSize": null,
                "span": 3,
                "styles": [
                   {
@@ -2207,9 +2211,11 @@
             {
                "columns": [ ],
                "datasource": "$datasource",
+               "fontSize": "100%",
                "gridPos": { },
                "id": 29,
                "links": [ ],
+               "pageSize": null,
                "span": 12,
                "styles": [
                   {
