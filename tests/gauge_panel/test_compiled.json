@@ -147,6 +147,38 @@
       "transparent": false,
       "type": "gauge"
    },
+   "field_title_grafana6": {
+      "datasource": null,
+      "links": [ ],
+      "options": {
+         "fieldOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "defaults": {
+               "links": [ ],
+               "mappings": [ ],
+               "max": 100,
+               "min": 0,
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [ ]
+               },
+               "title": "${__series.name}",
+               "unit": "percent"
+            },
+            "fields": "",
+            "values": false
+         },
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.6.0",
+      "targets": [ ],
+      "title": "",
+      "transparent": false,
+      "type": "gauge"
+   },
    "thresholds": {
       "datasource": null,
       "fieldConfig": {
