@@ -12,7 +12,7 @@ local stat = grafana.statPanel;
       allValues=true,
       reducerFunction='sum',
       graphMode='area',
-      textMode='name',
+      textMode='auto',
       thresholdsMode='percentage',
     ),
   links:
