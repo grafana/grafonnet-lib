@@ -17,7 +17,7 @@
       "options": {
          "colorMode": "value",
          "graphMode": "area",
-	 "textMode": "name",
+         "textMode": "name",
          "justifyMode": "auto",
          "orientation": "auto",
          "reduceOptions": {
@@ -83,7 +83,7 @@
       "options": {
          "colorMode": "value",
          "graphMode": "area",
-	 "textMode": "name",
+         "textMode": "name",
          "justifyMode": "auto",
          "orientation": "auto",
          "reduceOptions": {
@@ -158,7 +158,7 @@
       "options": {
          "colorMode": "value",
          "graphMode": "area",
-	 "textMode": "name",
+         "textMode": "name",
          "justifyMode": "auto",
          "orientation": "auto",
          "reduceOptions": {
