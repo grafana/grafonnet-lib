@@ -15,6 +15,7 @@
    * @param orientation (default `'auto'`) Stacking direction in case of multiple series or fields.
    * @param colorMode (default `'value'`) 'value' or 'background'.
    * @param graphMode (default `'area'`) 'none' or 'area' to enable sparkline mode.
+   * @param textMode (default `'auto'`) 'auto', 'name', 'none', 'value' or 'value_and_name' to enable the corresponding text mode.
    * @param justifyMode (default `'auto'`) 'auto' or 'center'.
    * @param unit (default `'none'`) Panel unit field option.
    * @param min (optional) Leave empty to calculate based on all values.
@@ -51,6 +52,7 @@
     orientation='auto',
     colorMode='value',
     graphMode='area',
+    textMode='area',
     justifyMode='auto',
     unit='none',
     min=null,
@@ -107,6 +109,7 @@
         orientation: orientation,
         colorMode: colorMode,
         graphMode: graphMode,
+        textMode: textMode,
         justifyMode: justifyMode,
       },
       fieldConfig: {
