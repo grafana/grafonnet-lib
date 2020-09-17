@@ -17,7 +17,6 @@
       "options": {
          "colorMode": "value",
          "graphMode": "area",
-         "textMode": "auto",
          "justifyMode": "auto",
          "orientation": "auto",
          "reduceOptions": {
@@ -26,7 +25,8 @@
             ],
             "fields": "",
             "values": true
-         }
+         },
+         "textMode": "auto"
       },
       "pluginVersion": "7",
       "targets": [ ],
@@ -83,7 +83,6 @@
       "options": {
          "colorMode": "value",
          "graphMode": "area",
-         "textMode": "auto",
          "justifyMode": "auto",
          "orientation": "auto",
          "reduceOptions": {
@@ -92,7 +91,8 @@
             ],
             "fields": "",
             "values": false
-         }
+         },
+         "textMode": "auto"
       },
       "pluginVersion": "7",
       "targets": [ ],
@@ -158,7 +158,6 @@
       "options": {
          "colorMode": "value",
          "graphMode": "area",
-         "textMode": "auto",
          "justifyMode": "auto",
          "orientation": "auto",
          "reduceOptions": {
@@ -167,7 +166,8 @@
             ],
             "fields": "",
             "values": false
-         }
+         },
+         "textMode": "auto"
       },
       "pluginVersion": "7",
       "targets": [ ],
@@ -206,7 +206,6 @@
       "options": {
          "colorMode": "value",
          "graphMode": "area",
-         "textMode": "auto",
          "justifyMode": "auto",
          "orientation": "auto",
          "reduceOptions": {
@@ -215,7 +214,8 @@
             ],
             "fields": "",
             "values": false
-         }
+         },
+         "textMode": "auto"
       },
       "pluginVersion": "7",
       "targets": [ ],
@@ -253,7 +253,6 @@
       "options": {
          "colorMode": "value",
          "graphMode": "area",
-         "textMode": "auto",
          "justifyMode": "auto",
          "orientation": "auto",
          "reduceOptions": {
@@ -262,7 +261,8 @@
             ],
             "fields": "",
             "values": false
-         }
+         },
+         "textMode": "auto"
       },
       "pluginVersion": "7",
       "targets": [ ],
