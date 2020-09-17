@@ -52,7 +52,7 @@
     orientation='auto',
     colorMode='value',
     graphMode='area',
-    textMode='area',
+    textMode='auto',
     justifyMode='auto',
     unit='none',
     min=null,
