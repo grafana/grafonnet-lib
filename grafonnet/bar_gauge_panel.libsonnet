@@ -30,7 +30,7 @@
     ],
     fieldConfig: {
       defaults: {
-	[if decimals != null then 'decimals']: decimals,
+        [if decimals != null then 'decimals']: decimals,
         unit: unit,
         thresholds: {
           mode: 'absolute',
