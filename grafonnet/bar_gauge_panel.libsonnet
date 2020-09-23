@@ -9,6 +9,7 @@
    * @param datasource (optional) Panel datasource.
    * @param unit (optional) The unit of the data.
    * @param thresholds (optional) An array of threashold values.
+   * @param decimals (optional)  Number of decimal places to show.
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
@@ -19,6 +20,7 @@
     datasource=null,
     unit=null,
     thresholds=[],
+    decimals=null,
   ):: {
     type: 'bargauge',
     title: title,
@@ -28,6 +30,7 @@
     ],
     fieldConfig: {
       defaults: {
+	[if decimals != null then 'decimals']: decimals,
         unit: unit,
         thresholds: {
           mode: 'absolute',
