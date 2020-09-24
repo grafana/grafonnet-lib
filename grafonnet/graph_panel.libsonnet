@@ -56,6 +56,8 @@
    * @param value_type (default `'individual'`) Type of tooltip value
    * @param shared_tooltip (default `true`) Allow to group or spit tooltips on mouseover within a chart
    * @param percentage (defaut: false) show as percentages
+   * @param y_axis_align (defaut: false) Set Y-axis alignment
+   * @param y_axis_align_level (defaut: null) Set Y-axis alignment level
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
@@ -125,6 +127,8 @@
     percentage=false,
     time_from=null,
     time_shift=null,
+    y_axis_align=false,
+    y_axis_align_level=null
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -164,6 +168,10 @@
       [if x_axis_min != null then 'min']: x_axis_min,
       [if x_axis_max != null then 'max']: x_axis_max,
     },
+    yaxis: {
+        align: y_axis_align,
+        alignLevel: y_axis_align_level
+    }
     lines: lines,
     fill: fill,
     linewidth: linewidth,
