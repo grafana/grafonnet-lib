@@ -9,6 +9,8 @@
    * @param datasource (optional) Panel datasource.
    * @param unit (optional) The unit of the data.
    * @param thresholds (optional) An array of threashold values.
+   * @param orientation (optional) string (horizontal or vertical)
+   * @param displayMode (optional) string (eg. lcd)
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
