@@ -48,8 +48,9 @@
                   [if options_max != null then 'max']: options_max,
                 }
             },
-            orientation: options_orientation,
-            displayMode: options_displayMode,
+            [if options_orientation != null then 'orientation']: options_orientation,
+            [if options_displayMode != null then 'displayMode']: options_displayMode,
+            showUnfilled: true,
         },
         [if pluginVersion != null then 'pluginVersion']: pluginVersion,
 
