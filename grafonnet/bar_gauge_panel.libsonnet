@@ -47,17 +47,17 @@
       targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
     },
     addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
-    "options": {
-    "reduceOptions": {
-      "values": false,
-      "calcs": [
-        "mean"
-      ],
-      "fields": ""
+    options: {
+      reduceOptions: {
+        values: false,
+        calcs: [
+          'mean',
+        ],
+        fields: '',
+      },
+      [if orientation != null then 'orientation']: orientation,
+      [if displayMode != null then 'displayMode']: displayMode,
+      showUnfilled: true,
     },
-    [if orientation !=null then 'orientation']: orientation,
-    [if displayMode !=null then 'displayMode']: displayMode,
-    "showUnfilled": true
-  },
   },
 }
