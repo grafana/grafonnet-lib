@@ -55,8 +55,8 @@
       ],
       "fields": ""
     },
-    "orientation": orientation,
-    "displayMode": displayMode,
+    [if orientation !=null then 'orientation']: orientation,
+    [if displayMode !=null then 'displayMode']: displayMode,
     "showUnfilled": true
   },
   },
