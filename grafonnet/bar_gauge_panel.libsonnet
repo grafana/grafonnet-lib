@@ -19,6 +19,8 @@
     datasource=null,
     unit=null,
     thresholds=[],
+    orientation=null,
+    displayMode=null,
   ):: {
     type: 'bargauge',
     title: title,
@@ -43,5 +45,17 @@
       targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
     },
     addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
+    "options": {
+    "reduceOptions": {
+      "values": false,
+      "calcs": [
+        "mean"
+      ],
+      "fields": ""
+    },
+    "orientation": orientation,
+    "displayMode": displayMode,
+    "showUnfilled": true
+  },
   },
 }
