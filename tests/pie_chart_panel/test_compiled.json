@@ -5,11 +5,22 @@
          "4xx": "#F2C96D",
          "5xx": "#BF1B00"
       },
+      "breakPoint": null,
+      "cacheTimeout": null,
+      "combine": {
+         "label": "Others",
+         "threshold": 0
+      },
       "datasource": "$PROMETHEUS",
+      "decimals": null,
       "description": "description",
+      "format": "short",
       "legend": {
+         "header": "",
          "percentage": true,
          "show": true,
+         "sort": "avg",
+         "sortDesc": true,
          "values": true
       },
       "legendType": "Right side",
@@ -19,34 +30,60 @@
       "repeatDirection": "h",
       "span": 12,
       "targets": [ ],
+      "timeFrom": null,
+      "timeShift": null,
       "title": "test",
       "type": "grafana-piechart-panel",
       "valueName": "current"
    },
    "basic": {
       "aliasColors": { },
+      "breakPoint": null,
+      "cacheTimeout": null,
+      "combine": {
+         "label": "Others",
+         "threshold": 0
+      },
       "datasource": null,
+      "decimals": null,
       "description": "",
+      "format": "short",
       "legend": {
+         "header": "",
          "percentage": true,
          "show": true,
+         "sort": "avg",
+         "sortDesc": true,
          "values": true
       },
       "legendType": "Right side",
       "pieType": "pie",
       "span": 12,
       "targets": [ ],
+      "timeFrom": null,
+      "timeShift": null,
       "title": "test",
       "type": "grafana-piechart-panel",
       "valueName": "current"
    },
    "targets": {
       "aliasColors": { },
+      "breakPoint": null,
+      "cacheTimeout": null,
+      "combine": {
+         "label": "Others",
+         "threshold": 0
+      },
       "datasource": null,
+      "decimals": null,
       "description": "",
+      "format": "short",
       "legend": {
+         "header": "",
          "percentage": true,
          "show": true,
+         "sort": "avg",
+         "sortDesc": true,
          "values": true
       },
       "legendType": "Right side",
@@ -62,6 +99,8 @@
             "refId": "B"
          }
       ],
+      "timeFrom": null,
+      "timeShift": null,
       "title": "with targets",
       "type": "grafana-piechart-panel",
       "valueName": "current"
