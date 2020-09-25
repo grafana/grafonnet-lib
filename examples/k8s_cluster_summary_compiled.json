@@ -754,6 +754,10 @@
                   "show": true,
                   "values": [ ]
                },
+               "yaxis": {
+                  "align": false,
+                  "alignLevel": null
+               },
                "yaxes": [
                   {
                      "format": "short",
@@ -847,6 +851,10 @@
                   "name": null,
                   "show": true,
                   "values": [ ]
+               },
+               "yaxis": {
+                  "align": false,
+                  "alignLevel": null
                },
                "yaxes": [
                   {
@@ -942,6 +950,10 @@
                   "show": true,
                   "values": [ ]
                },
+               "yaxis": {
+                  "align": false,
+                  "alignLevel": null
+               },
                "yaxes": [
                   {
                      "format": "short",
@@ -1028,6 +1040,10 @@
                   "name": null,
                   "show": true,
                   "values": [ ]
+               },
+               "yaxis": {
+                  "align": false,
+                  "alignLevel": null
                },
                "yaxes": [
                   {
