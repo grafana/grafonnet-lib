@@ -169,8 +169,8 @@
       [if x_axis_max != null then 'max']: x_axis_max,
     },
     yaxis: {
-        align: y_axis_align,
-        alignLevel: y_axis_align_level
+      align: y_axis_align,
+      alignLevel: y_axis_align_level
     }
     lines: lines,
     fill: fill,
