@@ -170,8 +170,8 @@
     },
     yaxis: {
       align: y_axis_align,
-      alignLevel: y_axis_align_level
-    }
+      alignLevel: y_axis_align_level,
+    },
     lines: lines,
     fill: fill,
     linewidth: linewidth,
