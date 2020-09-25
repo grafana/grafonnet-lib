@@ -128,7 +128,7 @@
     time_from=null,
     time_shift=null,
     y_axis_align=false,
-    y_axis_align_level=null
+    y_axis_align_level=null,
   ):: {
     title: title,
     [if span != null then 'span']: span,
