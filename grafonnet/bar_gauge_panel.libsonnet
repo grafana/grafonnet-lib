@@ -20,61 +20,61 @@
    * @method addMapping(mapping) Adds a mapping object.
    * @method addThreshold(threshold) Adds a threshold object.
    */
-  	new(
-		title,
-		description=null,
-		datasource=null,
-		unit=null,
-		reductionFunc='mean',
-		options_orientation='auto',
-		options_displayMode='lcd',
-		options_min=1,
-		options_max=100,
-		pluginVersion=null,
-  	):: {
-        type: 'bargauge',
-        title: title,
-        [if description != null then 'description']: description,
-        datasource: datasource,
-        options: {
-            "fieldOptions": {
-                "calcs": [
-                  reductionFunc
-                ],
-                "defaults": {
-                  "mappings": [],
-                  "thresholds": [],
-                  [if options_min != null then 'min']: options_min,
-                  [if options_max != null then 'max']: options_max,
-                }
-            },
-            [if options_orientation != null then 'orientation']: options_orientation,
-            [if options_displayMode != null then 'displayMode']: options_displayMode,
-            showUnfilled: true,
-        },
-        [if pluginVersion != null then 'pluginVersion']: pluginVersion,
-
-        _nextTarget:: 0,
-        addTarget(target):: self {
-            local nextTarget = super._nextTarget,
-            _nextTarget: nextTarget + 1,
-            targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
-        },
-
-        addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
-
-        _nextMapping:: 0,
-        addMapping(mapping):: self {
-            local nextMapping = super._nextMapping,
-            _nextMapping: nextMapping + 1,
-            options+: {fieldOptions+: { defaults+: { mappings+: [mapping { id: nextMapping }] } } },
-        },
-
-        _nextThreshold:: 0,
-        addThreshold(threshold):: self {
-            local nextThreshold = super._nextThreshold,
-            _nextThreshold: nextThreshold + 1,
-            options+: {fieldOptions+: { defaults+: { thresholds+: [threshold { id: nextThreshold }] } } },
-        },
+  new(
+    title,
+    description=null,
+    datasource=null,
+    unit=null,
+    reductionFunc='mean',
+    options_orientation='auto',
+    options_displayMode='lcd',
+    options_min=1,
+    options_max=100,
+    pluginVersion=null,
+  ):: {
+    type: 'bargauge',
+    title: title,
+    [if description != null then 'description']: description,
+    datasource: datasource,
+    options: {
+      "fieldOptions": {
+        "calcs": [
+          reductionFunc
+        ],
+        "defaults": {
+          "mappings": [],
+          "thresholds": [],
+          [if options_min != null then 'min']: options_min,
+          [if options_max != null then 'max']: options_max,
+        }
+      },
+      [if options_orientation != null then 'orientation']: options_orientation,
+      [if options_displayMode != null then 'displayMode']: options_displayMode,
+      showUnfilled: true,
     },
+    [if pluginVersion != null then 'pluginVersion']: pluginVersion,
+
+    _nextTarget:: 0,
+    addTarget(target):: self {
+      local nextTarget = super._nextTarget,
+      _nextTarget: nextTarget + 1,
+      targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
+    },
+
+    addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
+
+    _nextMapping:: 0,
+    addMapping(mapping):: self {
+      local nextMapping = super._nextMapping,
+      _nextMapping: nextMapping + 1,
+      options+: {fieldOptions+: { defaults+: { mappings+: [mapping { id: nextMapping }] } } },
+    },
+
+    _nextThreshold:: 0,
+    addThreshold(threshold):: self {
+      local nextThreshold = super._nextThreshold,
+      _nextThreshold: nextThreshold + 1,
+      options+: {fieldOptions+: { defaults+: { thresholds+: [threshold { id: nextThreshold }] } } },
+    },
+  },
 }
