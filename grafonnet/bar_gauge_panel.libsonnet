@@ -37,16 +37,16 @@
     [if description != null then 'description']: description,
     datasource: datasource,
     options: {
-      "fieldOptions": {
-        "calcs": [
-          reductionFunc
+      fieldOptions: {
+        calcs: [
+          reductionFunc,
         ],
-        "defaults": {
-          "mappings": [],
-          "thresholds": [],
+        defaults: {
+          mappings: [],
+          thresholds: [],
           [if options_min != null then 'min']: options_min,
           [if options_max != null then 'max']: options_max,
-        }
+        },
       },
       [if options_orientation != null then 'orientation']: options_orientation,
       [if options_displayMode != null then 'displayMode']: options_displayMode,
@@ -67,14 +67,14 @@
     addMapping(mapping):: self {
       local nextMapping = super._nextMapping,
       _nextMapping: nextMapping + 1,
-      options+: {fieldOptions+: { defaults+: { mappings+: [mapping { id: nextMapping }] } } },
+      options+: { fieldOptions+: { defaults+: { mappings+: [mapping { id: nextMapping }] } } },
     },
 
     _nextThreshold:: 0,
     addThreshold(threshold):: self {
       local nextThreshold = super._nextThreshold,
       _nextThreshold: nextThreshold + 1,
-      options+: {fieldOptions+: { defaults+: { thresholds+: [threshold { id: nextThreshold }] } } },
+      options+: { fieldOptions+: { defaults+: { thresholds+: [threshold { id: nextThreshold }] } } },
     },
   },
 }
