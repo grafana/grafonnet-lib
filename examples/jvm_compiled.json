@@ -512,10 +512,6 @@
                   "show": true,
                   "values": [ ]
                },
-               "yaxis": {
-                  "align": false,
-                  "alignLevel": null
-               },
                "yaxes": [
                   {
                      "decimals": 2,
@@ -615,10 +611,6 @@
                   "name": null,
                   "show": true,
                   "values": [ ]
-               },
-               "yaxis": {
-                  "align": false,
-                  "alignLevel": null
                },
                "yaxes": [
                   {
@@ -735,10 +727,6 @@
                   "show": true,
                   "values": [ ]
                },
-               "yaxis": {
-                  "align": false,
-                  "alignLevel": null
-               },
                "yaxes": [
                   {
                      "decimals": 2,
@@ -838,10 +826,6 @@
                   "show": true,
                   "values": [ ]
                },
-               "yaxis": {
-                  "align": false,
-                  "alignLevel": null
-               },
                "yaxes": [
                   {
                      "decimals": 2,
@@ -926,10 +910,6 @@
                   "name": null,
                   "show": true,
                   "values": [ ]
-               },
-               "yaxis": {
-                  "align": false,
-                  "alignLevel": null
                },
                "yaxes": [
                   {
@@ -1062,10 +1042,6 @@
                   "show": true,
                   "values": [ ]
                },
-               "yaxis": {
-                  "align": false,
-                  "alignLevel": null
-               },
                "yaxes": [
                   {
                      "decimals": 2,
@@ -1150,10 +1126,6 @@
                   "name": null,
                   "show": true,
                   "values": [ ]
-               },
-               "yaxis": {
-                  "align": false,
-                  "alignLevel": null
                },
                "yaxes": [
                   {

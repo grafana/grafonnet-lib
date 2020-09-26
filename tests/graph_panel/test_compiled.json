@@ -72,10 +72,6 @@
          "show": false,
          "values": [ ]
       },
-      "yaxis": {
-         "align": false,
-         "alignLevel": null
-      },
       "yaxes": [
          {
             "decimals": 2,
