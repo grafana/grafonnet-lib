@@ -6,12 +6,15 @@
    *
    * @param expr
    * @param hide (optional) Disable query on graph.
+   * @param legendFormat (optional) Defines the legend. Defaults to ''.
    */
   target(
     expr,
     hide=null,
+    legendFormat='',
   ):: {
     [if hide != null then 'hide']: hide,
     expr: expr,
+    legendFormat: legendFormat,
   },
 }
