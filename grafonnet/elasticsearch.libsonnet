@@ -1,6 +1,16 @@
 {
   /**
+   * Creates an [Elasticsearch target](https://grafana.com/docs/grafana/latest/features/datasources/elasticsearch/)
+   *
    * @name elasticsearch.target
+   *
+   * @param query
+   * @param timeField
+   * @param id (optional)
+   * @param datasource (optional)
+   * @param metrics (optional)
+   * @param bucketAggs (optional)
+   * @param alias (optional)
    */
   target(
     query,

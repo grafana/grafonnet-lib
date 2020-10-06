@@ -5,10 +5,10 @@
    * @name barGaugePanel.new
    *
    * @param title Panel title.
-   * @param description Panel description.
-   * @param datasource Panel datasource.
-   * @param unit The unit of the data.
-   * @param thresholds An array of threashold values.
+   * @param description (optional) Panel description.
+   * @param datasource (optional) Panel datasource.
+   * @param unit (optional) The unit of the data.
+   * @param thresholds (optional) An array of threashold values.
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.

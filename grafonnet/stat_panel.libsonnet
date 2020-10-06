@@ -5,34 +5,34 @@
    * @name statPanel.new
    *
    * @param title Panel title.
-   * @param description Panel description.
-   * @param transparent Whether to display the panel without a background.
-   * @param datasource Panel datasource.
-   * @param allValues Show all values instead of reducing to one.
-   * @param valueLimit Limit of values in all values mode.
-   * @param reducerFunction Function to use to reduce values to when using single value.
-   * @param fields Fields that should be included in the panel.
-   * @param orientation Stacking direction in case of multiple series or fields.
-   * @param colorMode 'value' or 'background'.
-   * @param graphMode 'none' or 'area' to enable sparkline mode.
-   * @param justifyMode 'auto' or 'center'.
-   * @param unit Panel unit field option.
-   * @param min Leave empty to calculate based on all values.
-   * @param max Leave empty to calculate based on all values.
-   * @param decimals Number of decimal places to show.
-   * @param displayName Change the field or series name.
-   * @param noValue What to show when there is no value.
-   * @param thresholdsMode 'absolute' or 'percentage'.
-   * @param repeat Name of variable that should be used to repeat this panel.
-   * @param repeatDirection 'h' for horizontal or 'v' for vertical.
-   * @param repeatMaxPerRow Maximum panels per row in repeat mode.
-   * @param pluginVersion Plugin version the panel should be modeled for. This has been tested with the default, '7', and '6.7'.
+   * @param description (optional) Panel description.
+   * @param transparent (default `false`) Whether to display the panel without a background.
+   * @param datasource (optional) Panel datasource.
+   * @param allValues (default `false`) Show all values instead of reducing to one.
+   * @param valueLimit (optional) Limit of values in all values mode.
+   * @param reducerFunction (default `'mean'`) Function to use to reduce values to when using single value.
+   * @param fields (default `''`) Fields that should be included in the panel.
+   * @param orientation (default `'auto'`) Stacking direction in case of multiple series or fields.
+   * @param colorMode (default `'value'`) 'value' or 'background'.
+   * @param graphMode (default `'area'`) 'none' or 'area' to enable sparkline mode.
+   * @param justifyMode (default `'auto'`) 'auto' or 'center'.
+   * @param unit (default `'none'`) Panel unit field option.
+   * @param min (optional) Leave empty to calculate based on all values.
+   * @param max (optional) Leave empty to calculate based on all values.
+   * @param decimals (optional) Number of decimal places to show.
+   * @param displayName (optional) Change the field or series name.
+   * @param noValue (optional) What to show when there is no value.
+   * @param thresholdsMode (default `'absolute'`) 'absolute' or 'percentage'.
+   * @param repeat (optional) Name of variable that should be used to repeat this panel.
+   * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
+   * @param repeatMaxPerRow (optional) Maximum panels per row in repeat mode.
+   * @param pluginVersion (default `'7'`) Plugin version the panel should be modeled for. This has been tested with the default, '7', and '6.7'.
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
-   * @method addLink(link) Adds a link. Argument format: `{ title: 'Link Title', url: 'https://...', targetBlank: true }`.
+   * @method addLink(link) Adds a [panel link](https://grafana.com/docs/grafana/latest/linking/panel-links/). Argument format: `{ title: 'Link Title', url: 'https://...', targetBlank: true }`.
    * @method addLinks(links) Adds an array of links.
-   * @method addThreshold(step) Adds a threshold step. Argument format: `{ color: 'green', value: 0 }`.
+   * @method addThreshold(step) Adds a [threshold](https://grafana.com/docs/grafana/latest/panels/thresholds/) step. Argument format: `{ color: 'green', value: 0 }`.
    * @method addThresholds(steps) Adds an array of threshold steps.
    * @method addMapping(mapping) Adds a value mapping.
    * @method addMappings(mappings) Adds an array of value mappings.

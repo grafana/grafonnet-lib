@@ -1,60 +1,68 @@
 {
   /**
-   * Returns a new graph panel that can be added in a row.
+   * Creates a [graph panel](https://grafana.com/docs/grafana/latest/panels/visualizations/graph-panel/).
    * It requires the graph panel plugin in grafana, which is built-in.
    *
    * @name graphPanel.new
    *
    * @param title The title of the graph panel.
-   * @param span Width of the panel
-   * @param datasource Datasource
-   * @param fill Fill, integer from 0 to 10
-   * @param linewidth Line Width, integer from 0 to 10
-   * @param decimals Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
-   * @param decimalsY1 Override automatic decimal precision for the first Y axis. If null, use decimals parameter.
-   * @param decimalsY2 Override automatic decimal precision for the second Y axis. If null, use decimals parameter.
-   * @param min_span Min span
-   * @param format Unit of the Y axes
-   * @param formatY1 Unit of the first Y axis
-   * @param formatY2 Unit of the second Y axis
-   * @param min Min of the Y axes
-   * @param max Max of the Y axes
-   * @param labelY1 Label of the first Y axis
-   * @param labelY2 Label of the second Y axis
-   * @param x_axis_mode X axis mode, one of [time, series, histogram]
-   * @param x_axis_values Chosen value of series, one of [avg, min, max, total, count]
-   * @param x_axis_buckets restricts the x axis to this amount of buckets
-   * @param x_axis_min restricts the x axis to display from this value if supplied
-   * @param x_axis_max restricts the x axis to display up to this value if supplied
-   * @param lines Display lines, boolean
-   * @param points Display points, boolean
-   * @param pointradius Radius of the points, allowed values are 0.5 or [1 ... 10] with step 1
-   * @param bars Display bars, boolean
-   * @param staircase Display line as staircase, boolean
-   * @param dashes Display line as dashes
-   * @param stack Stack values
-   * @param repeat Variable used to repeat the graph panel
-   * @param legend_show Show legend
-   * @param legend_values Show values in legend
-   * @param legend_min Show min in legend
-   * @param legend_max Show max in legend
-   * @param legend_current Show current in legend
-   * @param legend_total Show total in legend
-   * @param legend_avg Show average in legend
-   * @param legend_alignAsTable Show legend as table
-   * @param legend_rightSide Show legend to the right
-   * @param legend_sideWidth Legend width
-   * @param legend_sort Sort order of legend
-   * @param legend_sortDesc Sort legend descending
-   * @param aliasColors Define color mappings for graphs
-   * @param thresholds Configuration of graph thresholds
-   * @param logBase1Y Value of logarithm base of the first Y axis
-   * @param logBase2Y Value of logarithm base of the second Y axis
-   * @param transparent Boolean (default: false) If set to true the panel will be transparent
-   * @param value_type Type of tooltip value
-   * @param shared_tooltip Boolean Allow to group or spit tooltips on mouseover within a chart
-   * @param percentage Boolean (defaut: false) show as percentages
-   * @return A json that represents a graph panel
+   * @param description (optional) The description of the panel
+   * @param span (optional) Width of the panel
+   * @param datasource (optional) Datasource
+   * @param fill (default `1`) , integer from 0 to 10
+   * @param linewidth (default `1`) Line Width, integer from 0 to 10
+   * @param decimals (optional) Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
+   * @param decimalsY1 (optional) Override automatic decimal precision for the first Y axis. If null, use decimals parameter.
+   * @param decimalsY2 (optional) Override automatic decimal precision for the second Y axis. If null, use decimals parameter.
+   * @param min_span (optional) Min span
+   * @param format (default `short`) Unit of the Y axes
+   * @param formatY1 (optional) Unit of the first Y axis
+   * @param formatY2 (optional) Unit of the second Y axis
+   * @param min (optional) Min of the Y axes
+   * @param max (optional) Max of the Y axes
+   * @param labelY1 (optional) Label of the first Y axis
+   * @param labelY2 (optional) Label of the second Y axis
+   * @param x_axis_mode (default `'time'`) X axis mode, one of [time, series, histogram]
+   * @param x_axis_values (default `'total'`) Chosen value of series, one of [avg, min, max, total, count]
+   * @param x_axis_buckets (optional) Restricts the x axis to this amount of buckets
+   * @param x_axis_min (optional) Restricts the x axis to display from this value if supplied
+   * @param x_axis_max (optional) Restricts the x axis to display up to this value if supplied
+   * @param lines (default `true`) Display lines
+   * @param points (default `false`) Display points
+   * @param pointradius (default `5`) Radius of the points, allowed values are 0.5 or [1 ... 10] with step 1
+   * @param bars (default `false`) Display bars
+   * @param staircase (default `false`) Display line as staircase
+   * @param dashes (default `false`) Display line as dashes
+   * @param stack (default `false`) Whether to stack values
+   * @param repeat (optional) Name of variable that should be used to repeat this panel.
+   * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
+   * @param legend_show (default `true`) Show legend
+   * @param legend_values (default `false`) Show values in legend
+   * @param legend_min (default `false`) Show min in legend
+   * @param legend_max (default `false`) Show max in legend
+   * @param legend_current (default `false`) Show current in legend
+   * @param legend_total (default `false`) Show total in legend
+   * @param legend_avg (default `false`) Show average in legend
+   * @param legend_alignAsTable (default `false`) Show legend as table
+   * @param legend_rightSide (default `false`) Show legend to the right
+   * @param legend_sideWidth (optional) Legend width
+   * @param legend_sort (optional) Sort order of legend
+   * @param legend_sortDesc (optional) Sort legend descending
+   * @param aliasColors (optional) Define color mappings for graphs
+   * @param thresholds (optional) An array of graph thresholds
+   * @param logBase1Y (default `1`) Value of logarithm base of the first Y axis
+   * @param logBase2Y (default `1`) Value of logarithm base of the second Y axis
+   * @param transparent (default `false`) Whether to display the panel without a background.
+   * @param value_type (default `'individual'`) Type of tooltip value
+   * @param shared_tooltip (default `true`) Allow to group or spit tooltips on mouseover within a chart
+   * @param percentage (defaut: false) show as percentages
+   *
+   * @method addTarget(target) Adds a target object.
+   * @method addTargets(targets) Adds an array of targets.
+   * @method addSeriesOverride(override)
+   * @method addYaxis(format,min,max,label,show,logBase,decimals) Adds a Y axis to the graph
+   * @method addAlert(alert) Adds an alert
+   * @method addLink(link) Adds a [panel link](https://grafana.com/docs/grafana/latest/linking/panel-links/)
    */
   new(
     title,
