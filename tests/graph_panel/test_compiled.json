@@ -699,6 +699,99 @@
          }
       ]
    },
+   "multipleLinks": {
+      "aliasColors": { },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "legend": {
+         "alignAsTable": false,
+         "avg": false,
+         "current": false,
+         "max": false,
+         "min": false,
+         "rightSide": false,
+         "show": true,
+         "sideWidth": null,
+         "total": false,
+         "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [
+         {
+            "asDropdown": true,
+            "icon": "external link",
+            "includeVars": false,
+            "keepTime": false,
+            "tags": [ ],
+            "targetBlank": false,
+            "title": "foolink",
+            "type": "dashboards",
+            "url": ""
+         },
+         {
+            "asDropdown": true,
+            "icon": "external link",
+            "includeVars": false,
+            "keepTime": false,
+            "tags": [ ],
+            "targetBlank": false,
+            "title": "varlink",
+            "type": "dashboards",
+            "url": ""
+         }
+      ],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [ ],
+      "spaceLength": 10,
+      "span": 12,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [ ],
+      "thresholds": [ ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Multiple Links",
+      "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+         "buckets": null,
+         "mode": "time",
+         "name": null,
+         "show": true,
+         "values": [ ]
+      },
+      "yaxes": [
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         },
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         }
+      ]
+   },
    "multipleTargets": {
       "aliasColors": { },
       "bars": false,

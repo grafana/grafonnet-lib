@@ -275,5 +275,6 @@
     addLink(link):: self {
       links+: [link],
     },
+    addLinks(links):: std.foldl(function(p, t) p.addLink(t), links, self),
   },
 }
