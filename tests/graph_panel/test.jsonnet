@@ -80,8 +80,8 @@ local graphPanel = grafana.graphPanel;
          .addLink('barlinks'),
   multipleLinks: graphPanel.new('Multiple Links', span=12)
                  .addLinks([
-    grafana.link.dashboards(title='foolink', tags=[]),
-    grafana.link.dashboards(title='varlink', tags=[]),
+    { title: 'foo', url: 'link' },
+    { title: 'bar', url: 'link' },
   ]),
   axis_decimals: graphPanel.new('Axis decimals', decimals=2, decimalsY1=1),
   staircase_line: graphPanel.new('Staircase line', staircase=true),

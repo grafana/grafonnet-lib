@@ -722,26 +722,12 @@
       "linewidth": 1,
       "links": [
          {
-            "asDropdown": true,
-            "icon": "external link",
-            "includeVars": false,
-            "keepTime": false,
-            "tags": [ ],
-            "targetBlank": false,
-            "title": "foolink",
-            "type": "dashboards",
-            "url": ""
+            "title": "foo",
+            "url": "link"
          },
          {
-            "asDropdown": true,
-            "icon": "external link",
-            "includeVars": false,
-            "keepTime": false,
-            "tags": [ ],
-            "targetBlank": false,
-            "title": "varlink",
-            "type": "dashboards",
-            "url": ""
+            "title": "bar",
+            "url": "link"
          }
       ],
       "nullPointMode": "null",
