@@ -1,0 +1,12 @@
+{
+   "advance": {
+      "targetBlank": true,
+      "title": "foo",
+      "url": "www.foo.com"
+   },
+   "basic": {
+      "targetBlank": false,
+      "title": "foo",
+      "url": "www.foo.com"
+   }
+}
