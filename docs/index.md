@@ -6,6 +6,20 @@ maintaining them, you can easily create your own dashboards using the many
 helpers grafonnet-lib offers you, thanks to the data templating language
 [Jsonnet](http://jsonnet.org/).
 
+!!! warning
+    We're in the process of introducing generated code that can be used instead
+    of the manually maintained Jsonnet code in the `grafonnet` directory. The
+    generated code lives in `grafonnet-7.0`. It's generated from a new project,
+    [grafana/dashboard-spec](https://github.com/grafana/dashboard-spec). The
+    generated code is still incomplete, however, the components present are
+    useable. We very much appreciate contributions in
+    [grafana/dashboard-spec](https://github.com/grafana/dashboard-spec) for
+    components yet to be added._
+
+    | Grafana Version | Grafonnet Library | API Docs |
+    | --- | --- | --- |
+    | 7.x | [grafonnet-7.0](https://github.com/grafana/grafonnet-lib/tree/master/grafonnet-7.0) | [DOCS.md](https://github.com/grafana/grafonnet-lib/tree/master/grafonnet-7.0/DOCS.md) |
+
 ## Grafana dashboard
 
 [A dashboard in Grafana is represented by a JSON

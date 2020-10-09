@@ -4,6 +4,8 @@ theme:
   palette:
     primary: 'Deep orange'
     accent: 'Orange'
+markdown_extensions:
+  - 'admonition'
 nav:
   - Home: 'index.md'
   - Getting Started: 'getting-started.md'
