@@ -8,6 +8,7 @@
       "decimals": 2,
       "description": "description",
       "fill": 2,
+      "fillGradient": 1,
       "height": "2011px",
       "legend": {
          "alignAsTable": true,
@@ -114,6 +115,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -203,6 +205,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -277,6 +280,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -348,6 +352,7 @@
       "datasource": null,
       "decimals": 2,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -419,6 +424,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -489,6 +495,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -561,6 +568,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -633,6 +641,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -706,6 +715,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -785,6 +795,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": true,
          "avg": false,
@@ -857,6 +868,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -926,6 +938,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
