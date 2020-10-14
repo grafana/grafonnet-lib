@@ -715,6 +715,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
