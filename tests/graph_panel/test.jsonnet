@@ -79,6 +79,11 @@ local graphPanel = grafana.graphPanel;
   links: graphPanel.new('with links', span=12)
          .addLink('foolinks')
          .addLink('barlinks'),
+  multipleLinks: graphPanel.new('Multiple Links', span=12)
+                 .addLinks([
+    { title: 'foo', url: 'link' },
+    { title: 'bar', url: 'link' },
+  ]),
   axis_decimals: graphPanel.new('Axis decimals', decimals=2, decimalsY1=1),
   staircase_line: graphPanel.new('Staircase line', staircase=true),
 }
