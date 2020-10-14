@@ -21,6 +21,7 @@ local graphPanel = grafana.graphPanel;
     labelY2='labelY2',
     lines=false,
     fill=2,
+    fillGradient=1,
     linewidth=2,
     nullPointMode='nullAsZero',
     points=true,
