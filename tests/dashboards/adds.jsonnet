@@ -16,7 +16,7 @@ local link = grafana.link;
   .addAnnotations(['foo2', 'bar2'])
   .addLink('foolinks')
   .addLink('barlinks')
-  .addDashboardLinks([link.dashboards('foo', ['foo', 'bar']), link.dashboards('bar', ['foo', 'bar'])]),
+  .addLinks([link.dashboards('foo', ['foo', 'bar']), link.dashboards('bar', ['foo', 'bar'])]),
   dashboard.new('test2')
   .addPanel(row.new(title='id0'), { x: 14, y: 42, w: 33, h: 26 })
   .addPanel(row.new(title='id1'), { x: 24, y: 52, w: 43, h: 36 })
