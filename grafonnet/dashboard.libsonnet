@@ -27,6 +27,7 @@ local timepickerlib = import 'timepicker.libsonnet';
    * @method addPanel(panel,gridPos) Appends a panel, with an optional grid position in grid coordinates, e.g. `gridPos={'x':0, 'y':0, 'w':12, 'h': 9}`
    * @method addPanels(panels) Appends an array of panels
    * @method addLink(link) Adds a [dashboard link](https://grafana.com/docs/grafana/latest/linking/dashboard-links/)
+   * @method addLinks(dashboardLink) Adds an array of [dashboard links](https://grafana.com/docs/grafana/latest/linking/dashboard-links/)
    * @method addRequired(type, name, id, version)
    * @method addInput(name, label, type, pluginId, pluginName, description, value)
    * @method addRow(row) Adds a row. This is the legacy row concept from Grafana < 5, when rows were needed for layout. Rows should now be added via `addPanel`.
@@ -149,6 +150,7 @@ local timepickerlib = import 'timepicker.libsonnet';
     addLink(link):: self {
       links+: [link],
     },
+    addLinks(dashboardLinks):: std.foldl(function(d, t) d.addLink(t), dashboardLinks, self),
     required:: [],
     __requires: it.required,
     addRequired(type, name, id, version):: self {

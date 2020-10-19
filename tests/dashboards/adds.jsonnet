@@ -1,6 +1,8 @@
 local grafana = import 'grafonnet/grafana.libsonnet';
 local dashboard = grafana.dashboard;
 local row = grafana.row;
+local link = grafana.link;
+
 
 [
   dashboard.new('test')
@@ -13,7 +15,8 @@ local row = grafana.row;
   .addAnnotation('bar')
   .addAnnotations(['foo2', 'bar2'])
   .addLink('foolinks')
-  .addLink('barlinks'),
+  .addLink('barlinks')
+  .addLinks([link.dashboards('foo', ['foo', 'bar']), link.dashboards('bar', ['foo', 'bar'])]),
   dashboard.new('test2')
   .addPanel(row.new(title='id0'), { x: 14, y: 42, w: 33, h: 26 })
   .addPanel(row.new(title='id1'), { x: 24, y: 52, w: 43, h: 36 })
