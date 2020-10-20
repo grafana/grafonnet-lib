@@ -13,6 +13,7 @@ local singlestat = grafana.singlestat;
     'adv',
     format='s',
     interval='10s',
+    maxDataPoints=1000,
     repeatDirection='v',
     height='42px',
     prefixFontSize='10%',
