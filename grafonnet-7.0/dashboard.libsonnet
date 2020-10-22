@@ -33,18 +33,13 @@
     ,
 
     setTimepicker(
+      hidden=false,
       refreshIntervals=['5s', '10s', '30s', '1m', '5m', '15m', '30m', '1h', '2h', '1d'],
     ):: self {}
+        + { timepicker+: { [if hidden != null then 'hidden']: hidden } }
         + { timepicker+: { [if refreshIntervals != null then 'refresh_intervals']: refreshIntervals } }
     ,
 
-
-    addTemplate(
-      template
-    ):: self {}
-        + { templating+: { list+: [
-          template,
-        ] } },
 
     addAnnotation(
       builtIn=0,
@@ -67,6 +62,13 @@
             [if rawQuery != null then 'rawQuery']: rawQuery,
             [if showIn != null then 'showIn']: showIn,
           },
+        ] } },
+
+    addTemplate(
+      template
+    ):: self {}
+        + { templating+: { list+: [
+          template,
         ] } },
 
 

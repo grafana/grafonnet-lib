@@ -51,9 +51,15 @@ Instantiate a dashboard.
   
 #### #setTimepicker
 
+* **hidden**: (type: boolean, default: `false`)
+  
 * **refreshIntervals**: (type: array, default: `["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"]`)
   
 
+#### #addTemplate
+
+* **template**: (type: object)
+  
 #### #addAnnotation
 
 * **builtIn**: (type: integer, default: `0`)
@@ -71,10 +77,6 @@ Instantiate a dashboard.
 * **rawQuery**: (type: string, default: `null`)
   
 * **showIn**: (type: integer, default: `0`)
-  
-#### #addTemplate
-
-* **template**: (type: object)
   
 
 
@@ -134,7 +136,7 @@ Instantiate a dashboard.
 * **values**: (type: boolean, default: `false`)
   
 
-#### #addPanelLink
+#### #addDataLink
 
 * **targetBlank**: (type: boolean, default: `true`)
   
@@ -142,7 +144,7 @@ Instantiate a dashboard.
   
 * **url**: (type: string, default: `null`)
   
-#### #addDataLink
+#### #addPanelLink
 
 * **targetBlank**: (type: boolean, default: `true`)
   
@@ -528,7 +530,7 @@ Instantiate a dashboard.
 * **values**: (type: boolean, default: `false`)
   
 
-#### #addDataLink
+#### #addPanelLink
 
 * **targetBlank**: (type: boolean, default: `true`)
   
@@ -536,7 +538,7 @@ Instantiate a dashboard.
   
 * **url**: (type: string, default: `null`)
   
-#### #addPanelLink
+#### #addDataLink
 
 * **targetBlank**: (type: boolean, default: `true`)
   
@@ -599,9 +601,9 @@ Instantiate a dashboard.
 
 * **displayName**: (type: string, default: `null`)
   
-* **max**: (type: integer, default: `0`)
+* **max**: (type: integer, default: `null`)
   
-* **min**: (type: integer, default: `0`)
+* **min**: (type: integer, default: `null`)
   
 * **thresholdMode**: (type: string, default: `"absolute"`)
   
@@ -626,7 +628,7 @@ Instantiate a dashboard.
 * **showHeader**: (type: boolean, default: `true`)
   
 
-#### #addPanelLink
+#### #addDataLink
 
 * **targetBlank**: (type: boolean, default: `true`)
   
@@ -634,7 +636,7 @@ Instantiate a dashboard.
   
 * **url**: (type: string, default: `null`)
   
-#### #addDataLink
+#### #addPanelLink
 
 * **targetBlank**: (type: boolean, default: `true`)
   
@@ -736,6 +738,8 @@ Instantiate a dashboard.
 * **expr**: (type: string, default: `null`)
   
 * **format**: (type: string, default: `"time_series"`)
+  
+* **instant**: (type: boolean, default: `null`)
   
 * **interval**: (type: string, default: `null`)
   

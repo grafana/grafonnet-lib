@@ -19,8 +19,8 @@
 
     setFieldConfig(
       displayName=null,
-      max=0,
-      min=0,
+      max=null,
+      min=null,
       thresholdMode='absolute',
       noValue=null,
       unit='short',

@@ -58,19 +58,6 @@
     ,
 
 
-    addDataLink(
-      targetBlank=true,
-      title=null,
-      url=null,
-    ):: self {}
-        + { fieldConfig+: { defaults+: { links+: [
-          {
-            [if targetBlank != null then 'targetBlank']: targetBlank,
-            [if title != null then 'title']: title,
-            [if url != null then 'url']: url,
-          },
-        ] } } },
-
     addPanelLink(
       targetBlank=true,
       title=null,
@@ -83,6 +70,19 @@
             [if url != null then 'url']: url,
           },
         ] },
+
+    addDataLink(
+      targetBlank=true,
+      title=null,
+      url=null,
+    ):: self {}
+        + { fieldConfig+: { defaults+: { links+: [
+          {
+            [if targetBlank != null then 'targetBlank']: targetBlank,
+            [if title != null then 'title']: title,
+            [if url != null then 'url']: url,
+          },
+        ] } } },
 
     addMapping(
       from=null,
