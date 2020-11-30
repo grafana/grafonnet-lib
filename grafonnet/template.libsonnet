@@ -54,7 +54,6 @@
       tagValuesQuery: tagValuesQuery,
       tagsQuery: tagsQuery,
       tags: [],
-      tagsQuery: '',
       type: 'query',
       useTags: useTags,
     },
