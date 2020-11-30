@@ -27,6 +27,8 @@
     label=null,
     allValues=null,
     tagValuesQuery='',
+    tagsQuery='',
+    useTags=false,
     current=null,
     hide='',
     regex='',
@@ -50,10 +52,11 @@
       regex: regex,
       sort: sort,
       tagValuesQuery: tagValuesQuery,
+      tagsQuery: tagsQuery,
       tags: [],
       tagsQuery: '',
       type: 'query',
-      useTags: false,
+      useTags: useTags,
     },
   /**
    * Use an [interval variable](https://grafana.com/docs/grafana/latest/variables/variable-types/add-interval-variable/) to represent time spans such as '1m', '1h', '1d'. You can think of them as a dashboard-wide "group by time" command. Interval variables change how the data is grouped in the visualization. You can also use the Auto Option to return a set number of data points per time span.
