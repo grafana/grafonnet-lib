@@ -59,6 +59,7 @@
     displayName=null,
     noValue=null,
     thresholdsMode='absolute',
+    timeFrom=null,
     repeat=null,
     repeatDirection='h',
     repeatMaxPerRow=null,
@@ -75,6 +76,7 @@
     [if repeat != null then 'repeat']: repeat,
     [if repeat != null then 'repeatDirection']: repeatDirection,
     [if repeat != null then 'repeatMaxPerRow']: repeatMaxPerRow,
+    [if timeFrom != null then 'timeFrom']: timeFrom,
 
     // targets
     _nextTarget:: 0,
