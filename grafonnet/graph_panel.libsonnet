@@ -128,6 +128,7 @@
     percentage=false,
     time_from=null,
     time_shift=null,
+    interval=null
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -204,6 +205,7 @@
     },
     timeFrom: time_from,
     timeShift: time_shift,
+    interval: interval,
     [if transparent == true then 'transparent']: transparent,
     aliasColors: aliasColors,
     repeat: repeat,
