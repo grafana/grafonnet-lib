@@ -57,6 +57,7 @@
    * @param value_type (default `'individual'`) Type of tooltip value
    * @param shared_tooltip (default `true`) Allow to group or spit tooltips on mouseover within a chart
    * @param percentage (defaut: false) show as percentages
+   * @param interval (defaut: null) A lower limit for the interval.
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
