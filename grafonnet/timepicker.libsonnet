@@ -31,8 +31,10 @@
       '7d',
       '30d',
     ],
+    nowDelay=null,
   ):: {
     refresh_intervals: refresh_intervals,
     time_options: time_options,
+    [if nowDelay != null then 'nowDelay']: nowDelay,
   },
 }
