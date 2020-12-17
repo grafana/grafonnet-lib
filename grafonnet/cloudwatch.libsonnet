@@ -15,6 +15,7 @@
    * @param dimensions (optional)
    * @param id (optional)
    * @param expression (optional)
+   * @param hide (optional)
 
    * @return Panel target
    */
@@ -30,7 +31,8 @@
     period='1m',
     dimensions={},
     id=null,
-    expression=null
+    expression=null,
+    hide=null
   ):: {
     region: region,
     namespace: namespace,
@@ -43,6 +45,7 @@
     dimensions: dimensions,
     [if id != null then 'id']: id,
     [if expression != null then 'expression']: expression,
+    [if hide != null then 'hide']: hide,
 
   },
 }
