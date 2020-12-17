@@ -25,7 +25,7 @@
    * @param thresholdsMode (default `'absolute'`) 'absolute' or 'percentage'.
    * @param repeat (optional) Name of variable that should be used to repeat this panel.
    * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
-   * @param repeatMaxPerRow (optional) Maximum panels per row in repeat mode.
+   * @param maxPerRow (optional) Maximum panels per row in repeat mode.
    * @param pluginVersion (default `'7'`) Plugin version the panel should be modeled for. This has been tested with the default, '7', and '6.7'.
    *
    * @method addTarget(target) Adds a target object.
@@ -61,7 +61,7 @@
     thresholdsMode='absolute',
     repeat=null,
     repeatDirection='h',
-    repeatMaxPerRow=null,
+    maxPerRow=null,
     pluginVersion='7',
   ):: {
 
@@ -74,7 +74,7 @@
     links: [],
     [if repeat != null then 'repeat']: repeat,
     [if repeat != null then 'repeatDirection']: repeatDirection,
-    [if repeat != null then 'maxPerRow']: repeatMaxPerRow,
+    [if repeat != null then 'maxPerRow']: maxPerRow,
 
     // targets
     _nextTarget:: 0,
