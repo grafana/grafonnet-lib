@@ -21,6 +21,7 @@
       "legend": {
          "show": true
       },
+      "maxDataPoints": 50,
       "minSpan": 6,
       "repeat": "PROMETHEUS_DS",
       "repeatDirection": "h",
@@ -70,6 +71,7 @@
       "legend": {
          "show": false
       },
+      "maxDataPoints": 50,
       "repeat": "PROMETHEUS_DS",
       "repeatDirection": "v",
       "title": "advanced tsbuckets test",
