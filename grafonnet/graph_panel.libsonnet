@@ -57,6 +57,8 @@
    * @param value_type (default `'individual'`) Type of tooltip value
    * @param shared_tooltip (default `true`) Allow to group or spit tooltips on mouseover within a chart
    * @param percentage (defaut: false) show as percentages
+   * @param interval (defaut: null) A lower limit for the interval.
+
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
@@ -128,6 +130,7 @@
     percentage=false,
     time_from=null,
     time_shift=null,
+    interval=null
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -204,6 +207,7 @@
     },
     timeFrom: time_from,
     timeShift: time_shift,
+    [if interval != null then 'interval']: interval,
     [if transparent == true then 'transparent']: transparent,
     aliasColors: aliasColors,
     repeat: repeat,
