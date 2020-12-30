@@ -18,6 +18,7 @@
   sql:: import 'sql.libsonnet',
   graphite:: import 'graphite.libsonnet',
   alertCondition:: import 'alert_condition.libsonnet',
+  cloudmonitoring:: import 'cloudmonitoring.libsonnet',
   cloudwatch:: import 'cloudwatch.libsonnet',
   elasticsearch:: import 'elasticsearch.libsonnet',
   heatmapPanel:: import 'heatmap_panel.libsonnet',
