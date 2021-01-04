@@ -184,7 +184,7 @@
     bars: bars,
     stack: stack,
     percentage: percentage,
-    maxDataPoints: maxDataPoints,
+    [if maxDataPoints != null then 'maxDataPoints']: maxDataPoints,
     legend: {
       show: legend_show,
       values: legend_values,
