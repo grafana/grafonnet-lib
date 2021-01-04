@@ -21,6 +21,7 @@
    * @param formatY2 (optional) Unit of the second Y axis
    * @param min (optional) Min of the Y axes
    * @param max (optional) Max of the Y axes
+   * @param maxDataPoints (optional) If the data source supports it, sets the maximum number of data points for each series returned.
    * @param labelY1 (optional) Label of the first Y axis
    * @param labelY2 (optional) Label of the second Y axis
    * @param x_axis_mode (default `'time'`) X axis mode, one of [time, series, histogram]
@@ -128,6 +129,7 @@
     value_type='individual',
     shared_tooltip=true,
     percentage=false,
+    maxDataPoints=null,
     time_from=null,
     time_shift=null,
     interval=null
@@ -182,6 +184,7 @@
     bars: bars,
     stack: stack,
     percentage: percentage,
+    maxDataPoints: maxDataPoints,
     legend: {
       show: legend_show,
       values: legend_values,
