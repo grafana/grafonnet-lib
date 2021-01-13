@@ -43,7 +43,7 @@
       perSeriesAligner: perSeriesAligner,
       projectName: project,
       unit: unit,
-      valueType: valueType
+      valueType: valueType,
     },
     queryType: 'metrics',
     refId: 'A',
@@ -53,7 +53,7 @@
       projectName: project,
       selectorName: 'select_slo_health',
       serviceId: '',
-      sloId: ''
+      sloId: '',
     },
   },
 }
