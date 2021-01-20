@@ -21,8 +21,6 @@
          "unit": 1,
          "valueType": "DOUBLE"
       },
-      "queryType": "metrics",
-      "refId": "A",
       "sloQuery": {
          "aliasBy": "CPU Request Utilization",
          "alignmentPeriod": "cloud-monitoring-auto",
@@ -45,8 +43,6 @@
          "unit": 1,
          "valueType": "INT64"
       },
-      "queryType": "metrics",
-      "refId": "A",
       "sloQuery": {
          "alignmentPeriod": "cloud-monitoring-auto",
          "projectName": "gcp-organization",
