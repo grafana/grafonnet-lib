@@ -23,6 +23,7 @@
    * @param displayName (optional) Change the field or series name.
    * @param noValue (optional) What to show when there is no value.
    * @param thresholdsMode (default `'absolute'`) 'absolute' or 'percentage'.
+   * @param timeFrom (optional) Override the relative time range.
    * @param repeat (optional) Name of variable that should be used to repeat this panel.
    * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
    * @param maxPerRow (optional) Maximum panels per row in repeat mode.
