@@ -42,6 +42,7 @@
    * @param yBucketBound (default `'auto'`) Which bound ('lower' or 'upper') of the bucket to use
    * @param yBucketNumber (optional) Number of buckets for the Y axis
    * @param yBucketSize (optional) Size of Y axis buckets. Has priority over yBucketNumber
+   * @param maxDataPoints (optional) The maximum data points per series. Used directly by some data sources and used in calculation of auto interval. With streaming data this value is used for the rolling buffer.
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
@@ -83,7 +84,7 @@
     yBucketBound='auto',
     yBucketNumber=null,
     yBucketSize=null,
-
+    maxDataPoints=null,
   ):: {
     title: title,
     type: 'heatmap',
@@ -135,6 +136,7 @@
     yBucketBound: yBucketBound,
     [if dataFormat == 'timeseries' then 'yBucketNumber']: yBucketNumber,
     [if dataFormat == 'timeseries' then 'yBucketSize']: yBucketSize,
+    [if maxDataPoints != null then 'maxDataPoints']: maxDataPoints,
 
     _nextTarget:: 0,
     addTarget(target):: self {

@@ -43,6 +43,7 @@ local heatmapPanel = grafana.heatmapPanel;
       yBucketBound='lower',
       yBucketNumber=4,
       yBucketSize=5,
+      maxDataPoints=50,
     ),
 
   advanced_tsbuckets:
@@ -76,6 +77,7 @@ local heatmapPanel = grafana.heatmapPanel;
       yBucketBound='auto',
       yBucketNumber=1,
       yBucketSize=2,
+      maxDataPoints=50,
     ),
 
   basic_color_opacity:
