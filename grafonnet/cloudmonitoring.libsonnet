@@ -45,8 +45,6 @@
       unit: unit,
       valueType: valueType,
     },
-    queryType: 'metrics',
-    refId: 'A',
     sloQuery: {
       [if alias != null then 'aliasBy']: alias,
       alignmentPeriod: period,
