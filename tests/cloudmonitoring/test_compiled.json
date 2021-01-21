@@ -1,0 +1,54 @@
+{
+   "advanced": {
+      "metricQuery": {
+         "aliasBy": "CPU Request Utilization",
+         "alignmentPeriod": "cloud-monitoring-auto",
+         "crossSeriesReducer": "REDUCE_MEAN",
+         "filters": [
+            "resource.label.namespace_name",
+            "=",
+            "default",
+            "AND",
+            "resource.label.container_name",
+            "=",
+            "nginx"
+         ],
+         "groupBys": [ ],
+         "metricKind": "GAUGE",
+         "metricType": "kubernetes.io/container/cpu/request_utilization",
+         "perSeriesAligner": "ALIGN_INTERPOLATE",
+         "projectName": "gcp-organization",
+         "unit": 1,
+         "valueType": "DOUBLE"
+      },
+      "sloQuery": {
+         "aliasBy": "CPU Request Utilization",
+         "alignmentPeriod": "cloud-monitoring-auto",
+         "projectName": "gcp-organization",
+         "selectorName": "select_slo_health",
+         "serviceId": "",
+         "sloId": ""
+      }
+   },
+   "basic": {
+      "metricQuery": {
+         "alignmentPeriod": "cloud-monitoring-auto",
+         "crossSeriesReducer": "REDUCE_MAX",
+         "filters": [ ],
+         "groupBys": [ ],
+         "metricKind": "CUMULATIVE",
+         "metricType": "kubernetes.io/container/cpu/request_utilization",
+         "perSeriesAligner": "ALIGN_DELTA",
+         "projectName": "gcp-organization",
+         "unit": 1,
+         "valueType": "INT64"
+      },
+      "sloQuery": {
+         "alignmentPeriod": "cloud-monitoring-auto",
+         "projectName": "gcp-organization",
+         "selectorName": "select_slo_health",
+         "serviceId": "",
+         "sloId": ""
+      }
+   }
+}
