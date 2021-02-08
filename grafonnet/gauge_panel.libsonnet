@@ -141,6 +141,21 @@
         fieldConfig+: { defaults+: { links+: [link] } },
       },
 
+      // Overrides
+      addOverride(
+        matcher=null,
+        properties=null,
+      ):: self {
+        fieldConfig+: {
+          overrides+: [
+            {
+              [if matcher != null then 'matcher']: matcher,
+              [if properties != null then 'properties']: properties,
+            },
+          ],
+        },
+      },
+      addOverrides(overrides):: std.foldl(function(p, o) p.addOverride(o.matcher, o.properties), overrides, self),
     } else {
 
       options: {
