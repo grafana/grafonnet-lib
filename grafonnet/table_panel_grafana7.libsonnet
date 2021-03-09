@@ -8,6 +8,7 @@
     repeatDirection=null,
     title=null,
     transparent=false,
+    timeFrom=null,
   ):: {
     [if datasource != null then 'datasource']: datasource,
     [if description != null then 'description']: description,
@@ -15,6 +16,7 @@
     [if repeatDirection != null then 'repeatDirection']: repeatDirection,
     [if title != null then 'title']: title,
     [if transparent != null then 'transparent']: transparent,
+    [if timeFrom != null then 'timeFrom']: timeFrom,
     type: 'table',
 
     setFieldConfig(
@@ -25,6 +27,7 @@
       noValue=null,
       unit='short',
       width=null,
+      displayMode=null,
     ):: self {}
         + { fieldConfig+: { defaults+: { [if displayName != null then 'displayName']: displayName } } }
         + { fieldConfig+: { defaults+: { [if max != null then 'max']: max } } }
@@ -33,6 +36,7 @@
         + { fieldConfig+: { defaults+: { [if noValue != null then 'noValue']: noValue } } }
         + { fieldConfig+: { defaults+: { [if unit != null then 'unit']: unit } } }
         + { fieldConfig+: { defaults+: { custom+: { [if width != null then 'width']: width } } } }
+        + { fieldConfig+: { defaults+: { custom+: { [if displayMode != null then 'displayMode']: displayMode } } } }
     ,
 
     setGridPos(
