@@ -18,7 +18,7 @@
    * @param justifyMode (default `'auto'`) 'auto' or 'center'.
    * @param unit (default `'none'`) Panel unit field option.
    * @param colorScheme (optional) color name for the fixed colorSchemeMode e.g. `'yellow'`. Requires pluginVersion >= 7.3
-   * @param colorSchemeMode (optional) `'fixed'`, `'threshold'`, `'classic-palette'`, `'continuous-GrYlRd'`, `'continuous-RdYlGr'` or `'continuous-BlYlRd'`
+   * @param colorSchemeMode (optional) `'fixed'`, `'threshold'`, `'classic-palette'`, `'continuous-GrYlRd'`, `'continuous-RdYlGr'` or `'continuous-BlYlRd'`. Requires pluginVersion >= 7.3
    * @param min (optional) Leave empty to calculate based on all values.
    * @param max (optional) Leave empty to calculate based on all values.
    * @param decimals (optional) Number of decimal places to show.
