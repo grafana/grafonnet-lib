@@ -13,7 +13,7 @@ local stat = grafana.statPanel;
       reducerFunction='sum',
       graphMode='area',
       thresholdsMode='percentage',
-      timeFrom='1h'
+      timeFrom='1h',
     ),
   links:
     stat.new('links')
