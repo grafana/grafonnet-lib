@@ -14,6 +14,7 @@ local stat = grafana.statPanel;
       graphMode='area',
       thresholdsMode='percentage',
       timeFrom='1h',
+      colorScheme='classic-palette'
     ),
   links:
     stat.new('links')
