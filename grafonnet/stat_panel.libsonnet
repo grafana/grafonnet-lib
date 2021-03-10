@@ -17,7 +17,8 @@
    * @param graphMode (default `'area'`) 'none' or 'area' to enable sparkline mode.
    * @param justifyMode (default `'auto'`) 'auto' or 'center'.
    * @param unit (default `'none'`) Panel unit field option.
-   * @param colorScheme (optional) `'fixed'` (or color name e.g. `'yellow'`), `'threshold'`, `'classic-palette'`, `'continuous-GrYlRd'`, `'continuous-RdYlGr'` or `'continuous-BlYlRd'`
+   * @param colorScheme (optional) color name for the fixed colorSchemeMode e.g. `'yellow'`
+   * @param colorSchemeMode (optional) `'fixed'`, `'threshold'`, `'classic-palette'`, `'continuous-GrYlRd'`, `'continuous-RdYlGr'` or `'continuous-BlYlRd'`
    * @param min (optional) Leave empty to calculate based on all values.
    * @param max (optional) Leave empty to calculate based on all values.
    * @param decimals (optional) Number of decimal places to show.
@@ -55,6 +56,7 @@
     graphMode='area',
     justifyMode='auto',
     colorScheme=null,
+    colorSchemeMode=null,
     unit='none',
     min=null,
     max=null,
@@ -117,8 +119,9 @@
       fieldConfig: {
         defaults: {
           unit: unit,
-          [if colorScheme != null then 'color']: {
-            mode: colorScheme
+          [if pluginVersion >= '7.3' && (colorScheme != null || colorSchemeMode != null)  then 'color']: {
+            [if colorScheme != null then 'fixedColor']: colorScheme
+            [if colorSchemeMode != null then 'mode']: colorSchemeMode
           },
           [if min != null then 'min']: min,
           [if max != null then 'max']: max,

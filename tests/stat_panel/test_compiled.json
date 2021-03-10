@@ -4,9 +4,6 @@
       "description": "An advanced stat panel configuration",
       "fieldConfig": {
          "defaults": {
-            "color": {
-               "mode": "classic-palette"
-            },
             "links": [ ],
             "mappings": [ ],
             "thresholds": {
