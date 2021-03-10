@@ -17,6 +17,7 @@
    * @param graphMode (default `'area'`) 'none' or 'area' to enable sparkline mode.
    * @param justifyMode (default `'auto'`) 'auto' or 'center'.
    * @param unit (default `'none'`) Panel unit field option.
+   * @param colorScheme (optional) `'fixed'` (or color name e.g. `'yellow'`), `'threshold'`, `'classic-palette'`, `'continuous-GrYlRd'`, `'continuous-RdYlGr'` or `'continuous-BlYlRd'`
    * @param min (optional) Leave empty to calculate based on all values.
    * @param max (optional) Leave empty to calculate based on all values.
    * @param decimals (optional) Number of decimal places to show.
@@ -53,6 +54,7 @@
     colorMode='value',
     graphMode='area',
     justifyMode='auto',
+    colorScheme=null,
     unit='none',
     min=null,
     max=null,
@@ -115,6 +117,9 @@
       fieldConfig: {
         defaults: {
           unit: unit,
+          [if colorScheme != null then 'color']: {
+            mode: colorScheme
+          },
           [if min != null then 'min']: min,
           [if max != null then 'max']: max,
           [if decimals != null then 'decimals']: decimals,
