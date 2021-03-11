@@ -24,6 +24,7 @@
    * @param repeat (optional) Name of variable that should be used to repeat this panel.
    * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
    * @param repeatMaxPerRow (optional) Maximum panels per row in repeat mode.
+   * @param timeFrom (optional)
    * @param pluginVersion (default `'7'`) Plugin version the panel should be modeled for. This has been tested with the default, '7', and '6.7'.
    *
    * @method addTarget(target) Adds a target object.
@@ -36,7 +37,7 @@
    * @method addMappings(mappings) Adds an array of value mappings.
    * @method addDataLink(link) Adds a data link.
    * @method addDataLinks(links) Adds an array of data links.
-   * @param timeFrom (optional)
+   * @method addColorScheme(fixedColor, mode) Add a color scheme option. https://grafana.com/docs/grafana/latest/panels/field-options/standard-field-options/#color-scheme
    */
   new(
     title,
@@ -156,6 +157,21 @@
         },
       },
       addOverrides(overrides):: std.foldl(function(p, o) p.addOverride(o.matcher, o.properties), overrides, self),
+
+      // Color Scheme
+      addColorScheme(
+        fixedColor=null,
+        mode=null,
+      ):: self {
+        fieldConfig+: {
+          defaults+: {
+            color: {
+              [if fixedColor != null then 'fixedColor']: fixedColor,
+              [if mode != null then 'mode']: mode,
+            },
+          },
+        },
+      },
     } else {
 
       options: {
