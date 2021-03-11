@@ -17,8 +17,6 @@
    * @param graphMode (default `'area'`) 'none' or 'area' to enable sparkline mode.
    * @param justifyMode (default `'auto'`) 'auto' or 'center'.
    * @param unit (default `'none'`) Panel unit field option.
-   * @param colorScheme (optional) color name for the fixed colorSchemeMode e.g. `'yellow'`. Requires pluginVersion >= 7.3
-   * @param colorSchemeMode (optional) `'fixed'`, `'threshold'`, `'classic-palette'`, `'continuous-GrYlRd'`, `'continuous-RdYlGr'` or `'continuous-BlYlRd'`. Requires pluginVersion >= 7.3
    * @param min (optional) Leave empty to calculate based on all values.
    * @param max (optional) Leave empty to calculate based on all values.
    * @param decimals (optional) Number of decimal places to show.
@@ -41,6 +39,7 @@
    * @method addMappings(mappings) Adds an array of value mappings.
    * @method addDataLink(link) Adds a data link.
    * @method addDataLinks(links) Adds an array of data links.
+   * @method addColorScheme(fixedColor, mode) Add a color scheme option. https://grafana.com/docs/grafana/latest/panels/field-options/standard-field-options/#color-scheme
    */
   new(
     title,
@@ -55,8 +54,6 @@
     colorMode='value',
     graphMode='area',
     justifyMode='auto',
-    colorScheme=null,
-    colorSchemeMode=null,
     unit='none',
     min=null,
     max=null,
@@ -119,10 +116,6 @@
       fieldConfig: {
         defaults: {
           unit: unit,
-          [if pluginVersion >= '7.3' && (colorScheme != null || colorSchemeMode != null) then 'color']: {
-            [if colorScheme != null then 'fixedColor']: colorScheme,
-            [if colorSchemeMode != null then 'mode']: colorSchemeMode,
-          },
           [if min != null then 'min']: min,
           [if max != null then 'max']: max,
           [if decimals != null then 'decimals']: decimals,
@@ -170,6 +163,21 @@
         },
       },
       addOverrides(overrides):: std.foldl(function(p, o) p.addOverride(o.matcher, o.properties), overrides, self),
+
+      // Color Scheme
+      addColorScheme(
+        fixedColor=null,
+        mode=null
+      ):: self {
+        fieldConfig+: {
+          defaults+: {
+            color: {
+              [if fixedColor != null then 'fixedColor']: fixedColor,
+              [if mode != null then 'mode']: mode,
+            },
+          },
+        },
+      },
     } else {
       options: {
         fieldOptions: {
