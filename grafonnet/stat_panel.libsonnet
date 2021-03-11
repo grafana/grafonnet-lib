@@ -119,7 +119,7 @@
       fieldConfig: {
         defaults: {
           unit: unit,
-          [if pluginVersion >= '7.3' && (colorScheme != null || colorSchemeMode != null)  then 'color']: {
+          [if pluginVersion >= '7.3' && (colorScheme != null || colorSchemeMode != null) then 'color']: {
             [if colorScheme != null then 'fixedColor']: colorScheme,
             [if colorSchemeMode != null then 'mode']: colorSchemeMode,
           },
