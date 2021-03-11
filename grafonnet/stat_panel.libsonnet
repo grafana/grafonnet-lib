@@ -167,7 +167,7 @@
       // Color Scheme
       addColorScheme(
         fixedColor=null,
-        mode=null
+        mode=null,
       ):: self {
         fieldConfig+: {
           defaults+: {
