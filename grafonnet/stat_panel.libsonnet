@@ -39,7 +39,7 @@
    * @method addMappings(mappings) Adds an array of value mappings.
    * @method addDataLink(link) Adds a data link.
    * @method addDataLinks(links) Adds an array of data links.
-   * @method addColorScheme(fixedColor, mode) Add a color scheme option. https://grafana.com/docs/grafana/latest/panels/field-options/standard-field-options/#color-scheme
+   * @method addColorScheme(fixedColor, mode) Add a color scheme option. https://grafana.com/docs/grafana/latest/panels/field-options/standard-field-options/#color-scheme.
    */
   new(
     title,
