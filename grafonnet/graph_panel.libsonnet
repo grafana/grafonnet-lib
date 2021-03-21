@@ -10,6 +10,7 @@
    * @param span (optional) Width of the panel
    * @param datasource (optional) Datasource
    * @param fill (default `1`) , integer from 0 to 10
+   * @param fillGradient (default `0`) , integer from 0 to 10
    * @param linewidth (default `1`) Line Width, integer from 0 to 10
    * @param decimals (optional) Override automatic decimal precision for legend and tooltip. If null, not added to the json output.
    * @param decimalsY1 (optional) Override automatic decimal precision for the first Y axis. If null, use decimals parameter.
@@ -20,6 +21,7 @@
    * @param formatY2 (optional) Unit of the second Y axis
    * @param min (optional) Min of the Y axes
    * @param max (optional) Max of the Y axes
+   * @param maxDataPoints (optional) If the data source supports it, sets the maximum number of data points for each series returned.
    * @param labelY1 (optional) Label of the first Y axis
    * @param labelY2 (optional) Label of the second Y axis
    * @param x_axis_mode (default `'time'`) X axis mode, one of [time, series, histogram]
@@ -56,6 +58,8 @@
    * @param value_type (default `'individual'`) Type of tooltip value
    * @param shared_tooltip (default `true`) Allow to group or spit tooltips on mouseover within a chart
    * @param percentage (defaut: false) show as percentages
+   * @param interval (defaut: null) A lower limit for the interval.
+
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
@@ -63,11 +67,13 @@
    * @method addYaxis(format,min,max,label,show,logBase,decimals) Adds a Y axis to the graph
    * @method addAlert(alert) Adds an alert
    * @method addLink(link) Adds a [panel link](https://grafana.com/docs/grafana/latest/linking/panel-links/)
+   * @method addLinks(links) Adds an array of links.
    */
   new(
     title,
     span=null,
     fill=1,
+    fillGradient=0,
     linewidth=1,
     decimals=null,
     decimalsY1=null,
@@ -123,8 +129,10 @@
     value_type='individual',
     shared_tooltip=true,
     percentage=false,
+    maxDataPoints=null,
     time_from=null,
     time_shift=null,
+    interval=null
   ):: {
     title: title,
     [if span != null then 'span']: span,
@@ -166,6 +174,7 @@
     },
     lines: lines,
     fill: fill,
+    fillGradient: fillGradient,
     linewidth: linewidth,
     dashes: dashes,
     dashLength: 10,
@@ -175,6 +184,7 @@
     bars: bars,
     stack: stack,
     percentage: percentage,
+    [if maxDataPoints != null then 'maxDataPoints']: maxDataPoints,
     legend: {
       show: legend_show,
       values: legend_values,
@@ -200,6 +210,7 @@
     },
     timeFrom: time_from,
     timeShift: time_shift,
+    [if interval != null then 'interval']: interval,
     [if transparent == true then 'transparent']: transparent,
     aliasColors: aliasColors,
     repeat: repeat,
@@ -283,5 +294,20 @@
     addLink(link):: self {
       links+: [link],
     },
+    addLinks(links):: std.foldl(function(p, t) p.addLink(t), links, self),
+    addOverride(
+      matcher=null,
+      properties=null,
+    ):: self {
+      fieldConfig+: {
+        overrides+: [
+          {
+            [if matcher != null then 'matcher']: matcher,
+            [if properties != null then 'properties']: properties,
+          },
+        ],
+      },
+    },
+    addOverrides(overrides):: std.foldl(function(p, o) p.addOverride(o.matcher, o.properties), overrides, self),
   },
 }

@@ -29,6 +29,7 @@
       },
       "pluginVersion": "7",
       "targets": [ ],
+      "timeFrom": "1h",
       "title": "advanced",
       "transparent": true,
       "type": "stat"

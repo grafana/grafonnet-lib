@@ -23,9 +23,10 @@
    * @param displayName (optional) Change the field or series name.
    * @param noValue (optional) What to show when there is no value.
    * @param thresholdsMode (default `'absolute'`) 'absolute' or 'percentage'.
+   * @param timeFrom (optional) Override the relative time range.
    * @param repeat (optional) Name of variable that should be used to repeat this panel.
    * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
-   * @param repeatMaxPerRow (optional) Maximum panels per row in repeat mode.
+   * @param maxPerRow (optional) Maximum panels per row in repeat mode.
    * @param pluginVersion (default `'7'`) Plugin version the panel should be modeled for. This has been tested with the default, '7', and '6.7'.
    *
    * @method addTarget(target) Adds a target object.
@@ -59,9 +60,10 @@
     displayName=null,
     noValue=null,
     thresholdsMode='absolute',
+    timeFrom=null,
     repeat=null,
     repeatDirection='h',
-    repeatMaxPerRow=null,
+    maxPerRow=null,
     pluginVersion='7',
   ):: {
 
@@ -74,7 +76,8 @@
     links: [],
     [if repeat != null then 'repeat']: repeat,
     [if repeat != null then 'repeatDirection']: repeatDirection,
-    [if repeat != null then 'repeatMaxPerRow']: repeatMaxPerRow,
+    [if timeFrom != null then 'timeFrom']: timeFrom,
+    [if repeat != null then 'maxPerRow']: maxPerRow,
 
     // targets
     _nextTarget:: 0,
@@ -143,6 +146,22 @@
       addDataLink(link):: self {
         fieldConfig+: { defaults+: { links+: [link] } },
       },
+
+      // Overrides
+      addOverride(
+        matcher=null,
+        properties=null,
+      ):: self {
+        fieldConfig+: {
+          overrides+: [
+            {
+              [if matcher != null then 'matcher']: matcher,
+              [if properties != null then 'properties']: properties,
+            },
+          ],
+        },
+      },
+      addOverrides(overrides):: std.foldl(function(p, o) p.addOverride(o.matcher, o.properties), overrides, self),
     } else {
       options: {
         fieldOptions: {

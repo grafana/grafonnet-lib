@@ -17,7 +17,35 @@
       "id": null,
       "links": [
          "foolinks",
-         "barlinks"
+         "barlinks",
+         {
+            "asDropdown": true,
+            "icon": "external link",
+            "includeVars": false,
+            "keepTime": false,
+            "tags": [
+               "foo",
+               "bar"
+            ],
+            "targetBlank": false,
+            "title": "foo",
+            "type": "dashboards",
+            "url": ""
+         },
+         {
+            "asDropdown": true,
+            "icon": "external link",
+            "includeVars": false,
+            "keepTime": false,
+            "tags": [
+               "foo",
+               "bar"
+            ],
+            "targetBlank": false,
+            "title": "bar",
+            "type": "dashboards",
+            "url": ""
+         }
       ],
       "refresh": "",
       "rows": [

@@ -124,5 +124,79 @@
          "title": "with batch targets",
          "type": "table"
       }
+   ],
+   "transformations": [
+      {
+         "columns": [ ],
+         "datasource": null,
+         "links": [ ],
+         "span": 12,
+         "styles": [ ],
+         "targets": [ ],
+         "timeFrom": null,
+         "timeShift": null,
+         "title": "with transformations",
+         "transformations": [
+            {
+               "id": "seriesToColumns",
+               "options": {
+                  "byField": "instance"
+               }
+            },
+            {
+               "id": "filterFieldsByName",
+               "options": {
+                  "include": {
+                     "names": [
+                        "instance"
+                     ]
+                  }
+               }
+            }
+         ],
+         "type": "table"
+      },
+      {
+         "columns": [ ],
+         "datasource": null,
+         "links": [ ],
+         "span": 12,
+         "styles": [ ],
+         "targets": [ ],
+         "timeFrom": null,
+         "timeShift": null,
+         "title": "with batch transformations",
+         "transformations": [
+            {
+               "id": "filterFieldsByName",
+               "options": {
+                  "include": {
+                     "names": [
+                        "instance",
+                        "nodename",
+                        "Value #D",
+                        "Value #B",
+                        "Value #C",
+                        "Value #E",
+                        "Value #F",
+                        "Value #G",
+                        "Value #H",
+                        "Value #I",
+                        "Value #J",
+                        "Value #K",
+                        "Value #L"
+                     ]
+                  }
+               }
+            },
+            {
+               "id": "seriesToColumns",
+               "options": {
+                  "byField": "instance"
+               }
+            }
+         ],
+         "type": "table"
+      }
    ]
 }

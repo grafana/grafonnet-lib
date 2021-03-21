@@ -8,6 +8,7 @@
       "decimals": 2,
       "description": "description",
       "fill": 2,
+      "fillGradient": 1,
       "height": "2011px",
       "legend": {
          "alignAsTable": true,
@@ -114,6 +115,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -203,6 +205,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -277,6 +280,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -348,6 +352,7 @@
       "datasource": null,
       "decimals": 2,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -419,6 +424,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -489,6 +495,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -561,6 +568,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -633,6 +641,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -699,6 +708,86 @@
          }
       ]
    },
+   "multipleLinks": {
+      "aliasColors": { },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fill": 1,
+      "fillGradient": 0,
+      "legend": {
+         "alignAsTable": false,
+         "avg": false,
+         "current": false,
+         "max": false,
+         "min": false,
+         "rightSide": false,
+         "show": true,
+         "sideWidth": null,
+         "total": false,
+         "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [
+         {
+            "title": "foo",
+            "url": "link"
+         },
+         {
+            "title": "bar",
+            "url": "link"
+         }
+      ],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "repeat": null,
+      "seriesOverrides": [ ],
+      "spaceLength": 10,
+      "span": 12,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [ ],
+      "thresholds": [ ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Multiple Links",
+      "tooltip": {
+         "shared": true,
+         "sort": 0,
+         "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+         "buckets": null,
+         "mode": "time",
+         "name": null,
+         "show": true,
+         "values": [ ]
+      },
+      "yaxes": [
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         },
+         {
+            "format": "short",
+            "label": null,
+            "logBase": 1,
+            "max": null,
+            "min": null,
+            "show": true
+         }
+      ]
+   },
    "multipleTargets": {
       "aliasColors": { },
       "bars": false,
@@ -706,6 +795,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -785,6 +875,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": true,
          "avg": false,
@@ -857,6 +948,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,
@@ -926,6 +1018,7 @@
       "dashes": false,
       "datasource": null,
       "fill": 1,
+      "fillGradient": 0,
       "legend": {
          "alignAsTable": false,
          "avg": false,

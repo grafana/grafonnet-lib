@@ -42,6 +42,7 @@
    * @param links (optional)
    * @param tableColumn (default `''`)
    * @param maxPerRow (optional)
+   * @param maxDataPoints (default `100`)
    *
    * @method addTarget(target) Adds a target object.
    */
@@ -100,6 +101,7 @@
     links=[],
     tableColumn='',
     maxPerRow=null,
+    maxDataPoints=100,
   )::
     {
       [if height != null then 'height']: height,
@@ -116,7 +118,7 @@
       ],
       links: links,
       [if decimals != null then 'decimals']: decimals,
-      maxDataPoints: 100,
+      maxDataPoints: maxDataPoints,
       interval: interval,
       cacheTimeout: null,
       format: format,

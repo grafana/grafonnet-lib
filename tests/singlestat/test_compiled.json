@@ -39,7 +39,7 @@
             "value": 2
          }
       ],
-      "maxDataPoints": 100,
+      "maxDataPoints": 1000,
       "minSpan": 6,
       "nullPointMode": "connected",
       "nullText": null,

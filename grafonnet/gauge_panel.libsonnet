@@ -36,6 +36,7 @@
    * @method addMappings(mappings) Adds an array of value mappings.
    * @method addDataLink(link) Adds a data link.
    * @method addDataLinks(links) Adds an array of data links.
+   * @param timeFrom (optional)
    */
   new(
     title,
@@ -58,6 +59,7 @@
     repeat=null,
     repeatDirection='h',
     repeatMaxPerRow=null,
+    timeFrom=null,
     pluginVersion='7',
   ):: {
 
@@ -71,6 +73,7 @@
     [if repeat != null then 'repeat']: repeat,
     [if repeat != null then 'repeatDirection']: repeatDirection,
     [if repeat != null then 'repeatMaxPerRow']: repeatMaxPerRow,
+    [if timeFrom != null then 'timeFrom']: timeFrom,
 
     // targets
     _nextTarget:: 0,
@@ -138,6 +141,21 @@
         fieldConfig+: { defaults+: { links+: [link] } },
       },
 
+      // Overrides
+      addOverride(
+        matcher=null,
+        properties=null,
+      ):: self {
+        fieldConfig+: {
+          overrides+: [
+            {
+              [if matcher != null then 'matcher']: matcher,
+              [if properties != null then 'properties']: properties,
+            },
+          ],
+        },
+      },
+      addOverrides(overrides):: std.foldl(function(p, o) p.addOverride(o.matcher, o.properties), overrides, self),
     } else {
 
       options: {
