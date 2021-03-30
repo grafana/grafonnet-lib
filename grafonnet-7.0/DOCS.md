@@ -756,7 +756,7 @@ Instantiate a dashboard.
 
 
 
-### tamplate.datasource.new
+### template.datasource.new
 
 
 
@@ -790,7 +790,7 @@ Instantiate a dashboard.
 
 
 
-### tamplate.query.new
+### template.query.new
 
 
 
