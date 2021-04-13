@@ -68,6 +68,9 @@
    * @method addAlert(alert) Adds an alert
    * @method addLink(link) Adds a [panel link](https://grafana.com/docs/grafana/latest/linking/panel-links/)
    * @method addLinks(links) Adds an array of links.
+   * @method addTransformation(transformation) Adds a transformation object
+   * @method addTransformations(transformations) Adds an array of transformations
+
    */
   new(
     title,
@@ -309,5 +312,9 @@
       },
     },
     addOverrides(overrides):: std.foldl(function(p, o) p.addOverride(o.matcher, o.properties), overrides, self),
+    addTransformation(transformation):: self {
+      transformations+: [transformation],
+    },
+    addTransformations(transformations):: std.foldl(function(p, t) p.addTransformation(t), transformations, self),
   },
 }
