@@ -1,6 +1,6 @@
 {
   /**
-   * Creates a [template](https://grafana.com/docs/grafana/latest/variables/templates-and-variables/#templates) that can be added to a dashboard.
+   * Creates a [template](https://grafana.com/docs/grafana/latest/variables/#templates) that can be added to a dashboard.
    *
    * @name template.new
    *
@@ -18,7 +18,7 @@
    * @param multi (default `false`) Whether multiple values can be selected or not from variable value list.
    * @param sort (default `0`) `0`: Without Sort, `1`: Alphabetical (asc), `2`: Alphabetical (desc), `3`: Numerical (asc), `4`: Numerical (desc).
    *
-   * @return A [template](https://grafana.com/docs/grafana/latest/variables/templates-and-variables/#templates)
+   * @return A [template](https://grafana.com/docs/grafana/latest/variables/#templates)
    */
   new(
     name,
