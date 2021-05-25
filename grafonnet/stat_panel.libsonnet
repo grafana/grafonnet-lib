@@ -39,6 +39,7 @@
    * @method addMappings(mappings) Adds an array of value mappings.
    * @method addDataLink(link) Adds a data link.
    * @method addDataLinks(links) Adds an array of data links.
+   * @method addColorScheme(fixedColor, mode) Add a color scheme option. https://grafana.com/docs/grafana/latest/panels/field-options/standard-field-options/#color-scheme
    */
   new(
     title,
@@ -162,6 +163,21 @@
         },
       },
       addOverrides(overrides):: std.foldl(function(p, o) p.addOverride(o.matcher, o.properties), overrides, self),
+
+      // Color Scheme
+      addColorScheme(
+        fixedColor=null,
+        mode=null,
+      ):: self {
+        fieldConfig+: {
+          defaults+: {
+            color: {
+              [if fixedColor != null then 'fixedColor']: fixedColor,
+              [if mode != null then 'mode']: mode,
+            },
+          },
+        },
+      },
     } else {
       options: {
         fieldOptions: {
