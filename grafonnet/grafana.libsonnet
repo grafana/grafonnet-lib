@@ -28,5 +28,6 @@
   gaugePanel:: import 'gauge_panel.libsonnet',
   barGaugePanel:: import 'bar_gauge_panel.libsonnet',
   statPanel:: import 'stat_panel.libsonnet',
+  dataLink:: import 'data_link.libsonnet',
   transformation:: import 'transformation.libsonnet',
 }
