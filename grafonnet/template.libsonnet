@@ -17,6 +17,7 @@
    * @param includeAll (default `false`) Whether all value option is available or not.
    * @param multi (default `false`) Whether multiple values can be selected or not from variable value list.
    * @param sort (default `0`) `0`: Without Sort, `1`: Alphabetical (asc), `2`: Alphabetical (desc), `3`: Numerical (asc), `4`: Numerical (desc).
+   * @param skipUrlSync: (default `false`) Set to true to update URL with changes in variable
    *
    * @return A [template](https://grafana.com/docs/grafana/latest/variables/#templates)
    */
@@ -34,6 +35,7 @@
     includeAll=false,
     multi=false,
     sort=0,
+    skipUrlSync=false,
   )::
     {
       allValue: allValues,
@@ -54,6 +56,8 @@
       tagsQuery: '',
       type: 'query',
       useTags: false,
+      skipUrlSync: skipUrlSync,
+      definition: '',
     },
   /**
    * Use an [interval variable](https://grafana.com/docs/grafana/latest/variables/variable-types/add-interval-variable/) to represent time spans such as '1m', '1h', '1d'. You can think of them as a dashboard-wide "group by time" command. Interval variables change how the data is grouped in the visualization. You can also use the Auto Option to return a set number of data points per time span.
@@ -117,6 +121,9 @@
    * @param label (optional) Display name of the variable dropdown. If null, then the dropdown label will be the variable name.
    * @param regex (default `''`) Regex filter for which data source instances to choose from in the variable value drop-down list. Leave this field empty to display all instances.
    * @param refresh (default `'load'`) `'never'`: Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. `'load'`: Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. `'time'`: Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
+   * @param includeAll (default `false`) Whether all value option is available or not.
+   * @param multi (default `false`) Whether multiple values can be selected or not from variable value list.
+   * @param skipUrlSync: (default `false`) Set to true to update URL with changes in variable
    *
    * @return A [data source variable](https://grafana.com/docs/grafana/latest/variables/variable-types/add-data-source-variable/).
    */
@@ -128,6 +135,9 @@
     label=null,
     regex='',
     refresh='load',
+    includeAll=false,
+    multi=false,
+    skipUrlSync=false,
   ):: {
     current: $.current(current),
     hide: $.hide(hide),
@@ -138,6 +148,9 @@
     refresh: $.refresh(refresh),
     regex: regex,
     type: 'datasource',
+    includeAll: includeAll,
+    multi: multi,
+    skipUrlSync: skipUrlSync,
   },
   refresh(refresh):: if refresh == 'never'
   then
@@ -167,6 +180,7 @@
    * @param allValues (optional) Formatting for [multi-value variables](https://grafana.com/docs/grafana/latest/variables/formatting-multi-value-variables/#formatting-multi-value-variables)
    * @param includeAll (default `false`) Whether all value option is available or not.
    * @param hide (default `''`) `''`: the variable dropdown displays the variable Name or Label value. `'label'`: the variable dropdown only displays the selected variable value and a down arrow. Any other value: no variable dropdown is displayed on the dashboard.
+   * @param skipUrlSync: (default `false`) Set to true to update URL with changes in variable
    *
    * @return A custom variable.
    */
@@ -180,6 +194,7 @@
     multi=false,
     allValues=null,
     includeAll=false,
+    skipUrlSync=false,
     hide='',
   )::
     {
@@ -208,6 +223,7 @@
       multi: multi,
       name: name,
       query: query,
+      skipUrlSync: skipUrlSync,
       type: 'custom',
 
       valuelabel(value):: if value in valuelabels then
