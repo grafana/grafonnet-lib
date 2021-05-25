@@ -1,5 +1,6 @@
 local grafana = import 'grafonnet/grafana.libsonnet';
 local graphPanel = grafana.graphPanel;
+local transformation = grafana.transformation;
 
 {
   basic: graphPanel.new('Basic', span=12),
@@ -86,4 +87,43 @@ local graphPanel = grafana.graphPanel;
   ]),
   axis_decimals: graphPanel.new('Axis decimals', decimals=2, decimalsY1=1),
   staircase_line: graphPanel.new('Staircase line', staircase=true),
+  transformations:
+    [
+      graphPanel.new('with transformations', span=12)
+      .addTransformation(transformation.new('seriesToColumns', options={
+        byField: 'instance',
+      }))
+      .addTransformation(transformation.new('filterFieldsByName', options={
+        include: {
+          names: [
+            'instance',
+          ],
+        },
+      })),
+      graphPanel.new('with batch transformations', span=12)
+      .addTransformations([
+        transformation.new('filterFieldsByName', options={
+          include: {
+            names: [
+              'instance',
+              'nodename',
+              'Value #D',
+              'Value #B',
+              'Value #C',
+              'Value #E',
+              'Value #F',
+              'Value #G',
+              'Value #H',
+              'Value #I',
+              'Value #J',
+              'Value #K',
+              'Value #L',
+            ],
+          },
+        }),
+        transformation.new('seriesToColumns', options={
+          byField: 'instance',
+        }),
+      ]),
+    ],
 }
