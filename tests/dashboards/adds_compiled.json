@@ -52,6 +52,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "height": "250px",
             "panels": [ ],
             "repeat": null,
@@ -65,6 +69,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "height": "250px",
             "panels": [ ],
             "repeat": null,
@@ -78,6 +86,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "height": "250px",
             "panels": [ ],
             "repeat": null,
@@ -91,6 +103,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "height": "250px",
             "panels": [ ],
             "repeat": null,
@@ -243,6 +259,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "h": 41,
             "id": 6,
             "panels": [ ],
@@ -446,6 +466,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "height": "250px",
             "id": 2,
             "panels": [
@@ -469,6 +493,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "height": "250px",
             "id": 5,
             "panels": [ ],
@@ -483,6 +511,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "height": "250px",
             "id": 6,
             "panels": [ ],
@@ -513,6 +545,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "height": "250px",
             "id": 11,
             "panels": [
@@ -548,6 +584,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "id": 17,
             "panels": [
                {
@@ -570,6 +610,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "id": 20,
             "panels": [ ],
             "repeat": null,
@@ -583,6 +627,10 @@
          {
             "collapse": false,
             "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24
+            },
             "id": 21,
             "panels": [ ],
             "repeat": null,

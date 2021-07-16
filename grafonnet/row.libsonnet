@@ -37,6 +37,10 @@
     title: title,
     type: 'row',
     titleSize: titleSize,
+    gridPos: {
+      h: 1,
+      w: 24,
+    },
     addPanels(panels):: self {
       panels+: panels,
     },

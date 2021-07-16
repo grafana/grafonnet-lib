@@ -10,6 +10,8 @@
    * @param description (default `''`) Description of the panel
    * @param span (optional) Width of the panel
    * @param min_span (optional) Min span
+   * @param gridHeight (optional) Height of the panel in Grafana grid units
+   * @param gridWidth (optional) Width of the panel in Grafana grid units (max: 24)
    * @param datasource (optional) Datasource
    * @param aliasColors (optional) Define color mappings
    * @param pieType (default `'pie'`) Type of pie chart (one of pie or donut)
@@ -31,6 +33,8 @@
     min_span=null,
     datasource=null,
     height=null,
+    gridHeight=null,
+    gridWidth=null,
     aliasColors={},
     pieType='pie',
     valueName='current',
@@ -62,6 +66,10 @@
     legendType: legendType,
     targets: [
     ],
+    [if (gridHeight != null || gridWidth != null) then 'gridPos']: {
+      h: gridHeight,
+      w: gridWidth,
+    },
     _nextTarget:: 0,
     addTarget(target):: self {
       local nextTarget = super._nextTarget,

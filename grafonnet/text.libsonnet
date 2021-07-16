@@ -8,6 +8,8 @@
    * @param description (optional) Panel description.
    * @param datasource (optional) Panel datasource.
    * @param span (optional)
+   * @param gridHeight (optional) Height of the panel in Grafana grid units
+   * @param gridWidth (optional) Width of the panel in Grafana grid units (max: 24)
    * @param content (default `''`)
    * @param mode (default `'markdown'`) Rendering of the content: 'markdown','html', ...
    * @param transparent (optional) Whether to display the panel without a background.
@@ -18,6 +20,8 @@
   new(
     title='',
     span=null,
+    gridHeight=null,
+    gridWidth=null,
     mode='markdown',
     content='',
     transparent=null,
@@ -39,5 +43,9 @@
       [if repeat != null then 'repeat']: repeat,
       [if repeat != null then 'repeatDirection']: repeatDirection,
       [if repeat != null then 'maxPerRow']: repeatMaxPerRow,
+      [if (gridHeight != null || gridWidth != null) then 'gridPos']: {
+        h: gridHeight,
+        w: gridWidth,
+      },
     },
 }
