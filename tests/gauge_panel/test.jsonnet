@@ -46,4 +46,10 @@ local gaugePanel = grafana.gaugePanel;
       { color: 'yellow', value: 50 },
       { color: 'red', value: 80 },
     ]),
+  field_title_grafana6:
+    gaugePanel.new(
+      '',
+      pluginVersion='6.6.0',
+      fieldTitle='${__series.name}',
+    ),
 }

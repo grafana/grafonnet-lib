@@ -15,6 +15,7 @@
    * @param showThresholdLabels (default `false`) Render the threshold values around the gauge bar.
    * @param showThresholdMarkers (default `true`) Render the thresholds as an outer bar.
    * @param unit (default `'percent'`) Panel unit field option.
+   * @param fieldTitle (optional) Field title. May contain template variables (e.g. ${__series.name}).
    * @param min (optional) Leave empty to calculate based on all values.
    * @param max (optional) Leave empty to calculate based on all values.
    * @param decimals Number of decimal places to show.
@@ -50,6 +51,7 @@
     showThresholdLabels=false,
     showThresholdMarkers=true,
     unit='percent',
+    fieldTitle=null,
     min=0,
     max=100,
     decimals=null,
@@ -177,6 +179,7 @@
               mode: thresholdsMode,
               steps: [],
             },
+            [if fieldTitle != null then 'title']: fieldTitle,
             mappings: [],
             links: [],
           },
