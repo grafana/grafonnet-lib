@@ -68,4 +68,10 @@ local stat = grafana.statPanel;
       { color: 'green', value: 75 },
       { color: 'red', value: 90 },
     ]),
+  field_title_grafana6:
+    stat.new(
+      '',
+      pluginVersion='6.6.0',
+      fieldTitle='My values:',
+    ),
 }

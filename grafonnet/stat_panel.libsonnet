@@ -17,6 +17,7 @@
    * @param graphMode (default `'area'`) 'none' or 'area' to enable sparkline mode.
    * @param justifyMode (default `'auto'`) 'auto' or 'center'.
    * @param unit (default `'none'`) Panel unit field option.
+   * @param fieldTitle (optional) Field title. May contain template variables (e.g. ${__series.name}).
    * @param min (optional) Leave empty to calculate based on all values.
    * @param max (optional) Leave empty to calculate based on all values.
    * @param decimals (optional) Number of decimal places to show.
@@ -54,6 +55,7 @@
     graphMode='area',
     justifyMode='auto',
     unit='none',
+    fieldTitle=null,
     min=null,
     max=null,
     decimals=null,
@@ -178,6 +180,7 @@
             [if decimals != null then 'decimals']: decimals,
             [if displayName != null then 'displayName']: displayName,
             [if noValue != null then 'noValue']: noValue,
+            [if fieldTitle != null then 'title']: fieldTitle,
             thresholds: {
               mode: thresholdsMode,
               steps: [],
