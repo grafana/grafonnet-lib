@@ -157,9 +157,9 @@
    *
    * @name template.custom
    * This might be numbers, strings, or even other variables.
-   * @param name Variable name
+   * @param name Variable name.
    * @param query Comma separated without spacing list of selectable values.
-   * @param current Selected value
+   * @param current Selected value. If not specified, first value is selected.
    * @param refresh (default `'never'`) `'never'`: Variables queries are cached and values are not updated. This is fine if the values never change, but problematic if they are dynamic and change a lot. `'load'`: Queries the data source every time the dashboard loads. This slows down dashboard loading, because the variable query needs to be completed before dashboard can be initialized. `'time'`: Queries the data source when the dashboard time range changes. Only use this option if your variable options query contains a time range filter or is dependent on the dashboard time range.
    * @param label (default `''`) Display name of the variable dropdown. If you don’t enter a display name, then the dropdown label will be the variable name.
    * @param valuelabels (default `{}`) Display names for values defined in query. For example, if `query='new,old'`, then you may display them as follows `valuelabels={new: 'nouveau', old: 'ancien'}`.
@@ -173,7 +173,7 @@
   custom(
     name,
     query,
-    current,
+    current=null,
     refresh='never',
     label='',
     valuelabels={},
@@ -186,6 +186,7 @@
       // self has dynamic scope, so self may not be myself below.
       // '$' can't be used neither as this object is not top-level object.
       local custom = self,
+      local query_array = std.split(query, ','),
 
       allValue: allValues,
       current: {
@@ -200,7 +201,7 @@
           custom.valuelabel(current),
         [if multi then 'selected']: true,
       },
-      options: std.map(self.option, self.query_array(query)),
+      options: std.map(self.option, if includeAll then ['All'] + query_array else query_array),
       hide: $.hide(hide),
       includeAll: includeAll,
       label: label,
@@ -217,16 +218,13 @@
       option(option):: {
         text: custom.valuelabel(option),
         value: if includeAll && option == 'All' then '$__all' else option,
-        [if multi then 'selected']: if multi && std.isArray(current) then
+        selected: if multi && std.isArray(current) then
           std.member(current, option)
-        else if multi then
-          current == option
+        else if current == null then
+          option == query_array[0]
         else
-          null,
+          option == current,
       },
-      query_array(query):: std.split(
-        if includeAll then 'All,' + query else query, ','
-      ),
     },
   /**
    * [Text box variables](https://grafana.com/docs/grafana/latest/variables/variable-types/add-text-box-variable/)
