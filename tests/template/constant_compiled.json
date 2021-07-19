@@ -1,0 +1,22 @@
+{
+   "basic": {
+      "current": [
+         {
+            "selected": true,
+            "text": "myProject",
+            "value": "myProject"
+         }
+      ],
+      "hide": 2,
+      "label": "Project",
+      "name": "project_name",
+      "options": [
+         {
+            "selected": true,
+            "text": "myProject",
+            "value": "myProject"
+         }
+      ],
+      "type": "constant"
+   }
+}

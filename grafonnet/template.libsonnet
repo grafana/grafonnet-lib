@@ -286,4 +286,41 @@
       name: name,
       type: 'adhoc',
     },
+  /**
+   * [Constant variables](https://grafana.com/docs/grafana/latest/variables/variable-types/add-constant-variable/)
+   * allow you to define a hidden constant.
+   * This is useful for metric path prefixes for dashboards you want to share.
+   * When you export a dashboard, constant variables are converted to import options.
+   *
+   * @name template.constant
+   *
+   * @param name Variable name.
+   * @param value Variable value. You can enter letters, numbers, and symbols. You can even use wildcards if you use [raw format](https://grafana.com/docs/grafana/latest/variables/advanced-variable-format-options/#raw).
+   * @param label (optional) Display name of the variable dropdown. If you don’t enter a display name, then the dropdown label will be the variable name.
+   * @param hide (default `''`) `''`: the variable dropdown displays the variable Name or Label value. `'label'`: the variable dropdown only displays the selected variable value and a down arrow. Any other value: no variable dropdown is displayed on the dashboard.
+   *
+   * @return A constant variable.
+   */
+  constant(
+    name,
+    value='',
+    label='',
+    hide='',
+  )::
+    {
+      current: [{
+        selected: true,
+        value: value,
+        text: value,
+      }],
+      options: [{
+        selected: true,
+        value: value,
+        text: value,
+      }],
+      hide: $.hide(hide),
+      label: label,
+      name: name,
+      type: 'constant',
+    },
 }
