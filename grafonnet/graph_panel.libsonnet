@@ -64,6 +64,7 @@
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
    * @method addSeriesOverride(override)
+   * @method resetYaxes() Reset the Y axes
    * @method addYaxis(format,min,max,label,show,logBase,decimals) Adds a Y axis to the graph
    * @method addAlert(alert) Adds an alert
    * @method addLink(link) Adds a [panel link](https://grafana.com/docs/grafana/latest/linking/panel-links/)
