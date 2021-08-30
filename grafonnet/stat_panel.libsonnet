@@ -95,6 +95,25 @@
     addLinks(links):: std.foldl(function(p, l) p.addLink(l), links, self),
 
     pluginVersion: pluginVersion,
+
+    setOptions(
+      calcs=['mean'],
+      colorMode='value',
+      fields=null,
+      graphMode='none',
+      justifyMode='auto',
+      orientation='auto',
+      textMode='auto',
+      values=false,
+    ):: self {}
+        + { options+: { reduceOptions+: { [if calcs != null then 'calcs']: calcs } } }
+        + { options+: { [if colorMode != null then 'colorMode']: colorMode } }
+        + { options+: { reduceOptions+: { [if fields != null then 'fields']: fields } } }
+        + { options+: { [if graphMode != null then 'graphMode']: graphMode } }
+        + { options+: { [if justifyMode != null then 'justifyMode']: justifyMode } }
+        + { options+: { [if orientation != null then 'orientation']: orientation } }
+        + { options+: { [if textMode != null then 'textMode']: textMode } }
+        + { options+: { reduceOptions+: { [if values != null then 'values']: values } } },
   } + (
 
     if pluginVersion >= '7' then {
