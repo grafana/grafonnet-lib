@@ -16,6 +16,7 @@
    * @param colorMode (default `'value'`) 'value' or 'background'.
    * @param graphMode (default `'area'`) 'none' or 'area' to enable sparkline mode.
    * @param justifyMode (default `'auto'`) 'auto' or 'center'.
+   * @param textMode (default `auto`) Options are 'auto', 'none', 'value', 'name' and 'value_and_name'.
    * @param unit (default `'none'`) Panel unit field option.
    * @param min (optional) Leave empty to calculate based on all values.
    * @param max (optional) Leave empty to calculate based on all values.
@@ -53,6 +54,7 @@
     colorMode='value',
     graphMode='area',
     justifyMode='auto',
+    textMode='auto',
     unit='none',
     min=null,
     max=null,
@@ -111,6 +113,7 @@
         colorMode: colorMode,
         graphMode: graphMode,
         justifyMode: justifyMode,
+        textMode: textMode,
       },
       fieldConfig: {
         defaults: {
