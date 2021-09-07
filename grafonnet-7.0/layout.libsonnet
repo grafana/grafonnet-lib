@@ -8,7 +8,7 @@
 // to make this possible.
 //
 // Usage
-//   local grafana = import 'grafonnet/grafana.libsonnet';
+//   local grafana = import 'grafonnet-7.0/grafana.libsonnet';
 //   local layout = import "grafonnet-7.0/layout.libsonnet";
 //
 //   local dashboard = grafana.dashboard.new('Empty Dashboard') + layout;
