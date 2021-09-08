@@ -1,6 +1,6 @@
 {
   /**
-   * Creates a [Prometheus target](https://grafana.com/docs/grafana/latest/features/datasources/prometheus/)
+   * Creates a [Prometheus target](https://grafana.com/docs/grafana/latest/datasources/prometheus/)
    * to be added to panels.
    *
    * @name prometheus.target

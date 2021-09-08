@@ -1,6 +1,6 @@
 {
   /**
-   * Creates a [CloudWatch target](https://grafana.com/docs/grafana/latest/features/datasources/cloudwatch/)
+   * Creates a [CloudWatch target](https://grafana.com/docs/grafana/latest/datasources/cloudwatch/)
    *
    * @name cloudwatch.target
    *
