@@ -1,6 +1,6 @@
 {
   /**
-   * Creates a [Graphite target](https://grafana.com/docs/grafana/latest/features/datasources/graphite/)
+   * Creates a [Graphite target](https://grafana.com/docs/grafana/latest/datasources/graphite/)
    *
    * @name graphite.target
    *

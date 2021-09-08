@@ -1,6 +1,6 @@
 {
   /**
-   * Creates a [Loki target](https://grafana.com/docs/grafana/latest/features/datasources/loki/)
+   * Creates a [Loki target](https://grafana.com/docs/grafana/latest/datasources/loki/)
    *
    * @name loki.target
    *

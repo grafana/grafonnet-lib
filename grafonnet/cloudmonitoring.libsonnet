@@ -1,6 +1,6 @@
 {
   /**
-   * Creates a [Google Cloud Monitoring target](https://grafana.com/docs/grafana/latest/datasources/cloudmonitoring/)
+   * Creates a [Google Cloud Monitoring target](https://grafana.com/docs/grafana/latest/datasources/google-cloud-monitoring/)
    *
    * @name cloudmonitoring.target
    *
