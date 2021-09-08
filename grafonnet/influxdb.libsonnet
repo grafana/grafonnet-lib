@@ -1,6 +1,6 @@
 {
   /**
-   * Creates an [InfluxDB target](https://grafana.com/docs/grafana/latest/features/datasources/influxdb/)
+   * Creates an [InfluxDB target](https://grafana.com/docs/grafana/latest/datasources/influxdb/)
    *
    * @name influxdb.target
    *
