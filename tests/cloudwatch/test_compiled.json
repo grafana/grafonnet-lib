@@ -9,7 +9,7 @@
       "highResolution": false,
       "metricName": "RequestCountPerTarget",
       "namespace": "AWS/ApplicationELB",
-      "period": "1m",
+      "period": "auto",
       "region": "eu-west-1",
       "statistics": [
          "Sum"
@@ -20,7 +20,7 @@
       "highResolution": false,
       "metricName": "RequestCountPerTarget",
       "namespace": "AWS/ApplicationELB",
-      "period": "1m",
+      "period": "auto",
       "region": "eu-west-1",
       "statistics": [
          "Average"
