@@ -11,7 +11,7 @@
    * @param statistic (default: `'Average'`)
    * @param alias (optional)
    * @param highResolution (default: `false`)
-   * @param period (default: `'1m'`)
+   * @param period (default: `'auto'`)
    * @param dimensions (optional)
    * @param id (optional)
    * @param expression (optional)
@@ -28,7 +28,7 @@
     statistic='Average',
     alias=null,
     highResolution=false,
-    period='1m',
+    period='auto',
     dimensions={},
     id=null,
     expression=null,
