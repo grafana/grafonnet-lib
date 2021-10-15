@@ -3,6 +3,7 @@
       "datasource": "$PROMETHEUS",
       "description": "description",
       "limit": 20,
+      "nameFilter": "name of alert",
       "onlyAlertsOnDashboard": true,
       "show": "current",
       "sortOrder": 2,
@@ -18,6 +19,7 @@
    "basic": {
       "datasource": null,
       "limit": 10,
+      "nameFilter": null,
       "onlyAlertsOnDashboard": true,
       "show": "current",
       "sortOrder": 1,
