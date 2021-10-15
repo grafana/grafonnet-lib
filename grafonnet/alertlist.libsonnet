@@ -14,6 +14,7 @@
    * @param transparent (optional) Whether to display the panel without a background
    * @param description (optional)
    * @param datasource (optional)
+   * @param nameFilter (optional) Filter by alert name
    */
   new(
     title='',
@@ -26,6 +27,7 @@
     transparent=null,
     description=null,
     datasource=null,
+    nameFilter=null,
   )::
     {
       [if transparent != null then 'transparent']: transparent,
@@ -39,5 +41,6 @@
       onlyAlertsOnDashboard: onlyAlertsOnDashboard,
       [if description != null then 'description']: description,
       datasource: datasource,
+      nameFilter: nameFilter,
     },
 }
