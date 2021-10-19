@@ -1,6 +1,6 @@
 {
   /**
-   * Creates a [heatmap panel](https://grafana.com/docs/grafana/latest/panels/visualizations/heatmap/).
+   * Creates a [heatmap panel](https://grafana.com/docs/grafana/latest/visualizations/heatmap/).
    * Requires the heatmap panel plugin in Grafana, which is built-in.
    *
    * @name heatmapPanel.new
