@@ -14,6 +14,7 @@
    * @param period (default: `'auto'`)
    * @param dimensions (optional)
    * @param id (optional)
+    * @param matchExact (default: `false`) (optional)
    * @param expression (optional)
    * @param hide (optional)
 
@@ -31,6 +32,7 @@
     period='auto',
     dimensions={},
     id=null,
+    matchExact=false,
     expression=null,
     hide=null
   ):: {
@@ -44,6 +46,7 @@
     period: period,
     dimensions: dimensions,
     [if id != null then 'id']: id,
+    matchExact: matchExact,
     [if expression != null then 'expression']: expression,
     [if hide != null then 'hide']: hide,
 
