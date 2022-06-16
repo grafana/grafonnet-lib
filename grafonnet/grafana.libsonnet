@@ -28,4 +28,5 @@
   barGaugePanel:: import 'bar_gauge_panel.libsonnet',
   statPanel:: import 'stat_panel.libsonnet',
   googleCloudMonitoring:: import 'google_cloud_monitoring.libsonnet',
+  clickhouse:: import 'clickhouse.libsonnet',
 }
