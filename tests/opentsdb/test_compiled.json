@@ -1,0 +1,77 @@
+{
+   "advanced": {
+      "aggregator": "max",
+      "alias": "$tag_host",
+      "downsampleAggregator": "avg",
+      "downsampleFillPolicy": "none",
+      "downsampleInterval": "",
+      "filters": [ ],
+      "isCounter": false,
+      "metric": "sys.cpu.system",
+      "shouldComputeRate": false,
+      "tags": {
+         "dc": "us-west-01",
+         "host": "web0*"
+      }
+   },
+   "basic": {
+      "aggregator": "sum",
+      "downsampleAggregator": "avg",
+      "downsampleFillPolicy": "none",
+      "downsampleInterval": "",
+      "filters": [ ],
+      "isCounter": false,
+      "metric": "sys.cpu.system",
+      "shouldComputeRate": false,
+      "tags": { }
+   },
+   "rate": {
+      "aggregator": "avg",
+      "downsampleAggregator": "avg",
+      "downsampleFillPolicy": "none",
+      "downsampleInterval": "",
+      "filters": [
+         {
+            "filter": "web01|web02",
+            "groupBy": true,
+            "tagk": "host",
+            "type": "literal_or"
+         },
+         {
+            "filter": "^us-west*",
+            "groupBy": false,
+            "tagk": "dc",
+            "type": "regexp"
+         }
+      ],
+      "isCounter": true,
+      "metric": "sys.cpu.system.brust",
+      "shouldComputeRate": true,
+      "tags": { }
+   },
+   "topk": {
+      "aggregator": "avg",
+      "downsampleAggregator": "avg",
+      "downsampleFillPolicy": "none",
+      "downsampleInterval": "",
+      "filters": [
+         {
+            "filter": "web01|web02",
+            "groupBy": true,
+            "tagk": "host",
+            "type": "literal_or"
+         },
+         {
+            "filter": "^us-west*",
+            "groupBy": false,
+            "tagk": "dc",
+            "type": "regexp"
+         }
+      ],
+      "isCounter": true,
+      "metric": "sys.cpu.system.brust",
+      "shouldComputeRate": true,
+      "shouldComputeTopK": true,
+      "tags": { }
+   }
+}
