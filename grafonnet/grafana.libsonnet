@@ -21,6 +21,7 @@
   cloudmonitoring:: import 'cloudmonitoring.libsonnet',
   cloudwatch:: import 'cloudwatch.libsonnet',
   elasticsearch:: import 'elasticsearch.libsonnet',
+  opentsdb:: import 'opentsdb.libsonnet',
   heatmapPanel:: import 'heatmap_panel.libsonnet',
   dashlist:: import 'dashlist.libsonnet',
   pluginlist:: import 'pluginlist.libsonnet',
