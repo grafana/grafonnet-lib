@@ -253,6 +253,7 @@
                "datasource": "$datasource",
                "gridPos": { },
                "id": 5,
+               "links": [ ],
                "span": 12,
                "styles": [
                   {
@@ -685,6 +686,7 @@
                "dashes": false,
                "datasource": "$datasource",
                "fill": 1,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 10,
                "legend": {
@@ -779,6 +781,7 @@
                "dashes": false,
                "datasource": "$datasource",
                "fill": 1,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 11,
                "legend": {
@@ -873,6 +876,7 @@
                "dashes": false,
                "datasource": "$datasource",
                "fill": 1,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 12,
                "legend": {
@@ -967,6 +971,7 @@
                "dashes": false,
                "datasource": "$datasource",
                "fill": 1,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 13,
                "legend": {
@@ -1296,6 +1301,7 @@
                "datasource": "$datasource",
                "gridPos": { },
                "id": 17,
+               "links": [ ],
                "span": 3,
                "styles": [
                   {
@@ -2207,6 +2213,7 @@
                "datasource": "$datasource",
                "gridPos": { },
                "id": 29,
+               "links": [ ],
                "span": 12,
                "styles": [
                   {

@@ -1,5 +1,6 @@
 local grafana = import 'grafonnet/grafana.libsonnet';
 local tablePanel = grafana.tablePanel;
+local transformation = grafana.transformation;
 
 {
   basic: tablePanel.new(
@@ -36,6 +37,7 @@ local tablePanel = grafana.tablePanel;
     },
     time_from='24h',
     time_shift='1h',
+    links=[{ targetBlank: true, title: 'foolink', url: 'https://example.com' }],
   ),
   targets:
     [
@@ -44,6 +46,45 @@ local tablePanel = grafana.tablePanel;
       .addTarget({ b: 'foo' }),
       tablePanel.new('with batch targets', span=12)
       .addTargets([{ a: 'foo' }, { b: 'foo' }]),
+    ],
+  transformations:
+    [
+      tablePanel.new('with transformations', span=12)
+      .addTransformation(transformation.new('seriesToColumns', options={
+        byField: 'instance',
+      }))
+      .addTransformation(transformation.new('filterFieldsByName', options={
+        include: {
+          names: [
+            'instance',
+          ],
+        },
+      })),
+      tablePanel.new('with batch transformations', span=12)
+      .addTransformations([
+        transformation.new('filterFieldsByName', options={
+          include: {
+            names: [
+              'instance',
+              'nodename',
+              'Value #D',
+              'Value #B',
+              'Value #C',
+              'Value #E',
+              'Value #F',
+              'Value #G',
+              'Value #H',
+              'Value #I',
+              'Value #J',
+              'Value #K',
+              'Value #L',
+            ],
+          },
+        }),
+        transformation.new('seriesToColumns', options={
+          byField: 'instance',
+        }),
+      ]),
     ],
   hideColumns: tablePanel.new(
     'test',

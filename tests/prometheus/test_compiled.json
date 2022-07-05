@@ -3,6 +3,7 @@
       "datasource": "prom1",
       "expr": "apache_up",
       "format": "time_series",
+      "hide": true,
       "instant": true,
       "interval": "1m",
       "intervalFactor": 1,

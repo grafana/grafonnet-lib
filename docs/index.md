@@ -1,14 +1,29 @@
 # ![Grafonnet logo](images/grafonnet.png)
 
 Grafonnet provides an easy and maintainable way of writing
-[grafana](https://grafana.org) dashboards. Instead of generating JSON files and
+[Grafana](https://grafana.org) dashboards. Instead of generating JSON files and
 maintaining them, you can easily create your own dashboards using the many
 helpers grafonnet-lib offers you, thanks to the data templating language
-[jsonnet](http://jsonnet.org/).
+[Jsonnet](http://jsonnet.org/).
+
+!!! warning
+    We're in the process of introducing generated code that can be used instead
+    of the manually maintained Jsonnet code in the `grafonnet` directory. The
+    generated code lives in `grafonnet-7.0`. It's generated from a new project,
+    [grafana/dashboard-spec](https://github.com/grafana/dashboard-spec). The
+    generated code is still incomplete, however, the components present are
+    useable. We very much appreciate contributions in
+    [grafana/dashboard-spec](https://github.com/grafana/dashboard-spec) for
+    components yet to be added._
+
+    | Grafana Version | Grafonnet Library | API Docs |
+    | --- | --- | --- |
+    | 7.x | [grafonnet-7.0](https://github.com/grafana/grafonnet-lib/tree/master/grafonnet-7.0) | [DOCS.md](https://github.com/grafana/grafonnet-lib/tree/master/grafonnet-7.0/DOCS.md) |
 
 ## Grafana dashboard
 
-[Grafana](https://grafana.org) is using JSON as format for the dashboards. While
+[A dashboard in Grafana is represented by a JSON
+object](https://grafana.com/docs/grafana/latest/reference/dashboard/). While
 this choice makes sense from a technical point of view, people who want to keep
 those dashboards under version control end up putting large, independent JSON
 files under source control.
@@ -17,8 +32,8 @@ When doing so, it is hard to maintain the same links, templates, or even
 annotation between graphs. It usually requires a lot of custom tooling to
 change and keep those Json files aligned. There are alternatives, like
 [grafanalib](https://github.com/weaveworks/grafanalib), that makes thing easier.
-However, as Grafonnet is using [jsonnet](http://jsonnet.org/), a superset of
-Json, it gives you out of the box a very easy way to use any feature of grafana
+However, as Grafonnet is using [Jsonnet](http://jsonnet.org/), a superset of
+JSON, it gives you out of the box a very easy way to use any feature of grafana
 that would not be covered by Grafonnet already.
 
 ## Scope

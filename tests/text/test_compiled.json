@@ -3,7 +3,10 @@
       "content": "coocoo",
       "datasource": "$PROMETHEUS",
       "description": "description",
+      "maxPerRow": 12,
       "mode": "html",
+      "repeat": "my-variable",
+      "repeatDirection": "v",
       "span": 5,
       "title": "foo",
       "transparent": true,
@@ -13,6 +16,17 @@
       "content": "",
       "datasource": null,
       "mode": "markdown",
+      "span": 12,
+      "title": "",
+      "type": "text"
+   },
+   "repeat": {
+      "content": "",
+      "datasource": null,
+      "maxPerRow": null,
+      "mode": "markdown",
+      "repeat": "my-variable",
+      "repeatDirection": null,
       "span": 12,
       "title": "",
       "type": "text"

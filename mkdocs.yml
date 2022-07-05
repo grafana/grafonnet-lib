@@ -4,9 +4,12 @@ theme:
   palette:
     primary: 'Deep orange'
     accent: 'Orange'
+markdown_extensions:
+  - 'admonition'
 nav:
   - Home: 'index.md'
   - Getting Started: 'getting-started.md'
+  - Usage: 'usage.md'
   - Examples: 'examples.md'
   - Style Guide: 'style-guide.md'
   - Community Plugins: 'community-plugins.md'

@@ -441,6 +441,7 @@
                "datasource": "-- Mixed --",
                "decimals": 2,
                "fill": 0,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 6,
                "legend": {
@@ -541,6 +542,7 @@
                "datasource": "-- Mixed --",
                "decimals": 2,
                "fill": 0,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 7,
                "legend": {
@@ -655,6 +657,7 @@
                "datasource": "-- Mixed --",
                "decimals": 2,
                "fill": 0,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 8,
                "legend": {
@@ -770,6 +773,7 @@
                "datasource": "-- Mixed --",
                "decimals": 2,
                "fill": 0,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 9,
                "legend": {
@@ -855,6 +859,7 @@
                "datasource": "-- Mixed --",
                "decimals": 2,
                "fill": 0,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 10,
                "legend": {
@@ -954,6 +959,7 @@
                "datasource": "-- Mixed --",
                "decimals": 2,
                "fill": 0,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 11,
                "legend": {
@@ -1071,6 +1077,7 @@
                "datasource": "-- Mixed --",
                "decimals": 2,
                "fill": 0,
+               "fillGradient": 0,
                "gridPos": { },
                "id": 12,
                "legend": {

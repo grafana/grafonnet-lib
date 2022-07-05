@@ -1,0 +1,240 @@
+{
+   "advanced": {
+      "datasource": null,
+      "fieldConfig": {
+         "defaults": {
+            "links": [ ],
+            "mappings": [ ],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+               "mode": "percentage",
+               "steps": [
+                  {
+                     "color": "purple",
+                     "value": 80
+                  }
+               ]
+            },
+            "unit": "percent"
+         }
+      },
+      "links": [ ],
+      "options": {
+         "reduceOptions": {
+            "calcs": [
+               "sum"
+            ],
+            "fields": "",
+            "values": false
+         },
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
+      },
+      "pluginVersion": "7",
+      "targets": [ ],
+      "title": "advanced",
+      "transparent": true,
+      "type": "gauge"
+   },
+   "advanced_grafana6": {
+      "datasource": null,
+      "links": [ ],
+      "options": {
+         "fieldOptions": {
+            "calcs": [
+               "sum"
+            ],
+            "defaults": {
+               "links": [ ],
+               "mappings": [ ],
+               "max": 100,
+               "min": 0,
+               "thresholds": {
+                  "mode": "percentage",
+                  "steps": [
+                     {
+                        "color": "purple",
+                        "value": 80
+                     }
+                  ]
+               },
+               "unit": "percent"
+            },
+            "fields": "",
+            "values": false
+         },
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.7",
+      "targets": [ ],
+      "title": "advanced_grafana6",
+      "transparent": true,
+      "type": "gauge"
+   },
+   "basic": {
+      "datasource": null,
+      "fieldConfig": {
+         "defaults": {
+            "links": [ ],
+            "mappings": [ ],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+               "mode": "absolute",
+               "steps": [
+                  {
+                     "color": "blue",
+                     "value": 0
+                  }
+               ]
+            },
+            "unit": "percent"
+         }
+      },
+      "links": [ ],
+      "options": {
+         "reduceOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "fields": "",
+            "values": false
+         },
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
+      },
+      "pluginVersion": "7",
+      "targets": [ ],
+      "title": "basic",
+      "transparent": false,
+      "type": "gauge"
+   },
+   "basic_grafana6": {
+      "datasource": null,
+      "links": [ ],
+      "options": {
+         "fieldOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "defaults": {
+               "links": [ ],
+               "mappings": [ ],
+               "max": 100,
+               "min": 0,
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                     {
+                        "color": "blue",
+                        "value": 0
+                     }
+                  ]
+               },
+               "unit": "percent"
+            },
+            "fields": "",
+            "values": false
+         },
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.7",
+      "targets": [ ],
+      "title": "basic_grafana6",
+      "transparent": false,
+      "type": "gauge"
+   },
+   "thresholds": {
+      "datasource": null,
+      "fieldConfig": {
+         "defaults": {
+            "links": [ ],
+            "mappings": [ ],
+            "max": 95,
+            "min": 10,
+            "thresholds": {
+               "mode": "absolute",
+               "steps": [
+                  {
+                     "color": "green",
+                     "value": 0
+                  },
+                  {
+                     "color": "yellow",
+                     "value": 50
+                  },
+                  {
+                     "color": "red",
+                     "value": 80
+                  }
+               ]
+            },
+            "unit": "percent"
+         }
+      },
+      "links": [ ],
+      "options": {
+         "reduceOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "fields": "",
+            "values": false
+         },
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
+      },
+      "pluginVersion": "7",
+      "targets": [ ],
+      "title": "thresholds",
+      "transparent": false,
+      "type": "gauge"
+   },
+   "thresholds_grafana6": {
+      "datasource": null,
+      "links": [ ],
+      "options": {
+         "fieldOptions": {
+            "calcs": [
+               "mean"
+            ],
+            "defaults": {
+               "links": [ ],
+               "mappings": [ ],
+               "max": 95,
+               "min": 10,
+               "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                     {
+                        "color": "green",
+                        "value": 0
+                     },
+                     {
+                        "color": "yellow",
+                        "value": 50
+                     },
+                     {
+                        "color": "red",
+                        "value": 80
+                     }
+                  ]
+               },
+               "unit": "percent"
+            },
+            "fields": "",
+            "values": false
+         },
+         "showThresholdLabels": false,
+         "showThresholdMarkers": true
+      },
+      "pluginVersion": "6.7",
+      "targets": [ ],
+      "title": "thresholds_grafana6",
+      "transparent": false,
+      "type": "gauge"
+   }
+}

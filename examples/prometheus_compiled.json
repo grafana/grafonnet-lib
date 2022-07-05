@@ -184,6 +184,7 @@
          "dashes": false,
          "datasource": "Prometheus",
          "fill": 1,
+         "fillGradient": 0,
          "gridPos": {
             "h": 8,
             "w": 7,
