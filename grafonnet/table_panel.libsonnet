@@ -1,6 +1,6 @@
 {
   /**
-   * Creates a [table panel](https://grafana.com/docs/grafana/latest/panels/visualizations/table-panel/) that can be added in a row.
+   * Creates a [table panel](https://grafana.com/docs/grafana/latest/visualizations/table/) that can be added in a row.
    * It requires the table panel plugin in grafana, which is built-in.
    *
    * @name table.new
