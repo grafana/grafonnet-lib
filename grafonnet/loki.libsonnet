@@ -12,9 +12,11 @@
     expr,
     hide=null,
     legendFormat='',
+    instant=null,
   ):: {
     [if hide != null then 'hide']: hide,
     expr: expr,
     legendFormat: legendFormat,
+    [if instant != null then 'instant']: instant,
   },
 }
