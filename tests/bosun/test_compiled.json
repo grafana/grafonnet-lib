@@ -1,0 +1,7 @@
+{
+   "basic": {
+      "alias": "$tag_host $tag_pxname",
+      "expandHelper": 0,
+      "expr": "q(\"sum:haproxy.frontend.scur{host=*,pxname=*,tier=*}\", \"5m\", \"\")"
+   }
+}
