@@ -1,0 +1,128 @@
+{
+   "axis_tests": {
+      "can_align_axis_right": true,
+      "can_label_axis": true,
+      "can_set_axis_soft_max": true,
+      "can_set_axis_soft_min": true,
+      "can_set_axis_width": true,
+      "can_set_log_scale": true
+   },
+   "can_add_a_threshold": true,
+   "can_add_two_thresholds": true,
+   "can_color_by_min": true,
+   "can_display_thresholds": true,
+   "can_make_transparent": true,
+   "can_map_missing_values": true,
+   "can_override_series_name": true,
+   "can_set_decimals": true,
+   "can_set_description": true,
+   "can_set_fixed_color": true,
+   "can_set_max": true,
+   "can_set_min": true,
+   "can_set_unit": true,
+   "check_defaults": {
+      "axis_auto_placement": true,
+      "axis_label_blank": true,
+      "axis_linear_scale": true,
+      "axis_show_grid_lines_not_set": true,
+      "axis_soft_max_not_set": true,
+      "axis_soft_min_not_set": true,
+      "axis_width_not_set": true,
+      "classic_palette": true,
+      "colored_by_last": true,
+      "graph_style": {
+         "bars_aligned_centre": true,
+         "line_is_not_filled": true,
+         "line_style_is_solid": true,
+         "line_width_is_1": true,
+         "linear_interpolation": true,
+         "lines": true,
+         "no_gradient": true,
+         "nulls_are_not_connected": true,
+         "point_size_is_5": true,
+         "series_not_stacked": true,
+         "show_points_set_to_auto": true
+      },
+      "legend_mode_table_at_bottom": true,
+      "missing_values_not_mapped": true,
+      "no_decimals": true,
+      "no_description": true,
+      "no_links": true,
+      "no_maximum": true,
+      "no_minimum": true,
+      "no_overrides": true,
+      "no_repeat": true,
+      "no_targets": true,
+      "no_threshold_steps": true,
+      "no_value_mappings": true,
+      "sets_title": true,
+      "thresholds_are_absolute": true,
+      "thresholds_not_displayed": true,
+      "tooltip_mode_single": true,
+      "transparent_not_set": true,
+      "unitless_values": true
+   },
+   "datalinks_tests": {
+      "can_add_a_data_link": true,
+      "can_add_two_data_links": true
+   },
+   "graph_style_line_tests": {
+      "can_align_bars_left": true,
+      "can_align_bars_right": true,
+      "can_force_points_to_be_hidden": true,
+      "can_force_points_to_be_shown": true,
+      "can_set_custom_dash_pattern": true,
+      "can_set_dashed_line": true,
+      "can_set_dotted_line": true,
+      "can_set_fill_opacity": true,
+      "can_set_gradient_mode": true,
+      "can_set_interpolation": true,
+      "can_set_line_width": true,
+      "can_set_point_size": true,
+      "can_span_null_values": true,
+      "can_span_null_values_with_threshold": true,
+      "can_stack_series": true,
+      "can_stack_series_normalised": true
+   },
+   "legend_tests": {
+      "can_calculate_summaries": true,
+      "can_display_as_table": true,
+      "can_hide": true,
+      "can_position_at_right": true
+   },
+   "mappings_tests": {
+      "can_add_a_range_mapping": true,
+      "can_add_a_regex_mapping": true,
+      "can_add_a_special_mapping": true,
+      "can_add_a_value_mapping": true,
+      "can_add_two_range_mappings": true,
+      "can_add_two_regex_mappings": true,
+      "can_add_two_special_mappings": true,
+      "can_add_two_value_mappings": true
+   },
+   "override_tests": {
+      "can_override_a_named_field": true,
+      "can_override_fields_from_query": true,
+      "can_override_fields_matching_regex": true,
+      "can_override_fields_of_a_type": true
+   },
+   "repeat_tests": {
+      "can_limit_horizontal_repeat": true,
+      "can_set_direction": true,
+      "horizontal_repeat_ignored_when_vertical": true,
+      "repeats_horizontally_by_default": true
+   },
+   "targets_tests": {
+      "calculates_refids": true,
+      "can_add_a_target": true,
+      "can_add_list_of_targets": true,
+      "can_add_two_targets": true
+   },
+   "thresholds_can_be_percentages": true,
+   "tooltip_tests": {
+      "can_hide": true,
+      "can_show_all": true,
+      "can_sort_when_all": true,
+      "sort_ignored_when_not_all": true
+   }
+}

@@ -1,0 +1,230 @@
+{
+   "advanced": {
+      "description": "An advanced timeseries panel configuration",
+      "fieldConfig": {
+         "defaults": {
+            "color": {
+               "mode": "palette-classic",
+               "seriesBy": "min"
+            },
+            "custom": {
+               "axisGridShow": "true",
+               "axisLabel": "y-axis",
+               "axisPlacement": "right",
+               "axisSoftMax": 95,
+               "axisSoftMin": 5,
+               "axisWidth": 100,
+               "barAlignment": 0,
+               "drawStyle": "line",
+               "fillOpacity": "50",
+               "gradientMode": "hue",
+               "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+               },
+               "lineInterpolation": "linear",
+               "lineStyle": {
+                  "dash": [
+                     30,
+                     60
+                  ],
+                  "fill": "dash"
+               },
+               "lineWidth": 4,
+               "pointSize": 10,
+               "scaleDistribution": {
+                  "log": 2,
+                  "type": "log"
+               },
+               "showPoints": "always",
+               "spanNulls": true,
+               "stacking": {
+                  "group": "A",
+                  "mode": "normal"
+               },
+               "thresholdsStyle": {
+                  "mode": "off"
+               }
+            },
+            "decimals": 2,
+            "displayName": "a name",
+            "mappings": [ ],
+            "max": 10,
+            "min": -10,
+            "noValue": "none",
+            "thresholds": {
+               "mode": "absolute",
+               "steps": [ ]
+            },
+            "unit": "s"
+         },
+         "overrides": [ ]
+      },
+      "links": [ ],
+      "options": {
+         "legend": {
+            "calcs": [
+               "min",
+               "max",
+               "mean"
+            ],
+            "displayMode": "table",
+            "placement": "right"
+         },
+         "tooltip": {
+            "mode": "multi",
+            "sort": "asc"
+         }
+      },
+      "targets": [ ],
+      "title": "advanced",
+      "transparent": true,
+      "type": "timeseries"
+   },
+   "defaults": {
+      "fieldConfig": {
+         "defaults": {
+            "color": {
+               "mode": "palette-classic"
+            },
+            "custom": {
+               "axisLabel": "",
+               "axisPlacement": "auto",
+               "barAlignment": 0,
+               "drawStyle": "line",
+               "fillOpacity": 0,
+               "gradientMode": "none",
+               "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+               },
+               "lineInterpolation": "linear",
+               "lineStyle": {
+                  "fill": "solid"
+               },
+               "lineWidth": 1,
+               "pointSize": 5,
+               "scaleDistribution": {
+                  "type": "linear"
+               },
+               "showPoints": "auto",
+               "spanNulls": false,
+               "stacking": {
+                  "group": "A",
+                  "mode": "none"
+               },
+               "thresholdsStyle": {
+                  "mode": "off"
+               }
+            },
+            "mappings": [ ],
+            "thresholds": {
+               "mode": "absolute",
+               "steps": [ ]
+            }
+         },
+         "overrides": [ ]
+      },
+      "links": [ ],
+      "options": {
+         "legend": {
+            "calcs": [ ],
+            "displayMode": "list",
+            "placement": "bottom"
+         },
+         "tooltip": {
+            "mode": "single",
+            "sort": "none"
+         }
+      },
+      "targets": [ ],
+      "title": "defaults",
+      "type": "timeseries"
+   },
+   "thresholds": {
+      "description": "A panel with threshold markers",
+      "fieldConfig": {
+         "defaults": {
+            "color": {
+               "mode": "palette-classic"
+            },
+            "custom": {
+               "axisLabel": "",
+               "axisPlacement": "auto",
+               "barAlignment": 0,
+               "drawStyle": "line",
+               "fillOpacity": 0,
+               "gradientMode": "none",
+               "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+               },
+               "lineInterpolation": "linear",
+               "lineStyle": {
+                  "fill": "solid"
+               },
+               "lineWidth": 1,
+               "pointSize": 5,
+               "scaleDistribution": {
+                  "type": "linear"
+               },
+               "showPoints": "auto",
+               "spanNulls": false,
+               "stacking": {
+                  "group": "A",
+                  "mode": "none"
+               },
+               "thresholdsStyle": {
+                  "mode": "line"
+               }
+            },
+            "mappings": [ ],
+            "thresholds": {
+               "mode": "perecentage",
+               "steps": [
+                  {
+                     "color": {
+                        "color": "yellow",
+                        "value": 0
+                     },
+                     "value": null
+                  },
+                  {
+                     "color": {
+                        "color": "green",
+                        "value": 75
+                     },
+                     "value": null
+                  },
+                  {
+                     "color": {
+                        "color": "red",
+                        "value": 90
+                     },
+                     "value": null
+                  }
+               ]
+            }
+         },
+         "overrides": [ ]
+      },
+      "links": [ ],
+      "options": {
+         "legend": {
+            "calcs": [ ],
+            "displayMode": "list",
+            "placement": "bottom"
+         },
+         "tooltip": {
+            "mode": "single",
+            "sort": "none"
+         }
+      },
+      "targets": [ ],
+      "title": "thresholds",
+      "type": "timeseries"
+   }
+}
