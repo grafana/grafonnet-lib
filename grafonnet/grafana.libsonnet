@@ -8,6 +8,7 @@
   link:: import 'link.libsonnet',
   annotation:: import 'annotation.libsonnet',
   graphPanel:: import 'graph_panel.libsonnet',
+  timeseriesPanel:: import 'timeseries_panel.libsonnet',
   logPanel:: import 'log_panel.libsonnet',
   tablePanel:: import 'table_panel.libsonnet',
   singlestat:: import 'singlestat.libsonnet',
