@@ -1,6 +1,8 @@
 UID = $(shell id -u $(USER))
 GID = $(shell id -g $(USER))
 
+JSONNET_VERSION ?= 0.18.0
+
 help:         # Show this message.
 	@echo "\nAvailable Targets:\n"
 	@sed -ne '/@sed/!s/# //p' $(MAKEFILE_LIST)
@@ -11,7 +13,7 @@ test:         # Run all unit tests.
 		-v $$PWD:$$PWD \
 		-u $(UID):$(GID) \
 		--entrypoint bash \
-		bitnami/jsonnet:0.16.0 \
+		bitnami/jsonnet:$(JSONNET_VERSION) \
 		tests.sh
 
 test-update:  # Run all unit tests while copying test_output.json to compiled.json file.
@@ -20,10 +22,10 @@ test-update:  # Run all unit tests while copying test_output.json to compiled.js
 		-v $$PWD:$$PWD \
 		-u $(UID):$(GID) \
 		--entrypoint bash \
-		bitnami/jsonnet:0.16.0 \
+		bitnami/jsonnet:$(JSONNET_VERSION) \
 		tests.sh update
 
-E2E_GRAFANA_VERSION ?= 7.1.1
+E2E_GRAFANA_VERSION ?= 9.0.5
 
 e2e:          # Run all end-to-end tests.
 	GRAFANA_VERSION=${E2E_GRAFANA_VERSION} \
