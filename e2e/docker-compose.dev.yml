@@ -1,14 +1,14 @@
 version: '3'
 services:
   grafana:
-    image: grafana/grafana:${GRAFANA_VERSION?err}
+    image: grafana/grafana:${GRAFANA_VERSION?}
     ports:
       - "3030:3000"
   e2e:
     build:
       context: .
       args:
-        CYPRESS_IMAGE: cypress/included:4.7.0
+        CYPRESS_IMAGE: cypress/included:10.9.0
     image: grafonnet-e2e-dev
     entrypoint: cypress open --project .
     depends_on:
