@@ -41,6 +41,13 @@
     ,
 
 
+    addTemplate(
+      template
+    ):: self {}
+        + { templating+: { list+: [
+          template,
+        ] } },
+
     addAnnotation(
       builtIn=0,
       datasource='default',
@@ -62,13 +69,6 @@
             [if rawQuery != null then 'rawQuery']: rawQuery,
             [if showIn != null then 'showIn']: showIn,
           },
-        ] } },
-
-    addTemplate(
-      template
-    ):: self {}
-        + { templating+: { list+: [
-          template,
         ] } },
 
 

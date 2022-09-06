@@ -1,6 +1,6 @@
 {
   /**
-   * Creates a [Loki target](https://grafana.com/docs/grafana/latest/features/datasources/loki/)
+   * Creates a [Loki target](https://grafana.com/docs/grafana/latest/datasources/loki/)
    *
    * @name loki.target
    *
@@ -12,9 +12,11 @@
     expr,
     hide=null,
     legendFormat='',
+    instant=null,
   ):: {
     [if hide != null then 'hide']: hide,
     expr: expr,
     legendFormat: legendFormat,
+    [if instant != null then 'instant']: instant,
   },
 }

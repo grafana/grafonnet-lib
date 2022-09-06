@@ -14,6 +14,7 @@
     prometheus:: import 'target/prometheus.libsonnet',
   },
   template:: {
+    custom:: import 'template/custom.libsonnet',
     datasource:: import 'template/datasource.libsonnet',
     query:: import 'template/query.libsonnet',
   },

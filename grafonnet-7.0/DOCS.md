@@ -11,6 +11,7 @@
 * [target](#target)
   * [prometheus.new](#targetPrometheusnew)
 * [template](#template)
+  * [custom.new](#templateCustomnew)
   * [datasource.new](#templateDatasourcenew)
   * [query.new](#templateQuerynew)
 
@@ -56,10 +57,6 @@ Instantiate a dashboard.
 * **refreshIntervals**: (type: array, default: `["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"]`)
   
 
-#### #addTemplate
-
-* **template**: (type: object)
-  
 #### #addAnnotation
 
 * **builtIn**: (type: integer, default: `0`)
@@ -77,6 +74,10 @@ Instantiate a dashboard.
 * **rawQuery**: (type: string, default: `null`)
   
 * **showIn**: (type: integer, default: `0`)
+  
+#### #addTemplate
+
+* **template**: (type: object)
   
 
 
@@ -530,7 +531,7 @@ Instantiate a dashboard.
 * **values**: (type: boolean, default: `false`)
   
 
-#### #addPanelLink
+#### #addDataLink
 
 * **targetBlank**: (type: boolean, default: `true`)
   
@@ -538,7 +539,7 @@ Instantiate a dashboard.
   
 * **url**: (type: string, default: `null`)
   
-#### #addDataLink
+#### #addPanelLink
 
 * **targetBlank**: (type: boolean, default: `true`)
   
@@ -756,7 +757,41 @@ Instantiate a dashboard.
 
 
 
-### tamplate.datasource.new
+### template.custom.new
+
+
+
+* **allValue**: (type: string, default: `null`)
+  
+* **hide**: (type: integer, default: `0`)
+  
+* **includeAll**: (type: boolean, default: `false`)
+  
+* **label**: (type: string, default: `null`)
+  
+* **multi**: (type: boolean, default: `false`)
+  
+* **name**: (type: string, default: `null`)
+  
+* **query**: (type: string, default: `null`)
+  
+* **queryValue**: (type: string, default: `""`)
+  
+* **skipUrlSync**: (type: string, default: `false`)
+  
+
+#### #setCurrent
+
+* **selected**: (type: boolean, default: `false`)
+  
+* **text**: (type: string, default: `null`)
+  
+* **value**: (type: string, default: `null`)
+  
+
+
+
+### template.datasource.new
 
 
 
@@ -790,7 +825,7 @@ Instantiate a dashboard.
 
 
 
-### tamplate.query.new
+### template.query.new
 
 
 
