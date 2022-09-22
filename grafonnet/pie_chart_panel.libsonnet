@@ -23,6 +23,7 @@
    * @return A json that represents a pie chart panel
    *
    * @method addTarget(target) Adds a target object.
+   * @method addTargets(targets) Adds an array of targets.
    */
   new(
     title,
@@ -68,5 +69,6 @@
       _nextTarget: nextTarget + 1,
       targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
     },
+    addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
   },
 }
