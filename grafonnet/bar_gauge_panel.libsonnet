@@ -9,6 +9,7 @@
    * @param datasource (optional) Panel datasource.
    * @param unit (optional) The unit of the data.
    * @param thresholds (optional) An array of threashold values.
+   * @param options (optional) An object containing panel options
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
@@ -19,6 +20,7 @@
     datasource=null,
     unit=null,
     thresholds=[],
+    options={},
   ):: {
     type: 'bargauge',
     title: title,
@@ -35,6 +37,7 @@
         },
       },
     },
+    options: options,
     _nextTarget:: 0,
     addTarget(target):: self {
       // automatically ref id in added targets.
