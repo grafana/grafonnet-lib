@@ -1,11 +1,11 @@
 {
   /**
-   * Creates a [table panel](https://grafana.com/docs/grafana/latest/panels/visualizations/table-panel/) that can be added in a row.
+   * Creates a [table panel](https://grafana.com/docs/grafana/latest/visualizations/table/) that can be added in a row.
    * It requires the table panel plugin in grafana, which is built-in.
    *
-   * @name table.new
+   * @name tablePanel.new
    *
-   * @param title The title of the graph panel.
+   * @param title The title of the table panel.
    * @param description (optional) Description of the panel
    * @param span (optional)  Width of the panel
    * @param height (optional)  Height of the panel
