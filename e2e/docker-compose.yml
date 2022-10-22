@@ -1,12 +1,12 @@
 version: '3'
 services:
   grafana:
-    image: grafana/grafana:${GRAFANA_VERSION?err}
+    image: grafana/grafana:${GRAFANA_VERSION?}
   e2e:
     build:
       context: .
       args:
-        CYPRESS_IMAGE: cypress/base:12
+        CYPRESS_IMAGE: cypress/base:${CYPRESS_BASE_VERSION?}
     image: grafonnet-e2e
     command: npx cypress run
     depends_on:
@@ -16,5 +16,5 @@ services:
       - CYPRESS_video=false
     volumes:
       - ./cypress:/e2e/cypress
-      - ./cypress.json:/e2e/cypress.json
+      - ./cypress.config.js:/e2e/cypress.config.js
       - ../tests:/e2e/tests

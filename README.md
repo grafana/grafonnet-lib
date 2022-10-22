@@ -22,3 +22,8 @@ Please contribute! If you're interested, please start by reading the
 [contributing guide](CONTRIBUTING.md). Before you begin work please take note of
 our code of conduct and ensure that what you'd like to contribute is within the
 scope of what Grafonnet attempts to support.
+
+## Upgrading Cypress
+
+- Update version numbers in e2e/package.json and e2e/docker-compose.dev.yml
+- `make e2e-npm-install` to update e2e/package-lock.json
