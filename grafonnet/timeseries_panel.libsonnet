@@ -118,7 +118,7 @@
             [if axisWidth != 'auto' then 'axisWidth']: axisWidth,
             [if axisSoftMin != null then 'axisSoftMin']: axisSoftMin,
             [if axisSoftMax != null then 'axisSoftMax']: axisSoftMax,
-            [if axisShowGridLines != 'auto' then 'axisShowGrid']: axisShowGridLines,
+            [if axisShowGridLines != 'auto' then 'axisGridShow']: axisShowGridLines,
             barAlignment: {
               left: -1,
               center: 0,
