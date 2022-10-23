@@ -8,9 +8,9 @@
                "seriesBy": "min"
             },
             "custom": {
+               "axisGridShow": "true",
                "axisLabel": "y-axis",
                "axisPlacement": "right",
-               "axisShowGrid": "true",
                "axisSoftMax": 95,
                "axisSoftMin": 5,
                "axisWidth": 100,
