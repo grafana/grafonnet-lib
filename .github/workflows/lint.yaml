@@ -1,0 +1,12 @@
+name: Lint
+on:
+  - push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@1.1.0
+        with:
+          version: v0.8.0
