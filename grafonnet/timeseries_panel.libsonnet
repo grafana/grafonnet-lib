@@ -310,7 +310,7 @@
     decimals(places):: { id: 'decimals', value: places },
     displayName(name):: { id: 'displayName', value: name },
     fixedColor(color):: { id: 'color', value: { mode: 'fixed', fixedColor: color } },
-    colorScheme(name):: { id: 'color', value: { mode: name } },
+    colorScheme(name, colorBy='last'):: { id: 'color', value: { mode: name, seriesBy: colorBy } },
     noValue(value):: { id: 'noValue', value: value },
     dataLinks(links):: { id: 'links', value: links },
     valueMappings(mappings):: { id: 'mappings', value: mappings },
