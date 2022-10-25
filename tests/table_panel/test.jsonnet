@@ -4,52 +4,26 @@ local transformation = grafana.transformation;
 
 {
   basic: tablePanel.new(
-    'test',
-    span=12
+    'test'
   ),
   advanced: tablePanel.new(
     'test',
-    span=12,
     datasource='$PROMETHEUS',
     description='description',
-    columns=[
-      {
-        text: 'Users',
-        value: 'Users',
-      },
-    ],
-    styles=[
-      {
-        alias: 'Users',
-        colorMode: 'row',
-        colors: ['rgba(245,54,54,0.9)', 'rgba(237,129,40,0.89)', 'rgba(50,172,45,0.97)'],
-        pattern: 'Users',
-        thresholds: ['0', '50'],
-        type: 'number',
-        unit: 'none',
-      },
-    ],
-    transform='table',
     transparent=true,
-    sort={
-      col: 1,
-      desc: true,
-    },
-    time_from='24h',
-    time_shift='1h',
     links=[{ targetBlank: true, title: 'foolink', url: 'https://example.com' }],
   ),
   targets:
     [
-      tablePanel.new('with targets', span=12)
+      tablePanel.new('with targets')
       .addTarget({ a: 'foo' })
       .addTarget({ b: 'foo' }),
-      tablePanel.new('with batch targets', span=12)
+      tablePanel.new('with batch targets')
       .addTargets([{ a: 'foo' }, { b: 'foo' }]),
     ],
   transformations:
     [
-      tablePanel.new('with transformations', span=12)
+      tablePanel.new('with transformations')
       .addTransformation(transformation.new('seriesToColumns', options={
         byField: 'instance',
       }))
@@ -60,7 +34,7 @@ local transformation = grafana.transformation;
           ],
         },
       })),
-      tablePanel.new('with batch transformations', span=12)
+      tablePanel.new('with batch transformations')
       .addTransformations([
         transformation.new('filterFieldsByName', options={
           include: {
@@ -86,10 +60,7 @@ local transformation = grafana.transformation;
         }),
       ]),
     ],
-  hideColumns: tablePanel.new(
-    'test',
-    span=12,
-  ).
-    hideColumn('Time').
-    hideColumn('Space'),
+  hideColumns: tablePanel.new('test').
+    addOverridesForField('Time', tablePanel.overrides.hide(true)).
+    addOverridesForField('Space', tablePanel.overrides.hide(true)),
 }
