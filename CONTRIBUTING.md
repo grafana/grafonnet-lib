@@ -1,5 +1,8 @@
 # Contributing
 
+_The below contribution guide is taken from the original Grafana repository and
+the sentiments expressed there apply equally here._
+
 Thank you for your interest in contributing to Grafonnet! We welcome all people
 who want to contribute in a healthy and constructive manner within our
 community. Grafonnet is developed within the Grafana community. Therefore we
@@ -10,8 +13,8 @@ participants to adhere to it.
 
 ## Version Support
 
-We strive to only support the latest and last major Grafana versions - currently
-6 and 7.
+We strive to only support the latest and last major Grafana versions -
+currently 9.
 
 ## Feature Support
 
