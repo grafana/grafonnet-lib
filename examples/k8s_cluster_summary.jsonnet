@@ -75,37 +75,31 @@ grafana.dashboard.new(
     grafana.tablePanel.new(
       'Node Info',
       datasource='$datasource',
-      span=12,
-      styles=[
-
-        { alias: 'Instance', pattern: 'instance' },
-        { alias: 'Instance Type', pattern: 'beta_kubernetes_io_instance_type' },
-        { alias: 'Node Pool', pattern: 'cloud_google_com_gke_nodepool' },
-        { alias: 'Region', pattern: 'failure_domain_beta_kubernetes_io_region' },
-        { alias: 'Zone', pattern: 'failure_domain_beta_kubernetes_io_zone' },
-        {
-          alias: 'Status',
-          pattern: 'Value',
-          colorMode: 'cell',
-          colors: ['rgba(245, 54, 54, 0.9)', 'rgba(237, 129, 40, 0.89)', 'rgba(50, 172, 45, 0.97)'],
-          thresholds: ['0', '1'],
-          type: 'string',
-          unit: 'short',
-          valueMaps: [{ text: 'OK', value: '1' }, { text: 'Down', value: '0' }],
-        },
-
-        // Hide these columns
-        { pattern: 'Time', type: 'hidden' },
-        { pattern: '__name__', type: 'hidden' },
-        { pattern: 'beta_kubernetes_io_arch', type: 'hidden' },
-        { pattern: 'beta_kubernetes_io_fluentd_ds_ready', type: 'hidden' },
-        { pattern: 'beta_kubernetes_io_os', type: 'hidden' },
-        { pattern: 'cloud_google_com_gke_os_distribution', type: 'hidden' },
-        { pattern: 'job', type: 'hidden' },
-        { pattern: 'kubernetes_io_hostname', type: 'hidden' },
-        { pattern: 'service', type: 'hidden' },
-      ],
     )
+    .addOverridesForField('Value', [
+      grafana.tablePanel.overrides.unit('short'),
+      grafana.tablePanel.overrides.displayName('Status'),
+      grafana.tablePanel.overrides.cellDisplayMode('color-background'),
+      grafana.tablePanel.overrides.thresholds([
+        { color: 'rgba(245, 54, 54, 0.9)', value: null },
+        { color: 'rgba(237, 129, 40, 0.89)', value: 0 },
+        { color: 'rgba(50, 172, 45, 0.97)', value: 1 },
+      ]),
+    ])
+    .addOverridesForField('instance', [grafana.tablePanel.overrides.displayName('Instance')])
+    .addOverridesForField('beta_kubernetes_io_instance_type', [grafana.tablePanel.overrides.displayName('Instance Type')])
+    .addOverridesForField('cloud_google_com_gke_nodepool', [grafana.tablePanel.overrides.displayName('Node Pool')])
+    .addOverridesForField('failure_domain_beta_kubernetes_io_region', [grafana.tablePanel.overrides.displayName('Region')])
+    .addOverridesForField('failure_domain_beta_kubernetes_io_zone', [grafana.tablePanel.overrides.displayName('Zone')])
+    .addOverridesForField('Time', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('__name__', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('beta_kubernetes_io_arch', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('beta_kubernetes_io_fluentd_ds_ready', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('beta_kubernetes_io_os', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('cloud_google_com_gke_os_distribution', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('job', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('kubernetes_io_hostname', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('service', [grafana.tablePanel.overrides.hide(true)])
     .addTarget(
       grafana.prometheus.target(
         'up{job="kubernetes-nodes"}',
@@ -338,11 +332,8 @@ grafana.dashboard.new(
     grafana.tablePanel.new(
       'Deployment Replicas - Up To Date',
       datasource='$datasource',
-      span=3,
-      styles=[
-        { pattern: 'Time', type: 'hidden' },
-      ],
     )
+    .addOverridesForField('Time', [grafana.tablePanel.overrides.hide(true)])
     .addTarget(
       grafana.prometheus.target(
         'kube_deployment_status_replicas',
@@ -529,34 +520,28 @@ grafana.dashboard.new(
     grafana.tablePanel.new(
       'Container Failed to Start',
       datasource='$datasource',
-      span=12,
-      styles=[
-
-        {
-          alias: 'Status',
-          pattern: 'Value',
-          colorMode: 'cell',
-          colors: ['rgba(50, 172, 45, 0.97)', 'rgba(237, 129, 40, 0.89)', 'rgba(245, 54, 54, 0.9)'],
-          thresholds: ['0', '1'],
-          type: 'string',
-          unit: 'short',
-          valueMaps: [{ text: 'Error', value: '1' }],
-        },
-
-        // Hide these columns
-        { pattern: 'Time', type: 'hidden' },
-        { pattern: '__name__', type: 'hidden' },
-        { pattern: 'app', type: 'hidden' },
-        { pattern: 'chart', type: 'hidden' },
-        { pattern: 'component', type: 'hidden' },
-        { pattern: 'heritage', type: 'hidden' },
-        { pattern: 'instance', type: 'hidden' },
-        { pattern: 'job', type: 'hidden' },
-        { pattern: 'kubernetes_name', type: 'hidden' },
-        { pattern: 'kubernetes_namespace', type: 'hidden' },
-        { pattern: 'release', type: 'hidden' },
-      ],
     )
+    .addOverridesForField('Value', [
+      grafana.tablePanel.overrides.unit('short'),
+      grafana.tablePanel.overrides.displayName('Status'),
+      grafana.tablePanel.overrides.cellDisplayMode('color-background'),
+      grafana.tablePanel.overrides.thresholds([
+        { color: 'rgba(50, 172, 45, 0.97)', value: null },
+        { color: 'rgba(237, 129, 40, 0.89)', value: 0 },
+        { color: 'rgba(245, 54, 54, 0.9)', value: 1 },
+      ]),
+    ])
+    .addOverridesForField('Time', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('__name__', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('app', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('chart', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('component', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('heritage', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('instance', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('job', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('kubernetes_name', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('kubernetes_namespace', [grafana.tablePanel.overrides.hide(true)])
+    .addOverridesForField('release', [grafana.tablePanel.overrides.hide(true)])
     .addTarget(
       grafana.prometheus.target(
         'kube_pod_container_status_waiting_reason{reason!="ContainerCreating"} > 0',
