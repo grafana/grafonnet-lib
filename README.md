@@ -2,19 +2,22 @@
 
 Jsonnet libraries for writing Grafana dashboards as code.
 
-[![CircleCI](https://circleci.com/gh/grafana/grafonnet-lib.svg?style=svg)](https://circleci.com/gh/grafana/grafonnet-lib)
+This is a fork of grafonnet-lib from Grafana Labs, with improved support for
+recent Grafana features.
 
-_**Attention:** We're in the process of introducing generated code that can be
-used instead of the manually maintained Jsonnet code in the
-[grafonnet](./grafonnet) directory. The generated code lives in
-[grafonnet-7.0](./grafonnet-7.0). It's generated from a new project,
+Grafana's docs are here: https://grafana.github.io/grafonnet-lib/ although this
+codebase has diverged somewhat from the API described there.
+
+# Grafonnet 7
+
+In the [grafonnet-7.0](./grafonnet-7.0) directory you will find code generated
+from a new project,
 [grafana/dashboard-spec](https://github.com/grafana/dashboard-spec). The
-generated code is still incomplete, however, the components present are useable.
-We very much appreciate contributions in
+generated code is still incomplete, however, the components present are
+useable.  We very much appreciate contributions in
 [grafana/dashboard-spec](https://github.com/grafana/dashboard-spec) for
-components yet to be added._
+components yet to be added.
 
-See the full docs here: https://grafana.github.io/grafonnet-lib/
 
 ## Contributing
 
