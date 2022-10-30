@@ -1,6 +1,6 @@
 {
   "license": "Apache-2.0",
   "devDependencies": {
-    "cypress": "^10.9.0"
+    "cypress": "^10.11.0"
   }
 }
