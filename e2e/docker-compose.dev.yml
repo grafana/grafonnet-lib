@@ -8,7 +8,7 @@ services:
     build:
       context: .
       args:
-        CYPRESS_IMAGE: cypress/included:10.9.0
+        CYPRESS_IMAGE: cypress/included:10.11.0
     image: grafonnet-e2e-dev
     entrypoint: cypress open --project .
     depends_on:
