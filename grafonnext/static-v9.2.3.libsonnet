@@ -1,4 +1,4 @@
-// Generated with make static-v9.2.3.libsonnet
+// Generated with `make static-v9.2.3.libsonnet`
 {
   dashboard+: {
     withAnnotations(value): { annotations: value },
