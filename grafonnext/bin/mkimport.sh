@@ -4,7 +4,7 @@ IFS=$'\n\t'
 
 function gen() {
     echo "{"
-    echo "// Generated with make schemas.libsonnet"
+    echo "// Generated with \`make schemas.libsonnet\`"
     for VERSION in $(find schemas/* -maxdepth 0 -type d); do
         V=$(basename $VERSION)
         echo "'$V': ["

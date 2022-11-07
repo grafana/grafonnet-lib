@@ -2,7 +2,7 @@ local crdsonnet = import 'github.com/Duologic/crdsonnet/crdsonnet/main.libsonnet
 local render = import 'github.com/Duologic/crdsonnet/crdsonnet/render.libsonnet';
 local schemas = import 'schemas.libsonnet';
 
-function(version='v9.2.3')
+function(version='v9.2.3', render='dynamic')
 
   local schema = {
     [s.info.title]: s
@@ -10,45 +10,15 @@ function(version='v9.2.3')
   }.dashboard;
   local component = schema.components.schemas.dashboard;
 
-  crdsonnet.fromOpenAPI(
+  (if render == 'dynamic'
+   then {}
+   else '// Generated with `make static-%s.libsonnet`\n' % version)
+  + crdsonnet.fromOpenAPI(
     'dashboard',
     component,
     schema,
-    render='dynamic',
+    render=render,
   )
-  + {
-    dashboard+: {
-      new(title):
-        self.withTitle(title)
-        + self.withTimezone('utc')
-        + self.time.withFrom('now-6h')
-        + self.time.withTo('now'),
-
-      panels+: {
-        'dashboard.GraphPanel'+:: {},
-        graphPanel+: self['dashboard.GraphPanel'] {
-          new(title):
-            self.withTitle(title)
-            + self.withType('graph'),
-        },
-        'dashboard.HeatmapPanel'+:: {},
-        heatmapPanel+: self['dashboard.HeatmapPanel'] {
-          new(title):
-            self.withTitle(title)
-            + self.withType('heatmap'),
-        },
-        'dashboard.Panel'+:: {},
-        panel+: self['dashboard.Panel'] {
-          new(title, type):
-            self.withTitle(title)
-            + self.withType(type),
-        },
-        'dashboard.RowPanel'+:: {},
-        rowPanel+: self['dashboard.RowPanel'] {
-          new(title):
-            self.withTitle(title)
-            + self.withType(),
-        },
-      },
-    },
-  }
+  + (if render == 'dynamic'
+     then (import 'veneer.libsonnet')
+     else "\n+ (import 'veneer.libsonnet')")

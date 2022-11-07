@@ -5,3 +5,6 @@ schemas/%:
 
 schemas.libsonnet:
 	sh bin/mkimport.sh
+
+static-%.libsonnet:
+	jsonnet -S -J vendor -A version='$*' -A render='static' main.libsonnet | jsonnetfmt - > static-$*.libsonnet
