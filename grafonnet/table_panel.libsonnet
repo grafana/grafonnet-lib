@@ -22,8 +22,10 @@
    * @param column_filter (default: `false`) Enable/disable column filters
    * @param cell_display_mode (default: `'auto'`) How to display cell values (`'auto'`, `'color-text'`, `'color-background'`, `'color-background-solid'`, `'gradient-gauge'`, `'lcd-gauge'`, `'basic'`. `'json-view'`)
    * @param cell_value_inspect (default `'false'`) Enable cell value inspection in a modal window
-   * @param no_value (optional) What to show when there is no value.
+   * @param no_value (optional) What to show when there is no value
    * @param transparent (default: `false`) Whether to display the panel without a background
+   * @param sort_by (optional) The series to sort rows by
+   * @param sort_ascending (default: `true`) Whether to sort in ascending or descending order when `sort_by` is set
    * @param links (optional) Array of links for the panel.
    * @param repeat (optional) Name of variable that should be used to repeat this panel.
    * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
@@ -64,6 +66,8 @@
     cell_value_inspect=false,
     no_value=null,
     transparent=false,
+    sort_by=null,
+    sort_ascending=true,
     links=[],
     repeat=null,
     repeatDirection='h',
@@ -90,7 +94,7 @@
           steps: [],
         },
         color: {
-          mode: 'threshold',
+          mode: 'thresholds',
         },
         [if unit != null then 'unit']: unit,
         [if decimals != null then 'decimals']: decimals,
@@ -108,6 +112,7 @@
         fields: if footer_field != null then [footer_field] else '',
         [if pagination then 'enablePagination']: true,
       },
+      [if sort_by != null then 'sortBy']: [{ desc: if sort_ascending then false else true, displayName: sort_by }],
     },
     links: links,
     [if repeat != null then 'repeat']: repeat,
