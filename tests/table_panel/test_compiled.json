@@ -5,7 +5,7 @@
       "fieldConfig": {
          "defaults": {
             "color": {
-               "mode": "threshold"
+               "mode": "thresholds"
             },
             "custom": {
                "align": "auto",
@@ -47,7 +47,7 @@
       "fieldConfig": {
          "defaults": {
             "color": {
-               "mode": "threshold"
+               "mode": "thresholds"
             },
             "custom": {
                "align": "auto",
@@ -82,7 +82,7 @@
       "fieldConfig": {
          "defaults": {
             "color": {
-               "mode": "threshold"
+               "mode": "thresholds"
             },
             "custom": {
                "align": "auto",
@@ -139,7 +139,7 @@
          "fieldConfig": {
             "defaults": {
                "color": {
-                  "mode": "threshold"
+                  "mode": "thresholds"
                },
                "custom": {
                   "align": "auto",
@@ -184,7 +184,7 @@
          "fieldConfig": {
             "defaults": {
                "color": {
-                  "mode": "threshold"
+                  "mode": "thresholds"
                },
                "custom": {
                   "align": "auto",
@@ -231,7 +231,7 @@
          "fieldConfig": {
             "defaults": {
                "color": {
-                  "mode": "threshold"
+                  "mode": "thresholds"
                },
                "custom": {
                   "align": "auto",
@@ -284,7 +284,7 @@
          "fieldConfig": {
             "defaults": {
                "color": {
-                  "mode": "threshold"
+                  "mode": "thresholds"
                },
                "custom": {
                   "align": "auto",
