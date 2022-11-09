@@ -1,21 +1,17 @@
 // Generated with `make static-latest.libsonnet`
 {
   annolist+: {
-    withPanelOptions(value): { PanelOptions: value },
-    withPanelOptionsMixin(value): { PanelOptions+: value },
-    PanelOptions+: {
-      withLimit(value=10): { PanelOptions+: { limit: value } },
-      withNavigateAfter(value='10m'): { PanelOptions+: { navigateAfter: value } },
-      withNavigateBefore(value='10m'): { PanelOptions+: { navigateBefore: value } },
-      withNavigateToPanel(value=true): { PanelOptions+: { navigateToPanel: value } },
-      withOnlyFromThisDashboard(value=false): { PanelOptions+: { onlyFromThisDashboard: value } },
-      withOnlyInTimeRange(value=false): { PanelOptions+: { onlyInTimeRange: value } },
-      withShowTags(value=true): { PanelOptions+: { showTags: value } },
-      withShowTime(value=true): { PanelOptions+: { showTime: value } },
-      withShowUser(value=true): { PanelOptions+: { showUser: value } },
-      withTags(value): { PanelOptions+: { tags: if std.isArray(value) then value else [value] } },
-      withTagsMixin(value): { PanelOptions+: { tags+: if std.isArray(value) then value else [value] } },
-    },
+    withLimit(value=10): { limit: value },
+    withNavigateAfter(value='10m'): { navigateAfter: value },
+    withNavigateBefore(value='10m'): { navigateBefore: value },
+    withNavigateToPanel(value=true): { navigateToPanel: value },
+    withOnlyFromThisDashboard(value=false): { onlyFromThisDashboard: value },
+    withOnlyInTimeRange(value=false): { onlyInTimeRange: value },
+    withShowTags(value=true): { showTags: value },
+    withShowTime(value=true): { showTime: value },
+    withShowUser(value=true): { showUser: value },
+    withTags(value): { tags: if std.isArray(value) then value else [value] },
+    withTagsMixin(value): { tags+: if std.isArray(value) then value else [value] },
   },
 } {
   dashboard+: {
@@ -269,30 +265,21 @@
   },
 } {
   dashlist+: {
-    withPanelLayout(value): { PanelLayout: value },
-    withPanelOptions(value): { PanelOptions: value },
-    withPanelOptionsMixin(value): { PanelOptions+: value },
-    PanelOptions+: {
-      withFolderId(value): { PanelOptions+: { folderId: value } },
-      withLayout(value): { PanelOptions+: { layout: value } },
-      withMaxItems(value=10): { PanelOptions+: { maxItems: value } },
-      withQuery(value=''): { PanelOptions+: { query: value } },
-      withShowHeadings(value=true): { PanelOptions+: { showHeadings: value } },
-      withShowRecentlyViewed(value=false): { PanelOptions+: { showRecentlyViewed: value } },
-      withShowSearch(value=false): { PanelOptions+: { showSearch: value } },
-      withShowStarred(value=true): { PanelOptions+: { showStarred: value } },
-      withTags(value): { PanelOptions+: { tags: if std.isArray(value) then value else [value] } },
-      withTagsMixin(value): { PanelOptions+: { tags+: if std.isArray(value) then value else [value] } },
-    },
+    withFolderId(value): { folderId: value },
+    withLayout(value): { layout: value },
+    withMaxItems(value=10): { maxItems: value },
+    withQuery(value=''): { query: value },
+    withShowHeadings(value=true): { showHeadings: value },
+    withShowRecentlyViewed(value=false): { showRecentlyViewed: value },
+    withShowSearch(value=false): { showSearch: value },
+    withShowStarred(value=true): { showStarred: value },
+    withTags(value): { tags: if std.isArray(value) then value else [value] },
+    withTagsMixin(value): { tags+: if std.isArray(value) then value else [value] },
   },
 } {
   news+: {
-    withPanelOptions(value): { PanelOptions: value },
-    withPanelOptionsMixin(value): { PanelOptions+: value },
-    PanelOptions+: {
-      withFeedUrl(value): { PanelOptions+: { feedUrl: value } },
-      withShowImage(value=true): { PanelOptions+: { showImage: value } },
-    },
+    withFeedUrl(value): { feedUrl: value },
+    withShowImage(value=true): { showImage: value },
   },
 } {
   playlist+: {
@@ -309,22 +296,9 @@
   },
 } {
   text+: {
-    withCodeLanguage(value='plaintext'): { CodeLanguage: value },
-    withCodeOptions(value): { CodeOptions: value },
-    withCodeOptionsMixin(value): { CodeOptions+: value },
-    CodeOptions+: {
-      withLanguage(value='plaintext'): { CodeOptions+: { language: value } },
-      withShowLineNumbers(value=false): { CodeOptions+: { showLineNumbers: value } },
-      withShowMiniMap(value=false): { CodeOptions+: { showMiniMap: value } },
-    },
-    withPanelOptions(value): { PanelOptions: value },
-    withPanelOptionsMixin(value): { PanelOptions+: value },
-    PanelOptions+: {
-      withCode(value): { PanelOptions+: { code: value } },
-      withContent(value='# Title\n\nFor markdown syntax help: [commonmark.org/help](https://commonmark.org/help/)'): { PanelOptions+: { content: value } },
-      withMode(value='markdown'): { PanelOptions+: { mode: value } },
-    },
-    withTextMode(value): { TextMode: value },
+    withCode(value): { code: value },
+    withContent(value='# Title\n\nFor markdown syntax help: [commonmark.org/help](https://commonmark.org/help/)'): { content: value },
+    withMode(value='markdown'): { mode: value },
   },
 }
 + (import 'veneer.libsonnet')

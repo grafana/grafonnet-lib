@@ -5,7 +5,19 @@ local schemasRaw = import 'schemas.libsonnet';
 function(version='latest', render='dynamic')
 
   local schemas = {
-    [s.info.title]: s
+    [s.info.title]:
+      s
+      + (if 'PanelOptions' in s.components.schemas[s.info.title].properties
+         then { components+: { schemas+: {
+           [s.info.title]: { '$ref': '#/components/schemas/PanelOptions' },
+           PanelOptions: s.components.schemas[s.info.title].properties.PanelOptions,
+         } } }
+         else {})
+      + (if 'PanelLayout' in s.components.schemas[s.info.title].properties
+         then { components+: { schemas+: {
+           PanelLayout: s.components.schemas[s.info.title].properties.PanelLayout,
+         } } }
+         else {})
     for s in schemasRaw[version]
   };
 
