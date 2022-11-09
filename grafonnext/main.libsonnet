@@ -2,7 +2,7 @@ local crdsonnet = import 'github.com/Duologic/crdsonnet/crdsonnet/main.libsonnet
 local renderer = import 'github.com/Duologic/crdsonnet/crdsonnet/render.libsonnet';
 local schemasRaw = import 'schemas.libsonnet';
 
-function(version='latest', render='static')
+function(version='latest', render='dynamic')
 
   local schemas = {
     [s.info.title]: s

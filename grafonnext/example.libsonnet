@@ -1,4 +1,4 @@
-local grafonnet = (import './main.libsonnet')('v9.2.3');
+local grafonnet = (import './main.libsonnet')('latest');
 local dashboard = grafonnet.dashboard;
 local panel = grafonnet.dashboard.panels.panel;
 
