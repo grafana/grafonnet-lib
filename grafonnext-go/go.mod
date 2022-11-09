@@ -1,4 +1,4 @@
-module github.com/grafana/grafonnet-lib/grafonnext
+module github.com/grafana/grafonnet-lib/grafonnext-go
 
 go 1.19
 

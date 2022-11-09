@@ -22,7 +22,7 @@ var rt = cuectx.GrafanaThemaRuntime()
 
 func main() {
 	// All core kinds first
-	base := filepath.Join("schemas", grafanaVersion, "core")
+	base := filepath.Join("..", "grafonnext", "schemas", grafanaVersion, "core")
 	die(os.MkdirAll(base, 0777))
 
 	for _, kind := range corekind.NewBase(nil).AllStructured() {
@@ -50,7 +50,7 @@ func main() {
 			}
 
 			b := marshalindent(f)
-			basecompo := filepath.Join("schemas", grafanaVersion, "composable", strings.ToLower(slot))
+			basecompo := filepath.Join("..", "grafonnext", "schemas", grafanaVersion, "composable", strings.ToLower(slot))
 			path := filepath.Join(basecompo, ptree.RootPlugin().Meta().Id+".json")
 			die(os.MkdirAll(basecompo, 0777))
 			die(os.WriteFile(path, b, 0644))

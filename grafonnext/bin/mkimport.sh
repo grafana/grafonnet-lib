@@ -8,7 +8,7 @@ function gen() {
     for VERSION in $(find schemas/* -maxdepth 0 -type d); do
         V=$(basename $VERSION)
         echo "'$V': ["
-        for FILE in $(find $VERSION/* -maxdepth 0 -type f); do
+        for FILE in $(find $VERSION/* -type f); do
             echo "import '$FILE',"
         done
         echo "],"

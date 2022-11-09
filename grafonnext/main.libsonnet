@@ -1,23 +1,30 @@
 local crdsonnet = import 'github.com/Duologic/crdsonnet/crdsonnet/main.libsonnet';
-local render = import 'github.com/Duologic/crdsonnet/crdsonnet/render.libsonnet';
-local schemas = import 'schemas.libsonnet';
+local renderer = import 'github.com/Duologic/crdsonnet/crdsonnet/render.libsonnet';
+local schemasRaw = import 'schemas.libsonnet';
 
-function(version='v9.2.3', render='dynamic')
+function(version='latest', render='static')
 
-  local schema = {
+  local schemas = {
     [s.info.title]: s
-    for s in schemas[version]
-  }.dashboard;
-  local component = schema.components.schemas.dashboard;
+    for s in schemasRaw[version]
+  };
 
   (if render == 'dynamic'
    then {}
    else '// Generated with `make static-%s.libsonnet`\n' % version)
-  + crdsonnet.fromOpenAPI(
-    'dashboard',
-    component,
-    schema,
-    render=render,
+  + std.foldl(
+    function(acc, k)
+      local schema = schemas[k];
+      local component = schema.components.schemas[k];
+      acc +
+      crdsonnet.fromOpenAPI(
+        k,
+        component,
+        schema,
+        render=render,
+      ),
+    std.objectFields(schemas),
+    renderer[render].nilvalue
   )
   + (if render == 'dynamic'
      then (import 'veneer.libsonnet')

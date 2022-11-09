@@ -1,5 +1,23 @@
-// Generated with `make static-v9.2.3.libsonnet`
+// Generated with `make static-latest.libsonnet`
 {
+  annolist+: {
+    withPanelOptions(value): { PanelOptions: value },
+    withPanelOptionsMixin(value): { PanelOptions+: value },
+    PanelOptions+: {
+      withLimit(value=10): { PanelOptions+: { limit: value } },
+      withNavigateAfter(value='10m'): { PanelOptions+: { navigateAfter: value } },
+      withNavigateBefore(value='10m'): { PanelOptions+: { navigateBefore: value } },
+      withNavigateToPanel(value=true): { PanelOptions+: { navigateToPanel: value } },
+      withOnlyFromThisDashboard(value=false): { PanelOptions+: { onlyFromThisDashboard: value } },
+      withOnlyInTimeRange(value=false): { PanelOptions+: { onlyInTimeRange: value } },
+      withShowTags(value=true): { PanelOptions+: { showTags: value } },
+      withShowTime(value=true): { PanelOptions+: { showTime: value } },
+      withShowUser(value=true): { PanelOptions+: { showUser: value } },
+      withTags(value): { PanelOptions+: { tags: if std.isArray(value) then value else [value] } },
+      withTagsMixin(value): { PanelOptions+: { tags+: if std.isArray(value) then value else [value] } },
+    },
+  },
+} {
   dashboard+: {
     withAnnotations(value): { annotations: value },
     withAnnotationsMixin(value): { annotations+: value },
@@ -22,6 +40,13 @@
         withShowIn(value=0): { annotations+: { showIn: value } },
         withTarget(value): { annotations+: { target: value } },
         withTargetMixin(value): { annotations+: { target+: value } },
+        target+: {
+          withLimit(value): { annotations+: { target+: { limit: value } } },
+          withMatchAny(value=true): { annotations+: { target+: { matchAny: value } } },
+          withTags(value): { annotations+: { target+: { tags: if std.isArray(value) then value else [value] } } },
+          withTagsMixin(value): { annotations+: { target+: { tags+: if std.isArray(value) then value else [value] } } },
+          withType(value): { annotations+: { target+: { type: value } } },
+        },
         withType(value='dashboard'): { annotations+: { type: value } },
       },
     },
@@ -241,6 +266,65 @@
     withUid(value): { uid: value },
     withVersion(value): { version: value },
     withWeekStart(value): { weekStart: value },
+  },
+} {
+  dashlist+: {
+    withPanelLayout(value): { PanelLayout: value },
+    withPanelOptions(value): { PanelOptions: value },
+    withPanelOptionsMixin(value): { PanelOptions+: value },
+    PanelOptions+: {
+      withFolderId(value): { PanelOptions+: { folderId: value } },
+      withLayout(value): { PanelOptions+: { layout: value } },
+      withMaxItems(value=10): { PanelOptions+: { maxItems: value } },
+      withQuery(value=''): { PanelOptions+: { query: value } },
+      withShowHeadings(value=true): { PanelOptions+: { showHeadings: value } },
+      withShowRecentlyViewed(value=false): { PanelOptions+: { showRecentlyViewed: value } },
+      withShowSearch(value=false): { PanelOptions+: { showSearch: value } },
+      withShowStarred(value=true): { PanelOptions+: { showStarred: value } },
+      withTags(value): { PanelOptions+: { tags: if std.isArray(value) then value else [value] } },
+      withTagsMixin(value): { PanelOptions+: { tags+: if std.isArray(value) then value else [value] } },
+    },
+  },
+} {
+  news+: {
+    withPanelOptions(value): { PanelOptions: value },
+    withPanelOptionsMixin(value): { PanelOptions+: value },
+    PanelOptions+: {
+      withFeedUrl(value): { PanelOptions+: { feedUrl: value } },
+      withShowImage(value=true): { PanelOptions+: { showImage: value } },
+    },
+  },
+} {
+  playlist+: {
+    withInterval(value='5m'): { interval: value },
+    withItems(value): { items: if std.isArray(value) then value else [value] },
+    withItemsMixin(value): { items+: if std.isArray(value) then value else [value] },
+    items+: {
+      withTitle(value): { title: value },
+      withType(value): { type: value },
+      withValue(value): { value: value },
+    },
+    withName(value): { name: value },
+    withUid(value): { uid: value },
+  },
+} {
+  text+: {
+    withCodeLanguage(value='plaintext'): { CodeLanguage: value },
+    withCodeOptions(value): { CodeOptions: value },
+    withCodeOptionsMixin(value): { CodeOptions+: value },
+    CodeOptions+: {
+      withLanguage(value='plaintext'): { CodeOptions+: { language: value } },
+      withShowLineNumbers(value=false): { CodeOptions+: { showLineNumbers: value } },
+      withShowMiniMap(value=false): { CodeOptions+: { showMiniMap: value } },
+    },
+    withPanelOptions(value): { PanelOptions: value },
+    withPanelOptionsMixin(value): { PanelOptions+: value },
+    PanelOptions+: {
+      withCode(value): { PanelOptions+: { code: value } },
+      withContent(value='# Title\n\nFor markdown syntax help: [commonmark.org/help](https://commonmark.org/help/)'): { PanelOptions+: { content: value } },
+      withMode(value='markdown'): { PanelOptions+: { mode: value } },
+    },
+    withTextMode(value): { TextMode: value },
   },
 }
 + (import 'veneer.libsonnet')
