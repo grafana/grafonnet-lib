@@ -8,7 +8,4 @@
     import 'schemas/latest/core/dashboard.json',
     import 'schemas/latest/core/playlist.json',
   ],
-  'v9.2.3': [
-    import 'schemas/v9.2.3/dashboard.json',
-  ],
 }
