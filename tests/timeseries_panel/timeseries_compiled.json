@@ -13,7 +13,7 @@
    "can_display_thresholds": true,
    "can_make_transparent": true,
    "can_map_missing_values": true,
-   "can_override_series_name": true,
+   "can_override_display_name": true,
    "can_set_decimals": true,
    "can_set_description": true,
    "can_set_fixed_color": true,

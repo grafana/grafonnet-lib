@@ -72,7 +72,7 @@ local overrides = grafana.timeseriesPanel.overrides;
   can_set_min: std.assertEqual(1234, grafana.timeseriesPanel.new(title='', min=1234).fieldConfig.defaults.min),
   can_set_max: std.assertEqual(5678, grafana.timeseriesPanel.new(title='', max=5678).fieldConfig.defaults.max),
   can_set_decimals: std.assertEqual(3, grafana.timeseriesPanel.new(title='', decimals=3).fieldConfig.defaults.decimals),
-  can_override_series_name: std.assertEqual('series name', grafana.timeseriesPanel.new(title='', seriesName='series name').fieldConfig.defaults.displayName),
+  can_override_display_name: std.assertEqual('display name', grafana.timeseriesPanel.new(title='', displayName='display name').fieldConfig.defaults.displayName),
   can_set_fixed_color: std.assertEqual({ mode: 'fixed', fixedColor: 'blue' }, grafana.timeseriesPanel.new(title='', colorMode='fixed', fixedColor='blue').fieldConfig.defaults.color),
   can_color_by_min: std.assertEqual('min', grafana.timeseriesPanel.new(title='', colorBy='min').fieldConfig.defaults.color.seriesBy),
   can_map_missing_values: std.assertEqual(123, grafana.timeseriesPanel.new(title='', noValue=123).fieldConfig.defaults.noValue),

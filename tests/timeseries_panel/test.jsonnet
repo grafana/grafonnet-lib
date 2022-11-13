@@ -34,7 +34,7 @@ local timeseries = grafana.timeseriesPanel;
       tooltip='all',
       tooltipSort='ascending',
       decimals=2,
-      seriesName='a name',
+      displayName='a name',
       colorBy='min',
       noValue='none',
     ),
