@@ -38,6 +38,7 @@
          "showHeader": true
       },
       "pluginVersion": "9.2.1",
+      "targets": [ ],
       "title": "test",
       "transparent": true,
       "type": "table"
@@ -74,6 +75,7 @@
          "showHeader": true
       },
       "pluginVersion": "9.2.1",
+      "targets": [ ],
       "title": "test",
       "type": "table"
    },
@@ -130,6 +132,7 @@
          "showHeader": true
       },
       "pluginVersion": "9.2.1",
+      "targets": [ ],
       "title": "test",
       "type": "table"
    },
@@ -258,6 +261,7 @@
             "showHeader": true
          },
          "pluginVersion": "9.2.1",
+         "targets": [ ],
          "title": "with transformations",
          "transformations": [
             {
@@ -311,6 +315,7 @@
             "showHeader": true
          },
          "pluginVersion": "9.2.1",
+         "targets": [ ],
          "title": "with batch transformations",
          "transformations": [
             {

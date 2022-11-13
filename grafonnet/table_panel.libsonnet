@@ -6,41 +6,42 @@
    * @name tablePanel.new
    *
    * @param title The title of the table panel.
-   * @param description (optional) Description of the panel
-   * @param datasource (optional) Datasource
-   * @param unit (optional) The unit to use for values
-   * @param decimals (optional) The number of decimal places to display
-   * @param display_name (optional) Override the series name
-   * @param header (default: `true`) Whether to show the table header
-   * @param footer (default: `false`) Whether to show the table footer
-   * @param footer_calculation (default: `'sum'`) The reducer function / calculation to display in the footer
-   * @param footer_field (optional) The field to display in the footer
-   * @param pagination (default: `false`) Whether to offer pagination of results
-   * @param min_column_width (optional) The minimum width for column auto resizing
-   * @param column_width (optional) The column width
-   * @param column_align (default: `'auto'`) The column alignment (`'auto'`, `'left'`, `'center'`, or `'right'`)
-   * @param column_filter (default: `false`) Enable/disable column filters
-   * @param cell_display_mode (default: `'auto'`) How to display cell values (`'auto'`, `'color-text'`, `'color-background'`, `'color-background-solid'`, `'gradient-gauge'`, `'lcd-gauge'`, `'basic'`. `'json-view'`)
-   * @param cell_value_inspect (default `'false'`) Enable cell value inspection in a modal window
-   * @param no_value (optional) What to show when there is no value
-   * @param transparent (default: `false`) Whether to display the panel without a background
-   * @param sort_by (optional) The series to sort rows by
-   * @param sort_ascending (default: `true`) Whether to sort in ascending or descending order when `sort_by` is set
+   * @param description (optional) The description of the panel.
+   * @param datasource (optional) Datasource.
+   * @param transparent (default `false`) Whether to display the panel without a background.
+   * @param unit (optional) The unit to use for values.
+   * @param decimals (optional) The number of decimal places to display.
+   * @param displayName (optional) Override the series or field name.
+   * @param noValue (optional) What to show when there is no value.
+   * @param thresholdMode (default `'absolute'`) Whether thresholds are absolute or a percentage. `'absolute'` or `'percentage'`.
+   * @param header (default `true`) Whether to show the table header.
+   * @param footer (default `false`) Whether to show the table footer.
+   * @param footerCalculation (default: `'sum'`) The reducer function / calculation to display in the footer.
+   * @param footerField (optional) The field to display in the footer.
+   * @param pagination (default `false`) Whether to offer pagination of results.
+   * @param minColumnWidth (optional) The minimum width for column auto resizing.
+   * @param columnWidth (optional) The column width.
+   * @param columnAlign (default `'auto'`) The column alignment (`'auto'`, `'left'`, `'center'`, or `'right'`).
+   * @param columnFilter (default `false`) Enable/disable column filters.
+   * @param cellDisplayMode (default `'auto'`) How to display cell values (`'auto'`, `'color-text'`, `'color-background'`, `'color-background-solid'`, `'gradient-gauge'`, `'lcd-gauge'`, `'basic'`. `'json-view'`).
+   * @param cellValueInspect (default `'false'`) Enable cell value inspection in a modal window.
+   * @param sortBy (optional) The series to sort rows by.
+   * @param sortAscending (default: `true`) Whether to sort in ascending or descending order when `sortBy` is set.
    * @param links (optional) Array of links for the panel.
    * @param repeat (optional) Name of variable that should be used to repeat this panel.
    * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
-   * @param repeatMaxPerRow (optional) How many panels to limit each row to when repeating horizontally,
-   * @param thresholdMode (default `'absolute'`) Whether thresholds are absolute or a percentage. `'absolute'` or `'percentage'`
-   * @return A json that represents a table panel
+   * @param repeatMaxPerRow (optional) How many panels to limit each row to when repeating horizontally.
+   * @return A json that represents a table panel.
    *
+   * @method addTarget(target) Adds a target object.
+   * @method addTargets(targets) Adds an array of targets.
+   * @method addLink(link) Add a link to the panel.
+   * @method addLinks(links) Adds an array of links to the panel.
    * @method addThreshold(color, value=null) Adds a threshold.
-   * @method addTarget(target) Adds a target object
-   * @method addTargets(targets) Adds an array of targets
    * @method addValueMapping(value, color, displayText=null) Adds a value mapping.
    * @method addRangeMapping(from, to, color, displayText=null) Adds a range mapping.
    * @method addRegexMapping(pattern, color, displayText=null) Adds a regular expression mapping.
    * @method addSpecialMapping(match, color, displayText=null) Adds a special mapping.
-   * @method addLink(link) Adds a link
    * @method addOverridesForField(field, overrides) Add a list of overrides for a named field.
    * @method addOverridesForFieldsMatchingRegex(regex, overrides) Add a list of overrides for field names matching a given regex.
    * @method addOverridesForFieldsOfType(type, overrides) Add a list of overrides for fields of a given type.
@@ -50,29 +51,29 @@
     title,
     description=null,
     datasource=null,
+    transparent=false,
     unit=null,
     decimals=null,
-    display_name=null,
+    displayName=null,
+    noValue=null,
+    thresholdMode='absolute',
     header=true,
     footer=false,
-    footer_calculation='sum',
-    footer_field=null,
+    footerCalculation='sum',
+    footerField=null,
     pagination=false,
-    min_column_width=null,
-    column_width=null,
-    column_align='auto',
-    column_filter=false,
-    cell_display_mode='auto',
-    cell_value_inspect=false,
-    no_value=null,
-    transparent=false,
-    sort_by=null,
-    sort_ascending=true,
+    minColumnWidth=null,
+    columnWidth=null,
+    columnAlign='auto',
+    columnFilter=false,
+    cellDisplayMode='auto',
+    cellValueInspect=false,
+    sortBy=null,
+    sortAscending=true,
     links=[],
     repeat=null,
     repeatDirection='h',
     repeatMaxPerRow=null,
-    thresholdMode='absolute',
   ):: {
     type: 'table',
     title: title,
@@ -81,12 +82,12 @@
     fieldConfig: {
       defaults: {
         custom: {
-          align: column_align,
-          displayMode: cell_display_mode,
-          inspect: cell_value_inspect,
-          [if min_column_width != null then 'minWidth']: min_column_width,
-          [if column_width != null then 'width']: column_width,
-          [if column_filter then 'filterable']: column_filter,
+          align: columnAlign,
+          displayMode: cellDisplayMode,
+          inspect: cellValueInspect,
+          [if minColumnWidth != null then 'minWidth']: minColumnWidth,
+          [if columnWidth != null then 'width']: columnWidth,
+          [if columnFilter then 'filterable']: columnFilter,
         },
         mappings: [],
         thresholds: {
@@ -98,32 +99,39 @@
         },
         [if unit != null then 'unit']: unit,
         [if decimals != null then 'decimals']: decimals,
-        [if display_name != null then 'displayName']: display_name,
-        [if no_value != null then 'noValue']: no_value,
+        [if displayName != null then 'displayName']: displayName,
+        [if noValue != null then 'noValue']: noValue,
       },
       overrides: [],
     },
     datasource: datasource,
+    links: links,
     options: {
       showHeader: header,
       footer: {
         show: footer,
-        reducer: [footer_calculation],
-        fields: if footer_field != null then [footer_field] else '',
+        reducer: [footerCalculation],
+        fields: if footerField != null then [footerField] else '',
         [if pagination then 'enablePagination']: true,
       },
-      [if sort_by != null then 'sortBy']: [{ desc: if sort_ascending then false else true, displayName: sort_by }],
+      [if sortBy != null then 'sortBy']: [{ desc: if sortAscending then false else true, displayName: sortBy }],
     },
-    links: links,
     [if repeat != null then 'repeat']: repeat,
     [if repeat != null then 'repeatDirection']: repeatDirection,
     [if repeat != null && repeatDirection == 'h' && repeatMaxPerRow != null then 'maxPerRow']: repeatMaxPerRow,
+    targets: [],
     pluginVersion: '9.2.1',
     _nextTarget:: 0,
     addThreshold(color, value=null):: self {
       fieldConfig+: { defaults+: { thresholds+: { steps+: [{ color: color, value: value }] } } },
     },
+    addLink(link):: self {
+      links+: [link],
+    },
+    addLinks(links):: std.foldl(function(p, t) p.addLink(t), links, self),
     addTarget(target):: self {
+      // automatically ref id in added targets.
+      // https://github.com/kausalco/public/blob/master/klumps/grafana.libsonnet
       local nextTarget = super._nextTarget,
       _nextTarget: nextTarget + 1,
       targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
@@ -171,9 +179,6 @@
           [if displayText != null then 'text']: displayText,
         },
       }),
-    addLink(link):: self {
-      links+: [link],
-    },
     addTransformation(transformation):: self {
       transformations+: [transformation],
     },
