@@ -8,6 +8,14 @@ recent Grafana features.
 Grafana's docs are here: https://grafana.github.io/grafonnet-lib/ although this
 codebase has diverged somewhat from the API described there.
 
+## What's different in this fork?
+
+Support for Grafana 9 panel types:
+
+- Stat panel
+- Table panel
+- Timeseries panel
+
 # Grafonnet 7
 
 In the [grafonnet-7.0](./grafonnet-7.0) directory you will find code generated

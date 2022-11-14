@@ -4,14 +4,21 @@
       "description": "An advanced stat panel configuration",
       "fieldConfig": {
          "defaults": {
-            "links": [ ],
+            "color": {
+               "mode": "palette-classic"
+            },
+            "custom": {
+               "thresholdsStyle": {
+                  "mode": "percentage"
+               }
+            },
             "mappings": [ ],
             "thresholds": {
-               "mode": "percentage",
+               "mode": "absolute",
                "steps": [ ]
-            },
-            "unit": "none"
-         }
+            }
+         },
+         "overrides": [ ]
       },
       "links": [ ],
       "options": {
@@ -28,42 +35,9 @@
          },
          "textMode": "auto"
       },
-      "pluginVersion": "7",
+      "pluginVersion": "9.2.4",
       "targets": [ ],
-      "timeFrom": "1h",
       "title": "advanced",
-      "transparent": true,
-      "type": "stat"
-   },
-   "advanced_grafana6": {
-      "datasource": null,
-      "description": "An advanced stat panel configuration for Grafana 6.7.x",
-      "links": [ ],
-      "options": {
-         "colorMode": "value",
-         "fieldOptions": {
-            "calcs": [
-               "sum"
-            ],
-            "defaults": {
-               "links": [ ],
-               "mappings": [ ],
-               "thresholds": {
-                  "mode": "percentage",
-                  "steps": [ ]
-               },
-               "unit": "none"
-            },
-            "fields": "",
-            "values": true
-         },
-         "graphMode": "area",
-         "justifyMode": "auto",
-         "orientation": "auto"
-      },
-      "pluginVersion": "6.7",
-      "targets": [ ],
-      "title": "advanced_grafana6",
       "transparent": true,
       "type": "stat"
    },
@@ -71,14 +45,21 @@
       "datasource": null,
       "fieldConfig": {
          "defaults": {
-            "links": [ ],
+            "color": {
+               "mode": "palette-classic"
+            },
+            "custom": {
+               "thresholdsStyle": {
+                  "mode": "off"
+               }
+            },
             "mappings": [ ],
             "thresholds": {
                "mode": "absolute",
                "steps": [ ]
-            },
-            "unit": "none"
-         }
+            }
+         },
+         "overrides": [ ]
       },
       "links": [ ],
       "options": {
@@ -88,62 +69,37 @@
          "orientation": "auto",
          "reduceOptions": {
             "calcs": [
-               "mean"
+               "lastNotNull"
             ],
             "fields": "",
             "values": false
          },
          "textMode": "auto"
       },
-      "pluginVersion": "7",
+      "pluginVersion": "9.2.4",
       "targets": [ ],
       "title": "basic",
-      "transparent": false,
-      "type": "stat"
-   },
-   "basic_grafana6": {
-      "datasource": null,
-      "links": [ ],
-      "options": {
-         "colorMode": "value",
-         "fieldOptions": {
-            "calcs": [
-               "mean"
-            ],
-            "defaults": {
-               "links": [ ],
-               "mappings": [ ],
-               "thresholds": {
-                  "mode": "absolute",
-                  "steps": [ ]
-               },
-               "unit": "none"
-            },
-            "fields": "",
-            "values": false
-         },
-         "graphMode": "area",
-         "justifyMode": "auto",
-         "orientation": "auto"
-      },
-      "pluginVersion": "6.7",
-      "targets": [ ],
-      "title": "basic_grafana6",
-      "transparent": false,
       "type": "stat"
    },
    "links": {
       "datasource": null,
       "fieldConfig": {
          "defaults": {
-            "links": [ ],
+            "color": {
+               "mode": "palette-classic"
+            },
+            "custom": {
+               "thresholdsStyle": {
+                  "mode": "off"
+               }
+            },
             "mappings": [ ],
             "thresholds": {
                "mode": "absolute",
                "steps": [ ]
-            },
-            "unit": "none"
-         }
+            }
+         },
+         "overrides": [ ]
       },
       "links": [
          {
@@ -163,45 +119,58 @@
          "orientation": "auto",
          "reduceOptions": {
             "calcs": [
-               "mean"
+               "lastNotNull"
             ],
             "fields": "",
             "values": false
          },
          "textMode": "auto"
       },
-      "pluginVersion": "7",
+      "pluginVersion": "9.2.4",
       "targets": [ ],
       "title": "links",
-      "transparent": false,
       "type": "stat"
    },
    "mappings": {
       "datasource": null,
       "fieldConfig": {
          "defaults": {
-            "links": [ ],
+            "color": {
+               "mode": "palette-classic"
+            },
+            "custom": {
+               "thresholdsStyle": {
+                  "mode": "off"
+               }
+            },
             "mappings": [
                {
-                  "id": 0,
-                  "text": "10*2",
-                  "type": 1,
-                  "value": "100"
+                  "options": {
+                     "100": {
+                        "index": 0,
+                        "text": "10*2"
+                     }
+                  },
+                  "type": "value"
                },
                {
-                  "from": "0",
-                  "id": 1,
-                  "text": "Less than 100",
-                  "to": "99",
-                  "type": 2
+                  "options": {
+                     "from": "0",
+                     "result": {
+                        "index": 1,
+                        "text": "Less than 100"
+                     },
+                     "to": "99"
+                  },
+                  "type": "range"
                }
             ],
             "thresholds": {
                "mode": "absolute",
                "steps": [ ]
-            },
-            "unit": "none"
-         }
+            }
+         },
+         "overrides": [ ]
       },
       "links": [ ],
       "options": {
@@ -211,24 +180,30 @@
          "orientation": "auto",
          "reduceOptions": {
             "calcs": [
-               "mean"
+               "lastNotNull"
             ],
             "fields": "",
             "values": false
          },
          "textMode": "auto"
       },
-      "pluginVersion": "7",
+      "pluginVersion": "9.2.4",
       "targets": [ ],
       "title": "mappings",
-      "transparent": false,
       "type": "stat"
    },
    "thresholds": {
       "datasource": null,
       "fieldConfig": {
          "defaults": {
-            "links": [ ],
+            "color": {
+               "mode": "palette-classic"
+            },
+            "custom": {
+               "thresholdsStyle": {
+                  "mode": "off"
+               }
+            },
             "mappings": [ ],
             "thresholds": {
                "mode": "absolute",
@@ -246,9 +221,9 @@
                      "value": 90
                   }
                ]
-            },
-            "unit": "none"
-         }
+            }
+         },
+         "overrides": [ ]
       },
       "links": [ ],
       "options": {
@@ -258,61 +233,16 @@
          "orientation": "auto",
          "reduceOptions": {
             "calcs": [
-               "mean"
+               "lastNotNull"
             ],
             "fields": "",
             "values": false
          },
          "textMode": "auto"
       },
-      "pluginVersion": "7",
+      "pluginVersion": "9.2.4",
       "targets": [ ],
       "title": "thresholds",
-      "transparent": false,
-      "type": "stat"
-   },
-   "thresholds_grafana6": {
-      "datasource": null,
-      "links": [ ],
-      "options": {
-         "colorMode": "value",
-         "fieldOptions": {
-            "calcs": [
-               "mean"
-            ],
-            "defaults": {
-               "links": [ ],
-               "mappings": [ ],
-               "thresholds": {
-                  "mode": "absolute",
-                  "steps": [
-                     {
-                        "color": "yellow",
-                        "value": 0
-                     },
-                     {
-                        "color": "green",
-                        "value": 75
-                     },
-                     {
-                        "color": "red",
-                        "value": 90
-                     }
-                  ]
-               },
-               "unit": "none"
-            },
-            "fields": "",
-            "values": false
-         },
-         "graphMode": "area",
-         "justifyMode": "auto",
-         "orientation": "auto"
-      },
-      "pluginVersion": "6.7",
-      "targets": [ ],
-      "title": "thresholds_grafana6",
-      "transparent": false,
       "type": "stat"
    }
 }

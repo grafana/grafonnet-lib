@@ -4,219 +4,251 @@
    *
    * @name statPanel.new
    *
-   * @param title Panel title.
-   * @param description (optional) Panel description.
+   * @param title The title of the stat panel.
+   * @param description (optional) The description of the panel.
    * @param transparent (default `false`) Whether to display the panel without a background.
-   * @param datasource (optional) Panel datasource.
-   * @param allValues (default `false`) Show all values instead of reducing to one.
-   * @param valueLimit (optional) Limit of values in all values mode.
-   * @param reducerFunction (default `'mean'`) Function to use to reduce values to when using single value.
-   * @param fields (default `''`) Fields that should be included in the panel.
-   * @param orientation (default `'auto'`) Stacking direction in case of multiple series or fields.
-   * @param colorMode (default `'value'`) 'value' or 'background'.
-   * @param graphMode (default `'area'`) 'none' or 'area' to enable sparkline mode.
-   * @param textMode (default `'auto'`) Control if name and value is displayed or just name.
-   * @param justifyMode (default `'auto'`) 'auto' or 'center'.
-   * @param unit (default `'none'`) Panel unit field option.
-   * @param min (optional) Leave empty to calculate based on all values.
-   * @param max (optional) Leave empty to calculate based on all values.
-   * @param decimals (optional) Number of decimal places to show.
-   * @param displayName (optional) Change the field or series name.
+   * @param datasource (optional) Datasource.
+   * @param unit (optional) The unit to use for values.
+   * @param min (optional) The minimum value to display.
+   * @param max (optional) The maximum value to display.
+   * @param decimals (optional) The number of decimal places to display.
+   * @param displayName (optional) Override the series or field name.
+   * @param colorMode (default `'palette-classic'`) The color mode to use.
+   * @param fixedColor (optional) The color to use when `colorMode` is `'fixed'`.
    * @param noValue (optional) What to show when there is no value.
-   * @param thresholdsMode (default `'absolute'`) 'absolute' or 'percentage'.
-   * @param timeFrom (optional) Override the relative time range.
+   * @param thresholdDisplay (default `'off'`) How thresholds should be visualised. `'off'`, `'line'`, `'area'`, or `'line+area'`.
+   * @param thresholdMode (default `'absolute'`) Whether thresholds are absolute or a percentage. `'absolute'` or `'percentage'`.
+   * @param reduceValues (default `true`) Whether to apply a reducer function.
+   * @param reducerFunction (default `'lastNotNull'`) The function to use when reducing values to a single statistic. `lastNotNull`, `last`, `firstNotNull`, `first`, `min`, `max`, `mean`, `variance`, `stdDev`, `sum`, `count`, `range`, `delta`, `step`, `diff`, `logmin`, `allIsZero`, `changeCount`, `distinctCount`, `diffperc`, `allValues`, `uniqueValues`.
+   * @param valueLimit (optional) When `reduceValues` is `false`, the maximum number of values to display.
+   * @param fields (default `''` - all numeric) A regular expression matching the fields to display.
+   * @param orientation (default `'auto'`) The layout orientation. `'auto'`, `'horizontal'`, or `'vertical'`.
+   * @param textMode (default `'auto'`) Control whether values are presented with names or not. `'auto'`, `'value'`, `'value_and_name'`, `'name'`, `'none'`.
+   * @param colorStyle (default `'value'`) How to colorize the panel. `'none'`, `'value'`, `'background'`.
+   * @param sparkLines (default `true`) Whether to display sparklines or not.
+   * @param textAlign (default `'auto'`) How text should be aligned. `'auto'` or `'center'`.
+   * @param titleTextSize (optional) The size of the title text.
+   * @param valueTextSize (optional) The size of the value text.
+   * @param connectNullValues (default `false`) When graphStyle` is `'line'`, whether to connect null values or not. Can also specify a number of seconds beyond which points will not be connected. `true`, `false`, `<number of seconds>`.
+   * @param fillOpacity (default `0`) The opacity to fill the area beneath the graph when `graphStyle` is `'line'` or `'bars'`.
+   * @param showPoints (default `'auto'`) When `graphStyle` is `'line'` or '`bars``, whether to display datapoints on the graph. `'auto'`, `'always'`, or `'never'`.
+   * @param pointSize (default `5`) The size of points on the graph.
+   * @param stackSeries (default `'none'`) How series should be stacked. `'none'`, `'normal'`, or `'100%'`.
+   * @param gradientMode (default `none`) The gradient style to apply to the fill when `graphStyle` is `'line'` or `'bars'`. `'none'`, `'opacity'`, `'hue'`, or `'scheme'`.
+   * @param links (optional) Array of links for the panel.
    * @param repeat (optional) Name of variable that should be used to repeat this panel.
    * @param repeatDirection (default `'h'`) 'h' for horizontal or 'v' for vertical.
-   * @param maxPerRow (optional) Maximum panels per row in repeat mode.
-   * @param pluginVersion (default `'7'`) Plugin version the panel should be modeled for. This has been tested with the default, '7', and '6.7'.
+   * @param repeatMaxPerRow (optional) How many panels to limit each row to when repeating horizontally.
+   * @return A json that represents a stat panel.
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
-   * @method addLink(link) Adds a [panel link](https://grafana.com/docs/grafana/latest/linking/panel-links/). Argument format: `{ title: 'Link Title', url: 'https://...', targetBlank: true }`.
-   * @method addLinks(links) Adds an array of links.
-   * @method addThreshold(step) Adds a [threshold](https://grafana.com/docs/grafana/latest/panels/thresholds/) step. Argument format: `{ color: 'green', value: 0 }`.
-   * @method addThresholds(steps) Adds an array of threshold steps.
-   * @method addMapping(mapping) Adds a value mapping.
-   * @method addMappings(mappings) Adds an array of value mappings.
-   * @method addDataLink(link) Adds a data link.
-   * @method addDataLinks(links) Adds an array of data links.
+   * @method addLink(link) Add a link to the panel.
+   * @method addLinks(links) Adds an array of links to the panel.
+   * @method addThreshold(color, value=null) Adds a threshold.
+   * @method addValueMapping(value, color, displayText=null) Adds a value mapping.
+   * @method addRangeMapping(from, to, color, displayText=null) Adds a range mapping.
+   * @method addRegexMapping(pattern, color, displayText=null) Adds a regular expression mapping.
+   * @method addSpecialMapping(match, color, displayText=null) Adds a special mapping.
+   * @method addDataLink(url, title='', newWindow=false) Adds a data link.
+   * @method addOverridesForField(field, overrides) Add a list of overrides for a named field.
+   * @method addOverridesForFieldsMatchingRegex(regex, overrides) Add a list of overrides for field names matching a given regex.
+   * @method addOverridesForFieldsOfType(type, overrides) Add a list of overrides for fields of a given type.
+   * @method addOverridesForQuery(queryId, overrides) Add a list of overrides for fields from a given query.
    */
   new(
     title,
     description=null,
-    transparent=false,
     datasource=null,
-    allValues=false,
-    valueLimit=null,
-    reducerFunction='mean',
-    fields='',
-    orientation='auto',
-    colorMode='value',
-    graphMode='area',
-    textMode='auto',
-    justifyMode='auto',
-    unit='none',
+    transparent=false,
+    unit=null,
     min=null,
     max=null,
     decimals=null,
     displayName=null,
+    colorMode='palette-classic',
+    fixedColor=null,
     noValue=null,
-    thresholdsMode='absolute',
-    timeFrom=null,
+    thresholdDisplay='off',
+    thresholdMode='absolute',
+    reduceValues=true,
+    reducerFunction='lastNotNull',
+    valueLimit=null,
+    fields='',
+    orientation='auto',
+    textMode='auto',
+    colorStyle='value',
+    sparkLines=true,
+    textAlign='auto',
+    titleTextSize=null,
+    valueTextSize=null,
+    connectNullValues=false,
+    fillOpacity=0,
+    showPoints='auto',
+    pointSize=5,
+    stackSeries='none',
+    gradientMode='none',
+    links=[],
     repeat=null,
     repeatDirection='h',
-    maxPerRow=null,
-    pluginVersion='7',
+    repeatMaxPerRow=null,
   ):: {
-
     type: 'stat',
     title: title,
     [if description != null then 'description']: description,
-    transparent: transparent,
+    [if transparent then 'transparent']: transparent,
+    fieldConfig: {
+      defaults: {
+        custom: {
+          thresholdsStyle: {
+            mode: thresholdDisplay,
+          },
+        },
+        mappings: [],
+        thresholds: {
+          mode: thresholdMode,
+          steps: [],
+        },
+        color: {
+          mode: colorMode,
+          [if colorMode == 'fixed' && fixedColor != null then 'fixedColor']: fixedColor,
+        },
+        [if unit != null then 'unit']: unit,
+        [if min != null then 'min']: min,
+        [if max != null then 'max']: max,
+        [if decimals != null then 'decimals']: decimals,
+        [if displayName != null then 'displayName']: displayName,
+        [if noValue != null then 'noValue']: noValue,
+      },
+      overrides: [],
+    },
     datasource: datasource,
-    targets: [],
-    links: [],
+    links: links,
+    options: {
+      reduceOptions: {
+        values: !reduceValues,
+        calcs: [reducerFunction],
+        [if !reduceValues && valueLimit != null then 'limit']: valueLimit,
+        fields: fields,
+      },
+      orientation: orientation,
+      textMode: textMode,
+      colorMode: colorStyle,
+      graphMode: if sparkLines then 'area' else 'none',
+      justifyMode: textAlign,
+      [if titleTextSize != null || valueTextSize != null then 'text']: {
+        [if titleTextSize != null then 'titleSize']: titleTextSize,
+        [if valueTextSize != null then 'valueSize']: valueTextSize,
+      },
+    },
     [if repeat != null then 'repeat']: repeat,
     [if repeat != null then 'repeatDirection']: repeatDirection,
-    [if timeFrom != null then 'timeFrom']: timeFrom,
-    [if repeat != null then 'maxPerRow']: maxPerRow,
-
-    // targets
+    [if repeat != null && repeatDirection == 'h' && repeatMaxPerRow != null then 'maxPerRow']: repeatMaxPerRow,
+    targets: [],
+    pluginVersion: '9.2.4',
     _nextTarget:: 0,
+    addThreshold(color, value=null):: self {
+      fieldConfig+: { defaults+: { thresholds+: { steps+: [{ color: color, value: value }] } } },
+    },
+    addLink(link):: self {
+      links+: [link],
+    },
+    addLinks(links):: std.foldl(function(p, t) p.addLink(t), links, self),
     addTarget(target):: self {
+      // automatically ref id in added targets.
+      // https://github.com/kausalco/public/blob/master/klumps/grafana.libsonnet
       local nextTarget = super._nextTarget,
       _nextTarget: nextTarget + 1,
       targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
     },
     addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
-
-    // links
-    addLink(link):: self {
-      links+: [link],
+    _nextMapping:: 0,
+    local addMapping = function(type, options) self {
+      local nextMapping = super._nextMapping,
+      _nextMapping: nextMapping + 1,
+      fieldConfig+: { defaults+: { mappings+: [{ type: type, options: options(nextMapping) }] } },
     },
-    addLinks(links):: std.foldl(function(p, l) p.addLink(l), links, self),
-
-    pluginVersion: pluginVersion,
-  } + (
-
-    if pluginVersion >= '7' then {
-      options: {
-        reduceOptions: {
-          values: allValues,
-          [if allValues && valueLimit != null then 'limit']: valueLimit,
-          calcs: [
-            reducerFunction,
-          ],
-          fields: fields,
+    addValueMapping(value, color=null, displayText=null)::
+      addMapping(type='value', options=function(index) {
+        [value]: {
+          [if color != null then 'color']: color,
+          index: index,
+          [if displayText != null then 'text']: displayText,
         },
-        orientation: orientation,
-        colorMode: colorMode,
-        graphMode: graphMode,
-        justifyMode: justifyMode,
-        textMode: textMode,
-      },
-      fieldConfig: {
-        defaults: {
-          unit: unit,
-          [if min != null then 'min']: min,
-          [if max != null then 'max']: max,
-          [if decimals != null then 'decimals']: decimals,
-          [if displayName != null then 'displayName']: displayName,
-          [if noValue != null then 'noValue']: noValue,
-          thresholds: {
-            mode: thresholdsMode,
-            steps: [],
-          },
-          mappings: [],
-          links: [],
+      }),
+    addRangeMapping(from, to, color=null, displayText=null)::
+      addMapping(type='range', options=function(index) {
+        from: from,
+        to: to,
+        result: {
+          [if color != null then 'color']: color,
+          index: index,
+          [if displayText != null then 'text']: displayText,
         },
-      },
-
-      // thresholds
-      addThreshold(step):: self {
-        fieldConfig+: { defaults+: { thresholds+: { steps+: [step] } } },
-      },
-
-      // mappings
-      _nextMapping:: 0,
-      addMapping(mapping):: self {
-        local nextMapping = super._nextMapping,
-        _nextMapping: nextMapping + 1,
-        fieldConfig+: { defaults+: { mappings+: [mapping { id: nextMapping }] } },
-      },
-
-      // data links
-      addDataLink(link):: self {
-        fieldConfig+: { defaults+: { links+: [link] } },
-      },
-
-      // Overrides
-      addOverride(
-        matcher=null,
-        properties=null,
-      ):: self {
-        fieldConfig+: {
-          overrides+: [
+      }),
+    addRegexMapping(pattern, color=null, displayText=null)::
+      addMapping(type='regex', options=function(index) {
+        pattern: pattern,
+        result: {
+          [if color != null then 'color']: color,
+          index: index,
+          [if displayText != null then 'text']: displayText,
+        },
+      }),
+    addSpecialMapping(match, color=null, displayText=null)::
+      addMapping(type='special', options=function(index) {
+        match: match,
+        result: {
+          color: color,
+          [if color != null then 'color']: color,
+          index: index,
+          [if displayText != null then 'text']: displayText,
+        },
+      }),
+    addDataLink(url, title='', newWindow=false):: self {
+      fieldConfig+: {
+        defaults+: {
+          links+: [
             {
-              [if matcher != null then 'matcher']: matcher,
-              [if properties != null then 'properties']: properties,
+              title: title,
+              url: url,
+              [if newWindow == true then 'targetBlank']: true,
             },
           ],
         },
       },
-      addOverrides(overrides):: std.foldl(function(p, o) p.addOverride(o.matcher, o.properties), overrides, self),
-    } else {
-      options: {
-        fieldOptions: {
-          values: allValues,
-          [if allValues && valueLimit != null then 'limit']: valueLimit,
-          calcs: [
-            reducerFunction,
-          ],
-          fields: fields,
-          defaults: {
-            unit: unit,
-            [if min != null then 'min']: min,
-            [if max != null then 'max']: max,
-            [if decimals != null then 'decimals']: decimals,
-            [if displayName != null then 'displayName']: displayName,
-            [if noValue != null then 'noValue']: noValue,
-            thresholds: {
-              mode: thresholdsMode,
-              steps: [],
-            },
-            mappings: [],
-            links: [],
-          },
-        },
-        orientation: orientation,
-        colorMode: colorMode,
-        graphMode: graphMode,
-        justifyMode: justifyMode,
-      },
-
-      // thresholds
-      addThreshold(step):: self {
-        options+: { fieldOptions+: { defaults+: { thresholds+: { steps+: [step] } } } },
-      },
-
-      // mappings
-      _nextMapping:: 0,
-      addMapping(mapping):: self {
-        local nextMapping = super._nextMapping,
-        _nextMapping: nextMapping + 1,
-        options+: { fieldOptions+: { defaults+: { mappings+: [mapping { id: nextMapping }] } } },
-      },
-
-      // data links
-      addDataLink(link):: self {
-        options+: { fieldOptions+: { defaults+: { links+: [link] } } },
-      },
-    }
-
-  ) + {
-    addThresholds(steps):: std.foldl(function(p, s) p.addThreshold(s), steps, self),
-    addMappings(mappings):: std.foldl(function(p, m) p.addMapping(m), mappings, self),
-    addDataLinks(links):: std.foldl(function(p, l) p.addDataLink(l), links, self),
+    },
+    local addOverrides = function(matcher, overrides) self {
+      fieldConfig+: { overrides+: [{ matcher: matcher, properties: overrides }] },
+    },
+    addOverridesForField(field, overrides)::
+      addOverrides(matcher={ id: 'byName', options: field }, overrides=overrides),
+    addOverridesForFieldsMatchingRegex(regex, overrides)::
+      addOverrides(matcher={ id: 'byRegexp', options: regex }, overrides=overrides),
+    addOverridesForFieldsOfType(type, overrides)::
+      addOverrides(matcher={ id: 'byType', options: type }, overrides=overrides),
+    addOverridesForQuery(queryId, overrides)::
+      addOverrides(matcher={ id: 'byFrameRefID', options: queryId }, overrides=overrides),
+  },
+  /**
+   * Helpers for use with the addOverrides* methods of the timeseries panel.
+   *
+   * Example usage:
+   *   grafana.timeseriesPanel.new(title='my panel')
+   *     .addOverridesForField(field='somefield', overrides=[overrides.lineWidth(5)])
+   */
+  overrides:: {
+    unit(unit):: { id: 'unit', value: unit },
+    min(min):: { id: 'min', value: min },
+    max(max):: { id: 'max', value: max },
+    decimals(places):: { id: 'decimals', value: places },
+    displayName(name):: { id: 'displayName', value: name },
+    fixedColor(color):: { id: 'color', value: { mode: 'fixed', fixedColor: color } },
+    colorScheme(name):: { id: 'color', value: { mode: name } },
+    noValue(value):: { id: 'noValue', value: value },
+    dataLinks(links):: { id: 'links', value: links },
+    valueMappings(mappings):: { id: 'mappings', value: mappings },
+    thresholds(thresholds, type='absolute'):: { id: 'thresholds', value: { mode: type, steps: thresholds } },
+    showThresholds(style):: { id: 'custom.thresholdsStyle', value: { mode: style } },
   },
 }
