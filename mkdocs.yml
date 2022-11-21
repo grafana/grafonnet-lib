@@ -1,11 +1,26 @@
 site_name: Grafonnet
+
 theme:
   name: 'material'
   palette:
-    primary: 'Deep orange'
-    accent: 'Orange'
+    - scheme: default
+      media: '(prefers-color-scheme: light)'
+      primary: 'deep orange'
+      accent: 'orange'
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      media: '(prefers-color-scheme: dark)'
+      primary: 'deep orange'
+      accent: 'orange'
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
 markdown_extensions:
   - 'admonition'
+
 nav:
   - Home: 'index.md'
   - Getting Started: 'getting-started.md'
