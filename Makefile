@@ -1,6 +1,8 @@
 UID = $(shell id -u $(USER))
 GID = $(shell id -g $(USER))
 
+E2E_CYPRESS_BASE_VERSION ?= 18.12.0
+E2E_GRAFANA_VERSION ?= 9.2.4
 JSONNET_VERSION ?= 0.18.0
 
 help:         # Show this message.
@@ -24,9 +26,6 @@ test-update:  # Run all unit tests while copying test_output.json to compiled.js
 		--entrypoint bash \
 		bitnami/jsonnet:$(JSONNET_VERSION) \
 		tests.sh update
-
-E2E_GRAFANA_VERSION ?= 9.2.4
-E2E_CYPRESS_BASE_VERSION ?= 16.17.1
 
 e2e:          # Run all end-to-end tests.
 	GRAFANA_VERSION=${E2E_GRAFANA_VERSION} \
