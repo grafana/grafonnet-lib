@@ -1,0 +1,17 @@
+#!/bin/sh
+
+export VERSION=v9.4.0
+
+mkdir -p grafonnet/$VERSION
+
+jsonnet --tla-code "coreRegistry=import 'registry/$VERSION/registry-core.json'" \
+        --tla-code "composableRegistry=import 'registry/$VERSION/registry-composable.json'" \
+        -S gen-imports.jsonnet |
+  jsonnet -J vendor \
+          -J . \
+          -S \
+          --tla-code "imports=import '/dev/stdin'" \
+          --tla-code "version='$VERSION'" \
+          --tla-code "render='static'" \
+          gen-schemas.jsonnet > grafonnet/$VERSION/grafana.libsonnet
+

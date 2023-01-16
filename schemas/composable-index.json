@@ -1,0 +1,32 @@
+{
+  "annolist": {
+    "x": "kinds/composable/annolist/panel/x/annolist_types_gen.json"
+  },
+  "barchart": {
+    "x": "kinds/composable/barchart/panel/x/barchart_types_gen.json"
+  },
+  "bargauge": {
+    "x": "kinds/composable/bargauge/panel/x/bargauge_types_gen.json"
+  },
+  "dashlist": {
+    "x": "kinds/composable/dashlist/panel/x/dashlist_types_gen.json"
+  },
+  "gauge": {
+    "x": "kinds/composable/gauge/panel/x/gauge_types_gen.json"
+  },
+  "histogram": {
+    "x": "kinds/composable/histogram/panel/x/histogram_types_gen.json"
+  },
+  "news": {
+    "x": "kinds/composable/news/panel/x/news_types_gen.json"
+  },
+  "piechart": {
+    "x": "kinds/composable/piechart/panel/x/piechart_types_gen.json"
+  },
+  "stat": {
+    "x": "kinds/composable/stat/panel/x/stat_types_gen.json"
+  },
+  "text": {
+    "x": "kinds/composable/text/panel/x/text_types_gen.json"
+  }
+}

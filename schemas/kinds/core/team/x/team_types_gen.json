@@ -1,0 +1,78 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "team",
+    "version": "0.0"
+  },
+  "paths": {},
+  "components": {
+    "schemas": {
+      "Permission": {
+        "type": "integer",
+        "enum": [
+          1,
+          2,
+          4
+        ],
+        "$schema": "http://json-schema.org/draft-04/schema#"
+      },
+      "team": {
+        "type": "object",
+        "required": [
+          "orgId",
+          "name",
+          "memberCount",
+          "permission",
+          "accessControl",
+          "created",
+          "updated"
+        ],
+        "properties": {
+          "orgId": {
+            "description": "OrgId is the ID of an organisation the team belongs to.",
+            "type": "integer",
+            "format": "int64"
+          },
+          "name": {
+            "description": "Name of the team.",
+            "type": "string"
+          },
+          "email": {
+            "description": "Email of the team.",
+            "type": "string"
+          },
+          "avatarUrl": {
+            "description": "AvatarUrl is the team's avatar URL.",
+            "type": "string"
+          },
+          "memberCount": {
+            "description": "MemberCount is the number of the team members.",
+            "type": "integer",
+            "format": "int64"
+          },
+          "permission": {
+            "$ref": "#/components/schemas/Permission"
+          },
+          "accessControl": {
+            "description": "AccessControl metadata associated with a given resource.",
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          },
+          "created": {
+            "description": "Created indicates when the team was created.",
+            "type": "integer",
+            "format": "int64"
+          },
+          "updated": {
+            "description": "Updated indicates when the team was updated.",
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "$schema": "http://json-schema.org/draft-04/schema#"
+      }
+    }
+  }
+}

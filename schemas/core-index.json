@@ -1,0 +1,11 @@
+{
+  "dashboard": {
+    "x": "kinds/core/dashboard/x/dashboard_types_gen.json"
+  },
+  "playlist": {
+    "x": "kinds/core/playlist/x/playlist_types_gen.json"
+  },
+  "team": {
+    "x": "kinds/core/team/x/team_types_gen.json"
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "kind": "annolist",
+    "schemaInterface": "Panel",
+    "version": "x"
+  },
+  {
+    "kind": "barchart",
+    "schemaInterface": "Panel",
+    "version": "x"
+  },
+  {
+    "kind": "bargauge",
+    "schemaInterface": "Panel",
+    "version": "x"
+  },
+  {
+    "kind": "dashlist",
+    "schemaInterface": "Panel",
+    "version": "x"
+  },
+  {
+    "kind": "gauge",
+    "schemaInterface": "Panel",
+    "version": "x"
+  },
+  {
+    "kind": "histogram",
+    "schemaInterface": "Panel",
+    "version": "x"
+  },
+  {
+    "kind": "news",
+    "schemaInterface": "Panel",
+    "version": "x"
+  },
+  {
+    "kind": "piechart",
+    "schemaInterface": "Panel",
+    "version": "x"
+  },
+  {
+    "kind": "stat",
+    "schemaInterface": "Panel",
+    "version": "x"
+  },
+  {
+    "kind": "text",
+    "schemaInterface": "Panel",
+    "version": "x"
+  }
+]
