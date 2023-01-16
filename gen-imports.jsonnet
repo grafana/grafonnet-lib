@@ -5,10 +5,27 @@ local coreKinds = import 'schemas/core-index.json';
 local start = '{\n';
 local makeImport(kinds, schemaInterface) = function(kind, acc) acc + "  %(name)s: import 'schemas/%(file)s', // %(schemaInterface)s\n" % { name: kind.kind, file: kinds[kind.kind][kind.version], schemaInterface: schemaInterface };
 local coreImports(reg) = std.foldr(makeImport(coreKinds, 'Core'), reg, '');
-local schemaInterfaces(reg) = std.map(function(v) v.schemaInterface, std.set(reg, function(v) v.schemaInterface));
-local filterComposables(reg, schemaInterface) = std.filter(function(kind) kind.schemaInterface == schemaInterface, reg);
-local composableImportsFor(reg, schemaInterface) = std.foldr(makeImport(composableKinds, schemaInterface), filterComposables(reg, schemaInterface), '');
-local composableImports(reg) = std.foldr(function(schemaInterface, acc) acc + composableImportsFor(reg, schemaInterface), schemaInterfaces(reg), '');
+local schemaInterfaces(reg) =
+  std.map(
+    function(v) v.schemaInterface,
+    std.set(reg, function(v) v.schemaInterface)
+  );
+local filterComposables(reg, schemaInterface) =
+  std.filter(
+    function(kind) kind.schemaInterface == schemaInterface, reg
+  );
+local composableImportsFor(reg, schemaInterface) =
+  std.foldr(
+    makeImport(composableKinds, schemaInterface),
+    filterComposables(reg, schemaInterface),
+    ''
+  );
+local composableImports(reg) =
+  std.foldr(
+    function(schemaInterface, acc) acc + composableImportsFor(reg, schemaInterface),
+    schemaInterfaces(reg),
+    ''
+  );
 local end = '}\n';
 
 function(coreRegistry, composableRegistry)

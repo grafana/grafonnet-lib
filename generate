@@ -1,17 +1,17 @@
 #!/bin/sh
 
-export VERSION=v9.4.0
+export GRAFANA_VERSION=${GRAFANA_VERSION?"Please specify a GRAFANA_VERSION"}
 
-mkdir -p grafonnet/$VERSION
+mkdir -p grafonnet/$GRAFANA_VERSION
 
-jsonnet --tla-code "coreRegistry=import 'registry/$VERSION/registry-core.json'" \
-        --tla-code "composableRegistry=import 'registry/$VERSION/registry-composable.json'" \
+jsonnet --tla-code "coreRegistry=import 'registry/$GRAFANA_VERSION/registry-core.json'" \
+        --tla-code "composableRegistry=import 'registry/$GRAFANA_VERSION/registry-composable.json'" \
         -S gen-imports.jsonnet |
   jsonnet -J vendor \
           -J . \
           -S \
           --tla-code "imports=import '/dev/stdin'" \
-          --tla-code "version='$VERSION'" \
+          --tla-code "version='$GRAFANA_VERSION'" \
           --tla-code "render='static'" \
-          gen-schemas.jsonnet > grafonnet/$VERSION/grafana.libsonnet
+          gen-schemas.jsonnet > grafonnet/$GRAFANA_VERSION/grafana.libsonnet
 
