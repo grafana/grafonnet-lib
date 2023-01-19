@@ -1,6 +1,11 @@
+local grafonnet = import 'github.com/grafana/grafonnet-lib/grafonnet/grafana.libsonnet';
+local schemas = import 'github.com/grafana/grok/jsonnet/v9.4.0/imports.libsonnet';
+grafonnet.new(schemas) + {
+  // the vaneer
+}
 local crdsonnet = import 'github.com/Duologic/crdsonnet/crdsonnet/main.libsonnet';
 local renderer = import 'github.com/Duologic/crdsonnet/crdsonnet/render.libsonnet';
-local schemasRaw = import 'github.com/grafana/grok/jsonnet/v9.4.0/imports.libsonnet';
+local schemasRaw = import 'schemas.libsonnet';
 local version="v9.4.0";
 
 local schemas = {
@@ -32,5 +37,5 @@ std.foldl(
       render='dynamic',
     ),
   std.objectFields(schemas),
-  renderer.dynamic.nilvalue
+  renderer[render].nilvalue
 ) + (import 'veneer.libsonnet')
