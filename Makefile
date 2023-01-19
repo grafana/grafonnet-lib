@@ -46,7 +46,10 @@ gen-api-docs: # Generate api-docs.md from source code comments.
 		grafonnet --markdown \
 		> docs/api-docs.md
 
+generate: # generate library for specific Grafana version
+	gen/generate
+
 spec-import:  # Import generated libraries from https://github.com/grafana/dashboard-spec.
 	svn export https://github.com/grafana/dashboard-spec/branches/_gen/_gen/7.0/jsonnet grafonnet-7.0 --force
 
-.PHONY: help test test-update e2e gen-api-docs spec-import
+.PHONY: help test test-update e2e gen-api-docs spec-import generate
