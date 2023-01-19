@@ -49,6 +49,9 @@ gen-api-docs: # Generate api-docs.md from source code comments.
 generate: # generate library for specific Grafana version
 	gen/generate
 
+generate-static: # allow downstream users to render a static version should they need it
+	gen/generate-static
+
 spec-import:  # Import generated libraries from https://github.com/grafana/dashboard-spec.
 	svn export https://github.com/grafana/dashboard-spec/branches/_gen/_gen/7.0/jsonnet grafonnet-7.0 --force
 

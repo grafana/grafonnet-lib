@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export GRAFANA_VERSION=${GRAFANA_VERSION?"Please specify a GRAFANA_VERSION"}
+DIR=grafonnet/$GRAFANA_VERSION
+mkdir -p $DIR
+cat gen/static.jsonnet.tmpl | sed "s/{{GRAFANA_VERSION}}/$GRAFANA_VERSION/g" > /tmp/static.jsonnet
+jsonnet -S -J vendor -J gen /tmp/static.jsonnet > $DIR/static.libsonnet
+cp gen/veneer.libsonnet $DIR/veneer.libsonnet
+
