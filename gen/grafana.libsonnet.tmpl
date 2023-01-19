@@ -17,7 +17,7 @@ local schemas = {
          PanelLayout: s.components.schemas[s.info.title].properties.PanelLayout,
        } } }
        else {})
-  for s in std.objectValues(schemas)
+  for s in schemasRaw
 };
 
 std.foldl(
