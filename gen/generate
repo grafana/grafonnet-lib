@@ -5,5 +5,6 @@ DIR=grafonnet/$GRAFANA_VERSION
 mkdir -p $DIR
 cat gen/jsonnetfile.json.tmpl | sed "s/{{GRAFANA_VERSION}}/$GRAFANA_VERSION/g" > $DIR/jsonnetfile.json
 cat gen/grafana.libsonnet.tmpl | sed "s/{{GRAFANA_VERSION}}/$GRAFANA_VERSION/g" > $DIR/grafana.libsonnet
+cat gen/docs.jsonnet.tmpl | sed "s/{{GRAFANA_VERSION}}/$GRAFANA_VERSION/g" > $DIR/docs.jsonnet
 cp gen/veneer.libsonnet $DIR/veneer.libsonnet
 
