@@ -1,5 +1,0 @@
-#!/bin/bash
-
-export GRAFANA_VERSION=${GRAFANA_VERSION?"Please specify a GRAFANA_VERSION"}
-DIR=grafonnet/$GRAFANA_VERSION
-jsonnet -S -m "$DIR" -c -A "version=$GRAFANA_VERSION" generate.jsonnet
