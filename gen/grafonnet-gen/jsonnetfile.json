@@ -4,7 +4,7 @@
     {
       "source": {
         "git": {
-          "remote": "https://github.com/duologic/crdsonnet.git",
+          "remote": "https://github.com/Duologic/crdsonnet.git",
           "subdir": "crdsonnet"
         }
       },
