@@ -2,9 +2,4 @@
 
 export GRAFANA_VERSION=${GRAFANA_VERSION?"Please specify a GRAFANA_VERSION"}
 DIR=grafonnet/$GRAFANA_VERSION
-mkdir -p $DIR
-cat gen/jsonnetfile.json.tmpl | sed "s/{{GRAFANA_VERSION}}/$GRAFANA_VERSION/g" > $DIR/jsonnetfile.json
-cat gen/grafana.libsonnet.tmpl | sed "s/{{GRAFANA_VERSION}}/$GRAFANA_VERSION/g" > $DIR/grafana.libsonnet
-cat gen/docs.jsonnet.tmpl | sed "s/{{GRAFANA_VERSION}}/$GRAFANA_VERSION/g" > $DIR/docs.jsonnet
-cp gen/veneer.libsonnet $DIR/veneer.libsonnet
-
+jsonnet -S -m "$DIR" -c -A "version=$GRAFANA_VERSION" generate.jsonnet

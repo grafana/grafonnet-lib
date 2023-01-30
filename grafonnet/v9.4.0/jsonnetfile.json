@@ -1,24 +1,25 @@
 {
-  "version": 1,
   "dependencies": [
     {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/grafonnet-lib.git",
+          "subdir": "gen/grafonnet-gen"
+        }
+      },
+      "version": "malcolmholmes/generated-grafonnet-mk2"
+    },
+    {
+      "name": "grafana-schemas",
       "source": {
         "git": {
           "remote": "https://github.com/grafana/grok.git",
           "subdir": "jsonnet/v9.4.0"
         }
       },
-      "version": "main"
-    },
-    {
-      "source": {
-        "git": {
-          "remote": "https://github.com/Duologic/crdsonnet.git",
-          "subdir": "crdsonnet"
-        }
-      },
-      "version": "master"
+      "version": "malcolmholmes/add-jsonnet-support"
     }
   ],
-  "legacyImports": false
+  "legacyImports": true,
+  "version": 1
 }
