@@ -10,7 +10,6 @@
       "version": "malcolmholmes/generated-grafonnet-mk2"
     },
     {
-      "name": "grafana-schemas",
       "source": {
         "git": {
           "remote": "https://github.com/grafana/grok.git",
@@ -20,6 +19,6 @@
       "version": "malcolmholmes/add-jsonnet-support"
     }
   ],
-  "legacyImports": true,
+  "legacyImports": false,
   "version": 1
 }

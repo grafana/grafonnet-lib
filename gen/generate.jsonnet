@@ -3,11 +3,14 @@ local filesFor(version) = {
 
   'main.libsonnet': |||
     local grafonnet = import 'github.com/grafana/grafonnet-lib/gen/grafonnet-gen/main.libsonnet';
-    local schemas = import 'grafana-schemas/imports.libsonnet';
-    local version = import './grafana-version';
+    local schemas = import './grafana-schemas.libsonnet';
+    local version = importstr './grafana-version';
     grafonnet.new(schemas, version)
   |||,
 
+  'schemas.libsonnet': |||
+    import 'github.com/grafana/grok/jsonnet/%s/imports.libsonnet'
+  ||| % version,
 
   'docs.libsonnet': |||
     local grafonnet = import 'github.com/grafana/grafonnet-lib/gen/grafonnet-gen/main.libsonnet';
@@ -35,10 +38,9 @@ local filesFor(version) = {
           },
         },
         version: 'malcolmholmes/add-jsonnet-support',
-        name: 'grafana-schemas',
       },
     ],
-    legacyImports: true,
+    legacyImports: false,
   }, '  '),
 };
 
