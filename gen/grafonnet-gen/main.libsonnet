@@ -65,18 +65,25 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     // fiels in the upstream Panel schema This function fits these schemas in the right
     // place for CRDsonnet.
     new(dashboardSchema, panelSchema):
+      local baseSchema = {
+        properties+: {
+          PanelOptions+: {},
+          PanelFieldConfig+: {},
+        },
+      } + panelSchema;
+
       local customSchema =
         panelSchema.components.schemas[panelSchema.info.title] {
           type: 'object',
           properties+: {
-            options: panelSchema.properties.PanelOptions,
+            options: baseSchema.properties.PanelOptions,
             fieldConfig+: {
               type: 'object',
               properties+: {
                 defaults+: {
                   type: 'object',
                   properties+: {
-                    custom: panelSchema.properties.PanelFieldConfig,
+                    custom: baseSchema.properties.PanelFieldConfig,
                   },
                 },
               },
