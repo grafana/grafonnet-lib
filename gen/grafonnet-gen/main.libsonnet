@@ -26,7 +26,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               '',
               'main.libsonnet',
             )
-            + self.withUsageTemplate(
+            + d.package.withUsageTemplate(
               |||
                 local grafonnet = import 'github.com/grafana/grafonnet-lib/grafonnet/%(version)s/main.libsonnet';
                 grafonnet.%(name)s
@@ -65,25 +65,19 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     // fiels in the upstream Panel schema This function fits these schemas in the right
     // place for CRDsonnet.
     new(dashboardSchema, panelSchema):
-      local baseSchema = {
-        properties+: {
-          PanelOptions+: {},
-          PanelFieldConfig+: {},
-        },
-      } + panelSchema;
-
       local customSchema =
         panelSchema.components.schemas[panelSchema.info.title] {
           type: 'object',
-          properties+: {
-            options: baseSchema.properties.PanelOptions,
-            fieldConfig+: {
+          [if 'properties' in panelSchema then 'properties']+: {
+            [if 'PanelOptions' in panelSchema.properties then 'options']:
+              panelSchema.properties.PanelOptions,
+            [if 'PanelFieldConfig' in panelSchema.properties then 'fieldConfig']: {
               type: 'object',
               properties+: {
                 defaults+: {
                   type: 'object',
                   properties+: {
-                    custom: baseSchema.properties.PanelFieldConfig,
+                    custom: panelSchema.properties.PanelFieldConfig,
                   },
                 },
               },
@@ -106,10 +100,12 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         );
 
       parsed.panelLib {
-        options: parsed.customLib.options,
+        [if 'options' in parsed.customLib then 'options']:
+          parsed.customLib.options,
         fieldConfig+: {
           defaults+: {
-            custom: parsed.customLib.fieldConfig.defaults.custom,
+            [if 'custom' in parsed.customLib.fieldConfig.defaults then 'custom']:
+              parsed.customLib.fieldConfig.defaults.custom,
           },
         },
       },
