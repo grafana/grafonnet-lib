@@ -1,6 +1,7 @@
 site_name: Grafonnet
 theme:
   name: 'material'
+  custom_dir: overrides
   palette:
     primary: 'Deep orange'
     accent: 'Orange'
