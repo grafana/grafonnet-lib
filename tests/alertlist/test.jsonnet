@@ -17,5 +17,6 @@ local alertlist = grafana.alertlist;
     ],
     onlyAlertsOnDashboard=true,
     transparent=true,
+    nameFilter='name of alert',
   ),
 }
