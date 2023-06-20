@@ -6,12 +6,14 @@
    *
    * @param title Panel title.
    * @param description (optional) Panel description.
+   * @param span (optional) Width of the panel
    * @param transparent (default `false`) Whether to display the panel without a background.
    * @param datasource (optional) Panel datasource.
    * @param allValues (default `false`) Show all values instead of reducing to one.
    * @param valueLimit (optional) Limit of values in all values mode.
    * @param reducerFunction (default `'mean'`) Function to use to reduce values to when using single value.
    * @param fields (default `''`) Fields that should be included in the panel.
+   * @param height (default `''`) Defines height of the panel.
    * @param orientation (default `'auto'`) Stacking direction in case of multiple series or fields.
    * @param colorMode (default `'value'`) 'value' or 'background'.
    * @param graphMode (default `'area'`) 'none' or 'area' to enable sparkline mode.
@@ -43,6 +45,7 @@
    */
   new(
     title,
+    span=null,
     description=null,
     transparent=false,
     datasource=null,
@@ -50,6 +53,7 @@
     valueLimit=null,
     reducerFunction='mean',
     fields='',
+    height=null,
     orientation='auto',
     colorMode='value',
     graphMode='area',
@@ -71,6 +75,8 @@
 
     type: 'stat',
     title: title,
+    [if span != null then 'span']: span,
+    [if height != null then 'height']: height,
     [if description != null then 'description']: description,
     transparent: transparent,
     datasource: datasource,
