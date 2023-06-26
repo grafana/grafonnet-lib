@@ -12,6 +12,7 @@
    * @param datasource (optional) Datasource
    * @param min_span (optional)  Min span
    * @param styles (optional) Array of styles for the panel
+   * @param maxDataPoints (optional) If the data source supports it, sets the maximum number of data points for each series returned
    * @param columns (optional) Array of columns for the panel
    * @param sort (optional) Sorting instruction for the panel
    * @param transform (optional) Allow table manipulation to present data as desired
@@ -39,6 +40,7 @@
     transparent=false,
     columns=[],
     sort=null,
+    maxDataPoints=null,
     time_from=null,
     time_shift=null,
     links=[],
@@ -53,6 +55,7 @@
     ],
     styles: styles,
     columns: columns,
+    [if maxDataPoints != null then 'maxDataPoints']: maxDataPoints,
     timeFrom: time_from,
     timeShift: time_shift,
     links: links,
