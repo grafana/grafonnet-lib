@@ -2,6 +2,10 @@
    "advanced": {
       "collapse": true,
       "collapsed": true,
+      "gridPos": {
+         "h": 1,
+         "w": 24
+      },
       "height": "125px",
       "panels": [ ],
       "repeat": "env",
@@ -15,6 +19,10 @@
    "basic": {
       "collapse": false,
       "collapsed": false,
+      "gridPos": {
+         "h": 1,
+         "w": 24
+      },
       "panels": [ ],
       "repeat": null,
       "repeatIteration": null,
@@ -27,6 +35,10 @@
    "panels": {
       "collapse": false,
       "collapsed": false,
+      "gridPos": {
+         "h": 1,
+         "w": 24
+      },
       "height": "250px",
       "panels": [
          "foo{\"gridPos\": { }}",
@@ -43,6 +55,10 @@
    "showTite": {
       "collapse": false,
       "collapsed": false,
+      "gridPos": {
+         "h": 1,
+         "w": 24
+      },
       "panels": [ ],
       "repeat": null,
       "repeatIteration": null,

@@ -7,6 +7,8 @@
    *
    * @param title (default `''`) The title of the log panel.
    * @param span (optional) Width of the panel
+   * @param gridHeight (optional) Height of the panel in Grafana grid units
+   * @param gridWidth (optional) Width of the panel in Grafana grid units (max: 24)
    * @param datasource (optional) Datasource
    * @showLabels (default `false`) Whether to show or hide labels
    * @showTime (default `true`) Whether to show or hide time for each line
@@ -27,6 +29,8 @@
     wrapLogMessage=true,
     span=12,
     height=null,
+    gridHeight=null,
+    gridWidth=null,
   ):: {
     [if height != null then 'height']: height,
     span: span,
@@ -52,5 +56,9 @@
     timeShift: time_shift,
     title: title,
     type: 'logs',
+    [if (gridHeight != null || gridWidth != null) then 'gridPos']: {
+      h: gridHeight,
+      w: gridWidth,
+    },
   },
 }

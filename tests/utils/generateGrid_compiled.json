@@ -1,0 +1,1854 @@
+{
+   "advanced": {
+      "__inputs": [ ],
+      "__requires": [ ],
+      "annotations": {
+         "list": [ ]
+      },
+      "editable": false,
+      "gnetId": null,
+      "graphTooltip": 0,
+      "hideControls": false,
+      "id": null,
+      "links": [ ],
+      "panels": [
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 8,
+               "w": 12,
+               "x": 0,
+               "y": 0
+            },
+            "id": 2,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [ ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "graph 1",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 8,
+               "w": 12,
+               "x": 12,
+               "y": 0
+            },
+            "id": 3,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [ ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "graph 2",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "collapse": false,
+            "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24,
+               "x": 0,
+               "y": 8
+            },
+            "id": 4,
+            "panels": [ ],
+            "repeat": null,
+            "repeatIteration": null,
+            "repeatRowId": null,
+            "showTitle": true,
+            "title": "row 1",
+            "titleSize": "h6",
+            "type": "row"
+         },
+         {
+            "datasource": null,
+            "gridPos": {
+               "h": 4,
+               "w": 10,
+               "x": 0,
+               "y": 9
+            },
+            "id": 5,
+            "options": {
+               "showLabels": false,
+               "showTime": true,
+               "sortOrder": "Descending",
+               "wrapLogMessage": true
+            },
+            "span": 12,
+            "targets": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "log panel",
+            "type": "logs"
+         },
+         {
+            "aliasColors": { },
+            "datasource": null,
+            "description": "",
+            "gridPos": {
+               "h": 4,
+               "w": 4,
+               "x": 10,
+               "y": 9
+            },
+            "id": 6,
+            "legend": {
+               "percentage": true,
+               "show": true,
+               "values": true
+            },
+            "legendType": "Right side",
+            "pieType": "pie",
+            "targets": [ ],
+            "title": "pie chart",
+            "type": "grafana-piechart-panel",
+            "valueName": "current"
+         },
+         {
+            "datasource": null,
+            "fieldConfig": {
+               "defaults": {
+                  "links": [ ],
+                  "mappings": [ ],
+                  "max": 100,
+                  "min": 0,
+                  "thresholds": {
+                     "mode": "absolute",
+                     "steps": [ ]
+                  },
+                  "unit": "percent"
+               }
+            },
+            "gridPos": {
+               "h": 4,
+               "w": 5,
+               "x": 14,
+               "y": 9
+            },
+            "id": 7,
+            "links": [ ],
+            "options": {
+               "reduceOptions": {
+                  "calcs": [
+                     "mean"
+                  ],
+                  "fields": "",
+                  "values": false
+               },
+               "showThresholdLabels": false,
+               "showThresholdMarkers": true
+            },
+            "pluginVersion": "7",
+            "targets": [ ],
+            "title": "gauge",
+            "transparent": false,
+            "type": "gauge"
+         },
+         {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+               "#299c46",
+               "rgba(237, 129, 40, 0.89)",
+               "#d44a3a"
+            ],
+            "datasource": null,
+            "format": "none",
+            "gauge": {
+               "maxValue": 100,
+               "minValue": 0,
+               "show": false,
+               "thresholdLabels": false,
+               "thresholdMarkers": true
+            },
+            "gridPos": {
+               "h": 4,
+               "w": 5,
+               "x": 19,
+               "y": 9
+            },
+            "id": 8,
+            "interval": null,
+            "links": [ ],
+            "mappingType": 1,
+            "mappingTypes": [
+               {
+                  "name": "value to text",
+                  "value": 1
+               },
+               {
+                  "name": "range to text",
+                  "value": 2
+               }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [
+               {
+                  "from": "null",
+                  "text": "N/A",
+                  "to": "null"
+               }
+            ],
+            "sparkline": {
+               "fillColor": "rgba(31, 118, 189, 0.18)",
+               "full": false,
+               "lineColor": "rgb(31, 120, 193)",
+               "show": false
+            },
+            "tableColumn": "",
+            "targets": [ ],
+            "thresholds": "",
+            "title": "singlestat",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [
+               {
+                  "op": "=",
+                  "text": "N/A",
+                  "value": "null"
+               }
+            ],
+            "valueName": "avg"
+         },
+         {
+            "cacheTimeout": null,
+            "colorBackground": false,
+            "colorValue": false,
+            "colors": [
+               "#299c46",
+               "rgba(237, 129, 40, 0.89)",
+               "#d44a3a"
+            ],
+            "datasource": null,
+            "format": "none",
+            "gauge": {
+               "maxValue": 100,
+               "minValue": 0,
+               "show": false,
+               "thresholdLabels": false,
+               "thresholdMarkers": true
+            },
+            "gridPos": {
+               "h": 4,
+               "w": 5,
+               "x": 0,
+               "y": 13
+            },
+            "id": 9,
+            "interval": null,
+            "links": [ ],
+            "mappingType": 1,
+            "mappingTypes": [
+               {
+                  "name": "value to text",
+                  "value": 1
+               },
+               {
+                  "name": "range to text",
+                  "value": 2
+               }
+            ],
+            "maxDataPoints": 100,
+            "nullPointMode": "connected",
+            "nullText": null,
+            "postfix": "",
+            "postfixFontSize": "50%",
+            "prefix": "",
+            "prefixFontSize": "50%",
+            "rangeMaps": [
+               {
+                  "from": "null",
+                  "text": "N/A",
+                  "to": "null"
+               }
+            ],
+            "sparkline": {
+               "fillColor": "rgba(31, 118, 189, 0.18)",
+               "full": false,
+               "lineColor": "rgb(31, 120, 193)",
+               "show": false
+            },
+            "tableColumn": "",
+            "targets": [ ],
+            "thresholds": "",
+            "title": "another singlestat",
+            "type": "singlestat",
+            "valueFontSize": "80%",
+            "valueMaps": [
+               {
+                  "op": "=",
+                  "text": "N/A",
+                  "value": "null"
+               }
+            ],
+            "valueName": "avg"
+         },
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 4,
+               "w": 19,
+               "x": 5,
+               "y": 13
+            },
+            "id": 10,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [ ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "graph 3",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "collapse": false,
+            "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24,
+               "x": 0,
+               "y": 17
+            },
+            "id": 11,
+            "panels": [ ],
+            "repeat": null,
+            "repeatIteration": null,
+            "repeatRowId": null,
+            "showTitle": true,
+            "title": "row 2",
+            "titleSize": "h6",
+            "type": "row"
+         },
+         {
+            "cards": {
+               "cardPadding": null,
+               "cardRound": null
+            },
+            "color": {
+               "cardColor": "#b4ff00",
+               "colorScale": "sqrt",
+               "colorScheme": "interpolateOranges",
+               "exponent": 0.5,
+               "mode": "spectrum"
+            },
+            "dataFormat": "timeseries",
+            "datasource": null,
+            "gridPos": {
+               "h": 10,
+               "w": 10,
+               "x": 0,
+               "y": 18
+            },
+            "heatmap": { },
+            "hideZeroBuckets": false,
+            "highlightCards": true,
+            "id": 12,
+            "legend": {
+               "show": false
+            },
+            "title": "heatmap",
+            "tooltip": {
+               "show": true,
+               "showHistogram": false
+            },
+            "type": "heatmap",
+            "xAxis": {
+               "show": true
+            },
+            "xBucketNumber": null,
+            "xBucketSize": null,
+            "yAxis": {
+               "decimals": null,
+               "format": "short",
+               "logBase": 1,
+               "max": null,
+               "min": null,
+               "show": true,
+               "splitFactor": null
+            },
+            "yBucketBound": "auto",
+            "yBucketNumber": null,
+            "yBucketSize": null
+         },
+         {
+            "columns": [ ],
+            "datasource": null,
+            "gridPos": {
+               "h": 10,
+               "w": 10,
+               "x": 10,
+               "y": 18
+            },
+            "id": 13,
+            "links": [ ],
+            "styles": [ ],
+            "targets": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "table",
+            "type": "table"
+         },
+         {
+            "collapse": false,
+            "collapsed": false,
+            "gridPos": {
+               "h": 1,
+               "w": 24,
+               "x": 0,
+               "y": 28
+            },
+            "id": 14,
+            "panels": [ ],
+            "repeat": null,
+            "repeatIteration": null,
+            "repeatRowId": null,
+            "showTitle": true,
+            "title": "row 3",
+            "titleSize": "h6",
+            "type": "row"
+         },
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 6,
+               "w": 12,
+               "x": 0,
+               "y": 29
+            },
+            "id": 15,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [ ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "graph 4",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "datasource": null,
+            "fieldConfig": {
+               "defaults": {
+                  "links": [ ],
+                  "mappings": [ ],
+                  "thresholds": {
+                     "mode": "absolute",
+                     "steps": [ ]
+                  },
+                  "unit": "none"
+               }
+            },
+            "gridPos": {
+               "h": 6,
+               "w": 6,
+               "x": 12,
+               "y": 29
+            },
+            "id": 16,
+            "links": [ ],
+            "options": {
+               "colorMode": "value",
+               "graphMode": "area",
+               "justifyMode": "auto",
+               "orientation": "auto",
+               "reduceOptions": {
+                  "calcs": [
+                     "mean"
+                  ],
+                  "fields": "",
+                  "values": false
+               }
+            },
+            "pluginVersion": "7",
+            "targets": [ ],
+            "title": "stat",
+            "transparent": false,
+            "type": "stat"
+         }
+      ],
+      "refresh": "",
+      "rows": [ ],
+      "schemaVersion": 14,
+      "style": "dark",
+      "tags": [ ],
+      "templating": {
+         "list": [ ]
+      },
+      "time": {
+         "from": "now-6h",
+         "to": "now"
+      },
+      "timepicker": {
+         "refresh_intervals": [
+            "5s",
+            "10s",
+            "30s",
+            "1m",
+            "5m",
+            "15m",
+            "30m",
+            "1h",
+            "2h",
+            "1d"
+         ],
+         "time_options": [
+            "5m",
+            "15m",
+            "1h",
+            "6h",
+            "12h",
+            "24h",
+            "2d",
+            "7d",
+            "30d"
+         ]
+      },
+      "timezone": "browser",
+      "title": "advanced",
+      "version": 0
+   },
+   "basic": {
+      "__inputs": [ ],
+      "__requires": [ ],
+      "annotations": {
+         "list": [ ]
+      },
+      "editable": false,
+      "gnetId": null,
+      "graphTooltip": 0,
+      "hideControls": false,
+      "id": null,
+      "links": [ ],
+      "panels": [
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 8,
+               "w": 12,
+               "x": 0,
+               "y": 0
+            },
+            "id": 2,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [ ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "graph 1",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 8,
+               "w": 12,
+               "x": 12,
+               "y": 0
+            },
+            "id": 3,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [ ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "graph 2",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         }
+      ],
+      "refresh": "",
+      "rows": [ ],
+      "schemaVersion": 14,
+      "style": "dark",
+      "tags": [ ],
+      "templating": {
+         "list": [ ]
+      },
+      "time": {
+         "from": "now-6h",
+         "to": "now"
+      },
+      "timepicker": {
+         "refresh_intervals": [
+            "5s",
+            "10s",
+            "30s",
+            "1m",
+            "5m",
+            "15m",
+            "30m",
+            "1h",
+            "2h",
+            "1d"
+         ],
+         "time_options": [
+            "5m",
+            "15m",
+            "1h",
+            "6h",
+            "12h",
+            "24h",
+            "2d",
+            "7d",
+            "30d"
+         ]
+      },
+      "timezone": "browser",
+      "title": "basic",
+      "version": 0
+   },
+   "repeatExample1": {
+      "__inputs": [ ],
+      "__requires": [ ],
+      "annotations": {
+         "list": [ ]
+      },
+      "editable": false,
+      "gnetId": null,
+      "graphTooltip": 0,
+      "hideControls": false,
+      "id": null,
+      "links": [ ],
+      "panels": [
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 4,
+               "w": 10,
+               "x": 0,
+               "y": 0
+            },
+            "id": 2,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server1"
+               }
+            ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "memory",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 4,
+               "w": 10,
+               "x": 10,
+               "y": 0
+            },
+            "id": 3,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server1"
+               }
+            ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "ram",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "datasource": null,
+            "fieldConfig": {
+               "defaults": {
+                  "links": [ ],
+                  "mappings": [ ],
+                  "max": 100,
+                  "min": 0,
+                  "thresholds": {
+                     "mode": "absolute",
+                     "steps": [ ]
+                  },
+                  "unit": "percent"
+               }
+            },
+            "gridPos": {
+               "h": 4,
+               "w": 4,
+               "x": 20,
+               "y": 0
+            },
+            "id": 4,
+            "links": [ ],
+            "options": {
+               "reduceOptions": {
+                  "calcs": [
+                     "mean"
+                  ],
+                  "fields": "",
+                  "values": false
+               },
+               "showThresholdLabels": false,
+               "showThresholdMarkers": true
+            },
+            "pluginVersion": "7",
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server1"
+               }
+            ],
+            "title": "cpu",
+            "transparent": false,
+            "type": "gauge"
+         },
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 4,
+               "w": 10,
+               "x": 0,
+               "y": 4
+            },
+            "id": 5,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server2"
+               }
+            ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "memory",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 4,
+               "w": 10,
+               "x": 10,
+               "y": 4
+            },
+            "id": 6,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server2"
+               }
+            ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "ram",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "datasource": null,
+            "fieldConfig": {
+               "defaults": {
+                  "links": [ ],
+                  "mappings": [ ],
+                  "max": 100,
+                  "min": 0,
+                  "thresholds": {
+                     "mode": "absolute",
+                     "steps": [ ]
+                  },
+                  "unit": "percent"
+               }
+            },
+            "gridPos": {
+               "h": 4,
+               "w": 4,
+               "x": 20,
+               "y": 4
+            },
+            "id": 7,
+            "links": [ ],
+            "options": {
+               "reduceOptions": {
+                  "calcs": [
+                     "mean"
+                  ],
+                  "fields": "",
+                  "values": false
+               },
+               "showThresholdLabels": false,
+               "showThresholdMarkers": true
+            },
+            "pluginVersion": "7",
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server2"
+               }
+            ],
+            "title": "cpu",
+            "transparent": false,
+            "type": "gauge"
+         },
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 4,
+               "w": 10,
+               "x": 0,
+               "y": 8
+            },
+            "id": 8,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server3"
+               }
+            ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "memory",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 4,
+               "w": 10,
+               "x": 10,
+               "y": 8
+            },
+            "id": 9,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server3"
+               }
+            ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "ram",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "datasource": null,
+            "fieldConfig": {
+               "defaults": {
+                  "links": [ ],
+                  "mappings": [ ],
+                  "max": 100,
+                  "min": 0,
+                  "thresholds": {
+                     "mode": "absolute",
+                     "steps": [ ]
+                  },
+                  "unit": "percent"
+               }
+            },
+            "gridPos": {
+               "h": 4,
+               "w": 4,
+               "x": 20,
+               "y": 8
+            },
+            "id": 10,
+            "links": [ ],
+            "options": {
+               "reduceOptions": {
+                  "calcs": [
+                     "mean"
+                  ],
+                  "fields": "",
+                  "values": false
+               },
+               "showThresholdLabels": false,
+               "showThresholdMarkers": true
+            },
+            "pluginVersion": "7",
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server3"
+               }
+            ],
+            "title": "cpu",
+            "transparent": false,
+            "type": "gauge"
+         }
+      ],
+      "refresh": "",
+      "rows": [ ],
+      "schemaVersion": 14,
+      "style": "dark",
+      "tags": [ ],
+      "templating": {
+         "list": [ ]
+      },
+      "time": {
+         "from": "now-6h",
+         "to": "now"
+      },
+      "timepicker": {
+         "refresh_intervals": [
+            "5s",
+            "10s",
+            "30s",
+            "1m",
+            "5m",
+            "15m",
+            "30m",
+            "1h",
+            "2h",
+            "1d"
+         ],
+         "time_options": [
+            "5m",
+            "15m",
+            "1h",
+            "6h",
+            "12h",
+            "24h",
+            "2d",
+            "7d",
+            "30d"
+         ]
+      },
+      "timezone": "browser",
+      "title": "repeat example 1",
+      "version": 0
+   },
+   "repeatExample2": {
+      "__inputs": [ ],
+      "__requires": [ ],
+      "annotations": {
+         "list": [ ]
+      },
+      "editable": false,
+      "gnetId": null,
+      "graphTooltip": 0,
+      "hideControls": false,
+      "id": null,
+      "links": [ ],
+      "panels": [
+         {
+            "aliasColors": { },
+            "bars": false,
+            "dashLength": 10,
+            "dashes": false,
+            "datasource": null,
+            "fill": 1,
+            "fillGradient": 0,
+            "gridPos": {
+               "h": 4,
+               "w": 9,
+               "x": 0,
+               "y": 0
+            },
+            "id": 2,
+            "legend": {
+               "alignAsTable": false,
+               "avg": false,
+               "current": false,
+               "max": false,
+               "min": false,
+               "rightSide": false,
+               "show": true,
+               "sideWidth": null,
+               "total": false,
+               "values": false
+            },
+            "lines": true,
+            "linewidth": 1,
+            "links": [ ],
+            "nullPointMode": "null",
+            "percentage": false,
+            "pointradius": 5,
+            "points": false,
+            "renderer": "flot",
+            "repeat": null,
+            "seriesOverrides": [ ],
+            "spaceLength": 10,
+            "stack": false,
+            "steppedLine": false,
+            "targets": [ ],
+            "thresholds": [ ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "health overview",
+            "tooltip": {
+               "shared": true,
+               "sort": 0,
+               "value_type": "individual"
+            },
+            "type": "graph",
+            "xaxis": {
+               "buckets": null,
+               "mode": "time",
+               "name": null,
+               "show": true,
+               "values": [ ]
+            },
+            "yaxes": [
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               },
+               {
+                  "format": "short",
+                  "label": null,
+                  "logBase": 1,
+                  "max": null,
+                  "min": null,
+                  "show": true
+               }
+            ]
+         },
+         {
+            "columns": [ ],
+            "datasource": null,
+            "gridPos": {
+               "h": 4,
+               "w": 5,
+               "x": 9,
+               "y": 0
+            },
+            "id": 3,
+            "links": [ ],
+            "styles": [ ],
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server1"
+               }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "server instances",
+            "type": "table"
+         },
+         {
+            "columns": [ ],
+            "datasource": null,
+            "gridPos": {
+               "h": 4,
+               "w": 5,
+               "x": 14,
+               "y": 0
+            },
+            "id": 4,
+            "links": [ ],
+            "styles": [ ],
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server2"
+               }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "server instances",
+            "type": "table"
+         },
+         {
+            "columns": [ ],
+            "datasource": null,
+            "gridPos": {
+               "h": 4,
+               "w": 5,
+               "x": 19,
+               "y": 0
+            },
+            "id": 5,
+            "links": [ ],
+            "styles": [ ],
+            "targets": [
+               {
+                  "refId": "A",
+                  "server": "server3"
+               }
+            ],
+            "timeFrom": null,
+            "timeShift": null,
+            "title": "server instances",
+            "type": "table"
+         }
+      ],
+      "refresh": "",
+      "rows": [ ],
+      "schemaVersion": 14,
+      "style": "dark",
+      "tags": [ ],
+      "templating": {
+         "list": [ ]
+      },
+      "time": {
+         "from": "now-6h",
+         "to": "now"
+      },
+      "timepicker": {
+         "refresh_intervals": [
+            "5s",
+            "10s",
+            "30s",
+            "1m",
+            "5m",
+            "15m",
+            "30m",
+            "1h",
+            "2h",
+            "1d"
+         ],
+         "time_options": [
+            "5m",
+            "15m",
+            "1h",
+            "6h",
+            "12h",
+            "24h",
+            "2d",
+            "7d",
+            "30d"
+         ]
+      },
+      "timezone": "browser",
+      "title": "repeat example 2",
+      "version": 0
+   }
+}
