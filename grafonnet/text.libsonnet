@@ -39,5 +39,19 @@
       [if repeat != null then 'repeat']: repeat,
       [if repeat != null then 'repeatDirection']: repeatDirection,
       [if repeat != null then 'maxPerRow']: repeatMaxPerRow,
+
+      addPanelLink(
+        targetBlank=true,
+        title=null,
+        url=null,
+      ):: self {}
+          + { links+: [
+            {
+              [if targetBlank != null then 'targetBlank']: targetBlank,
+              [if title != null then 'title']: title,
+              [if url != null then 'url']: url,
+            },
+          ] },
     },
+
 }
