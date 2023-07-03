@@ -21,6 +21,8 @@
    * @param formatY2 (optional) Unit of the second Y axis
    * @param min (optional) Min of the Y axes
    * @param max (optional) Max of the Y axes
+   * @param minY2 (optional) Min of the second Y axis. If null, use min parameter.
+   * @param maxY2 (optional) Max of the second Y axis. If null, use max parameter.
    * @param maxDataPoints (optional) If the data source supports it, sets the maximum number of data points for each series returned.
    * @param labelY1 (optional) Label of the first Y axis
    * @param labelY2 (optional) Label of the second Y axis
@@ -85,6 +87,8 @@
     formatY2=null,
     min=null,
     max=null,
+    minY2=null,
+    maxY2=null,
     labelY1=null,
     labelY2=null,
     x_axis_mode='time',
@@ -156,8 +160,8 @@
       ),
       self.yaxe(
         if formatY2 != null then formatY2 else format,
-        min,
-        max,
+        if minY2 != null then minY2 else min,
+        if maxY2 != null then maxY2 else max,
         decimals=(if decimalsY2 != null then decimalsY2 else decimals),
         logBase=logBase2Y,
         label=labelY2
