@@ -12,10 +12,12 @@
       "name": "foo",
       "options": [
          {
+            "selected": true,
             "text": "nouveau",
             "value": "new"
          },
          {
+            "selected": false,
             "text": "ancien",
             "value": "old"
          }
@@ -37,10 +39,12 @@
       "name": "host",
       "options": [
          {
+            "selected": false,
             "text": "foo",
             "value": "foo"
          },
          {
+            "selected": true,
             "text": "bar",
             "value": "bar"
          }
