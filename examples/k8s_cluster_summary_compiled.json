@@ -249,96 +249,248 @@
                "valueName": "avg"
             },
             {
-               "columns": [ ],
                "datasource": "$datasource",
+               "fieldConfig": {
+                  "defaults": {
+                     "color": {
+                        "mode": "threshold"
+                     },
+                     "custom": {
+                        "align": "auto",
+                        "displayMode": "auto",
+                        "inspect": false
+                     },
+                     "mappings": [ ],
+                     "thresholds": {
+                        "mode": "absolute",
+                        "steps": [ ]
+                     }
+                  },
+                  "overrides": [
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "Value"
+                        },
+                        "properties": [
+                           {
+                              "id": "unit",
+                              "value": "short"
+                           },
+                           {
+                              "id": "displayName",
+                              "value": "Status"
+                           },
+                           {
+                              "id": "custom.displayMode",
+                              "value": "color-background"
+                           },
+                           {
+                              "id": "thresholds",
+                              "value": {
+                                 "mode": "absolute",
+                                 "steps": [
+                                    {
+                                       "color": "rgba(245, 54, 54, 0.9)",
+                                       "value": null
+                                    },
+                                    {
+                                       "color": "rgba(237, 129, 40, 0.89)",
+                                       "value": 0
+                                    },
+                                    {
+                                       "color": "rgba(50, 172, 45, 0.97)",
+                                       "value": 1
+                                    }
+                                 ]
+                              }
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "instance"
+                        },
+                        "properties": [
+                           {
+                              "id": "displayName",
+                              "value": "Instance"
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "beta_kubernetes_io_instance_type"
+                        },
+                        "properties": [
+                           {
+                              "id": "displayName",
+                              "value": "Instance Type"
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "cloud_google_com_gke_nodepool"
+                        },
+                        "properties": [
+                           {
+                              "id": "displayName",
+                              "value": "Node Pool"
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "failure_domain_beta_kubernetes_io_region"
+                        },
+                        "properties": [
+                           {
+                              "id": "displayName",
+                              "value": "Region"
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "failure_domain_beta_kubernetes_io_zone"
+                        },
+                        "properties": [
+                           {
+                              "id": "displayName",
+                              "value": "Zone"
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "Time"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "__name__"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "beta_kubernetes_io_arch"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "beta_kubernetes_io_fluentd_ds_ready"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "beta_kubernetes_io_os"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "cloud_google_com_gke_os_distribution"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "job"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "kubernetes_io_hostname"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "service"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     }
+                  ]
+               },
                "gridPos": { },
                "id": 5,
                "links": [ ],
-               "span": 12,
-               "styles": [
-                  {
-                     "alias": "Instance",
-                     "pattern": "instance"
-                  },
-                  {
-                     "alias": "Instance Type",
-                     "pattern": "beta_kubernetes_io_instance_type"
-                  },
-                  {
-                     "alias": "Node Pool",
-                     "pattern": "cloud_google_com_gke_nodepool"
-                  },
-                  {
-                     "alias": "Region",
-                     "pattern": "failure_domain_beta_kubernetes_io_region"
-                  },
-                  {
-                     "alias": "Zone",
-                     "pattern": "failure_domain_beta_kubernetes_io_zone"
-                  },
-                  {
-                     "alias": "Status",
-                     "colorMode": "cell",
-                     "colors": [
-                        "rgba(245, 54, 54, 0.9)",
-                        "rgba(237, 129, 40, 0.89)",
-                        "rgba(50, 172, 45, 0.97)"
+               "options": {
+                  "footer": {
+                     "fields": "",
+                     "reducer": [
+                        "sum"
                      ],
-                     "pattern": "Value",
-                     "thresholds": [
-                        "0",
-                        "1"
-                     ],
-                     "type": "string",
-                     "unit": "short",
-                     "valueMaps": [
-                        {
-                           "text": "OK",
-                           "value": "1"
-                        },
-                        {
-                           "text": "Down",
-                           "value": "0"
-                        }
-                     ]
+                     "show": false
                   },
-                  {
-                     "pattern": "Time",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "__name__",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "beta_kubernetes_io_arch",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "beta_kubernetes_io_fluentd_ds_ready",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "beta_kubernetes_io_os",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "cloud_google_com_gke_os_distribution",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "job",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "kubernetes_io_hostname",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "service",
-                     "type": "hidden"
-                  }
-               ],
+                  "showHeader": true
+               },
+               "pluginVersion": "9.2.1",
                "targets": [
                   {
                      "expr": "up{job=\"kubernetes-nodes\"}",
@@ -349,8 +501,6 @@
                      "refId": "A"
                   }
                ],
-               "timeFrom": null,
-               "timeShift": null,
                "title": "Node Info",
                "type": "table"
             }
@@ -1297,18 +1447,52 @@
                "valueName": "avg"
             },
             {
-               "columns": [ ],
                "datasource": "$datasource",
+               "fieldConfig": {
+                  "defaults": {
+                     "color": {
+                        "mode": "threshold"
+                     },
+                     "custom": {
+                        "align": "auto",
+                        "displayMode": "auto",
+                        "inspect": false
+                     },
+                     "mappings": [ ],
+                     "thresholds": {
+                        "mode": "absolute",
+                        "steps": [ ]
+                     }
+                  },
+                  "overrides": [
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "Time"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     }
+                  ]
+               },
                "gridPos": { },
                "id": 17,
                "links": [ ],
-               "span": 3,
-               "styles": [
-                  {
-                     "pattern": "Time",
-                     "type": "hidden"
-                  }
-               ],
+               "options": {
+                  "footer": {
+                     "fields": "",
+                     "reducer": [
+                        "sum"
+                     ],
+                     "show": false
+                  },
+                  "showHeader": true
+               },
+               "pluginVersion": "9.2.1",
                "targets": [
                   {
                      "expr": "kube_deployment_status_replicas",
@@ -1319,8 +1503,6 @@
                      "refId": "A"
                   }
                ],
-               "timeFrom": null,
-               "timeShift": null,
                "title": "Deployment Replicas - Up To Date",
                "type": "table"
             }
@@ -2209,80 +2391,212 @@
                "valueName": "avg"
             },
             {
-               "columns": [ ],
                "datasource": "$datasource",
+               "fieldConfig": {
+                  "defaults": {
+                     "color": {
+                        "mode": "threshold"
+                     },
+                     "custom": {
+                        "align": "auto",
+                        "displayMode": "auto",
+                        "inspect": false
+                     },
+                     "mappings": [ ],
+                     "thresholds": {
+                        "mode": "absolute",
+                        "steps": [ ]
+                     }
+                  },
+                  "overrides": [
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "Value"
+                        },
+                        "properties": [
+                           {
+                              "id": "unit",
+                              "value": "short"
+                           },
+                           {
+                              "id": "displayName",
+                              "value": "Status"
+                           },
+                           {
+                              "id": "custom.displayMode",
+                              "value": "color-background"
+                           },
+                           {
+                              "id": "thresholds",
+                              "value": {
+                                 "mode": "absolute",
+                                 "steps": [
+                                    {
+                                       "color": "rgba(50, 172, 45, 0.97)",
+                                       "value": null
+                                    },
+                                    {
+                                       "color": "rgba(237, 129, 40, 0.89)",
+                                       "value": 0
+                                    },
+                                    {
+                                       "color": "rgba(245, 54, 54, 0.9)",
+                                       "value": 1
+                                    }
+                                 ]
+                              }
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "Time"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "__name__"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "app"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "chart"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "component"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "heritage"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "instance"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "job"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "kubernetes_name"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "kubernetes_namespace"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     },
+                     {
+                        "matcher": {
+                           "id": "byName",
+                           "options": "release"
+                        },
+                        "properties": [
+                           {
+                              "id": "custom.hidden",
+                              "value": true
+                           }
+                        ]
+                     }
+                  ]
+               },
                "gridPos": { },
                "id": 29,
                "links": [ ],
-               "span": 12,
-               "styles": [
-                  {
-                     "alias": "Status",
-                     "colorMode": "cell",
-                     "colors": [
-                        "rgba(50, 172, 45, 0.97)",
-                        "rgba(237, 129, 40, 0.89)",
-                        "rgba(245, 54, 54, 0.9)"
+               "options": {
+                  "footer": {
+                     "fields": "",
+                     "reducer": [
+                        "sum"
                      ],
-                     "pattern": "Value",
-                     "thresholds": [
-                        "0",
-                        "1"
-                     ],
-                     "type": "string",
-                     "unit": "short",
-                     "valueMaps": [
-                        {
-                           "text": "Error",
-                           "value": "1"
-                        }
-                     ]
+                     "show": false
                   },
-                  {
-                     "pattern": "Time",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "__name__",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "app",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "chart",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "component",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "heritage",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "instance",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "job",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "kubernetes_name",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "kubernetes_namespace",
-                     "type": "hidden"
-                  },
-                  {
-                     "pattern": "release",
-                     "type": "hidden"
-                  }
-               ],
+                  "showHeader": true
+               },
+               "pluginVersion": "9.2.1",
                "targets": [
                   {
                      "expr": "kube_pod_container_status_waiting_reason{reason!=\"ContainerCreating\"} > 0",
@@ -2293,8 +2607,6 @@
                      "refId": "A"
                   }
                ],
-               "timeFrom": null,
-               "timeShift": null,
                "title": "Container Failed to Start",
                "type": "table"
             }
