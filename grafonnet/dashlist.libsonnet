@@ -11,6 +11,7 @@
    * @param tags (optional) Array of tag(s) to search by
    * @param recent (default `true`) Displays recently viewed dashboards
    * @param search (default `false`) Description of the panel
+   * @param folderId (optional) Id of the folder in which to search for dashboards, only effective with `search` set to `true`
    * @param starred (default `false`) Displays starred dashboards
    * @param headings (default `true`) Chosen list selection(starred, recently Viewed, search) is shown as a heading
    * @param limit (default `10`) Set maximum items in a list
@@ -24,6 +25,7 @@
     recent=true,
     search=false,
     starred=false,
+    folderId,
     headings=true,
     limit=10,
   ):: {
@@ -37,5 +39,6 @@
     headings: headings,
     limit: limit,
     [if description != null then 'description']: description,
+    [if folderId != null then 'folderId']: folderId,
   },
 }
