@@ -20,7 +20,7 @@
       "span": 12,
       "targets": [ ],
       "title": "test",
-      "type": "grafana-piechart-panel",
+      "type": "piechart",
       "valueName": "current"
    },
    "basic": {
@@ -37,7 +37,7 @@
       "span": 12,
       "targets": [ ],
       "title": "test",
-      "type": "grafana-piechart-panel",
+      "type": "piechart",
       "valueName": "current"
    },
    "targets": {
@@ -63,7 +63,7 @@
          }
       ],
       "title": "with targets",
-      "type": "grafana-piechart-panel",
+      "type": "piechart",
       "valueName": "current"
    }
 }
