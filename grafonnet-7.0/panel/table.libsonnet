@@ -130,5 +130,16 @@
           target,
         ] },
 
+    addTransformation(
+      id=null,
+      options=null
+    ):: self {}
+        + { transformations+: [
+          {
+            [if id != null then 'id']: id,
+            [if options != null then 'options']: options,
+          },
+        ] },
+
   },
 }
