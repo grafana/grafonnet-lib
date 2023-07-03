@@ -22,6 +22,7 @@
       ],
       "query": "new,old",
       "refresh": 0,
+      "skipUrlSync": false,
       "type": "custom"
    },
    "basic": {
@@ -47,6 +48,7 @@
       ],
       "query": "foo,bar",
       "refresh": 0,
+      "skipUrlSync": false,
       "type": "custom"
    },
    "multi": {
@@ -83,6 +85,7 @@
       ],
       "query": "new,current,old",
       "refresh": 0,
+      "skipUrlSync": false,
       "type": "custom"
    },
    "multiIncludeAll": {
@@ -118,6 +121,7 @@
       ],
       "query": "new,old",
       "refresh": 0,
+      "skipUrlSync": false,
       "type": "custom"
    }
 }
