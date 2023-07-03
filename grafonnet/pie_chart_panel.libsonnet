@@ -41,7 +41,7 @@
     repeatDirection=null,
     maxPerRow=null,
   ):: {
-    type: 'grafana-piechart-panel',
+    type: 'piechart',
     [if description != null then 'description']: description,
     pieType: pieType,
     title: title,
