@@ -12,6 +12,10 @@ local Dashlist = grafana.dashlist;
     recent=false,
     search=true,
     headings=true,
-    limit=5
+    limit=5,
+  ),
+  folderId: Dashlist.new(
+    'test',
+    folderId=3
   ),
 }
