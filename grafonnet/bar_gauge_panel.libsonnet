@@ -9,6 +9,12 @@
    * @param datasource (optional) Panel datasource.
    * @param unit (optional) The unit of the data.
    * @param thresholds (optional) An array of threashold values.
+   * @param values (optional) Bool if show values
+   * @param calcs (optional) An array of type of calculation
+   * @param fields (optional) string - fields that should be included in the panel
+   * @param orientation (optional) string (horizontal or vertical)
+   * @param displayMode (optional) string (eg. lcd)
+   * @param showUnfilled (optional) bool if showUnfilled
    *
    * @method addTarget(target) Adds a target object.
    * @method addTargets(targets) Adds an array of targets.
@@ -19,6 +25,12 @@
     datasource=null,
     unit=null,
     thresholds=[],
+    values=false,
+    calcs=['mean'],
+    fields='',
+    orientation='auto',
+    displayMode='gradient',
+    showUnfilled=true,
   ):: {
     type: 'bargauge',
     title: title,
@@ -43,5 +55,15 @@
       targets+: [target { refId: std.char(std.codepoint('A') + nextTarget) }],
     },
     addTargets(targets):: std.foldl(function(p, t) p.addTarget(t), targets, self),
+    options: {
+      reduceOptions: {
+        values: values,
+        calcs: calcs,
+        fields: fields,
+      },
+      orientation: orientation,
+      displayMode: displayMode,
+      showUnfilled: showUnfilled,
+    },
   },
 }
